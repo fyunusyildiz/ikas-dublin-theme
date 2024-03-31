@@ -14,7 +14,7 @@
       "componentJson": null,
       "props": [
         {
-          "id": "8cbb9999-702d-48bf-9b45-a77546ed4627",
+          "id": "a6712841-bc2e-4c62-88f7-00a7854a97cf",
           "name": "logo",
           "displayName": "",
           "description": "",
@@ -27,7 +27,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "337a8261-3f3f-43fe-b175-aeaa870a6064",
+          "id": "2e09015b-ef7c-46e6-9e71-94bab0231d7b",
           "name": "showTax",
           "displayName": "",
           "description": "",
@@ -40,7 +40,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "fd78d944-72b4-4de1-b2a6-34885f1413c0",
+          "id": "072790e2-78d0-4873-a3c2-a23ddd1d9b32",
           "name": "showCampaignOffersDesign",
           "displayName": "",
           "description": "",
@@ -53,7 +53,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "f47125f1-c620-492a-bd4d-0626d4f8b469",
+          "id": "4522802c-24a8-4193-98ce-eddb3aa1a532",
           "name": "campaignOfferIsSmallDesign",
           "displayName": "",
           "description": "",
@@ -66,7 +66,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "250ac72e-a073-4fc4-8827-4a1d5b876919",
+          "id": "15262bee-7b1f-4a83-8ec7-46e75f9396d6",
           "name": "showCampaignIsBiggerImage",
           "displayName": "",
           "description": "",
@@ -79,7 +79,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "17b34358-bda6-45a9-985c-8d58fb88b654",
+          "id": "06d05b6f-7bc0-43cb-aeb4-78d47d969010",
           "name": "campaignOffersTitleColor",
           "displayName": "",
           "description": "",
@@ -92,7 +92,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "02af2cef-5da4-40f1-a078-3ddaff9598ee",
+          "id": "c9771a35-9a6d-45cb-9341-3d25550fbb7e",
           "name": "campaignOffersDescriptionColor",
           "displayName": "",
           "description": "",
@@ -105,7 +105,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "9d75614a-a5d0-4c2a-90bf-6a33fb71f63f",
+          "id": "a0f32178-77d2-4d3b-8f0e-9095693ad8bc",
           "name": "showCampaignShowDiscountSettings",
           "displayName": "",
           "description": "",
@@ -118,7 +118,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "fdad2581-9ef1-4d4a-a654-37d124d94d96",
+          "id": "c8f375e8-3032-4f2e-9d5d-f2e4383ca8fa",
           "name": "showCampaignHideDiscountBadge",
           "displayName": "",
           "description": "",
@@ -131,7 +131,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "66ac7c30-929e-4a91-866e-6db5721e7971",
+          "id": "884073ca-f84a-44c9-a463-2007e54b2572",
           "name": "campaignOffersDiscountPercentageColor",
           "displayName": "",
           "description": "",
@@ -144,7 +144,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "791c74d0-8b05-427b-8cc1-d72de1225f60",
+          "id": "99ab9de7-4d0b-477f-a9c7-a12d91f3bae3",
           "name": "campaignOffersDiscountPercentageBgColor",
           "displayName": "",
           "description": "",
@@ -157,7 +157,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "d04b73fa-3478-4d4e-b3d6-c30f74f85a6d",
+          "id": "e4f03539-b16b-4054-8a0f-a1f9c50ee610",
           "name": "showCampaignShowCountdownSettings",
           "displayName": "",
           "description": "",
@@ -170,7 +170,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "8ccc4432-0e8b-4c77-94ad-0029f4dce15e",
+          "id": "3c320af3-c5e9-4598-ba33-3801f240f4c9",
           "name": "campaignOfferCountdownStyleIsLine",
           "displayName": "",
           "description": "",
@@ -183,7 +183,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "72db5e81-baed-443e-8813-48518672b6be",
+          "id": "fc7d7d9e-c7b6-4500-ac29-251ea7137ac3",
           "name": "campaignOffersCountdownTextColor",
           "displayName": "",
           "description": "",
@@ -196,7 +196,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "7bafb632-bb1b-49c5-a008-cf445e05f49e",
+          "id": "aa536e21-224b-476d-a87c-03c4c44d2278",
           "name": "campaignOffersCountdownTimeColor",
           "displayName": "",
           "description": "",
@@ -209,7 +209,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "fa681fb8-8caf-415f-9160-0368e1c6b786",
+          "id": "fc28ec92-fbb4-494a-bd88-eb7be2b34534",
           "name": "campaignOffersCountdownBgColor",
           "displayName": "",
           "description": "",
@@ -222,7 +222,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "63ee7adc-47fa-496e-8488-0ffbf0c1856f",
+          "id": "157e9808-7e87-4a54-bbb9-6d63b5313d28",
           "name": "campaignOffersEnableMiddlePhase",
           "displayName": "",
           "description": "",
@@ -235,7 +235,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "fdce19b1-05e7-41d2-93d5-a16e37349ba8",
+          "id": "61d6b056-b5b5-438b-b867-4e2ffb124ca2",
           "name": "campaignOffersMiddlePhaseOverlayColor",
           "displayName": "",
           "description": "",
@@ -248,7 +248,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "4ff02238-b7df-42a4-be4c-71acc1e58817",
+          "id": "5222ecd6-1f4d-4c66-9e24-9e2d181f88fa",
           "name": "campaignOfferCountdownStyleIsLineSuccessPage",
           "displayName": "",
           "description": "",
@@ -261,7 +261,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "a42fc605-d58f-47db-abb9-dd08c8af304c",
+          "id": "f987ec3b-9724-46fd-9c67-d0ac0cceedf9",
           "name": "buttonBgColor",
           "displayName": "",
           "description": "",
@@ -274,7 +274,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "90121ff7-e8a4-4a43-9bf1-2ab792f372ad",
+          "id": "5eb138eb-e961-4b43-8c5f-c2378ae3355d",
           "name": "buttonTextColor",
           "displayName": "",
           "description": "",
@@ -287,7 +287,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "9a88ea46-4b2c-47cf-9943-e2814bb49445",
+          "id": "4f66ac72-81e5-4f2f-b046-a5c1a0e9b8fc",
           "name": "buttonDisabledBgColor",
           "displayName": "",
           "description": "",
@@ -300,7 +300,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "6d13909f-a3bd-4497-be48-7d9b7654a26d",
+          "id": "58cf01b1-c2fd-4592-a25a-a6a31cf214b0",
           "name": "buttonDisabledTextColor",
           "displayName": "",
           "description": "",
@@ -313,7 +313,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "1b7861b9-081f-4b96-895b-fe853f96c60b",
+          "id": "81b7745a-0181-4df7-90e8-20f74f1de0c5",
           "name": "primaryTextColor",
           "displayName": "",
           "description": "",
@@ -326,7 +326,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "a2e2c3bd-cb65-45f1-b03f-8153c44cb743",
+          "id": "a3520a2a-38a5-453b-aa2a-00ef5cf03d7b",
           "name": "secondaryTextColor",
           "displayName": "",
           "description": "",
@@ -339,7 +339,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "58896894-80b0-4205-bccc-2a583e24013f",
+          "id": "66c6d78f-ac43-49b7-ad57-42b039328dca",
           "name": "primaryBgColor",
           "displayName": "",
           "description": "",
@@ -352,7 +352,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "e53913eb-3553-4231-bb1a-7ab08a9899bc",
+          "id": "844edcea-dd23-4614-974d-f8f1814c76b0",
           "name": "secondaryBgColor",
           "displayName": "",
           "description": "",
@@ -365,7 +365,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "74669d1a-e4d9-4ac3-986b-e17de899e944",
+          "id": "abe28a1f-51f5-4b33-8695-2348ec2ff617",
           "name": "borderColor",
           "displayName": "",
           "description": "",
@@ -378,7 +378,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "93b819ad-1c28-4f8e-93ad-e081f5fb071b",
+          "id": "5f03993f-74b6-4d82-989f-e76f3b16a7fe",
           "name": "cardBgColor",
           "displayName": "",
           "description": "",
@@ -391,7 +391,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "86b1b4f7-b69e-43d4-bc9a-faced9991947",
+          "id": "fd86c2c4-6571-4231-b525-9f697029f28a",
           "name": "errorColor",
           "displayName": "",
           "description": "",
@@ -404,7 +404,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "6ce07aa0-f743-43b3-917f-0275b7000eec",
+          "id": "b5344f5e-4c27-4477-9b7c-851c783d8499",
           "name": "errorLightColor",
           "displayName": "",
           "description": "",
@@ -417,7 +417,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "8472e4ce-9863-4f74-a39a-89ce1a39289e",
+          "id": "c92c119c-6ba6-450f-8c9c-6379a957fd2c",
           "name": "warningColor",
           "displayName": "",
           "description": "",
@@ -430,7 +430,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "95a7e7b2-a182-4692-be48-3fd97880dbfc",
+          "id": "de7cd9ab-c2f3-4a2c-95c3-cdc924c264cf",
           "name": "warningLightColor",
           "displayName": "",
           "description": "",
@@ -443,7 +443,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "a21edcb6-f0cc-4894-9cd7-01411acf81d3",
+          "id": "8124e91a-7e26-40ff-9591-f2f0a16101bf",
           "name": "successColor",
           "displayName": "",
           "description": "",
@@ -456,7 +456,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "f26a59a7-3be4-4ca0-98e4-bddc1599e54c",
+          "id": "7ae70b25-28d9-47e1-bd06-ca9e71ef97ca",
           "name": "successLightColor",
           "displayName": "",
           "description": "",
@@ -469,7 +469,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "05ca359f-5884-4ba1-9f4a-71367913ab85",
+          "id": "d5e0d3a4-2ad3-4737-a69a-3a436925cf61",
           "name": "secondaryButtonBgColor",
           "displayName": "",
           "description": "",
@@ -482,7 +482,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "1a07420f-14a1-4bcc-a4c0-74138ce25527",
+          "id": "be29ea7e-9dde-4971-a278-d68386ee2eea",
           "name": "secondaryButtonTextColor",
           "displayName": "",
           "description": "",
@@ -495,7 +495,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "ea3ad8f7-afc6-440f-85a3-8e8a4f2b5348",
+          "id": "e8ac739c-3937-4a1a-88a4-ca26ccded865",
           "name": "secondaryButtonBorderColor",
           "displayName": "",
           "description": "",
@@ -765,6 +765,36 @@
         "rightFrameTextColor": "#ffffffff"
       },
       "commonPropValues": null
+    },
+    {
+      "id": "e26b43b6-b0fe-40af-a56a-9455fd0b6700",
+      "dir": "slider",
+      "displayName": "Slider",
+      "description": "",
+      "type": "COMPONENT",
+      "componentJson": null,
+      "props": [
+        {
+          "id": "37607a58-474c-4808-841c-042728ce3d7c",
+          "name": "slides",
+          "displayName": "Slides",
+          "description": "",
+          "type": "CUSTOM",
+          "isRequired": false,
+          "customDataId": "13af7d3a-ec2f-410e-bdf5-123872cadc77",
+          "sliderData": {},
+          "translations": {},
+          "groupId": "",
+          "excludedFields": [],
+          "excludedFieldsCategory": []
+        }
+      ],
+      "isHeader": false,
+      "isFooter": false,
+      "translations": {},
+      "defaultPropValuesTranslations": {},
+      "defaultPropValues": null,
+      "commonPropValues": null
     }
   ],
   "pages": [
@@ -774,47 +804,154 @@
       "type": "INDEX",
       "components": [
         {
-          "id": "b99c8612-bf3b-433f-8e70-d76c21cd5ceb",
-          "componentId": "b2a03d8a-6dc6-4be3-82c2-544492395fb7",
+          "id": "0c866a32-040c-43dc-9c7d-f63a1c62662b",
+          "componentId": "e26b43b6-b0fe-40af-a56a-9455fd0b6700",
           "propValues": {
-            "leftFrameLink": {
-              "id": "d5528b30-da43-4477-acdd-fcaa5850de23",
-              "linkType": "PAGE",
-              "label": "Ödeme Sayfası",
-              "pageId": "checkout",
-              "pageType": "CHECKOUT",
-              "itemId": null,
-              "externalLink": null,
-              "fileUrl": null,
-              "pageComponentId": null,
-              "subLinks": []
-            },
-            "rightFrameLink": {
-              "id": "defd805e-fcb6-424c-a85b-5eaecd351ea9",
-              "linkType": "EXTERNAL",
-              "label": "test",
-              "pageId": null,
-              "pageType": null,
-              "itemId": null,
-              "externalLink": "https://google.com",
-              "fileUrl": null,
-              "pageComponentId": null,
-              "subLinks": []
-            },
-            "leftFrameImage": {
-              "id": "theme-images/49bdab4b-2956-4eda-874b-a9b361d39cca",
-              "altText": null
-            },
-            "rightFrameImage": {
-              "id": "theme-images/9f4b0393-6cf4-44f1-82fe-b3d1f760d9a9",
-              "altText": null
-            },
-            "leftFrameText": "Bakım yapmak çok güzel",
-            "rightFrameText": "Yüz bakımı da çok önemlidir",
-            "leftFrameImageHasFilter": true,
-            "rightFrameImageHasFilter": true,
-            "leftFrameTextColor": "#fafafaff",
-            "rightFrameTextColor": "#ffffffff"
+            "slider": [
+              {
+                "left_hero": {
+                  "left_image": {
+                    "id": "theme-images/c6197b60-028a-4866-a633-bd606ca67aec",
+                    "altText": null
+                  },
+                  "left_title": "Test Metin",
+                  "left_button": {
+                    "id": "605aa343-ff7b-4068-8fd9-453d315ce14a",
+                    "linkType": "PAGE",
+                    "label": "Anasayfa",
+                    "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                    "pageType": "INDEX",
+                    "pageComponentId": null,
+                    "subLinks": []
+                  },
+                  "left_button_text": "Test",
+                  "left_button_background": "#ffffffff",
+                  "left_button_color": "#ff0004ff",
+                  "left_title_color": "#ffffffff",
+                  "left_has_filter": true,
+                  "left_position": "TOP_LEFT"
+                },
+                "right_hero": {
+                  "right_image": {
+                    "id": "theme-images/d8282a3e-398b-4c55-995b-480fdf062647",
+                    "altText": null
+                  },
+                  "right_title": "Test",
+                  "right_title_color": "#ffffffff",
+                  "right_button": {
+                    "id": "5ea27a21-ed9d-4c4c-a9a4-6586222a4178",
+                    "linkType": "PAGE",
+                    "label": "Anasayfa",
+                    "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                    "pageType": "INDEX",
+                    "pageComponentId": null,
+                    "subLinks": []
+                  },
+                  "right_button_text": "Test",
+                  "right_button_background": "#ffffffff",
+                  "right_button_color": "#f6053dff",
+                  "right_has_filter": true,
+                  "right_position": "TOP_LEFT"
+                }
+              }
+            ],
+            "slides": [
+              {
+                "left_hero": {
+                  "left_image": {
+                    "id": "theme-images/754c6c1e-a64c-47b7-8c4a-36f9b95760b2",
+                    "altText": null
+                  },
+                  "left_title": "Şapkalarımız şahane",
+                  "left_button": {
+                    "id": "47f8a469-c5fe-44cb-a4f1-af9c59752e0a",
+                    "linkType": "PAGE",
+                    "label": "Anasayfa",
+                    "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                    "pageType": "INDEX",
+                    "itemId": null,
+                    "externalLink": null,
+                    "fileUrl": null,
+                    "pageComponentId": null,
+                    "subLinks": []
+                  },
+                  "left_button_text": "Şapkalar",
+                  "left_button_background": "#ffffffff",
+                  "left_button_color": "#14008dff",
+                  "left_title_color": "#ffffffff",
+                  "left_has_filter": true,
+                  "left_position": "TOP_RIGHT"
+                },
+                "right_hero": {
+                  "right_image": {
+                    "id": "theme-images/ca56a9a0-fa2d-49fa-b28d-8e63dbe68465",
+                    "altText": null
+                  },
+                  "right_title": "Çantalarımız da şahane!",
+                  "right_title_color": "#ffffffff",
+                  "right_button": {
+                    "id": "4ee0a14e-751f-40bc-8a51-00cb09e05b5e",
+                    "linkType": "PAGE",
+                    "label": "Anasayfa",
+                    "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                    "pageType": "INDEX",
+                    "pageComponentId": null,
+                    "subLinks": []
+                  },
+                  "right_button_text": "Çantalar",
+                  "right_button_background": "#ffffffff",
+                  "right_button_color": "#150672ff",
+                  "right_has_filter": true,
+                  "right_position": "BOTTOM_LEFT"
+                }
+              },
+              {
+                "left_hero": {
+                  "left_image": {
+                    "id": "theme-images/7938a5d3-2410-4f37-8bea-61f3f691d81e",
+                    "altText": null
+                  },
+                  "left_title": "İBB Başkanı Murat Kurum",
+                  "left_button": {
+                    "id": "47f8a469-c5fe-44cb-a4f1-af9c59752e0a",
+                    "linkType": "PAGE",
+                    "label": "Anasayfa",
+                    "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                    "pageType": "INDEX",
+                    "pageComponentId": null,
+                    "subLinks": []
+                  },
+                  "left_button_text": "Siteye Git",
+                  "left_button_background": "#ffffffff",
+                  "left_button_color": "#14008dff",
+                  "left_title_color": "#ffffffff",
+                  "left_has_filter": true,
+                  "left_position": "BOTTOM_RIGHT"
+                },
+                "right_hero": {
+                  "right_image": {
+                    "id": "theme-images/9095be55-59f4-482f-856b-d189b7fe895e",
+                    "altText": null
+                  },
+                  "right_title": "Eski İBB Başkanı Eko",
+                  "right_title_color": "#ffffffff",
+                  "right_button": {
+                    "id": "4ee0a14e-751f-40bc-8a51-00cb09e05b5e",
+                    "linkType": "PAGE",
+                    "label": "Anasayfa",
+                    "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                    "pageType": "INDEX",
+                    "pageComponentId": null,
+                    "subLinks": []
+                  },
+                  "right_button_text": "Öteye Git",
+                  "right_button_background": "#ffffffff",
+                  "right_button_color": "#150672ff",
+                  "right_has_filter": true,
+                  "right_position": "BOTTOM_RIGHT"
+                }
+              }
+            ]
           }
         }
       ],
@@ -900,7 +1037,397 @@
       ]
     }
   },
-  "customData": [],
+  "customData": [
+    {
+      "id": "6d099ac8-6402-488e-abf3-646f60d219d4",
+      "name": "Position",
+      "typescriptName": "Position",
+      "translations": {},
+      "type": "ENUM",
+      "isRequired": true,
+      "enumOptions": [
+        {
+          "id": "cb4aaa51-f2fa-40d5-968b-caf3287fb238",
+          "displayName": "Sol Üst",
+          "value": "TOP_LEFT",
+          "translations": {}
+        },
+        {
+          "id": "7cf73144-4be1-4a67-9499-42f030a0b39f",
+          "displayName": "Üst Orta",
+          "value": "TOP_CENTER",
+          "translations": {}
+        },
+        {
+          "id": "a23c77aa-d62e-4936-8ac6-590f1d7e18df",
+          "displayName": "Sağ Üst",
+          "value": "TOP_RIGHT",
+          "translations": {}
+        },
+        {
+          "id": "3232cfac-5a1e-4cd0-a5fa-8b6a532e670b",
+          "displayName": "Sol Orta",
+          "value": "LEFT_CENTER",
+          "translations": {}
+        },
+        {
+          "id": "c34ed7a3-2f99-4196-b968-2c435c8f5661",
+          "displayName": "Orta",
+          "value": "CENTER",
+          "translations": {}
+        },
+        {
+          "id": "586bdeb2-ed59-4fc8-8de1-87f4b987eeb9",
+          "displayName": "Sağ Orta",
+          "value": "RIGHT_CENTER",
+          "translations": {}
+        },
+        {
+          "id": "9c10c1e2-cd84-45c4-8627-79fcbca6cace",
+          "displayName": "Alt Orta",
+          "value": "BOTTOM_CENTER",
+          "translations": {}
+        },
+        {
+          "id": "e9583868-b2d7-450b-8121-3f746a6ffbdb",
+          "displayName": "Sol Alt",
+          "value": "BOTTOM_LEFT",
+          "translations": {}
+        },
+        {
+          "id": "b1870bd5-5a8a-490b-bc9d-1903a36aa09f",
+          "displayName": "Sağ Alt",
+          "value": "BOTTOM_RIGHT",
+          "translations": {}
+        }
+      ],
+      "sliderData": {},
+      "groupId": "",
+      "isRoot": true,
+      "level": 0,
+      "excludedFields": [],
+      "excludedFieldsCategory": []
+    },
+    {
+      "id": "13af7d3a-ec2f-410e-bdf5-123872cadc77",
+      "name": "Slides",
+      "translations": {},
+      "type": "DYNAMIC_LIST",
+      "isRequired": true,
+      "nestedData": [
+        {
+          "id": "66b281e0-b1f4-4607-bd16-8d929cce2f22",
+          "name": "Slide",
+          "typescriptName": "Slide",
+          "translations": {},
+          "type": "OBJECT",
+          "isRequired": true,
+          "nestedData": [
+            {
+              "id": "d5061ecf-0361-4747-9d03-6a29e07738f9",
+              "name": "Sol Frame",
+              "typescriptName": "LeftFrame",
+              "translations": {},
+              "type": "OBJECT",
+              "isRequired": true,
+              "key": "left_hero",
+              "nestedData": [
+                {
+                  "id": "54fc7862-b462-4462-9efe-9b0eff20550e",
+                  "name": "Görsel",
+                  "translations": {},
+                  "type": "IMAGE",
+                  "isRequired": true,
+                  "key": "left_image",
+                  "sliderData": {},
+                  "groupId": "2e54945e-c534-4bff-8750-44dffdb4390d",
+                  "isRoot": false,
+                  "level": 3,
+                  "excludedFields": [],
+                  "excludedFieldsCategory": []
+                },
+                {
+                  "id": "f39adfc5-6ebc-4784-8d44-8251caf02687",
+                  "name": "Metin",
+                  "translations": {},
+                  "type": "TEXT",
+                  "isRequired": true,
+                  "key": "left_title",
+                  "sliderData": {},
+                  "groupId": "2e54945e-c534-4bff-8750-44dffdb4390d",
+                  "isRoot": false,
+                  "level": 3,
+                  "excludedFields": [],
+                  "excludedFieldsCategory": []
+                },
+                {
+                  "id": "6b1b5f14-1e3b-4421-80cb-4d27268f95ec",
+                  "name": "Metin Rengi",
+                  "translations": {},
+                  "type": "COLOR",
+                  "isRequired": true,
+                  "key": "left_title_color",
+                  "sliderData": {},
+                  "groupId": "2e54945e-c534-4bff-8750-44dffdb4390d",
+                  "isRoot": false,
+                  "level": 3,
+                  "excludedFields": [],
+                  "excludedFieldsCategory": []
+                },
+                {
+                  "id": "8b3b9f37-9e8a-4d31-a896-ee85199f910a",
+                  "name": "Buton",
+                  "translations": {},
+                  "type": "LINK",
+                  "isRequired": true,
+                  "key": "left_button",
+                  "sliderData": {},
+                  "groupId": "2e54945e-c534-4bff-8750-44dffdb4390d",
+                  "isRoot": false,
+                  "level": 3,
+                  "excludedFields": [],
+                  "excludedFieldsCategory": []
+                },
+                {
+                  "id": "c3af8401-96ed-44dc-8658-12ebd06cdc2b",
+                  "name": "Buton Metni",
+                  "translations": {},
+                  "type": "TEXT",
+                  "isRequired": true,
+                  "key": "left_button_text",
+                  "sliderData": {},
+                  "groupId": "2e54945e-c534-4bff-8750-44dffdb4390d",
+                  "isRoot": false,
+                  "level": 3,
+                  "excludedFields": [],
+                  "excludedFieldsCategory": []
+                },
+                {
+                  "id": "922452a1-8ea9-472e-af08-163f05051ff0",
+                  "name": "Buton Arka Plan Rengi",
+                  "translations": {},
+                  "type": "COLOR",
+                  "isRequired": true,
+                  "key": "left_button_background",
+                  "sliderData": {},
+                  "groupId": "2e54945e-c534-4bff-8750-44dffdb4390d",
+                  "isRoot": false,
+                  "level": 3,
+                  "excludedFields": [],
+                  "excludedFieldsCategory": []
+                },
+                {
+                  "id": "76597313-2bd2-463d-b5c3-57adddbfaf43",
+                  "name": "Buton Metin Rengi",
+                  "translations": {},
+                  "type": "COLOR",
+                  "isRequired": true,
+                  "key": "left_button_color",
+                  "sliderData": {},
+                  "groupId": "2e54945e-c534-4bff-8750-44dffdb4390d",
+                  "isRoot": false,
+                  "level": 3,
+                  "excludedFields": [],
+                  "excludedFieldsCategory": []
+                },
+                {
+                  "id": "24e4dbab-5f66-4701-87ac-d67572fc5567",
+                  "name": "Görsele Filtre Ekle",
+                  "translations": {},
+                  "type": "BOOLEAN",
+                  "isRequired": false,
+                  "key": "left_has_filter",
+                  "sliderData": {},
+                  "groupId": "2e54945e-c534-4bff-8750-44dffdb4390d",
+                  "isRoot": false,
+                  "level": 3,
+                  "excludedFields": [],
+                  "excludedFieldsCategory": []
+                },
+                {
+                  "id": "a8b30f29-7f0d-432e-ab0c-d77625307bf9",
+                  "name": "Konumlandırma",
+                  "translations": {},
+                  "type": "CUSTOM",
+                  "isRequired": true,
+                  "key": "left_position",
+                  "customDataId": "6d099ac8-6402-488e-abf3-646f60d219d4",
+                  "sliderData": {},
+                  "groupId": "2e54945e-c534-4bff-8750-44dffdb4390d",
+                  "isRoot": false,
+                  "level": 3,
+                  "excludedFields": [],
+                  "excludedFieldsCategory": []
+                }
+              ],
+              "sliderData": {},
+              "groupId": "",
+              "isRoot": false,
+              "level": 2,
+              "excludedFields": [],
+              "excludedFieldsCategory": []
+            },
+            {
+              "id": "34f4e7fe-19bb-4f16-8715-dd9ab8dafc1a",
+              "name": "Sağ Frame",
+              "typescriptName": "RightFrame",
+              "translations": {},
+              "type": "OBJECT",
+              "isRequired": true,
+              "key": "right_hero",
+              "nestedData": [
+                {
+                  "id": "4b5f0afc-a5f8-490f-aa43-ba5ad72cf60f",
+                  "name": "Görsel",
+                  "translations": {},
+                  "type": "IMAGE",
+                  "isRequired": true,
+                  "key": "right_image",
+                  "sliderData": {},
+                  "groupId": "6a90756d-4681-4d88-80c0-7d287d648be8",
+                  "isRoot": false,
+                  "level": 3,
+                  "excludedFields": [],
+                  "excludedFieldsCategory": []
+                },
+                {
+                  "id": "9fc6e2d9-d53c-4f00-91de-57da5f6e8e36",
+                  "name": "Metin",
+                  "translations": {},
+                  "type": "TEXT",
+                  "isRequired": true,
+                  "key": "right_title",
+                  "sliderData": {},
+                  "groupId": "6a90756d-4681-4d88-80c0-7d287d648be8",
+                  "isRoot": false,
+                  "level": 3,
+                  "excludedFields": [],
+                  "excludedFieldsCategory": []
+                },
+                {
+                  "id": "e65d328b-dbbf-442d-ab53-ccd34a6d22af",
+                  "name": "Metin Rengi",
+                  "translations": {},
+                  "type": "COLOR",
+                  "isRequired": true,
+                  "key": "right_title_color",
+                  "sliderData": {},
+                  "groupId": "6a90756d-4681-4d88-80c0-7d287d648be8",
+                  "isRoot": false,
+                  "level": 3,
+                  "excludedFields": [],
+                  "excludedFieldsCategory": []
+                },
+                {
+                  "id": "42db248f-8a6c-4a69-b26f-2c7fcc85e241",
+                  "name": "Buton",
+                  "translations": {},
+                  "type": "LINK",
+                  "isRequired": true,
+                  "key": "right_button",
+                  "sliderData": {},
+                  "groupId": "6a90756d-4681-4d88-80c0-7d287d648be8",
+                  "isRoot": false,
+                  "level": 3,
+                  "excludedFields": [],
+                  "excludedFieldsCategory": []
+                },
+                {
+                  "id": "e844b042-b8a1-4203-88d4-5d6785de0e00",
+                  "name": "Buton Metni",
+                  "translations": {},
+                  "type": "TEXT",
+                  "isRequired": true,
+                  "key": "right_button_text",
+                  "sliderData": {},
+                  "groupId": "6a90756d-4681-4d88-80c0-7d287d648be8",
+                  "isRoot": false,
+                  "level": 3,
+                  "excludedFields": [],
+                  "excludedFieldsCategory": []
+                },
+                {
+                  "id": "0d2595fb-55e5-4b1e-88d7-807cb9a019f5",
+                  "name": "Buton Arka Plan Rengi",
+                  "translations": {},
+                  "type": "COLOR",
+                  "isRequired": true,
+                  "key": "right_button_background",
+                  "sliderData": {},
+                  "groupId": "6a90756d-4681-4d88-80c0-7d287d648be8",
+                  "isRoot": false,
+                  "level": 3,
+                  "excludedFields": [],
+                  "excludedFieldsCategory": []
+                },
+                {
+                  "id": "7687f55c-ba48-4235-bcb5-e23e9551ee3d",
+                  "name": "Buton Metin Rengi",
+                  "translations": {},
+                  "type": "COLOR",
+                  "isRequired": true,
+                  "key": "right_button_color",
+                  "sliderData": {},
+                  "groupId": "6a90756d-4681-4d88-80c0-7d287d648be8",
+                  "isRoot": false,
+                  "level": 3,
+                  "excludedFields": [],
+                  "excludedFieldsCategory": []
+                },
+                {
+                  "id": "e65bdb32-3996-4a0c-acf7-4b72a8f37f95",
+                  "name": "Görsele Filtre Ekle",
+                  "translations": {},
+                  "type": "BOOLEAN",
+                  "isRequired": false,
+                  "key": "right_has_filter",
+                  "sliderData": {},
+                  "groupId": "6a90756d-4681-4d88-80c0-7d287d648be8",
+                  "isRoot": false,
+                  "level": 3,
+                  "excludedFields": [],
+                  "excludedFieldsCategory": []
+                },
+                {
+                  "id": "6e545388-eb22-4b7e-aadc-d51e9dc75f6f",
+                  "name": "Konumlandırma",
+                  "translations": {},
+                  "type": "CUSTOM",
+                  "isRequired": true,
+                  "key": "right_position",
+                  "customDataId": "6d099ac8-6402-488e-abf3-646f60d219d4",
+                  "sliderData": {},
+                  "groupId": "6a90756d-4681-4d88-80c0-7d287d648be8",
+                  "isRoot": false,
+                  "level": 3,
+                  "excludedFields": [],
+                  "excludedFieldsCategory": []
+                }
+              ],
+              "sliderData": {},
+              "groupId": "",
+              "isRoot": false,
+              "level": 2,
+              "excludedFields": [],
+              "excludedFieldsCategory": []
+            }
+          ],
+          "sliderData": {},
+          "groupId": "",
+          "isRoot": false,
+          "level": 1,
+          "excludedFields": [],
+          "excludedFieldsCategory": []
+        }
+      ],
+      "sliderData": {},
+      "groupId": "",
+      "isRoot": true,
+      "level": 0,
+      "excludedFields": [],
+      "excludedFieldsCategory": []
+    }
+  ],
   "groups": [
     {
       "id": "2e54945e-c534-4bff-8750-44dffdb4390d",

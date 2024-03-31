@@ -62,7 +62,7 @@ const Banner: React.FC<BannerProps> = (props) => {
             <div className="w-full h-full absolute z-[1] bg-black bg-opacity-35 top-0 left-0" />
           )}
           <h6
-            className={`relative z-[2] text-xl md:text-base xs:text-sm`}
+            className={`relative z-[2] text-xl md:text-base xs:text-sm w-full h-full`}
             style={rightFrameTextStyle}
           >
             {rightFrameText}

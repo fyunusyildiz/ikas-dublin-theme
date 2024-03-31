@@ -1,7 +1,7 @@
-import Component0 from "src/components/banner";
+import Component0 from "src/components/slider";
 
   const Components = {
-    "b2a03d8a-6dc6-4be3-82c2-544492395fb7": Component0
+    "e26b43b6-b0fe-40af-a56a-9455fd0b6700": Component0
   };
   
 export default Components;
