@@ -20,6 +20,12 @@ export type Slide = {
 	right_hero: RightFrame;
 };
 
+export enum TextPosition{ 
+	"LEFT" = "LEFT",
+	"CENTER" = "CENTER",
+	"RIGHT" = "RIGHT",
+};
+
 export type LeftFrame = { 
 	left_image: IkasImage;
 	left_title: string;
@@ -63,5 +69,13 @@ export type BannerProps = {
 
 export type SliderProps = {
 	slides?: Slide[];
+};
+
+export type AnnouncementProps = {
+	text: string;
+	link: IkasNavigationLink;
+	backgroundColor: string;
+	textColor: string;
+	textAlign: TextPosition;
 };
 

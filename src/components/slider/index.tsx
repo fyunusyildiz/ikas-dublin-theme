@@ -1,13 +1,8 @@
-import * as React from "react";
-import { observer } from "mobx-react-lite";
 import { Image, Link } from "@ikas/storefront";
+import { observer } from "mobx-react-lite";
+import * as React from "react";
 
-import {
-  LeftFrame,
-  Position,
-  Slide,
-  SliderProps,
-} from "../__generated__/types";
+import { Position, Slide, SliderProps } from "../__generated__/types";
 
 import {
   ArrowLeft as IconArrowLeft,
@@ -103,7 +98,12 @@ const Slider: React.FC<SliderProps> = ({ slides }) => {
     <div className={styles.container}>
       <div ref={sliderRef} className={styles.slider}>
         {slides?.map((slide, index) => (
-          <div key={index} className={"snap-start relative flex-[0_0_100%] w-full flex flex-wrap"}>
+          <div
+            key={index}
+            className={
+              "snap-start relative flex-[0_0_100%] w-full flex flex-wrap"
+            }
+          >
             <div className={"relative w-1/2 h-full md:w-full xs:h-1/2"}>
               <Image
                 layout="fill"
@@ -113,13 +113,22 @@ const Slider: React.FC<SliderProps> = ({ slides }) => {
                 useBlur={true}
                 sizes="100vw"
               />
-              <div className={`absolute top-0 left-0 bottom-0 right-0 p-10 md:p-5 mx-auto flex flex-col justify-center z-[2] gap-y-3 xs:gap-y-2 ${getLeftSlidePositionClass(slide)}`}>
-                <div className={"z-[2] text-xl md:text-base xs:text-sm"} style={leftSlideTextColor(slide)}>
+              <div
+                className={`absolute top-0 left-0 bottom-0 right-0 p-10 md:p-5 mx-auto flex flex-col justify-center z-[2] gap-y-3 xs:gap-y-2 ${getLeftSlidePositionClass(
+                  slide
+                )}`}
+              >
+                <div
+                  className={"z-[2] text-xl md:text-base xs:text-sm"}
+                  style={leftSlideTextColor(slide)}
+                >
                   {slide.left_hero.left_title}
                 </div>
                 <Link href={slide.left_hero.left_button} passHref>
                   <a
-                    className={"cursor-pointer px-10 py-[15px] rounded-[35px] text-lg z-[2] md:px-5 md:py-2 md:text-base xs:text-sm"}
+                    className={
+                      "cursor-pointer px-10 py-[15px] rounded-[35px] text-lg z-[2] md:px-5 md:py-2 md:text-base xs:text-sm"
+                    }
                     style={leftSlideButtonStyle(slide)}
                   >
                     {slide.left_hero.left_button_text}
@@ -139,7 +148,11 @@ const Slider: React.FC<SliderProps> = ({ slides }) => {
                 useBlur={true}
                 sizes="100vw"
               />
-              <div className={`absolute top-0 left-0 bottom-0 right-0 p-10 md:p-5 mx-auto flex flex-col justify-center z-[2] gap-y-3 xs:gap-y-2 ${getRightSlidePositionClass(slide)}`}>
+              <div
+                className={`absolute top-0 left-0 bottom-0 right-0 p-10 md:p-5 mx-auto flex flex-col justify-center z-[2] gap-y-3 xs:gap-y-2 ${getRightSlidePositionClass(
+                  slide
+                )}`}
+              >
                 <div
                   className={"z-[2] text-xl md:text-base xs:text-sm"}
                   style={rightSlideTextColor(slide)}
@@ -148,7 +161,9 @@ const Slider: React.FC<SliderProps> = ({ slides }) => {
                 </div>
                 <Link href={slide.right_hero.right_button} passHref>
                   <a
-                    className={"cursor-pointer px-10 py-[15px] rounded-[35px] text-lg z-[2] md:px-5 md:py-2 md:text-base xs:text-sm"}
+                    className={
+                      "cursor-pointer px-10 py-[15px] rounded-[35px] text-lg z-[2] md:px-5 md:py-2 md:text-base xs:text-sm"
+                    }
                     style={rightSlideButtonStyle(slide)}
                   >
                     {slide.right_hero.right_button_text}
