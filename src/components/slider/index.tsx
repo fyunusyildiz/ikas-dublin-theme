@@ -136,7 +136,7 @@ const Slider: React.FC<SliderProps> = ({ slides }) => {
                 </Link>
               </div>
               {slide.left_hero.left_has_filter && (
-                <div className="w-full h-full absolute z-[1] bg-black bg-opacity-45 top-0 left-0" />
+                <div className="w-full h-full absolute z-[1] bg-black bg-opacity-35 top-0 left-0" />
               )}
             </div>
             <div className={"relative w-1/2 h-full md:w-full xs:h-1/2"}>
@@ -171,7 +171,7 @@ const Slider: React.FC<SliderProps> = ({ slides }) => {
                 </Link>
               </div>
               {slide.right_hero.right_has_filter && (
-                <div className="w-full h-full absolute z-[1] bg-black bg-opacity-45 top-0 left-0" />
+                <div className="w-full h-full absolute z-[1] bg-black bg-opacity-35 top-0 left-0" />
               )}
             </div>
             {hasPrevSlide && (

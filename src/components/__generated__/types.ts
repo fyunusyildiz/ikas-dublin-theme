@@ -79,3 +79,69 @@ export type AnnouncementProps = {
 	textAlign: TextPosition;
 };
 
+export type CategoryBannerWithTwoProps = {
+	firstCategoryLink: IkasNavigationLink;
+	firstCategoryImage: IkasImage;
+	firstCategoryText: string;
+	firstCategoryTextBackground: string;
+	firstCategoryTextColor: string;
+	firstCategoryHasFilter?: boolean;
+	secondCategoryLink: IkasNavigationLink;
+	secondCategoryImage: IkasImage;
+	secondCategoryText: string;
+	secondCategoryTextBackground: string;
+	secondCategoryTextColor: string;
+	secondCategoryHasFilter?: boolean;
+	hasMarginTop?: boolean;
+};
+
+export type CategoryBannerWithThreeProps = {
+	firstCategoryLink: IkasNavigationLink;
+	firstCategoryImage: IkasImage;
+	firstCategoryText: string;
+	firstCategoryTextBackground: string;
+	firstCategoryTextColor: string;
+	firstCategoryHasFilter?: boolean;
+	secondCategoryLink: IkasNavigationLink;
+	secondCategoryImage: IkasImage;
+	secondCategoryText: string;
+	secondCategoryTextBackground: string;
+	secondCategoryTextColor: string;
+	secondCategoryHasFilter?: boolean;
+	thirdCategoryLink: IkasNavigationLink;
+	thirdCategoryImage: IkasImage;
+	thirdCategoryText: string;
+	thirdCategoryTextBackground: string;
+	thirdCategoryTextColor: string;
+	thirdCategoryHasFilter?: boolean;
+	hasMarginTop?: boolean;
+};
+
+export type CategoryBannerWithFourProps = {
+	firstCategoryLink: IkasNavigationLink;
+	firstCategoryImage: IkasImage;
+	firstCategoryText: string;
+	firstCategoryTextBackground: string;
+	firstCategoryTextColor: string;
+	firstCategoryHasFilter?: boolean;
+	secondCategoryLink: IkasNavigationLink;
+	secondCategoryImage: IkasImage;
+	secondCategoryText: string;
+	secondCategoryTextBackground: string;
+	secondCategoryTextColor: string;
+	secondCategoryHasFilter?: boolean;
+	thirdCategoryLink: IkasNavigationLink;
+	thirdCategoryImage: IkasImage;
+	thirdCategoryText: string;
+	thirdCategoryTextBackground: string;
+	thirdCategoryTextColor: string;
+	thirdCategoryHasFilter?: boolean;
+	fourthCategoryLink: IkasNavigationLink;
+	fourthCategoryImage: IkasImage;
+	fourthCategoryText: string;
+	fourthCategoryTextBackground: string;
+	fourthCategoryTextColor: string;
+	fourthCategoryHasFilter?: boolean;
+	hasMarginTop?: boolean;
+};
+
