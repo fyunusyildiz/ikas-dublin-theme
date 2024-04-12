@@ -1,6 +1,7 @@
 import {
 	IkasImage,
 	IkasNavigationLink,
+	IkasSlider,
 } from "@ikas/storefront"
 
 export enum Position{ 
@@ -143,5 +144,16 @@ export type CategoryBannerWithFourProps = {
 	fourthCategoryTextColor: string;
 	fourthCategoryHasFilter?: boolean;
 	hasMarginTop?: boolean;
+};
+
+export type HeaderProps = {
+	logo: IkasImage;
+	logoMaxWidth: IkasSlider;
+	logoMaxHeight: IkasSlider;
+	headerBackgroundColor: string;
+	isCentered?: boolean;
+	links: IkasNavigationLink[];
+	headerLinkColor: string;
+	headerSublinkColor: string;
 };
 
