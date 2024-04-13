@@ -1,18 +1,17 @@
-import React, { useState } from "react";
-import { observer } from "mobx-react-lite";
 import { IkasNavigationLink, Link, useStore } from "@ikas/storefront";
+import { observer } from "mobx-react-lite";
+import { useState } from "react";
 
 import UIStore from "src/store/ui-store";
 
 import { HeaderProps } from "src/components/__generated__/types";
-import FavoriteSVG from "src/components/svg/favorite";
+import MaxQuantityPerCartModal from "src/components/components/modal-max-quantity-per-cart";
 import AccountSVG from "src/components/svg/account";
 import CartSVG from "src/components/svg/cart";
-import { SearchInput } from "src/components/header/desktop";
-import MaxQuantityPerCartModal from "src/components/components/modal-max-quantity-per-cart";
+import FavoriteSVG from "src/components/svg/favorite";
 
-import IOMenuSVG from "./svg/io-menu";
 import IOCloseSVG from "./svg/io-close";
+import IOMenuSVG from "./svg/io-menu";
 
 import * as S from "./style";
 
@@ -24,7 +23,6 @@ const MobileHeader = (props: HeaderProps) => {
           <LeftSide {...props} />
           <RightSide {...props} />
         </S.Row>
-        <SearchInput {...props} />
         <Sidenav {...props} />
       </S.Header>
       <MaxQuantityPerCartModal />

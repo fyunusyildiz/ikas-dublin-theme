@@ -1,18 +1,19 @@
 import { Link, useStore } from "@ikas/storefront";
 import { observer } from "mobx-react-lite";
 
-import { HeaderProps } from "src/components/__generated__/types";
+import { HeaderProps, TextPosition } from "src/components/__generated__/types";
 
 import MaxQuantityPerCartModal from "src/components/components/modal-max-quantity-per-cart";
 import AccountSVG from "src/components/svg/account";
 import CartSVG from "src/components/svg/cart";
 import FavoriteSVG from "src/components/svg/favorite";
 import ArrowDown from "src/components/header/desktop/svg/arrow-down";
-import { useState } from "react";
+import { useState, useCallback, useMemo } from "react";
 
 const DesktopHeader = (props: HeaderProps) => {
   return (
     <>
+      {props.hasAnnouncement && <Announcement {...props} />}
       <header style={{ backgroundColor: props.headerBackgroundColor }}>
         <div className="w-full px-20 py-5">
           <div className="w-full flex justify-between items-center">
@@ -28,6 +29,40 @@ const DesktopHeader = (props: HeaderProps) => {
 };
 
 export default observer(DesktopHeader);
+
+const Announcement: React.FC<HeaderProps> = (props) => {
+  const { announcementText } = props;
+
+  const getTextPosition = useCallback(() => {
+    switch (props.announcementTextAlign) {
+      case TextPosition.LEFT:
+        return "text-left";
+      case TextPosition.CENTER:
+        return "text-center";
+      case TextPosition.RIGHT:
+        return "text-right";
+      default:
+        return "text-center";
+    }
+  }, [props.announcementTextAlign]);
+  const getStyle = useMemo(() => {
+    return {
+      color: props.announcementTextColor ?? "white",
+      backgroundColor: props.announcementBgColor ?? "black",
+    };
+  }, [props.announcementTextColor, props.announcementBgColor]);
+
+  return (
+    <Link href={props.announcementLink} passHref>
+      <a
+        className={`w-full block text-base px-3 py-2 sm:text-xs ${getTextPosition()}`}
+        style={getStyle}
+      >
+        {announcementText}
+      </a>
+    </Link>
+  );
+};
 
 const LeftSide = (props: HeaderProps) => {
   const { logo, logoMaxHeight, logoMaxWidth } = props;
