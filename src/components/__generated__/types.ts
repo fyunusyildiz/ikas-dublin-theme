@@ -155,5 +155,7 @@ export type HeaderProps = {
 	links: IkasNavigationLink[];
 	headerLinkColor: string;
 	headerSublinkColor: string;
+	headerLinkHoverBg: string;
+	headerLinkHoverColor: string;
 };
 
