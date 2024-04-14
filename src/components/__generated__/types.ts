@@ -157,8 +157,11 @@ export type HeaderProps = {
 	announcementLink: IkasNavigationLink;
 	isCentered?: boolean;
 	logo: IkasImage;
+	transparentHeaderLogo?: IkasImage;
 	logoMaxWidth: IkasSlider;
 	logoMaxHeight: IkasSlider;
+	logoMaxWidthMobile: IkasSlider;
+	logoMaxHeightMobile: IkasSlider;
 	links: IkasNavigationLink[];
 	headerLinkColor: string;
 	headerSublinkColor: string;

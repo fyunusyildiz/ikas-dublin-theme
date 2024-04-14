@@ -11,8 +11,7 @@ export const NS = "header";
 
 const Header = (props: HeaderProps) => {
   const { isMobile } = useScreen();
-
-  return <DesktopHeader {...props} />;
+  return isMobile ? <MobileHeader {...props} /> : <DesktopHeader {...props} />;
 };
 
 export default observer(Header);

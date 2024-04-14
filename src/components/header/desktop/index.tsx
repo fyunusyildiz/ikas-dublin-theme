@@ -87,7 +87,21 @@ const Announcement: React.FC<HeaderProps> = (props) => {
 };
 
 const LeftSide = (props: HeaderProps) => {
-  const { logo, logoMaxHeight, logoMaxWidth } = props;
+  const [isScrolled, setIsScrolled] = useState(false);
+  const logo = props.noTransparentHeader
+    ? props.logo
+    : isScrolled
+    ? props.logo
+    : props.transparentHeaderLogo;
+
+  const { logoMaxHeight, logoMaxWidth } = props;
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setIsScrolled(window.scrollY > 20);
+    });
+  }, []);
+
   return (
     <div className="w-auto h-auto">
       <Link passHref href="/">
@@ -101,7 +115,7 @@ const LeftSide = (props: HeaderProps) => {
           >
             <img
               style={{ height: logoMaxHeight.value, width: logoMaxWidth.value }}
-              src={logo.src}
+              src={logo?.src}
             />
           </figure>
         </a>
@@ -162,7 +176,11 @@ const NavItem = (props: { link: LinkProps } & HeaderProps) => {
           style={{
             color: linkHoverState
               ? props.headerLinkHoverColor
-              : props.noTransparentHeader ? props.headerLinkColor : isScrolled ? "black" : "white",
+              : props.noTransparentHeader
+              ? props.headerLinkColor
+              : isScrolled
+              ? "black"
+              : "white",
             backgroundColor: linkHoverState
               ? props.headerLinkHoverBg
               : "transparent",
@@ -174,7 +192,11 @@ const NavItem = (props: { link: LinkProps } & HeaderProps) => {
               fill={
                 linkHoverState
                   ? props.headerLinkHoverColor
-                  : props.noTransparentHeader ? props.headerLinkColor : isScrolled ? "black" : "white"
+                  : props.noTransparentHeader
+                  ? props.headerLinkColor
+                  : isScrolled
+                  ? "black"
+                  : "white"
               }
             />
           )}
