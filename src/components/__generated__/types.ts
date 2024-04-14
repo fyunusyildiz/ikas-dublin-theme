@@ -149,12 +149,13 @@ export type CategoryBannerWithFourProps = {
 export type HeaderProps = {
 	hasAnnouncement?: boolean;
 	announcementText: string;
+	noTransparentHeader?: boolean;
+	headerBackgroundColor: string;
 	announcementBgColor: string;
 	announcementTextColor: string;
 	announcementTextAlign: TextPosition;
 	announcementLink: IkasNavigationLink;
 	isCentered?: boolean;
-	headerBackgroundColor: string;
 	logo: IkasImage;
 	logoMaxWidth: IkasSlider;
 	logoMaxHeight: IkasSlider;

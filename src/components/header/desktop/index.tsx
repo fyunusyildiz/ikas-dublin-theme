@@ -8,18 +8,40 @@ import AccountSVG from "src/components/svg/account";
 import CartSVG from "src/components/svg/cart";
 import FavoriteSVG from "src/components/svg/favorite";
 import ArrowDown from "src/components/header/desktop/svg/arrow-down";
-import { useState, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo, useEffect } from "react";
 
 const DesktopHeader = (props: HeaderProps) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setIsScrolled(window.scrollY > 20);
+    });
+  }, []);
   return (
     <>
-      {props.hasAnnouncement && <Announcement {...props} />}
-      <header style={{ backgroundColor: props.headerBackgroundColor }}>
+      {props.hasAnnouncement && props.noTransparentHeader && (
+        <Announcement {...props} />
+      )}
+      <header
+        className={`w-full transition-all duration-300 ${
+          props.noTransparentHeader
+            ? ""
+            : "fixed top-[0px] z-[999] transition-all duration-300 ease-in-out"
+        } ${isScrolled ? "fixed top-0 z-[999] shadow-sm" : ""}`}
+        style={{
+          backgroundColor: props.noTransparentHeader
+            ? props.headerBackgroundColor
+            : isScrolled
+            ? "white"
+            : "transparent",
+        }}
+      >
         <div className="w-full px-20 py-5">
           <div className="w-full flex justify-between items-center">
             <LeftSide {...props} />
             <Center {...props} />
-            <RightSide />
+            <RightSide {...props} />
           </div>
         </div>
       </header>
@@ -116,6 +138,13 @@ interface LinkProps {
 
 const NavItem = (props: { link: LinkProps } & HeaderProps) => {
   const [linkHoverState, setLinkHoverState] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setIsScrolled(window.scrollY > 20);
+    });
+  }, []);
 
   const toggleLinkHover = () => {
     setLinkHoverState(!linkHoverState);
@@ -133,7 +162,7 @@ const NavItem = (props: { link: LinkProps } & HeaderProps) => {
           style={{
             color: linkHoverState
               ? props.headerLinkHoverColor
-              : props.headerLinkColor,
+              : props.noTransparentHeader ? props.headerLinkColor : isScrolled ? "black" : "white",
             backgroundColor: linkHoverState
               ? props.headerLinkHoverBg
               : "transparent",
@@ -145,7 +174,7 @@ const NavItem = (props: { link: LinkProps } & HeaderProps) => {
               fill={
                 linkHoverState
                   ? props.headerLinkHoverColor
-                  : props.headerLinkColor
+                  : props.noTransparentHeader ? props.headerLinkColor : isScrolled ? "black" : "white"
               }
             />
           )}
@@ -172,27 +201,67 @@ const NavItem = (props: { link: LinkProps } & HeaderProps) => {
   );
 };
 
-const RightSide = observer(() => {
+const RightSide = observer((props: HeaderProps) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setIsScrolled(window.scrollY > 20);
+    });
+  }, []);
   const store = useStore();
   const quantity = store.cartStore.cart?.itemQuantity ?? 0;
   return (
     <div className="flex items-center gap-3">
       <Link href="/account/favorite-products" passHref>
         <a>
-          <FavoriteSVG />
+          <FavoriteSVG
+            stroke={
+              props.noTransparentHeader
+                ? props.headerLinkColor
+                : isScrolled
+                ? "black"
+                : "white"
+            }
+          />
         </a>
       </Link>
       <Link href="/account" passHref>
         <a>
-          <AccountSVG />
+          <AccountSVG
+            stroke={
+              props.noTransparentHeader
+                ? props.headerLinkColor
+                : isScrolled
+                ? "black"
+                : "white"
+            }
+          />
         </a>
       </Link>
       <Link passHref href="/cart">
         <a className="relative">
-          <span className="absolute -right-1 -top-1 rounded-full text-xs">
+          <span
+            className="absolute -right-1 -top-1 rounded-full text-xs"
+            style={{
+              color: props.noTransparentHeader
+                ? props.headerLinkColor
+                : isScrolled
+                ? "black"
+                : "white",
+            }}
+          >
             {quantity}
           </span>
-          <CartSVG />
+          <CartSVG
+            stroke={
+              props.noTransparentHeader
+                ? props.headerLinkColor
+                : isScrolled
+                ? "black"
+                : "white"
+            }
+          />
         </a>
       </Link>
     </div>
