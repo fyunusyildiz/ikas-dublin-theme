@@ -2,6 +2,7 @@ import {
 	IkasImage,
 	IkasNavigationLink,
 	IkasSlider,
+	IkasProduct,
 } from "@ikas/storefront"
 
 export enum Position{ 
@@ -25,6 +26,14 @@ export enum TextPosition{
 	"LEFT" = "LEFT",
 	"CENTER" = "CENTER",
 	"RIGHT" = "RIGHT",
+};
+
+export enum ImageAspectRatio{ 
+	"_1_1" = "1_1",
+	"_16_9" = "16_9",
+	"_3_1" = "3_1",
+	"_4_3" = "4_3",
+	"_21_9" = "21_9",
 };
 
 export type LeftFrame = { 
@@ -167,5 +176,10 @@ export type HeaderProps = {
 	headerSublinkColor: string;
 	headerLinkHoverBg: string;
 	headerLinkHoverColor: string;
+};
+
+export type ProductDetailProps = {
+	product: IkasProduct;
+	imageAspectRatio: ImageAspectRatio;
 };
 
