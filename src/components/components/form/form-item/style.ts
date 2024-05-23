@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { FormItemStatus } from ".";
+import { theme } from "src/styles/styled";
 
 type StyledStatusProp = {
   $status: FormItemStatus;
@@ -28,8 +29,8 @@ export const Help = styled.div<StyledStatusProp>`
   margin-top: 8px;
   font-weight: 300;
   line-height: 28px;
-  font-size: ${({ theme }) => theme.fontSize.sm};
-  color: ${({ theme, $status }) => {
+  font-size: ${theme.fontSize.sm};
+  color: ${({ $status }) => {
     if ($status === "error") {
       return theme.color.red;
     }

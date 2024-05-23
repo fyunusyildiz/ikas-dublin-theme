@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { theme } from "src/styles/styled";
 
 import { FormAlertType } from ".";
 
@@ -12,10 +13,10 @@ export const AlertWrapper = styled.div<AlertProps>`
   padding: 16px;
   padding-right: 20px;
   margin-bottom: 24px;
-  border: 1px solid ${({ theme }) => theme.color.border};
+  border: 1px solid ${theme.color.border};
   border-radius: 8px;
 
-  ${({ $status, theme }) => {
+  ${({ $status }) => {
     if ($status === "error") {
       return css`
         background-color: ${theme.color.red}10;
@@ -26,9 +27,9 @@ export const AlertWrapper = styled.div<AlertProps>`
 
     if ($status === "info") {
       return css`
-        background-color: ${({ theme }) => theme.color.orange}30;
-        border-color: ${({ theme }) => theme.color.orange};
-        color: ${({ theme }) => theme.color.orange};
+        background-color: ${theme.color.orange}30;
+        border-color: ${theme.color.orange};
+        color: ${theme.color.orange};
       `;
     }
 

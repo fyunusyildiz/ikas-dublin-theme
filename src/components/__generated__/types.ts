@@ -194,3 +194,10 @@ export type FooterProps = {
 	socialMediaLinks: IkasNavigationLink[];
 };
 
+export type RegisterProps = {
+	showMarketingEmailCheckbox?: boolean;
+	marketingEmailCheckboxText: string;
+	isMarketingEmailRequired?: boolean;
+	marketingEmailDefaultChecked?: boolean;
+};
+
