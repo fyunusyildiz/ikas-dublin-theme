@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { FormItemStatus } from "../form/form-item";
+import { theme } from "src/styles/styled";
 
 export const InputWrapper = styled.div`
   position: relative;
@@ -10,7 +11,7 @@ export const Prefix = styled.span`
   top: 50%;
   transform: translateY(-50%);
   left: 8px;
-  border-right: 1px solid ${({ theme }) => theme.color.inputBorder};
+  border-right: 1px solid ${theme.color.inputBorder};
   padding-right: 4px;
   height: 100%;
   display: flex;
@@ -36,7 +37,7 @@ export const Input = styled.input<StyledInputProps>`
     return `padding: 0 8px;`;
   }}
 
-  background-color: ${({ theme, $status }) => {
+  background-color: ${({ $status }) => {
     if ($status === "error") {
       return theme.color.red + "25";
     }
@@ -44,7 +45,7 @@ export const Input = styled.input<StyledInputProps>`
   }};
 
   border: 1px solid
-    ${({ theme, $status }) => {
+    ${({ $status }) => {
       if ($status === "error") {
         return theme.color.red;
       }
@@ -52,13 +53,9 @@ export const Input = styled.input<StyledInputProps>`
       return theme.color.inputBorder;
     }};
 
-  ${({ theme }) => {
-    return css`
       color: ${theme.color.inputText};
       font-size: ${theme.fontSize.sm};
       border-radius: ${theme.inputBorderRadius};
-    `;
-  }};
 
   :disabled {
     color: #dadada;
@@ -78,13 +75,13 @@ export const Length = styled.div`
 
 export const DatePicker = styled.input<StatusProps>`
   padding: 0 8px;
-  font-size: ${({ theme }) => theme.fontSize.sm};
-  border-radius: ${({ theme }) => theme.inputBorderRadius};
+  font-size: ${theme.fontSize.sm};
+  border-radius: ${theme.inputBorderRadius};
 
   width: 100%;
   height: 42px;
 
-  background-color: ${({ theme, $status }) => {
+  background-color: ${({ $status }) => {
     if ($status === "error") {
       return theme.color.red + "25";
     }
@@ -92,7 +89,7 @@ export const DatePicker = styled.input<StatusProps>`
   }};
 
   border: 1px solid
-    ${({ theme, $status }) => {
+    ${({ $status }) => {
       if ($status === "error") {
         return theme.color.red;
       }
@@ -101,6 +98,6 @@ export const DatePicker = styled.input<StatusProps>`
     }};
 
   :disabled {
-    background-color: ${({ theme }) => theme.color.inputBorder};
+    background-color: ${theme.color.inputBorder};
   }
 `;

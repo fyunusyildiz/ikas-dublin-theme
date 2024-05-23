@@ -183,3 +183,14 @@ export type ProductDetailProps = {
 	imageAspectRatio: ImageAspectRatio;
 };
 
+export type FooterProps = {
+	brandTextTitle: string;
+	brandText: string;
+	newsletterTitle: string;
+	newsletterText: string;
+	informationBlockTitle: string;
+	informationLinks: IkasNavigationLink[];
+	socialMediaTitle: string;
+	socialMediaLinks: IkasNavigationLink[];
+};
+

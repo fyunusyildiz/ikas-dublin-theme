@@ -1,5 +1,6 @@
 import breakpoints from "src/styles/breakpoints";
 import styled from "styled-components";
+import { theme } from "src/styles/styled";
 
 type ModalProps = {
   $visible: boolean;
@@ -13,8 +14,8 @@ export const Modal = styled.div<ModalProps>`
   left: 0;
   padding: 20px;
   overflow: hidden auto;
-  background-color: ${({ theme }) => theme.color.black}40;
-  z-index: ${({ theme }) => theme.zIndex.modal};
+  background-color: ${theme.color.black}40;
+  z-index: ${theme.zIndex.modal};
 
   display: ${({ $visible }) => ($visible ? "flex" : "none")};
 `;
@@ -27,7 +28,7 @@ export const ModalInner = styled.div.attrs({
   margin: auto;
   width: 100%;
   max-width: 500px;
-  background-color: ${({ theme }) => theme.color.white};
+  background-color: ${theme.color.white};
   border-radius: 12px;
 
   @media screen and (max-width: ${breakpoints.md}) {
