@@ -201,3 +201,37 @@ export type RegisterProps = {
 	marketingEmailDefaultChecked?: boolean;
 };
 
+export type CategoryBannerWithFiveProps = {
+	hasMarginTop?: boolean;
+	firstCategoryLink: IkasNavigationLink;
+	firstCategoryImage: IkasImage;
+	firstCategoryText: string;
+	firstCategoryTextBackground: string;
+	firstCategoryTextColor: string;
+	firstCategoryHasFilter: boolean;
+	secondCategoryLink: IkasNavigationLink;
+	secondCategoryImage: IkasImage;
+	secondCategoryText: string;
+	secondCategoryTextBackground: string;
+	secondCategoryTextColor: string;
+	secondCategoryHasFilter: boolean;
+	thirdCategoryLink: IkasNavigationLink;
+	thirdCategoryImage: IkasImage;
+	thirdCategoryText: string;
+	thirdCategoryTextBackground: string;
+	thirdCategoryTextColor: string;
+	thirdCategoryHasFilter: boolean;
+	fourthCategoryLink: IkasNavigationLink;
+	fourthCategoryImage: IkasImage;
+	fourthCategoryText: string;
+	fourthCategoryTextBackground: string;
+	fourthCategoryTextColor: string;
+	fourthCategoryHasFilter: boolean;
+	fifthCategoryLink: IkasNavigationLink;
+	fifthCategoryImage: IkasImage;
+	fifthCategoryText: string;
+	fifthCategoryTextBackground: string;
+	fifthCategoryTextColor: string;
+	fifthCategoryHasFilter: boolean;
+};
+
