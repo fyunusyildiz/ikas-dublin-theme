@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "src/styles/styled";
 
 export const Pagination = styled.footer`
   display: flex;
@@ -12,7 +13,7 @@ export const Pagination = styled.footer`
 
 export const Button = styled.button`
   :disabled {
-    color: ${({ theme }) => theme.color.secondaryText};
+    color: ${theme.color.secondaryText};
   }
 `;
 

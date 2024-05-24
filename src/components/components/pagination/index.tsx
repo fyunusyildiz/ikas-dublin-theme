@@ -37,13 +37,13 @@ const Pagination = (props: Props) => {
 
   if (!count) return null;
   return (
-    <S.Pagination>
+    <footer className="w-full mt-10 flex items-center justify-center gap-5">
       <S.PrevButton
         disabled={prevButtonDisabled}
         title={t("pagination.previousPage")}
         onClick={onPreviousClick}
       >
-        {t("pagination.prev")}
+        Önceki
       </S.PrevButton>
       <div>
         {page} / {pageCount}
@@ -53,9 +53,9 @@ const Pagination = (props: Props) => {
         title={t("pagination.nextPage")}
         onClick={onNextClick}
       >
-        {t("pagination.next")}
+        Sonraki
       </S.NextButton>
-    </S.Pagination>
+    </footer>
   );
 };
 

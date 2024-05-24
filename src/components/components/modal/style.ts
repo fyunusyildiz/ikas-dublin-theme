@@ -15,7 +15,7 @@ export const Modal = styled.div<ModalProps>`
   padding: 20px;
   overflow: hidden auto;
   background-color: ${theme.color.black}40;
-  z-index: ${theme.zIndex.modal};
+  z-index: 9999;
 
   display: ${({ $visible }) => ($visible ? "flex" : "none")};
 `;

@@ -3,6 +3,8 @@ import {
 	IkasNavigationLink,
 	IkasSlider,
 	IkasProduct,
+	IkasCategory,
+	IkasProductList,
 } from "@ikas/storefront"
 
 export enum Position{ 
@@ -233,5 +235,10 @@ export type CategoryBannerWithFiveProps = {
 	fifthCategoryTextBackground: string;
 	fifthCategoryTextColor: string;
 	fifthCategoryHasFilter: boolean;
+};
+
+export type PageCategoryProps = {
+	category: IkasCategory;
+	productList: IkasProductList;
 };
 
