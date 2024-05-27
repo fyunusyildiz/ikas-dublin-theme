@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { FormItemStatus } from "../form/form-item";
+import { theme } from "src/styles/styled";
 
 type StyledSelectProps = {
   $status: FormItemStatus;
@@ -12,7 +13,7 @@ export const Select = styled.select<StyledSelectProps>`
   padding: 12px 32px 12px 16px;
 
   color: #000;
-  background-color: ${({ theme, $status }) => {
+  background-color: ${({ $status }) => {
     if ($status === "error") {
       return theme.color.red + "25";
     }
@@ -20,7 +21,7 @@ export const Select = styled.select<StyledSelectProps>`
   }};
 
   border: 1px solid
-    ${({ theme, $status }) => {
+    ${({ $status }) => {
       if ($status === "error") {
         return theme.color.red;
       }

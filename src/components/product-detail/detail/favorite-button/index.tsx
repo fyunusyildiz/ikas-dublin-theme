@@ -1,17 +1,14 @@
-import React from "react";
-import { observer } from "mobx-react-lite";
 import { useTranslation } from "@ikas/storefront";
+import { observer } from "mobx-react-lite";
 
-import useFavorite from "./useFavorite";
-import Tooltip from "src/components/components/tooltip";
 import { ProductDetailProps } from "src/components/__generated__/types";
+import Tooltip from "src/components/components/tooltip";
+import useFavorite from "./useFavorite";
 // import { Loading } from "src/components/components/button";
 import { NS } from "src/components/product-detail";
 import ModalLoginRequired from "../components/modal-login-required";
 
 import FavoriteSVG from "src/components/svg/favorite";
-
-import * as S from "../style";
 
 export const FavoriteButton = observer(({ product }: ProductDetailProps) => {
   const { t } = useTranslation();
