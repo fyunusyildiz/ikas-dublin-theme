@@ -12,7 +12,7 @@ const CategoryBannerWithFive: React.FC<CategoryBannerWithFiveProps> = (
         props.hasMarginTop ? "mt-[160px] md:mt-[100px] sm:mt-[70px]" : ""
       }`}
     >
-      <Link href={props.firstCategoryLink} passHref>
+      <Link href={props.firstCategoryLink.href} passHref>
         <a
           className={`overflow-hidden group w-[49%] md:w-full md:h-[500px] xs:w-full h-full xs:h-[350px] relative flex items-center justify-center`}
         >
@@ -28,19 +28,21 @@ const CategoryBannerWithFive: React.FC<CategoryBannerWithFiveProps> = (
           {props.firstCategoryHasFilter && (
             <div className="w-full h-full absolute z-[1] bg-black bg-opacity-35 top-0 left-0" />
           )}
-          <h6
-            className={`absolute z-[2] text-2xl sm:px-3 pb-1 md:pb-0 xs:pb-[2px] md:text-xl sm:text-lg xs:text-base xs:bottom-5 font-bold text-white bottom-10 px-5`}
-            style={{
-              backgroundColor: props.firstCategoryTextBackground,
-              color: props.firstCategoryTextColor,
-            }}
-          >
-            {props.firstCategoryText}
-          </h6>
+          {props.categoriesHasText && (
+            <h6
+              className={`absolute z-[2] text-2xl sm:px-3 pb-1 md:pb-0 xs:pb-[2px] md:text-xl sm:text-lg xs:text-base xs:bottom-5 font-bold text-white bottom-10 px-5`}
+              style={{
+                backgroundColor: props.firstCategoryTextBackground,
+                color: props.firstCategoryTextColor,
+              }}
+            >
+              {props.firstCategoryText}
+            </h6>
+          )}
         </a>
       </Link>
       <div className="w-1/2 md:w-full h-full flex flex-wrap gap-3 justify-between">
-        <Link href={props.secondCategoryLink} passHref>
+        <Link href={props.secondCategoryLink.href} passHref>
           <a
             className={`overflow-hidden group w-[49%] sm:w-[49.2%] xs:w-full h-[294px] sm:h-[300px] xs:h-[350px] relative flex items-center justify-center`}
           >
@@ -56,18 +58,20 @@ const CategoryBannerWithFive: React.FC<CategoryBannerWithFiveProps> = (
             {props.secondCategoryHasFilter && (
               <div className="w-full h-full absolute z-[1] bg-black bg-opacity-35 top-0 left-0" />
             )}
-            <h6
-              className={`absolute z-[2] text-2xl sm:px-3 pb-1 md:pb-0 xs:pb-[2px] md:text-xl sm:text-lg xs:text-base xs:bottom-5 font-bold text-white bottom-10 px-5`}
-              style={{
-                backgroundColor: props.secondCategoryTextBackground,
-                color: props.secondCategoryTextColor,
-              }}
-            >
-              {props.secondCategoryText}
-            </h6>
+            {props.categoriesHasText && (
+              <h6
+                className={`absolute z-[2] text-2xl sm:px-3 pb-1 md:pb-0 xs:pb-[2px] md:text-xl sm:text-lg xs:text-base xs:bottom-5 font-bold text-white bottom-10 px-5`}
+                style={{
+                  backgroundColor: props.secondCategoryTextBackground,
+                  color: props.secondCategoryTextColor,
+                }}
+              >
+                {props.secondCategoryText}
+              </h6>
+            )}
           </a>
         </Link>
-        <Link href={props.thirdCategoryLink} passHref>
+        <Link href={props.thirdCategoryLink.href} passHref>
           <a
             className={`group overflow-hidden w-[49%] sm:w-[49.2%] xs:w-full h-[294px] sm:h-[300px] xs:h-[350px] relative flex items-center justify-center`}
           >
@@ -83,18 +87,20 @@ const CategoryBannerWithFive: React.FC<CategoryBannerWithFiveProps> = (
             {props.thirdCategoryHasFilter && (
               <div className="w-full h-full absolute z-[1] bg-black bg-opacity-35 top-0 left-0" />
             )}
-            <h6
-              className={`absolute z-[2] text-2xl sm:px-3 pb-1 md:pb-0 xs:pb-[2px] md:text-xl sm:text-lg xs:text-base xs:bottom-5 font-bold text-white bottom-10 px-5`}
-              style={{
-                backgroundColor: props.thirdCategoryTextBackground,
-                color: props.thirdCategoryTextColor,
-              }}
-            >
-              {props.thirdCategoryText}
-            </h6>
+            {props.categoriesHasText && (
+              <h6
+                className={`absolute z-[2] text-2xl sm:px-3 pb-1 md:pb-0 xs:pb-[2px] md:text-xl sm:text-lg xs:text-base xs:bottom-5 font-bold text-white bottom-10 px-5`}
+                style={{
+                  backgroundColor: props.thirdCategoryTextBackground,
+                  color: props.thirdCategoryTextColor,
+                }}
+              >
+                {props.thirdCategoryText}
+              </h6>
+            )}
           </a>
         </Link>
-        <Link href={props.fourthCategoryLink} passHref>
+        <Link href={props.fourthCategoryLink.href} passHref>
           <a
             className={`group overflow-hidden w-[49%] sm:w-[49.2%] xs:w-full h-[294px] sm:h-[300px] xs:h-[350px] relative flex items-center justify-center`}
           >
@@ -110,18 +116,20 @@ const CategoryBannerWithFive: React.FC<CategoryBannerWithFiveProps> = (
             {props.fourthCategoryHasFilter && (
               <div className="w-full h-full absolute z-[1] bg-black bg-opacity-35 top-0 left-0" />
             )}
-            <h6
-              className={`absolute z-[2] text-2xl sm:px-3 pb-1 md:pb-0 xs:pb-[2px] md:text-xl sm:text-lg xs:text-base xs:bottom-5 font-bold text-white bottom-10 px-5`}
-              style={{
-                backgroundColor: props.fourthCategoryTextBackground,
-                color: props.fourthCategoryTextColor,
-              }}
-            >
-              {props.fourthCategoryText}
-            </h6>
+            {props.categoriesHasText && (
+              <h6
+                className={`absolute z-[2] text-2xl sm:px-3 pb-1 md:pb-0 xs:pb-[2px] md:text-xl sm:text-lg xs:text-base xs:bottom-5 font-bold text-white bottom-10 px-5`}
+                style={{
+                  backgroundColor: props.fourthCategoryTextBackground,
+                  color: props.fourthCategoryTextColor,
+                }}
+              >
+                {props.fourthCategoryText}
+              </h6>
+            )}
           </a>
         </Link>
-        <Link href={props.fifthCategoryLink} passHref>
+        <Link href={props.fifthCategoryLink.href} passHref>
           <a
             className={`group overflow-hidden w-[49%] sm:w-[49.2%] xs:w-full h-[294px] sm:h-[300px] xs:h-[350px] relative flex items-center justify-center`}
           >
@@ -137,15 +145,17 @@ const CategoryBannerWithFive: React.FC<CategoryBannerWithFiveProps> = (
             {props.fifthCategoryHasFilter && (
               <div className="w-full h-full absolute z-[1] bg-black bg-opacity-35 top-0 left-0" />
             )}
-            <h6
-              className={`absolute z-[2] text-2xl sm:px-3 pb-1 md:pb-0 xs:pb-[2px] md:text-xl sm:text-lg xs:text-base xs:bottom-5 font-bold text-white bottom-10 px-5`}
-              style={{
-                backgroundColor: props.fifthCategoryTextBackground,
-                color: props.fifthCategoryTextColor,
-              }}
-            >
-              {props.fifthCategoryText}
-            </h6>
+            {props.categoriesHasText && (
+              <h6
+                className={`absolute z-[2] text-2xl sm:px-3 pb-1 md:pb-0 xs:pb-[2px] md:text-xl sm:text-lg xs:text-base xs:bottom-5 font-bold text-white bottom-10 px-5`}
+                style={{
+                  backgroundColor: props.fifthCategoryTextBackground,
+                  color: props.fifthCategoryTextColor,
+                }}
+              >
+                {props.fifthCategoryText}
+              </h6>
+            )}
           </a>
         </Link>
       </div>

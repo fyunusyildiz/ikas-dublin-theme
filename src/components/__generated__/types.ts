@@ -109,6 +109,7 @@ export type CategoryBannerWithTwoProps = {
 	secondCategoryTextColor: string;
 	secondCategoryHasFilter?: boolean;
 	hasMarginTop?: boolean;
+	categoriesHasText: boolean;
 };
 
 export type CategoryBannerWithThreeProps = {
@@ -131,6 +132,7 @@ export type CategoryBannerWithThreeProps = {
 	thirdCategoryTextColor: string;
 	thirdCategoryHasFilter?: boolean;
 	hasMarginTop?: boolean;
+	categoriesHasText: boolean;
 };
 
 export type CategoryBannerWithFourProps = {
@@ -159,6 +161,7 @@ export type CategoryBannerWithFourProps = {
 	fourthCategoryTextColor: string;
 	fourthCategoryHasFilter?: boolean;
 	hasMarginTop?: boolean;
+	categoriesHasText: boolean;
 };
 
 export type HeaderProps = {
@@ -239,6 +242,7 @@ export type CategoryBannerWithFiveProps = {
 	fifthCategoryTextBackground: string;
 	fifthCategoryTextColor: string;
 	fifthCategoryHasFilter: boolean;
+	categoriesHasText: boolean;
 };
 
 export type PageCategoryProps = {
