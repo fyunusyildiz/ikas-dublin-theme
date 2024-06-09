@@ -6012,6 +6012,188 @@
       ],
       "specifications": [],
       "disableIndex": false
+    },
+    {
+      "id": "cd773f77-3ca9-4d3e-af3f-cd23f107177a",
+      "name": "Hakkımızda",
+      "type": "CUSTOM",
+      "components": [
+        {
+          "id": "94761093-4a0b-4ee0-84a9-92cfbf6a1e56",
+          "componentId": "06d23529-6a32-4794-aad9-2bcc1a4f4952",
+          "propValues": {
+            "hasAnnouncement": true,
+            "announcementText": "1000₺ VE ÜZERİ ÜCRETSİZ KARGO!",
+            "noTransparentHeader": true,
+            "headerBackgroundColor": "#ffffffff",
+            "announcementBgColor": "#6f6448ff",
+            "announcementTextColor": "#ffffffff",
+            "announcementTextAlign": "CENTER",
+            "announcementLink": {
+              "id": "b1426d24-ed69-404f-baa8-930f2c85d56c",
+              "linkType": "PAGE",
+              "label": "Anasayfa",
+              "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+              "pageType": "INDEX",
+              "pageComponentId": null,
+              "subLinks": []
+            },
+            "isCentered": false,
+            "logo": {
+              "id": "theme-images/66497cb0-f7e8-4aba-89d8-b72d536ee55e",
+              "altText": null
+            },
+            "logoMaxWidth": {
+              "value": 150
+            },
+            "logoMaxHeight": {
+              "value": 73
+            },
+            "logoMaxWidthMobile": {
+              "value": 100
+            },
+            "logoMaxHeightMobile": {
+              "value": 48
+            },
+            "links": [
+              {
+                "id": "6f48d7ab-8b12-43d3-9433-184842749262",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": [
+                  {
+                    "id": "3e8ddaf4-98da-4349-a76f-aa2dc603cb0f",
+                    "linkType": "PAGE",
+                    "label": "Anasayfa",
+                    "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                    "pageType": "INDEX",
+                    "itemId": null,
+                    "externalLink": null,
+                    "fileUrl": null,
+                    "pageComponentId": null,
+                    "subLinks": []
+                  }
+                ]
+              },
+              {
+                "id": "4f2d5b06-37ba-45c2-b964-a70106d4fc2f",
+                "linkType": "PAGE",
+                "label": "Renson Fitilli Erkek Bere",
+                "pageId": "aa9daf62-60d3-458b-ad91-e09b069bc63c",
+                "pageType": "PRODUCT",
+                "itemId": "910c044d-ca21-406b-b19c-0867bc89d158",
+                "pageComponentId": null,
+                "subLinks": []
+              }
+            ],
+            "headerLinkColor": "#000000ff",
+            "headerSublinkColor": "#55545bff",
+            "headerLinkHoverBg": "#000000ff",
+            "headerLinkHoverColor": "#ffffffff",
+            "transparentHeaderLogo": {
+              "id": "theme-images/79361f5a-df52-464b-a5a6-5725a438d960",
+              "altText": null
+            }
+          }
+        },
+        {
+          "id": "b3aadf10-70f8-4f1e-b71c-1496344e2a32",
+          "componentId": "1e9eb5dc-c0a7-4bbb-a41d-f311be80dd16",
+          "propValues": {
+            "brandTextTitle": "Nordbron",
+            "brandText": "<p>Doğanın adımlarını izliyoruz. Karşı konulmaz biçimde yenilenirken her özgür ruhun arzuladığı biçimde yalın ve güçlü o.</p><p><br></p><p>Bir geyiğin ağaç dallarıyla ilişkisi kadar benzer, şehirdeki kontrastı kadar özgün.</p>",
+            "newsletterTitle": "Yeniliklerden Haberdar Ol",
+            "newsletterText": "<p style=\" font-weight: 400; font-size: 14px\">Yeniliklerden ve kampanyalardan siz de haberdar olun!</p>",
+            "informationBlockTitle": "Faydalı Linkler",
+            "informationLinks": [
+              {
+                "id": "dfb1886f-3107-4de4-a14a-f8c4a107df7d",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "33709125-1cd9-447f-a627-00c7bcaa443a",
+                "linkType": "PAGE",
+                "label": "Renson Fitilli Erkek Bere",
+                "pageId": "aa9daf62-60d3-458b-ad91-e09b069bc63c",
+                "pageType": "PRODUCT",
+                "itemId": "910c044d-ca21-406b-b19c-0867bc89d158",
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "e1140aee-91bf-48e9-9253-00fdd5fad019",
+                "linkType": "PAGE",
+                "label": "Ödeme Sayfası",
+                "pageId": "checkout",
+                "pageType": "CHECKOUT",
+                "pageComponentId": null,
+                "subLinks": []
+              }
+            ],
+            "socialMediaTitle": "Sosyal Medya",
+            "socialMediaLinks": [
+              {
+                "id": "2a0bc756-be07-4845-9c63-d0cd159b5db0",
+                "linkType": "EXTERNAL",
+                "label": "Instagram",
+                "pageId": null,
+                "pageType": null,
+                "itemId": null,
+                "externalLink": "https://www.instagram.com/nordbron/",
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "691b806c-eb33-4650-9e4e-9122a99f89e2",
+                "linkType": "EXTERNAL",
+                "label": "Facebook",
+                "pageId": null,
+                "pageType": null,
+                "itemId": null,
+                "externalLink": "https://www.facebook.com/Nordbron/",
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "7837e58a-6e38-4be7-b862-dd0e9988d698",
+                "linkType": "EXTERNAL",
+                "label": "YouTube",
+                "externalLink": "https://www.youtube.com/@Nordbron",
+                "pageComponentId": null,
+                "subLinks": []
+              }
+            ]
+          }
+        },
+        {
+          "id": "f8f66174-15a8-4335-b6b0-caf8cb3f8c48",
+          "componentId": "471dfb8e-49ae-4974-aa19-8029a5671040",
+          "propValues": {
+            "title": "Hakkımızda"
+          }
+        }
+      ],
+      "slug": "about",
+      "specifications": [],
+      "disableIndex": false
     }
   ],
   "settings": {
