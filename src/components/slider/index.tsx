@@ -1,6 +1,7 @@
 import { Image, Link } from "@ikas/storefront";
 import { observer } from "mobx-react-lite";
 import * as React from "react";
+import { useRouter } from "next/router";
 
 import { Position, Slide, SliderProps } from "../__generated__/types";
 
@@ -17,6 +18,8 @@ const Slider: React.FC<SliderProps> = ({ slides }) => {
     useSlider({
       slides,
     });
+
+  const router = useRouter();
 
   const getLeftSlidePositionClass = React.useCallback((slide: Slide) => {
     switch (slide.left_hero.left_position) {
@@ -104,76 +107,88 @@ const Slider: React.FC<SliderProps> = ({ slides }) => {
               "snap-start relative flex-[0_0_100%] w-full flex flex-wrap"
             }
           >
-            <div className={"relative w-1/2 h-full md:w-full xs:h-1/2"}>
-              <Image
-                layout="fill"
-                objectFit="cover"
-                alt=""
-                image={slide.left_hero.left_image}
-                useBlur={true}
-                sizes="100vw"
-              />
-              <div
-                className={`absolute top-0 left-0 bottom-0 right-0 p-10 md:p-5 mx-auto flex flex-col justify-center z-[2] gap-y-3 xs:gap-y-2 ${getLeftSlidePositionClass(
-                  slide
-                )}`}
-              >
+            <Link href={slide.left_hero.left_button.href} passHref>
+              <a className={"relative w-1/2 h-full md:w-full xs:h-1/2"}>
+                <Image
+                  layout="fill"
+                  objectFit="cover"
+                  alt=""
+                  image={slide.left_hero.left_image}
+                  useBlur={true}
+                  sizes="100vw"
+                />
                 <div
-                  className={"z-[2] text-xl md:text-base xs:text-sm"}
-                  style={leftSlideTextColor(slide)}
+                  className={`absolute top-0 left-0 bottom-0 right-0 p-10 md:p-5 mx-auto flex flex-col justify-center z-[2] gap-y-3 xs:gap-y-2 ${getLeftSlidePositionClass(
+                    slide
+                  )}`}
                 >
-                  {slide.left_hero.left_title}
+                  {!slide.left_hero.left_no_title && (
+                    <div
+                      className={"z-[2] text-xl md:text-base xs:text-sm"}
+                      style={leftSlideTextColor(slide)}
+                    >
+                      {slide.left_hero.left_title}
+                    </div>
+                  )}
+                  {!slide.left_hero.left_no_button && (
+                    <Link href={slide.left_hero.left_button.href} passHref>
+                      <a
+                        className={
+                          "cursor-pointer px-10 py-[15px] rounded-[35px] text-lg z-[2] md:px-5 md:py-2 md:text-base xs:text-sm"
+                        }
+                        style={leftSlideButtonStyle(slide)}
+                      >
+                        {slide.left_hero.left_button_text}
+                      </a>
+                    </Link>
+                  )}
                 </div>
-                <Link href={slide.left_hero.left_button} passHref>
-                  <a
-                    className={
-                      "cursor-pointer px-10 py-[15px] rounded-[35px] text-lg z-[2] md:px-5 md:py-2 md:text-base xs:text-sm"
-                    }
-                    style={leftSlideButtonStyle(slide)}
-                  >
-                    {slide.left_hero.left_button_text}
-                  </a>
-                </Link>
-              </div>
-              {slide.left_hero.left_has_filter && (
-                <div className="w-full h-full absolute z-[1] bg-black bg-opacity-35 top-0 left-0" />
-              )}
-            </div>
-            <div className={"relative w-1/2 h-full md:w-full xs:h-1/2"}>
-              <Image
-                layout="fill"
-                objectFit="cover"
-                alt=""
-                image={slide.right_hero.right_image}
-                useBlur={true}
-                sizes="100vw"
-              />
-              <div
-                className={`absolute top-0 left-0 bottom-0 right-0 p-10 md:p-5 mx-auto flex flex-col justify-center z-[2] gap-y-3 xs:gap-y-2 ${getRightSlidePositionClass(
-                  slide
-                )}`}
-              >
+                {slide.left_hero.left_has_filter && (
+                  <div className="w-full h-full absolute z-[1] bg-black bg-opacity-35 top-0 left-0" />
+                )}
+              </a>
+            </Link>
+            <Link href={slide.right_hero.right_button.href} passHref>
+              <a className={"relative w-1/2 h-full md:w-full xs:h-1/2"}>
+                <Image
+                  layout="fill"
+                  objectFit="cover"
+                  alt=""
+                  image={slide.right_hero.right_image}
+                  useBlur={true}
+                  sizes="100vw"
+                />
                 <div
-                  className={"z-[2] text-xl md:text-base xs:text-sm"}
-                  style={rightSlideTextColor(slide)}
+                  className={`absolute top-0 left-0 bottom-0 right-0 p-10 md:p-5 mx-auto flex flex-col justify-center z-[2] gap-y-3 xs:gap-y-2 ${getRightSlidePositionClass(
+                    slide
+                  )}`}
                 >
-                  {slide.right_hero.right_title}
+                  {!slide.right_hero.right_no_title && (
+                    <div
+                      className={"z-[2] text-xl md:text-base xs:text-sm"}
+                      style={rightSlideTextColor(slide)}
+                    >
+                      {slide.right_hero.right_title}
+                    </div>
+                  )}
+                  {!slide.right_hero.right_no_button && (
+                    <Link href={slide.right_hero.right_button.href} passHref>
+                      <a
+                        className={
+                          "cursor-pointer px-10 py-[15px] rounded-[35px] text-lg z-[2] md:px-5 md:py-2 md:text-base xs:text-sm"
+                        }
+                        style={rightSlideButtonStyle(slide)}
+                      >
+                        {slide.right_hero.right_button_text}
+                      </a>
+                    </Link>
+                  )}
                 </div>
-                <Link href={slide.right_hero.right_button} passHref>
-                  <a
-                    className={
-                      "cursor-pointer px-10 py-[15px] rounded-[35px] text-lg z-[2] md:px-5 md:py-2 md:text-base xs:text-sm"
-                    }
-                    style={rightSlideButtonStyle(slide)}
-                  >
-                    {slide.right_hero.right_button_text}
-                  </a>
-                </Link>
-              </div>
-              {slide.right_hero.right_has_filter && (
-                <div className="w-full h-full absolute z-[1] bg-black bg-opacity-35 top-0 left-0" />
-              )}
-            </div>
+                {slide.right_hero.right_has_filter && (
+                  <div className="w-full h-full absolute z-[1] bg-black bg-opacity-35 top-0 left-0" />
+                )}
+              </a>
+            </Link>
             {hasPrevSlide && (
               <div
                 className={`absolute top-1/2 h-12 w-12 z-[4] cursor-pointer bg-white bg-opacity-40 flex items-center justify-center text-white left-[25px] xs:left-[10px] xs:w-7 xs:h-7`}

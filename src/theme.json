@@ -14,7 +14,7 @@
       "componentJson": null,
       "props": [
         {
-          "id": "27ad0c9b-12b6-4f8b-aca2-cf8342b549ef",
+          "id": "64b8df4f-7d8e-485d-94ae-94ed3e815635",
           "name": "logo",
           "displayName": "",
           "description": "",
@@ -27,7 +27,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "6ddf9eb2-da9a-4b92-80da-ad2b2e616d13",
+          "id": "dab9ac83-447c-4f78-84bb-46ced9045579",
           "name": "showTax",
           "displayName": "",
           "description": "",
@@ -40,7 +40,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "9b065f86-3747-4d6b-b1ac-71bcc3adf450",
+          "id": "5924b883-3644-459c-becb-d50a66606c44",
           "name": "showCampaignOffersDesign",
           "displayName": "",
           "description": "",
@@ -53,7 +53,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "80bbb4e0-4be3-4c91-a466-79221357e1d2",
+          "id": "2a2fa0db-05bf-41b8-a5f4-8bc18b2a1c56",
           "name": "campaignOfferIsSmallDesign",
           "displayName": "",
           "description": "",
@@ -66,7 +66,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "3faa59ff-9900-41dc-9eef-5f32278e08c6",
+          "id": "75831447-bf74-4613-8416-00e6dba6b876",
           "name": "showCampaignIsBiggerImage",
           "displayName": "",
           "description": "",
@@ -79,7 +79,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "3862940c-6ff9-4e65-9532-3187134c16dd",
+          "id": "3f9b7d95-d6ea-4d55-9330-30a58d15d040",
           "name": "campaignOffersTitleColor",
           "displayName": "",
           "description": "",
@@ -92,7 +92,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "16615ea1-6791-4dc4-8159-13112c179dba",
+          "id": "4380cc64-dbed-48d8-9ab8-7694792946fb",
           "name": "campaignOffersDescriptionColor",
           "displayName": "",
           "description": "",
@@ -105,7 +105,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "5839bbcc-71db-40f6-9c72-78ba0a88d09e",
+          "id": "4efed450-d937-4cd5-b2a9-d52ea4e2fbff",
           "name": "showCampaignShowDiscountSettings",
           "displayName": "",
           "description": "",
@@ -118,7 +118,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "45e424bd-328a-41f4-973e-2f5a8a962bf9",
+          "id": "917bc366-4aed-44c0-998a-2210ea27022f",
           "name": "showCampaignHideDiscountBadge",
           "displayName": "",
           "description": "",
@@ -131,7 +131,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "3e98abcf-c132-4607-8777-99eb38ba6160",
+          "id": "51e573f6-d4b3-45b2-86c9-c3394715a9f8",
           "name": "campaignOffersDiscountPercentageColor",
           "displayName": "",
           "description": "",
@@ -144,7 +144,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "3afadc2c-acbe-40d1-9a8f-649275e8deb8",
+          "id": "2a2a26f7-1886-4c1c-a671-a0a2545d57ee",
           "name": "campaignOffersDiscountPercentageBgColor",
           "displayName": "",
           "description": "",
@@ -157,7 +157,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "eca6951e-4164-41e2-94f9-86756f7dbbb1",
+          "id": "8d509afb-415d-4610-8309-40de93969409",
           "name": "showCampaignShowCountdownSettings",
           "displayName": "",
           "description": "",
@@ -170,7 +170,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "8247fd7a-7dc3-4747-94fe-ac0a93372def",
+          "id": "6668e1c8-c1aa-431a-97a6-4e57a302fbda",
           "name": "campaignOfferCountdownStyleIsLine",
           "displayName": "",
           "description": "",
@@ -183,7 +183,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "f2386127-0293-4126-93c0-afcdbf056b13",
+          "id": "d27a636f-30df-4a16-98db-9e415f5b11e0",
           "name": "campaignOffersCountdownTextColor",
           "displayName": "",
           "description": "",
@@ -196,7 +196,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "aebac139-186b-43fd-a9e3-530bbbf9b3ad",
+          "id": "e77e3f5a-6e7e-4f04-90de-2bcef0d658fe",
           "name": "campaignOffersCountdownTimeColor",
           "displayName": "",
           "description": "",
@@ -209,7 +209,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "78ffb880-5733-4646-aa8f-a8ab31389958",
+          "id": "8631274e-f55d-42b5-950b-fcc0295d87f0",
           "name": "campaignOffersCountdownBgColor",
           "displayName": "",
           "description": "",
@@ -222,7 +222,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "81ce80f9-4115-40a6-aafb-e4f31d9a773e",
+          "id": "32266fe6-ee8f-42af-9135-a2304020fae4",
           "name": "campaignOffersEnableMiddlePhase",
           "displayName": "",
           "description": "",
@@ -235,7 +235,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "ceaf6acc-91f8-4d86-89a6-2eb0e71f37e4",
+          "id": "0bee3f6a-547e-4e3d-88be-b07660146f95",
           "name": "campaignOffersMiddlePhaseOverlayColor",
           "displayName": "",
           "description": "",
@@ -248,7 +248,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "ed46456e-35c5-4662-bb79-1a8e0aa6aba6",
+          "id": "03c76be1-de98-4bc5-b24a-c2a62fad746e",
           "name": "campaignOfferCountdownStyleIsLineSuccessPage",
           "displayName": "",
           "description": "",
@@ -261,7 +261,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "2690c620-a8c2-4bb4-9c3c-a821d3eccd37",
+          "id": "142f53f3-e6e8-4e59-8311-6c57d85e84ae",
           "name": "buttonBgColor",
           "displayName": "",
           "description": "",
@@ -274,7 +274,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "f3dca15d-6f05-42f7-8ad6-1f32ec734b43",
+          "id": "8113ab1b-6dae-4b4c-af9a-727f5bb848c0",
           "name": "buttonTextColor",
           "displayName": "",
           "description": "",
@@ -287,7 +287,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "44201317-8acd-479f-97f2-2a53ea6f4f07",
+          "id": "dc0c93c4-395d-4f2a-a36f-1761d1838243",
           "name": "buttonDisabledBgColor",
           "displayName": "",
           "description": "",
@@ -300,7 +300,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "ade53cdb-d677-4338-b589-705756a4a52f",
+          "id": "34dc5aab-305d-4926-94ac-2645b0b98864",
           "name": "buttonDisabledTextColor",
           "displayName": "",
           "description": "",
@@ -313,7 +313,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "823f8925-474f-4a01-a472-872158708ea3",
+          "id": "c98e4391-e646-4052-b623-3a3cba3e8af5",
           "name": "primaryTextColor",
           "displayName": "",
           "description": "",
@@ -326,7 +326,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "c50f0fff-7139-4086-8b1d-12c45f71f165",
+          "id": "485eb4cc-a4ad-49be-895d-feb906b04283",
           "name": "secondaryTextColor",
           "displayName": "",
           "description": "",
@@ -339,7 +339,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "81af939d-65ab-464a-93e6-1fd3528e5791",
+          "id": "ecd96766-4cec-472f-84fd-aeb8b1923d62",
           "name": "primaryBgColor",
           "displayName": "",
           "description": "",
@@ -352,7 +352,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "44e00627-0307-4b42-9b1e-c4d0544cbcdb",
+          "id": "80f2a75e-e10b-4c0e-85a1-8e4595f5d182",
           "name": "secondaryBgColor",
           "displayName": "",
           "description": "",
@@ -365,7 +365,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "33940bf6-5d4d-4adc-9e4c-c8cd8465fb5d",
+          "id": "303797ee-6f09-44ed-879a-8251b19d5624",
           "name": "borderColor",
           "displayName": "",
           "description": "",
@@ -378,7 +378,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "74f0fee8-74fb-46d9-84ad-78b754ce87e2",
+          "id": "8af8472f-5bdc-48e7-b662-799148fcbf3b",
           "name": "cardBgColor",
           "displayName": "",
           "description": "",
@@ -391,7 +391,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "b35cebfd-3a2b-4277-8890-50642aa1d8e8",
+          "id": "5bf925ad-b91d-4bf8-9d67-13140f5b11d0",
           "name": "errorColor",
           "displayName": "",
           "description": "",
@@ -404,7 +404,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "0f7f9bca-913c-4845-ae15-6056541ad12a",
+          "id": "596908bc-980f-4b6b-bd0d-d65eb074f67c",
           "name": "errorLightColor",
           "displayName": "",
           "description": "",
@@ -417,7 +417,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "689342b4-e54b-406c-8607-1a970c00f035",
+          "id": "ce21db60-422e-4e41-af90-8386c4a0de3a",
           "name": "warningColor",
           "displayName": "",
           "description": "",
@@ -430,7 +430,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "5ac4601a-5afe-44b7-afea-632843224cc7",
+          "id": "e9add465-babb-4d8e-9bab-2386ba9e1a7e",
           "name": "warningLightColor",
           "displayName": "",
           "description": "",
@@ -443,7 +443,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "1b89ca8e-ebea-4f34-a26b-408e60acad93",
+          "id": "6ffc9d79-b19a-4ce0-9f19-0cd8358c8ffc",
           "name": "successColor",
           "displayName": "",
           "description": "",
@@ -456,7 +456,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "0dfd2b7c-656c-4b1c-a38c-14a062a62558",
+          "id": "fba18d70-2bd4-4bc7-97e2-7add15ef8b0c",
           "name": "successLightColor",
           "displayName": "",
           "description": "",
@@ -469,7 +469,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "474f7f9d-f6f5-40b5-81f3-40067a377b72",
+          "id": "aae6fcc4-4516-4016-a3a0-60284e20fa03",
           "name": "secondaryButtonBgColor",
           "displayName": "",
           "description": "",
@@ -482,7 +482,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "516d730b-d8f5-4dac-bc51-855cc2be1cc6",
+          "id": "db0dbb06-d448-4566-a738-895e438df92f",
           "name": "secondaryButtonTextColor",
           "displayName": "",
           "description": "",
@@ -495,7 +495,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "09e089dc-8c52-4b90-9537-77b20130e049",
+          "id": "7d94321a-e281-450d-a223-651098d1ece3",
           "name": "secondaryButtonBorderColor",
           "displayName": "",
           "description": "",
@@ -769,7 +769,7 @@
     {
       "id": "e26b43b6-b0fe-40af-a56a-9455fd0b6700",
       "dir": "slider",
-      "displayName": "Slider",
+      "displayName": "Slider (2'li)",
       "description": "",
       "type": "COMPONENT",
       "componentJson": null,
@@ -793,7 +793,60 @@
       "isFooter": false,
       "translations": {},
       "defaultPropValuesTranslations": {},
-      "defaultPropValues": {},
+      "defaultPropValues": {
+        "slides": [
+          {
+            "left_hero": {
+              "left_no_title": false,
+              "left_no_button": false,
+              "left_image": {
+                "id": "theme-images/c8cf38ef-f948-4079-896a-2f09b907cda6",
+                "altText": null
+              },
+              "left_title": "Test",
+              "left_title_color": "#ffffffff",
+              "left_button": {
+                "id": "f7b0a9b9-20d4-4d70-8a09-529e0cda10d3",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              "left_button_text": "Buton",
+              "left_button_background": "#ffffffff",
+              "left_button_color": "#020007ff",
+              "left_has_filter": true,
+              "left_position": "BOTTOM_RIGHT"
+            },
+            "right_hero": {
+              "right_image": {
+                "id": "theme-images/6689eb1e-5232-4e94-88e8-22c98021c2d5",
+                "altText": null
+              },
+              "right_title": "Test",
+              "right_title_color": "#ffffffff",
+              "right_button": {
+                "id": "5c5db0be-3f67-4f06-88f3-f5fe1e4fea79",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              "right_button_text": "Buton",
+              "right_button_background": "#ffffffff",
+              "right_button_color": "#000000ff",
+              "right_has_filter": true,
+              "right_position": "CENTER",
+              "right_no_title": false,
+              "right_no_button": false
+            }
+          }
+        ]
+      },
       "commonPropValues": null
     },
     {
@@ -3204,12 +3257,10 @@
                   "left_button": {
                     "id": "47f8a469-c5fe-44cb-a4f1-af9c59752e0a",
                     "linkType": "PAGE",
-                    "label": "Anasayfa",
-                    "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                    "pageType": "INDEX",
-                    "itemId": null,
-                    "externalLink": null,
-                    "fileUrl": null,
+                    "label": "Renson Fitilli Erkek Bere",
+                    "pageId": "aa9daf62-60d3-458b-ad91-e09b069bc63c",
+                    "pageType": "PRODUCT",
+                    "itemId": "910c044d-ca21-406b-b19c-0867bc89d158",
                     "pageComponentId": null,
                     "subLinks": []
                   },
@@ -3217,7 +3268,9 @@
                   "left_button_background": "#ffffffff",
                   "left_button_color": "#000000ff",
                   "left_has_filter": true,
-                  "left_position": "BOTTOM_RIGHT"
+                  "left_position": "BOTTOM_RIGHT",
+                  "left_no_title": true,
+                  "left_no_button": true
                 },
                 "right_hero": {
                   "right_image": {
@@ -3229,9 +3282,9 @@
                   "right_button": {
                     "id": "4ee0a14e-751f-40bc-8a51-00cb09e05b5e",
                     "linkType": "PAGE",
-                    "label": "Anasayfa",
-                    "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                    "pageType": "INDEX",
+                    "label": "Kayıt Sayfası",
+                    "pageId": "5b30453b-7082-4b36-ba03-29b0c3fb50cc",
+                    "pageType": "REGISTER",
                     "pageComponentId": null,
                     "subLinks": []
                   },
@@ -3239,7 +3292,9 @@
                   "right_button_background": "#ffffffe8",
                   "right_button_color": "#050505ff",
                   "right_has_filter": true,
-                  "right_position": "BOTTOM_RIGHT"
+                  "right_position": "RIGHT_CENTER",
+                  "right_no_title": true,
+                  "right_no_button": true
                 }
               }
             ]
@@ -4666,6 +4721,34 @@
                   "level": 3,
                   "excludedFields": [],
                   "excludedFieldsCategory": []
+                },
+                {
+                  "id": "e9f02174-cd57-4109-b966-505363544264",
+                  "name": "Yazıyı Kaldır",
+                  "translations": {},
+                  "type": "BOOLEAN",
+                  "isRequired": true,
+                  "key": "left_no_title",
+                  "sliderData": {},
+                  "groupId": "2e54945e-c534-4bff-8750-44dffdb4390d",
+                  "isRoot": false,
+                  "level": 3,
+                  "excludedFields": [],
+                  "excludedFieldsCategory": []
+                },
+                {
+                  "id": "d0efd8bf-1237-4283-bd95-058cc683fdb9",
+                  "name": "Butonu Kaldır",
+                  "translations": {},
+                  "type": "BOOLEAN",
+                  "isRequired": true,
+                  "key": "left_no_button",
+                  "sliderData": {},
+                  "groupId": "2e54945e-c534-4bff-8750-44dffdb4390d",
+                  "isRoot": false,
+                  "level": 3,
+                  "excludedFields": [],
+                  "excludedFieldsCategory": []
                 }
               ],
               "sliderData": {},
@@ -4804,6 +4887,34 @@
                   "isRequired": true,
                   "key": "right_position",
                   "customDataId": "6d099ac8-6402-488e-abf3-646f60d219d4",
+                  "sliderData": {},
+                  "groupId": "6a90756d-4681-4d88-80c0-7d287d648be8",
+                  "isRoot": false,
+                  "level": 3,
+                  "excludedFields": [],
+                  "excludedFieldsCategory": []
+                },
+                {
+                  "id": "68243af9-5a05-4331-8066-850c4e3673f5",
+                  "name": "Yazıyı Kaldır",
+                  "translations": {},
+                  "type": "BOOLEAN",
+                  "isRequired": true,
+                  "key": "right_no_title",
+                  "sliderData": {},
+                  "groupId": "6a90756d-4681-4d88-80c0-7d287d648be8",
+                  "isRoot": false,
+                  "level": 3,
+                  "excludedFields": [],
+                  "excludedFieldsCategory": []
+                },
+                {
+                  "id": "1f6b523b-b3a7-4b6d-8e78-3e34ea8e4b9d",
+                  "name": "Butonu Kaldır",
+                  "translations": {},
+                  "type": "BOOLEAN",
+                  "isRequired": true,
+                  "key": "right_no_button",
                   "sliderData": {},
                   "groupId": "6a90756d-4681-4d88-80c0-7d287d648be8",
                   "isRoot": false,

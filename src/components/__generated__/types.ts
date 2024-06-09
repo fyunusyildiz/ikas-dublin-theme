@@ -48,6 +48,8 @@ export type LeftFrame = {
 	left_button_color: string;
 	left_has_filter?: boolean;
 	left_position: Position;
+	left_no_title: boolean;
+	left_no_button: boolean;
 };
 
 export type RightFrame = { 
@@ -60,6 +62,8 @@ export type RightFrame = {
 	right_button_color: string;
 	right_has_filter?: boolean;
 	right_position: Position;
+	right_no_title: boolean;
+	right_no_button: boolean;
 };
 
 export type TitleProps = {

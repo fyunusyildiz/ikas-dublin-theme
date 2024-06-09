@@ -1,60 +1,72 @@
 {
   "storefront": {
-    "type": "STOREFRONT",
     "_id": "fc638939-04a5-42b9-975b-4dc6170215a1",
     "merchantId": "5d5fb558-e51b-4318-8363-3879e0b56fd0",
     "deleted": false,
     "name": "dev-metus",
     "domains": null,
-    "status": "NOT_DEPLOYED",
+    "status": "READY",
     "salesChannelId": "40b909b9-0394-4ea1-a3d1-10cd601758ab",
     "mainStorefrontThemeId": "ae16442d-4b96-4321-9638-5f22267f0bea",
     "localizations": [
       {
         "_id": "48a9828e-aa31-45f7-8ef6-f0f75d38e0ff",
+        "createdAt": "2024-05-27T14:37:12.268Z",
+        "updatedAt": "2024-05-27T14:37:12.268Z",
         "deleted": false,
         "name": "Türkçe",
         "isDefault": true,
         "locale": "tr",
-        "createdAt": "2023-01-02T19:32:05.867Z",
-        "updatedAt": "2023-01-02T19:32:05.867Z",
         "id": "48a9828e-aa31-45f7-8ef6-f0f75d38e0ff"
       }
     ],
     "routings": [
       {
         "_id": "f63442ad-463f-4ae6-8d08-c346f64cb7dc",
+        "createdAt": "2024-05-27T14:37:12.268Z",
+        "updatedAt": "2024-05-27T14:37:12.268Z",
         "deleted": false,
         "countryCodes": null,
         "priceListId": null,
         "locale": "tr",
         "path": null,
         "domain": null,
-        "createdAt": "2023-01-02T19:32:05.867Z",
-        "updatedAt": "2023-01-02T19:32:05.867Z",
         "id": "f63442ad-463f-4ae6-8d08-c346f64cb7dc"
       }
     ],
     "themes": [
       {
         "_id": "ae16442d-4b96-4321-9638-5f22267f0bea",
+        "createdAt": "2024-05-27T14:37:12.268Z",
+        "updatedAt": "2024-05-27T14:37:12.268Z",
         "deleted": false,
         "name": "Kombos",
-        "status": "NOT_DEPLOYED",
+        "status": "READY",
         "isMainTheme": true,
         "themeId": "64e2bf75-b244-4d35-a172-eee34b5ef099",
         "themeVersionId": "f25474a1-854d-4da6-9c23-a493bf902746",
-        "createdAt": "2023-01-02T19:32:05.867Z",
-        "updatedAt": "2023-01-02T19:32:05.867Z",
         "id": "ae16442d-4b96-4321-9638-5f22267f0bea"
+      },
+      {
+        "_id": "9dbf31e3-e507-4fbe-805f-98fa187f367e",
+        "createdAt": "2024-05-27T14:37:12.268Z",
+        "updatedAt": "2024-05-27T14:37:12.268Z",
+        "deleted": false,
+        "name": "Dublin",
+        "status": "READY",
+        "isMainTheme": false,
+        "themeId": "4d096cda-46b1-4dd3-869c-91e13c741ee5",
+        "themeVersionId": "4ea347f7-04a1-4ae0-bf3d-379bd7226b8e",
+        "id": "9dbf31e3-e507-4fbe-805f-98fa187f367e"
       }
     ],
     "socialLoginSettings": [],
     "metaTemplates": [],
     "createdAt": "2023-01-02T19:32:05.867Z",
-    "updatedAt": "2023-01-02T19:32:05.867Z",
-    "__v": 0,
+    "updatedAt": "2024-05-27T14:37:12.268Z",
+    "__v": 1,
     "indexPageSeoSettings": [],
+    "type": "STOREFRONT",
     "id": "fc638939-04a5-42b9-975b-4dc6170215a1"
   },
   "salesChannel": {
