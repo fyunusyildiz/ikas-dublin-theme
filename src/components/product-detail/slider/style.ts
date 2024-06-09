@@ -22,9 +22,5 @@ export const Thumbnail = styled.button<{ $selected: boolean }>`
 export const MainImage = styled.figure`
   position: relative;
   height: 100%;
-
-  @media (min-width: 1440px) {
-    width: calc(100% - 124px);
-    margin-left: 124px;
-  }
+  width: 100%;
 `;

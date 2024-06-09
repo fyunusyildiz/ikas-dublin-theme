@@ -1,12 +1,9 @@
-import React from "react";
 import { IkasProduct, useTranslation } from "@ikas/storefront";
 
-import useBackInStock from "./useBackInStock";
-import { useAddToCart } from "src/utils/hooks/useAddToCart";
 import { ProductOptionsStore } from "src/components/product-detail/detail/product-options";
+import { useAddToCart } from "src/utils/hooks/useAddToCart";
 import { useBackInStockStore } from "../back-in-stock/backInStockStore";
-
-import { NS } from "src/components/product-detail";
+import useBackInStock from "./useBackInStock";
 
 type Props = {
   product: IkasProduct;
@@ -32,12 +29,12 @@ export default function useAddToCartButton({ product, quantity }: Props) {
       backInStockStore.pending;
 
   const buttonText = hasStock
-    ? t(`${NS}:detail.addToCart.text`)
+    ? "Sepete Ekle"
     : isBackInStockEnabled
     ? isBackInStockReminderSaved
-      ? t(`${NS}:detail.addToCart.backInStockReminderSaved`)
-      : t(`${NS}:detail.addToCart.remindOnBackInStock`)
-    : t(`${NS}:detail.addToCart.soldOut`);
+      ? "Hatırlatma Kaydedildi"
+      : "Gelince Haber Ver"
+    : "Tükendi";
 
   const buttonState: "addToCart" | "backInStock" =
     isBackInStockEnabled && !hasStock ? "backInStock" : "addToCart";

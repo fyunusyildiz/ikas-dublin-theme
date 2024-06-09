@@ -25,8 +25,8 @@ const Slider = (props: ProductDetailProps) => {
   }, [props.product.selectedVariant]);
 
   return (
-    <div className="flex overflow-x-auto flex-col relative mb-auto h-full">
-      <Thumbnails activeImage={activeImage} {...props} />
+    <div className="flex overflow-x-auto flex-col relative mb-auto">
+      {/* <Thumbnails activeImage={activeImage} {...props} /> */}
       <MainImage activeImage={activeImage} {...props} />
     </div>
   );
@@ -85,16 +85,20 @@ const MainImage = observer((props: MainImageProps) => {
 
   if (!image) return null;
   return (
-    <S.MainImage>
-      <Image
-        useBlur
-        image={image}
-        layout="fill"
-        width={width}
-        height={height}
-        objectFit="cover"
-        sizes={`(max-width: 1440px) 100vw, ${point.xxl / 2}px`}
-      />
-    </S.MainImage>
+    <div className="flex flex-wrap h-full">
+      {product.selectedVariant.images?.map((image, index) => (
+        <figure key={index} className="w-1/2 xs:w-full sm:h-[500px] h-[1000px] relative">
+          <Image
+            useBlur
+            image={image.image!}
+            layout="fill"
+            width={width}
+            height={height}
+            objectFit="cover"
+            sizes={`(max-width: 1440px) 100vw, ${point.xxl / 2}px`}
+          />
+        </figure>
+      ))}
+    </div>
   );
 });

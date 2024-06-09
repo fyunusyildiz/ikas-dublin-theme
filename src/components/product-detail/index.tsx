@@ -8,14 +8,12 @@ export const NS = "product-detail"; // for translation (i18n)
 
 const ProductDetail = (props: ProductDetailProps) => {
   return (
-    <div>
-      <section className="w-full h-[calc(100vh-200px)]">
-        <div className="grid grid-cols-[1fr_1fr] mt-5 mb-32 h-full gap-9 lg:grid-cols-[1fr]">
-          <Slider {...props} />
-          <Detail {...props} />
-        </div>
-      </section>
-    </div>
+    <section className="w-full">
+      <div className="grid grid-cols-[2fr_1fr] mt-5 mb-32 h-full gap-9 lg:grid-cols-[1fr]">
+        <Slider {...props} />
+        <Detail {...props} />
+      </div>
+    </section>
   );
 };
 
