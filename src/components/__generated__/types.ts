@@ -250,3 +250,7 @@ export type PageCategoryProps = {
 	productList: IkasProductList;
 };
 
+export type CartProps = {
+	summaryText?: string;
+};
+

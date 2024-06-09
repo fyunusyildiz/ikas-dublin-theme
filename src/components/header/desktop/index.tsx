@@ -6,9 +6,12 @@ import { HeaderProps, TextPosition } from "src/components/__generated__/types";
 import MaxQuantityPerCartModal from "src/components/components/modal-max-quantity-per-cart";
 import AccountSVG from "src/components/svg/account";
 import CartSVG from "src/components/svg/cart";
+import Close from "src/components/svg/close";
 import FavoriteSVG from "src/components/svg/favorite";
 import ArrowDown from "src/components/header/desktop/svg/arrow-down";
 import { useState, useCallback, useMemo, useEffect } from "react";
+import right from "src/components/product-list/right";
+import Button from "src/components/components/button";
 
 const DesktopHeader = (props: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -225,6 +228,7 @@ const NavItem = (props: { link: LinkProps } & HeaderProps) => {
 
 const RightSide = observer((props: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [openDrawer, setOpenDrawer] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -234,35 +238,35 @@ const RightSide = observer((props: HeaderProps) => {
   const store = useStore();
   const quantity = store.cartStore.cart?.itemQuantity ?? 0;
   return (
-    <div className="flex items-center gap-3">
-      <Link href="/account/favorite-products" passHref>
-        <a>
-          <FavoriteSVG
-            stroke={
-              props.noTransparentHeader
-                ? props.headerLinkColor
-                : isScrolled
-                ? "black"
-                : "white"
-            }
-          />
-        </a>
-      </Link>
-      <Link href="/account" passHref>
-        <a>
-          <AccountSVG
-            stroke={
-              props.noTransparentHeader
-                ? props.headerLinkColor
-                : isScrolled
-                ? "black"
-                : "white"
-            }
-          />
-        </a>
-      </Link>
-      <Link passHref href="/cart">
-        <a className="relative">
+    <>
+      <div className="flex items-center gap-3">
+        <Link href="/account/favorite-products" passHref>
+          <a>
+            <FavoriteSVG
+              stroke={
+                props.noTransparentHeader
+                  ? props.headerLinkColor
+                  : isScrolled
+                  ? "black"
+                  : "white"
+              }
+            />
+          </a>
+        </Link>
+        <Link href="/account" passHref>
+          <a>
+            <AccountSVG
+              stroke={
+                props.noTransparentHeader
+                  ? props.headerLinkColor
+                  : isScrolled
+                  ? "black"
+                  : "white"
+              }
+            />
+          </a>
+        </Link>
+        <button className="relative" onClick={() => setOpenDrawer(!openDrawer)}>
           <span
             className="absolute -right-1 -top-1 rounded-full text-xs"
             style={{
@@ -284,8 +288,42 @@ const RightSide = observer((props: HeaderProps) => {
                 : "white"
             }
           />
-        </a>
-      </Link>
-    </div>
+        </button>
+      </div>
+      <div
+        className={`w-full fixed flex justify-end z-[999] top-0 transition-all duration-300 h-screen bg-black bg-opacity-30 ${
+          openDrawer ? "right-0" : "-right-full"
+        }`}
+        onClick={() => setOpenDrawer(false)}
+      >
+        <div
+          className="w-1/3 h-full bg-white relative"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="w-full py-3 border-b border-solid border-gray-two flex items-center justify-between px-5">
+            <h3 className="text-lg font-semibold">
+              Sepetim <span>({quantity})</span>
+            </h3>
+            <button onClick={() => setOpenDrawer(false)}>
+              <Close />
+            </button>
+          </div>
+          <div className="w-full overflow-y-auto h-full">
+          </div>
+          <div className="w-full flex items-center justify-between p-3 absolute left-0 bottom-0">
+            <Link passHref href={"/cart"}>
+              <a className="w-[48%] flex items-center justify-center py-3 bg-google-green rounded-sm font-semibold">
+                Sepete Git
+              </a>
+            </Link>
+            <Link passHref href={`${store.cartStore.checkoutUrl}`}>
+              <a className="w-[48%] flex items-center justify-center py-3 bg-google-green rounded-sm font-semibold">
+                Alışverişi Tamamla
+              </a>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
   );
 });
