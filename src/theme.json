@@ -14,7 +14,7 @@
       "componentJson": null,
       "props": [
         {
-          "id": "9ba169ec-cdfe-404a-8fa1-84063585eb32",
+          "id": "b5e85602-ddd7-4997-a0ee-8ed7bfaa9041",
           "name": "logo",
           "displayName": "",
           "description": "",
@@ -27,7 +27,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "461d20f1-f18c-48f2-9d96-ed9239e3d07c",
+          "id": "47fe8fdc-7e3c-47f1-bada-7117ac7bd830",
           "name": "showTax",
           "displayName": "",
           "description": "",
@@ -40,7 +40,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "e0ea629c-fb19-4603-a122-f62c6e74731a",
+          "id": "6c27fea2-b606-439d-907a-88d3babb91ba",
           "name": "showCampaignOffersDesign",
           "displayName": "",
           "description": "",
@@ -53,7 +53,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "2d3d4c3f-1ef2-40d5-9cd8-6eb0dfc13f93",
+          "id": "5f8597df-da88-4cc2-930b-1ea5e2cd71eb",
           "name": "campaignOfferIsSmallDesign",
           "displayName": "",
           "description": "",
@@ -66,7 +66,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "648676ad-5608-4055-9408-8cfd62862b46",
+          "id": "d0cce5ff-3196-4c73-821f-203512f8c964",
           "name": "showCampaignIsBiggerImage",
           "displayName": "",
           "description": "",
@@ -79,7 +79,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "f6ed5dae-6498-47f9-95eb-64f2160e63a4",
+          "id": "78cd583a-cf5c-4a9a-8883-f55f50e2850d",
           "name": "campaignOffersTitleColor",
           "displayName": "",
           "description": "",
@@ -92,7 +92,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "7d080c17-112a-428a-ac20-a4f3d823b513",
+          "id": "4c80773f-cc93-490c-b350-48bff5b2e58c",
           "name": "campaignOffersDescriptionColor",
           "displayName": "",
           "description": "",
@@ -105,7 +105,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "53dde84e-689c-493b-8020-f94ad84f0e80",
+          "id": "d158c4a6-04a0-4702-8f6c-f8be838a5008",
           "name": "campaignOffersContainerBgColor",
           "displayName": "",
           "description": "",
@@ -118,7 +118,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "ec24eeb6-d9de-44b0-b62e-152afb1659b6",
+          "id": "4d3799ab-30fe-4e2e-bf80-bb9c352009ae",
           "name": "showCampaignShowDiscountSettings",
           "displayName": "",
           "description": "",
@@ -131,7 +131,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "8c50da71-2fda-489f-b210-f90df6ebd5c0",
+          "id": "c3694303-5e64-40c3-991b-dd9651659d50",
           "name": "showCampaignHideDiscountBadge",
           "displayName": "",
           "description": "",
@@ -144,7 +144,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "85df1a66-ceef-4944-bbe6-e51eea579bda",
+          "id": "456524d0-50e1-4179-b276-3a30703d0a5b",
           "name": "campaignOffersDiscountPercentageColor",
           "displayName": "",
           "description": "",
@@ -157,7 +157,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "55822394-a314-4455-8c2b-bf213607aaa7",
+          "id": "bcca4021-21aa-4b81-951f-d3b6f7c43d4c",
           "name": "campaignOffersDiscountPercentageBgColor",
           "displayName": "",
           "description": "",
@@ -170,7 +170,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "c8f43d96-87d0-4749-ae69-b5130bc3fd32",
+          "id": "630a691b-d6a9-4b57-a6cf-24dff200c2d2",
           "name": "showCampaignShowCountdownSettings",
           "displayName": "",
           "description": "",
@@ -183,7 +183,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "4cadcf5a-f0ef-42fa-b397-fdf630f764b3",
+          "id": "452a8070-7823-42fd-b15a-f6d83c5bbe41",
           "name": "campaignOfferCountdownStyleIsLine",
           "displayName": "",
           "description": "",
@@ -196,7 +196,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "ab7c945b-f5e5-4762-acbc-8de90a01b402",
+          "id": "71ff2552-1b17-47c9-8dcf-03e840024d8a",
           "name": "campaignOffersCountdownTextColor",
           "displayName": "",
           "description": "",
@@ -209,7 +209,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "c9756fdc-8647-4e02-935b-639d2333b6a7",
+          "id": "129ce027-4bf0-41d0-89b9-3331d3ce9527",
           "name": "campaignOffersCountdownTimeColor",
           "displayName": "",
           "description": "",
@@ -222,7 +222,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "5e672049-32f0-48f3-87a3-e91da72dea28",
+          "id": "ab3664bd-b76d-4a37-abc4-3b7824d145fb",
           "name": "campaignOffersCountdownBgColor",
           "displayName": "",
           "description": "",
@@ -235,7 +235,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "005bc3ef-1f87-43e6-a532-c19e0e66aefc",
+          "id": "742feff5-19f7-4ed0-93c0-0fdb3c708964",
           "name": "campaignOffersEnableMiddlePhase",
           "displayName": "",
           "description": "",
@@ -248,7 +248,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "db87be76-bc80-423e-bdee-974e90864e5c",
+          "id": "7352dcff-8312-47f4-8c62-2f3bdf8bd673",
           "name": "campaignOffersMiddlePhaseOverlayColor",
           "displayName": "",
           "description": "",
@@ -261,7 +261,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "c2fc12e9-d452-4ad4-ba6b-ee1b62b7c3e5",
+          "id": "967d0cab-3167-4b03-b752-1b8843bf279a",
           "name": "campaignOfferCountdownStyleIsLineSuccessPage",
           "displayName": "",
           "description": "",
@@ -274,7 +274,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "7594a1a9-a30e-4352-8b4f-f7cdb5b69c02",
+          "id": "23536d93-fb3f-4231-b4b2-5a60a284fa24",
           "name": "buttonBgColor",
           "displayName": "",
           "description": "",
@@ -287,7 +287,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "fc0e5ea1-215c-4579-85e9-cb3281d2c80f",
+          "id": "fccf49ca-157a-4451-b1aa-84050813693f",
           "name": "buttonTextColor",
           "displayName": "",
           "description": "",
@@ -300,7 +300,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "3111d04b-5576-44ee-b7c0-ebee64912d4f",
+          "id": "e6ea4a34-03f2-4fea-b4d7-773638ace810",
           "name": "buttonDisabledBgColor",
           "displayName": "",
           "description": "",
@@ -313,7 +313,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "12b68281-f10d-4c9c-9d59-8c5a109e8e35",
+          "id": "af96fe90-347c-4e7f-a0ae-1ccf91c2003b",
           "name": "buttonDisabledTextColor",
           "displayName": "",
           "description": "",
@@ -326,7 +326,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "a58f3c16-2a26-40e5-aa71-31e4976b6448",
+          "id": "a81ff565-47cc-4e5a-8913-add122fb8c8d",
           "name": "primaryTextColor",
           "displayName": "",
           "description": "",
@@ -339,7 +339,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "c3c5b0bc-4f5d-45a2-af11-aee58aa048fa",
+          "id": "c5e9fd89-3f67-4c70-9228-a76ce5382c4b",
           "name": "secondaryTextColor",
           "displayName": "",
           "description": "",
@@ -352,7 +352,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "ec9129ee-8564-4302-926a-ffe75c6bf4a3",
+          "id": "0a75f17d-b4f8-4924-8c72-fff141019daa",
           "name": "primaryBgColor",
           "displayName": "",
           "description": "",
@@ -365,7 +365,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "9f535783-9c63-4ecc-bd2b-5b69883195ed",
+          "id": "0682c160-6f1a-4879-bf01-4f99a1591b7a",
           "name": "secondaryBgColor",
           "displayName": "",
           "description": "",
@@ -378,7 +378,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "e35c9a18-f698-45ac-8c3d-2751b3fb9cdb",
+          "id": "dd109239-a619-42cb-a63d-152b2d6bdf6e",
           "name": "borderColor",
           "displayName": "",
           "description": "",
@@ -391,7 +391,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "47473495-f691-41c7-9ef2-c450df31dd87",
+          "id": "add8b06a-a8eb-4288-95ee-456da3a01974",
           "name": "cardBgColor",
           "displayName": "",
           "description": "",
@@ -404,7 +404,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "186e8d2f-9f2a-476b-9cbf-3647b5e9c08d",
+          "id": "38ab6c94-54f8-4bd8-bd6f-fdad7c4fdd8a",
           "name": "errorColor",
           "displayName": "",
           "description": "",
@@ -417,7 +417,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "91b9a116-a51c-4553-9e9b-20f8c347e855",
+          "id": "9e65de8f-ced8-48c1-96dd-ff4ef7db06f0",
           "name": "errorLightColor",
           "displayName": "",
           "description": "",
@@ -430,7 +430,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "8dd77c1e-b919-4953-9ff3-f95015c5c005",
+          "id": "5ca1aab3-ce45-404b-9f40-e9ba91561821",
           "name": "warningColor",
           "displayName": "",
           "description": "",
@@ -443,7 +443,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "1e72b200-d974-4619-89e3-e766d4545f05",
+          "id": "95a98af6-065b-42a2-b118-7ce803a69278",
           "name": "warningLightColor",
           "displayName": "",
           "description": "",
@@ -456,7 +456,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "8972a362-03c1-4d43-9c17-e9d7135ca2b8",
+          "id": "5f08e485-f781-4fe8-a063-85620f90ee0f",
           "name": "successColor",
           "displayName": "",
           "description": "",
@@ -469,7 +469,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "390dd7b4-38a1-4b7c-bb25-0d8e81a221d9",
+          "id": "7ce362d5-7ebc-43db-b005-084cd86fd834",
           "name": "successLightColor",
           "displayName": "",
           "description": "",
@@ -482,7 +482,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "63481fc5-f4f2-4936-a589-a931b25e2dee",
+          "id": "f15bdc86-d564-46ab-8eea-e4f616c57212",
           "name": "secondaryButtonBgColor",
           "displayName": "",
           "description": "",
@@ -495,7 +495,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "c5280f3a-1303-4303-8d31-1320c3d663f3",
+          "id": "740b2d9d-b22f-46be-a1d7-d1c34824fecc",
           "name": "secondaryButtonTextColor",
           "displayName": "",
           "description": "",
@@ -508,7 +508,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "4a4be8b1-4f83-4767-97a6-351639bf622f",
+          "id": "b11dfabb-880f-44de-9d66-ba6fe1321cc9",
           "name": "secondaryButtonBorderColor",
           "displayName": "",
           "description": "",
@@ -6777,6 +6777,196 @@
                 "recommendedProductType": "CATEGORY"
               }
             }
+          }
+        }
+      ],
+      "specifications": [],
+      "disableIndex": false
+    },
+    {
+      "id": "a8751b69-42da-422f-b348-92082073a4d7",
+      "name": "",
+      "type": "ACTIVATE_CUSTOMER",
+      "components": [
+        {
+          "id": "51b34cf0-0501-4a90-aae3-bcc4d09f8f51",
+          "componentId": "06d23529-6a32-4794-aad9-2bcc1a4f4952",
+          "propValues": {
+            "hasAnnouncement": true,
+            "announcementText": "1000₺ VE ÜZERİ ÜCRETSİZ KARGO!",
+            "noTransparentHeader": true,
+            "headerBackgroundColor": "#ffffffff",
+            "announcementBgColor": "#6f6448ff",
+            "announcementTextColor": "#ffffffff",
+            "announcementTextAlign": "CENTER",
+            "announcementLink": {
+              "id": "b1426d24-ed69-404f-baa8-930f2c85d56c",
+              "linkType": "PAGE",
+              "label": "Anasayfa",
+              "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+              "pageType": "INDEX",
+              "pageComponentId": null,
+              "subLinks": []
+            },
+            "isCentered": false,
+            "logo": {
+              "id": "theme-images/66497cb0-f7e8-4aba-89d8-b72d536ee55e",
+              "altText": null
+            },
+            "logoMaxWidth": {
+              "value": 120
+            },
+            "logoMaxHeight": {
+              "value": 58
+            },
+            "logoMaxWidthMobile": {
+              "value": 100
+            },
+            "logoMaxHeightMobile": {
+              "value": 48
+            },
+            "links": [
+              {
+                "id": "1cbac8a0-2a87-41e0-b665-855348efeae8",
+                "linkType": "PAGE",
+                "label": "Erkek",
+                "pageId": "45401063-2671-4da5-a1b6-3c6446115c16",
+                "pageType": "CATEGORY",
+                "itemId": "d15e0dee-2e80-409c-9326-65682a6b90fe",
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "96779adc-f598-4290-9a2c-58d9cd170996",
+                "linkType": "PAGE",
+                "label": "Kadın",
+                "pageId": "45401063-2671-4da5-a1b6-3c6446115c16",
+                "pageType": "CATEGORY",
+                "itemId": "27145b33-5864-4f2a-af3a-2bc43d47cc42",
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "cc9114a1-c3cb-4cb2-9940-043105a463cf",
+                "linkType": "PAGE",
+                "label": "Final Sale",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "8eda282d-f024-4f09-8832-5a2a1681b22b",
+                "linkType": "PAGE",
+                "label": "Hakkımızda",
+                "pageId": "cd773f77-3ca9-4d3e-af3f-cd23f107177a",
+                "pageType": "CUSTOM",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              }
+            ],
+            "headerLinkColor": "#454545ff",
+            "headerSublinkColor": "#55545bff",
+            "headerLinkHoverBg": "#00000000",
+            "headerLinkHoverColor": "#000000ff",
+            "transparentHeaderLogo": {
+              "id": "theme-images/79361f5a-df52-464b-a5a6-5725a438d960",
+              "altText": null
+            }
+          }
+        },
+        {
+          "id": "fe9b6b88-e96d-42b9-9c72-a9c595565f0b",
+          "componentId": "1e9eb5dc-c0a7-4bbb-a41d-f311be80dd16",
+          "propValues": {
+            "brandTextTitle": "Nordbron",
+            "brandText": "<p>Doğanın adımlarını izliyoruz. Karşı konulmaz biçimde yenilenirken her özgür ruhun arzuladığı biçimde yalın ve güçlü o.</p><p><br></p><p>Bir geyiğin ağaç dallarıyla ilişkisi kadar benzer, şehirdeki kontrastı kadar özgün.</p>",
+            "newsletterTitle": "Yeniliklerden Haberdar Ol",
+            "newsletterText": "<p style=\" font-weight: 400; font-size: 14px\">Yeniliklerden ve kampanyalardan siz de haberdar olun!</p>",
+            "informationBlockTitle": "Faydalı Linkler",
+            "informationLinks": [
+              {
+                "id": "dfb1886f-3107-4de4-a14a-f8c4a107df7d",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "33709125-1cd9-447f-a627-00c7bcaa443a",
+                "linkType": "PAGE",
+                "label": "Renson Fitilli Erkek Bere",
+                "pageId": "aa9daf62-60d3-458b-ad91-e09b069bc63c",
+                "pageType": "PRODUCT",
+                "itemId": "910c044d-ca21-406b-b19c-0867bc89d158",
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "ad37c506-cd88-4c2a-9fa0-803e7a5f6335",
+                "linkType": "PAGE",
+                "label": "Hakkımızda",
+                "pageId": "cd773f77-3ca9-4d3e-af3f-cd23f107177a",
+                "pageType": "CUSTOM",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              }
+            ],
+            "socialMediaTitle": "Sosyal Medya",
+            "socialMediaLinks": [
+              {
+                "id": "2a0bc756-be07-4845-9c63-d0cd159b5db0",
+                "linkType": "EXTERNAL",
+                "label": "Instagram",
+                "pageId": null,
+                "pageType": null,
+                "itemId": null,
+                "externalLink": "https://www.instagram.com/nordbron/",
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "691b806c-eb33-4650-9e4e-9122a99f89e2",
+                "linkType": "EXTERNAL",
+                "label": "Facebook",
+                "pageId": null,
+                "pageType": null,
+                "itemId": null,
+                "externalLink": "https://www.facebook.com/Nordbron/",
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "7837e58a-6e38-4be7-b862-dd0e9988d698",
+                "linkType": "EXTERNAL",
+                "label": "YouTube",
+                "externalLink": "https://www.youtube.com/@Nordbron",
+                "pageComponentId": null,
+                "subLinks": []
+              }
+            ]
           }
         }
       ],
