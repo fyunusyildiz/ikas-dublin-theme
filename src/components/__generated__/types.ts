@@ -260,3 +260,7 @@ export type AboutPageProps = {
 	images: IkasImage[];
 };
 
+export type PageSearchProps = {
+	productList: IkasProductList;
+};
+

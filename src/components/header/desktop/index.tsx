@@ -9,9 +9,10 @@ import CartSVG from "src/components/svg/cart";
 import Close from "src/components/svg/close";
 import FavoriteSVG from "src/components/svg/favorite";
 import ArrowDown from "src/components/header/desktop/svg/arrow-down";
+import Search from "src/components/header/desktop/svg/search";
 import { useState, useCallback, useMemo, useEffect } from "react";
-import right from "src/components/product-list/right";
-import Button from "src/components/components/button";
+import UIStore from "src/store/ui-store";
+import { useRouter } from "next/router";
 
 const DesktopHeader = (props: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,7 +28,7 @@ const DesktopHeader = (props: HeaderProps) => {
         <Announcement {...props} />
       )}
       <header
-        className={`w-full transition-all duration-300 ${
+        className={`w-full transition-all duration-300 shadow-md ${
           props.noTransparentHeader
             ? ""
             : "fixed top-[0px] z-[999] transition-all duration-300 ease-in-out"
@@ -40,7 +41,7 @@ const DesktopHeader = (props: HeaderProps) => {
             : "transparent",
         }}
       >
-        <div className="w-full px-20 py-5">
+        <div className="w-full p-5">
           <div className="w-full flex justify-between items-center">
             <LeftSide {...props} />
             <Center {...props} />
@@ -90,6 +91,26 @@ const Announcement: React.FC<HeaderProps> = (props) => {
 };
 
 const LeftSide = (props: HeaderProps) => {
+  return <Navigation {...props} />;
+};
+
+const Navigation = (props: HeaderProps) => {
+  return (
+    <nav className="w-[40%]">
+      <ul
+        className={`w-full flex items-center gap-x-5 ${
+          props.isCentered ? "justify-center" : "justify-start"
+        }`}
+      >
+        {props.links?.map((link, index) => (
+          <NavItem key={index} link={link} {...props} />
+        ))}
+      </ul>
+    </nav>
+  );
+};
+
+const Center = (props: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const logo = props.noTransparentHeader
     ? props.logo
@@ -104,9 +125,8 @@ const LeftSide = (props: HeaderProps) => {
       setIsScrolled(window.scrollY > 20);
     });
   }, []);
-
   return (
-    <div className="w-auto h-auto">
+    <div className="w-fit h-auto">
       <Link passHref href="/">
         <a>
           <figure
@@ -124,26 +144,6 @@ const LeftSide = (props: HeaderProps) => {
         </a>
       </Link>
     </div>
-  );
-};
-
-const Center = (props: HeaderProps) => {
-  return <Navigation {...props} />;
-};
-
-const Navigation = (props: HeaderProps) => {
-  return (
-    <nav className="w-[80%]">
-      <ul
-        className={`w-full flex items-center gap-x-5 ${
-          props.isCentered ? "justify-center" : "justify-start"
-        }`}
-      >
-        {props.links?.map((link, index) => (
-          <NavItem key={index} link={link} {...props} />
-        ))}
-      </ul>
-    </nav>
   );
 };
 
@@ -175,7 +175,7 @@ const NavItem = (props: { link: LinkProps } & HeaderProps) => {
         <a
           onMouseEnter={toggleLinkHover}
           onMouseLeave={toggleLinkHover}
-          className={`flex p-2 transition-colors duration-300 ease-in-out`}
+          className={`flex text-base p-2 transition-colors duration-300 ease-in-out uppercase`}
           style={{
             color: linkHoverState
               ? props.headerLinkHoverColor
@@ -226,6 +226,39 @@ const NavItem = (props: { link: LinkProps } & HeaderProps) => {
   );
 };
 
+export const SearchInput = observer((props: HeaderProps) => {
+  const uiStore = UIStore.getInstance();
+  const router = useRouter();
+
+  const onKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      router.push(`/search?s=${uiStore.searchKeyword}`);
+    }
+  };
+
+  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    uiStore.searchKeyword = event.target.value;
+  };
+
+  return (
+    <div className="relative">
+      <input
+        className="border border-solid text-2xs border-gray-two py-2 px-4 w-[200px] rounded-[5px] focus:outline-none"
+        type="search"
+        value={uiStore.searchKeyword}
+        placeholder={"Ürün Ara"}
+        onKeyPress={onKeyPress}
+        onChange={onChange}
+      />
+      <Search
+        className="absolute right-2 top-2 z-10"
+        fill={props.noTransparentHeader ? props.headerLinkColor : "black"}
+      />
+    </div>
+  );
+});
+
 const RightSide = observer((props: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -239,7 +272,8 @@ const RightSide = observer((props: HeaderProps) => {
   const quantity = store.cartStore.cart?.itemQuantity ?? 0;
   return (
     <>
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 w-[40%] justify-end">
+        <SearchInput {...props} />
         <Link href="/account/favorite-products" passHref>
           <a>
             <FavoriteSVG
@@ -308,8 +342,7 @@ const RightSide = observer((props: HeaderProps) => {
               <Close />
             </button>
           </div>
-          <div className="w-full overflow-y-auto h-full">
-          </div>
+          <div className="w-full overflow-y-auto h-full"></div>
           <div className="w-full flex items-center justify-between p-3 absolute left-0 bottom-0">
             <Link passHref href={"/cart"}>
               <a className="w-[48%] flex items-center justify-center py-3 bg-google-green rounded-sm font-semibold">
