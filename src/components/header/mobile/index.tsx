@@ -1,6 +1,7 @@
 import { IkasNavigationLink, Link, useStore } from "@ikas/storefront";
 import { observer } from "mobx-react-lite";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 import UIStore from "src/store/ui-store";
 
@@ -8,9 +9,9 @@ import { HeaderProps, TextPosition } from "src/components/__generated__/types";
 import MaxQuantityPerCartModal from "src/components/components/modal-max-quantity-per-cart";
 import AccountSVG from "src/components/svg/account";
 import CartSVG from "src/components/svg/cart";
-import FavoriteSVG from "src/components/svg/favorite";
 
 import IOCloseSVG from "./svg/io-close";
+import Search from "./svg/search";
 import IOMenuSVG from "./svg/io-menu";
 import { useEffect, useCallback, useMemo } from "react";
 
@@ -79,7 +80,7 @@ const Announcement: React.FC<HeaderProps> = (props) => {
   return (
     <Link href={props.announcementLink} passHref>
       <a
-        className={`w-full block text-base px-3 py-2 sm:text-xs ${getTextPosition()}`}
+        className={`w-full block text-base px-3 py-1 sm:text-2xs ${getTextPosition()}`}
         style={getStyle}
       >
         {announcementText}
@@ -171,11 +172,11 @@ const Sidenav = observer((props: HeaderProps) => {
         />
       )}
       <div
-        className={`fixed top-0 left-0 bottom-0 bg-white w-full max-w-full py-6 transition-transform z-[100] ${
+        className={`fixed top-0 left-0 bottom-0 bg-white w-full max-w-full py-2 transition-transform z-[100] ${
           uiStore.sidenavVisible ? "translate-x-0" : "-translate-x-full"
         } duration-300 ease-in-out overflow-auto`}
       >
-        <div className="flex justify-between items-center px-4 border-b border-solid pb-8 border-b-[#6F6448]">
+        <div className="flex justify-between items-center px-4 border-b border-solid pb-3 border-b-[#adadad]">
           <figure
             className="relative h-full flex items-center justify-center"
             style={{ height, maxWidth }}
@@ -201,7 +202,7 @@ const Sidenav = observer((props: HeaderProps) => {
 
 const Navigation = (props: HeaderProps) => {
   return (
-    <nav className="flex items-center w-full my-6 mx-0">
+    <nav className="flex items-center w-full mb-6 mx-0">
       <ul className="w-full">
         {props.links?.map((link, index) => (
           <NavigationListItem key={index} link={link} />
@@ -217,9 +218,12 @@ const NavigationListItem = ({ link }: { link: IkasNavigationLink }) => {
 
   return (
     <li>
-      <div className="flex items-center justify-between text-base p-4">
+      <div className="flex items-center justify-between text-base px-4 py-2">
         <Link href={link.href} passHref>
-          <a className="block" onClick={() => uiStore.toggleSidenav()}>
+          <a
+            className="block uppercase"
+            onClick={() => uiStore.toggleSidenav()}
+          >
             {link.label}
           </a>
         </Link>
@@ -254,6 +258,43 @@ const NavigationListItem = ({ link }: { link: IkasNavigationLink }) => {
   );
 };
 
+export const SearchInput = observer((props: HeaderProps) => {
+  const uiStore = UIStore.getInstance();
+  const router = useRouter();
+  const [searchClicked, setSearchClicked] = useState(false);
+
+  const onKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      router.push(`/search?s=${uiStore.searchKeyword}`);
+    }
+  };
+
+  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    uiStore.searchKeyword = event.target.value;
+  };
+
+  return (
+    <>
+      <button onClick={() => setSearchClicked((prev) => !prev)}>
+        <Search
+          fill={props.noTransparentHeader ? props.headerLinkColor : "black"}
+        />
+      </button>
+      <input
+        type="text"
+        value={uiStore.searchKeyword}
+        onChange={onChange}
+        onKeyPress={onKeyPress}
+        placeholder="Ürün Ara"
+        className={`absolute top-full left-0 focus:outline-none w-full h-10 p-2 border border-solid border-gray-three transition-all duration-300 z-10 ease-in-out ${
+          searchClicked ? "h-fit" : "h-0 py-0 border-none"
+        }`}
+      />
+    </>
+  );
+});
+
 const RightSide = observer((props: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -266,6 +307,7 @@ const RightSide = observer((props: HeaderProps) => {
   const quantity = store.cartStore.cart?.itemQuantity ?? 0;
   return (
     <div className="flex items-center gap-0">
+      <SearchInput {...props} />
       <Link href="/account" passHref>
         <a>
           <AccountSVG

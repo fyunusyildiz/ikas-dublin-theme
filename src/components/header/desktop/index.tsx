@@ -81,7 +81,7 @@ const Announcement: React.FC<HeaderProps> = (props) => {
   return (
     <Link href={props.announcementLink} passHref>
       <a
-        className={`w-full block text-base px-3 py-2 sm:text-xs ${getTextPosition()}`}
+        className={`w-full block text-sm px-3 py-1 sm:text-xs ${getTextPosition()}`}
         style={getStyle}
       >
         {announcementText}
