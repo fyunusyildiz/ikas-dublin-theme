@@ -71,7 +71,10 @@ export const Button = styled.button<ButtonProps>`
         font-size: 18px;
         line-height: 30px;
         height: ${ButtonSizes.large}px;
-        padding: 0 30px;
+        padding: 0;
+        background-color: #212529;
+        margin-top: 20px;
+        color: #fff;
       `;
     }
   }}

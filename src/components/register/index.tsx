@@ -1,40 +1,32 @@
-import React, { useEffect } from "react";
-import { observer } from "mobx-react-lite";
 import { Link, useTranslation } from "@ikas/storefront";
+import { observer } from "mobx-react-lite";
 
 import Alert from "src/components/components/alert";
+import Button from "src/components/components/button";
+import Checkbox from "src/components/components/checkbox";
 import Form from "src/components/components/form";
 import FormItem from "src/components/components/form/form-item";
-import Input from "src/components/components/input";
-import { Container } from "src/components/components/container";
-import Button from "src/components/components/button";
-import SocialLoginButton from "src/components/components/button/social-login";
-import Checkbox from "src/components/components/checkbox";
-import Row from "src/components/components/grid/row";
-import Col from "src/components/components/grid/col";
 import GoogleCaptcha from "src/components/components/google-captcha";
+import Col from "src/components/components/grid/col";
+import Row from "src/components/components/grid/row";
+import Input from "src/components/components/input";
 
 import useRegister from "./useRegister";
 
-import FacebookSVG from "src/components/svg/social-login/facebook";
-import GoogleSVG from "src/components/svg/social-login/google";
-
 import { RegisterProps } from "../__generated__/types";
 
-import * as S from "./style";
 import useRegisterForm from "./useRegisterForm";
 
 export const NS = "register";
 
 const Register = (props: RegisterProps) => {
-  const { t } = useTranslation();
   const register = useRegister(props);
   const { formAlert, onFormAlertClose, form } = register;
 
   return (
-    <div className="w-full">
-      <div className="w-full max-w-[500px] px-5 mt-40 mb-20 ml-28 md:mt-16 md:mb-16 md:ml-12 xs:ml-0 xs:mt-10">
-        <h1 className="text-3xl xs:text-2xl font-semibold text-black mb-4">
+    <div className="w-full flex flex-col items-center">
+      <div className="w-full max-w-[500px] px-5 md:my-10">
+        <h1 className="text-xl xs:text-lg font-normal text-black mb-2">
           Kayıt Ol
         </h1>
         <RegisterFormAlert
@@ -78,34 +70,11 @@ const RegisterFormComponent = observer((props: RegisterFormProps) => {
   const {
     marketingEmailFormItemHelp,
     marketingEmailFormItemStatus,
-    onSocialLogin,
     onMarketingEmailCheckboxChange,
   } = useRegisterForm(props);
 
   return (
     <Form onSubmit={onFormSubmit}>
-      {/* <S.SocialLoginWrapper>
-        <SocialLoginButton
-          color="#fff"
-          bgColor="#3a5a98"
-          borderColor="#3a5a98"
-          lineColor="#000"
-          text="Facebook"
-          subText={t(`${NS}:form.registerWith`)}
-          icon={<FacebookSVG />}
-          onClick={() => onSocialLogin("facebook")}
-        />
-        <SocialLoginButton
-          color="#000"
-          bgColor="#fff"
-          borderColor="#ddd"
-          lineColor="#ddd"
-          text="Google"
-          subText={t(`${NS}:form.registerWith`)}
-          icon={<GoogleSVG />}
-          onClick={() => onSocialLogin("google")}
-        />
-      </S.SocialLoginWrapper> */}
       <Row gutter={[24, 0]}>
         <Col span={12}>
           <FormItem
@@ -159,7 +128,13 @@ const RegisterFormComponent = observer((props: RegisterFormProps) => {
       </FormItem>
       <GoogleCaptcha i18nFileName="register" />
       <FormItem>
-        <Button block type="submit" loading={isPending} disabled={isPending}>
+        <Button
+          size="large"
+          block
+          type="submit"
+          loading={isPending}
+          disabled={isPending}
+        >
           Kayıt Ol
         </Button>
       </FormItem>
@@ -186,17 +161,14 @@ type FooterProps = {
 };
 
 const Footer = ({ redirect }: FooterProps) => {
-  const { t } = useTranslation();
-
   const redirectHref = redirect ? "?redirect=" + redirect : "";
   return (
-    <footer className="mt-20">
-      <h1 className="text-3xl xs:text-2xl font-semibold text-black mb-4">
-        Giriş Yap
-      </h1>
-      <p>Zaten bir hesabınız var mı?</p>
+    <footer className="mt-10 py-7 border-t border-solid border-gray-three">
+      <p className="font-normal text-base">Hesabın var mı?</p>
       <Link passHref href={`/account/login${redirectHref}`}>
-        <a>Giriş Yapın</a>
+        <a className="block w-full text-center py-3 mt-2 text-white text-sm bg-gray-four rounded-sm">
+          Giriş Yap
+        </a>
       </Link>
     </footer>
   );

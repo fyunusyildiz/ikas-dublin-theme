@@ -1,38 +1,35 @@
-import React from "react";
-import { observer } from "mobx-react-lite";
 import { Link, useTranslation } from "@ikas/storefront";
+import { observer } from "mobx-react-lite";
 
 import Alert from "src/components/components/alert";
+import Button from "src/components/components/button";
 import Form from "src/components/components/form";
 import FormItem from "src/components/components/form/form-item";
 import Input from "src/components/components/input";
-import { Container } from "src/components/components/container";
-import Button from "src/components/components/button";
 
 import GoogleCaptcha from "../components/google-captcha";
 import useRecoverPassword from "./useRecoverPassword";
 
-import * as S from "./style";
-
 export const NS = "recover-password";
 
 const RecoverPassword = () => {
-  const { t } = useTranslation();
   const recoverPassword = useRecoverPassword();
   const { formAlert, onFormAlertClose, form } = recoverPassword;
 
   return (
-    <Container>
-      <S.Wrapper>
-        <S.Title>Parola Sıfırlama</S.Title>
+    <div className="w-full flex flex-col items-center">
+      <div className="w-full max-w-[500px] px-5 md:my-10">
+        <h1 className="text-xl xs:text-lg font-normal text-black mb-2">
+          Şifre Sıfırla
+        </h1>
         <RecoverPasswordFormAlert
           formAlert={formAlert}
           onFormAlertClose={onFormAlertClose}
         />
         <RecoverPasswordFormComponent {...recoverPassword} />
         <Footer redirect={form.redirect} />
-      </S.Wrapper>
-    </Container>
+      </div>
+    </div>
   );
 };
 
@@ -92,7 +89,13 @@ const RecoverPasswordFormComponent = observer(
         </FormItem>
 
         <GoogleCaptcha i18nFileName="recover-password" />
-        <Button block type="submit" loading={isPending} disabled={isPending}>
+        <Button
+          size="large"
+          block
+          type="submit"
+          loading={isPending}
+          disabled={isPending}
+        >
           Gönder
         </Button>
       </Form>
@@ -105,23 +108,25 @@ type FooterProps = {
 };
 
 const Footer = ({ redirect }: FooterProps) => {
-  const { t } = useTranslation();
-
   const redirectHref = redirect ? "?redirect=" + redirect : "";
   return (
-    <S.Footer>
+    <footer className="mt-10 py-7 border-t border-solid border-gray-three">
       <div>
         Hesabınız yok mu?{" "}
         <Link passHref href={`/account/register${redirectHref}`}>
-          <a>Yeni hesap oluştur</a>
+          <a className="block w-full text-center py-3 mt-2 text-white text-sm bg-gray-four rounded-sm">
+            Kayıt Ol
+          </a>
         </Link>
       </div>
-      <div>
-        Hesabınız var mı?{" "}
+      <div className="mt-5">
+        Hesabın var mı?
         <Link passHref href={`/account/login${redirectHref}`}>
-          <a>Giriş yap</a>
+          <a className="block w-full text-center py-3 mt-2 text-white text-sm bg-gray-four rounded-sm">
+            Giriş Yap
+          </a>
         </Link>
       </div>
-    </S.Footer>
+    </footer>
   );
 };

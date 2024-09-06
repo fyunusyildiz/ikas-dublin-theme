@@ -1,42 +1,34 @@
-import React from "react";
+import { Link } from "@ikas/storefront";
 import { observer } from "mobx-react-lite";
-import { Link, useTranslation } from "@ikas/storefront";
 
 import Alert from "src/components/components/alert";
+import Button from "src/components/components/button";
 import Form from "src/components/components/form";
 import FormItem from "src/components/components/form/form-item";
 import Input from "src/components/components/input";
-import { Container } from "src/components/components/container";
-import Button from "src/components/components/button";
 
 import GoogleCaptcha from "../components/google-captcha";
 import useForgotPassword from "./useForgotPassword";
-
-import * as S from "./style";
-
 export const NS = "forgot-password";
 
-type Props = {};
-
-const ForgotPassword = (props: Props) => {
-  const { t } = useTranslation();
+const ForgotPassword = () => {
   const forgotPassword = useForgotPassword();
   const { formAlert, onFormAlertClose, form } = forgotPassword;
 
   return (
-    <Container>
-      <S.Wrapper>
-        <S.Title>
-          Parolamı Unuttum
-        </S.Title>
+    <div className="w-full flex flex-col items-center">
+      <div className="w-full max-w-[500px] px-5 md:my-10">
+        <h1 className="text-xl xs:text-lg font-normal text-black mb-2">
+          Şifremi Unuttum
+        </h1>
         <ForgotPasswordFormAlert
           formAlert={formAlert}
           onFormAlertClose={onFormAlertClose}
         />
         <ForgotPasswordFormComponent {...forgotPassword} />
         <Footer redirect={form.redirect} />
-      </S.Wrapper>
-    </Container>
+      </div>
+    </div>
   );
 };
 
@@ -66,8 +58,6 @@ type ForgotPasswordFormProps = ReturnType<typeof useForgotPassword>;
 
 const ForgotPasswordFormComponent = observer(
   ({ status, isPending, form, onFormSubmit }: ForgotPasswordFormProps) => {
-    const { t } = useTranslation();
-
     return (
       <Form onSubmit={onFormSubmit}>
         <FormItem
@@ -96,27 +86,25 @@ type FooterProps = {
 };
 
 const Footer = ({ redirect }: FooterProps) => {
-  const { t } = useTranslation();
-
   const redirectHref = redirect ? "?redirect=" + redirect : "";
   return (
-    <S.Footer>
+    <footer className="mt-10 py-7 border-t border-solid border-gray-three">
       <div>
         Hesabınız yok mu?{" "}
         <Link passHref href={`/account/register${redirectHref}`}>
-          <a>
-            Yeni hesap oluştur
+          <a className="block w-full text-center py-3 mt-2 text-white text-sm bg-gray-four rounded-sm">
+            Kayıt Ol
           </a>
         </Link>
       </div>
-      <div>
-        Hesabınız var mı?{" "}
+      <div className="mt-5">
+        Hesabın var mı?
         <Link passHref href={`/account/login${redirectHref}`}>
-          <a>
-            Giriş yap
+          <a className="block w-full text-center py-3 mt-2 text-white text-sm bg-gray-four rounded-sm">
+            Giriş Yap
           </a>
         </Link>
       </div>
-    </S.Footer>
+    </footer>
   );
 };
