@@ -14,7 +14,7 @@
       "componentJson": null,
       "props": [
         {
-          "id": "77bf323f-8c0e-4bfc-8b72-b5e174909847",
+          "id": "b6f4a14b-3bbf-49f9-91f6-655db8868c3f",
           "name": "logo",
           "displayName": "",
           "description": "",
@@ -27,7 +27,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "a8fe8edd-0722-4f2e-88c5-34b653ccc991",
+          "id": "6c17378d-ae38-4cfc-9711-8b0583ff5cdb",
           "name": "showTax",
           "displayName": "",
           "description": "",
@@ -40,7 +40,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "5964b1ad-576b-4da2-8834-8f6fe0fc7988",
+          "id": "edde4b68-4d62-4fb3-a605-6f05febac5dc",
           "name": "showCampaignOffersDesign",
           "displayName": "",
           "description": "",
@@ -53,7 +53,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "0651cec6-0900-45c3-87bf-154ace151d04",
+          "id": "4ad2a907-819f-455d-8573-1d450c799cc4",
           "name": "campaignOfferIsSmallDesign",
           "displayName": "",
           "description": "",
@@ -66,7 +66,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "bc3ea363-10f3-4f98-a298-cc74577d71ce",
+          "id": "eecedb92-dfe3-4792-bc48-88a9d6f6f1cc",
           "name": "showCampaignIsBiggerImage",
           "displayName": "",
           "description": "",
@@ -79,7 +79,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "d7016b6d-2b7e-4e6d-b46b-88546270bf50",
+          "id": "046d8bcb-183a-4508-afee-7d4577ff8e5a",
           "name": "campaignOffersTitleColor",
           "displayName": "",
           "description": "",
@@ -92,7 +92,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "f97e2d6f-6b81-44a2-88e6-4fd38110db43",
+          "id": "644fba8d-721a-4508-83ac-feafe74ab57d",
           "name": "campaignOffersDescriptionColor",
           "displayName": "",
           "description": "",
@@ -105,7 +105,20 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "64a99eb6-6fb9-45f3-b1b4-556913c11a8f",
+          "id": "a803e906-b5ee-4d0c-bb0a-556b59b2213b",
+          "name": "campaignOffersContainerBgColor",
+          "displayName": "",
+          "description": "",
+          "type": "COLOR",
+          "isRequired": false,
+          "sliderData": {},
+          "translations": {},
+          "groupId": "checkout-campaign-offers-design-settings",
+          "excludedFields": [],
+          "excludedFieldsCategory": []
+        },
+        {
+          "id": "a7532cd0-4289-4cbc-b7b0-79645f9f22a1",
           "name": "showCampaignShowDiscountSettings",
           "displayName": "",
           "description": "",
@@ -118,7 +131,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "f7638d14-9edf-4490-a85c-59393f4c2663",
+          "id": "909bd276-4517-4ec8-bde0-9bb91d388246",
           "name": "showCampaignHideDiscountBadge",
           "displayName": "",
           "description": "",
@@ -131,7 +144,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "1b03b28d-2968-416f-b58a-008a62d5f230",
+          "id": "48edb731-e5ac-4abe-9181-cb35eaf19ed2",
           "name": "campaignOffersDiscountPercentageColor",
           "displayName": "",
           "description": "",
@@ -144,7 +157,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "e4575d06-fe79-4091-944a-715ca753589c",
+          "id": "fd76c8eb-6ba1-46ab-ba40-10393ec96f03",
           "name": "campaignOffersDiscountPercentageBgColor",
           "displayName": "",
           "description": "",
@@ -157,7 +170,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "cb62ee69-bfa2-4fac-83b6-8accb92e82ec",
+          "id": "35e894f6-694a-4bec-a02e-09644f7dd190",
           "name": "showCampaignShowCountdownSettings",
           "displayName": "",
           "description": "",
@@ -170,7 +183,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "73c9c6e4-1bb9-4459-8cb1-50ffa6afb726",
+          "id": "ac4084b6-4f51-49ef-ad9f-3acca5f46c58",
           "name": "campaignOfferCountdownStyleIsLine",
           "displayName": "",
           "description": "",
@@ -183,7 +196,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "f077136d-f884-4193-9d56-cff017e283fc",
+          "id": "d59f9c27-9240-4ae6-a8b0-74cd8abeff1f",
           "name": "campaignOffersCountdownTextColor",
           "displayName": "",
           "description": "",
@@ -196,7 +209,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "2b356f69-7805-483a-9972-1d34a88dadd9",
+          "id": "ca650c08-baab-4d4e-99f9-eebb404bf7c6",
           "name": "campaignOffersCountdownTimeColor",
           "displayName": "",
           "description": "",
@@ -209,7 +222,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "97829474-c592-4fe1-add9-7ea78edd58ac",
+          "id": "42509e23-2e1d-41c8-8025-a343630edd04",
           "name": "campaignOffersCountdownBgColor",
           "displayName": "",
           "description": "",
@@ -222,7 +235,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "6965f00d-d0cf-4ded-bccc-6f3efc19c151",
+          "id": "443c395f-89ae-4a07-abe4-859bd8cf98a9",
           "name": "campaignOffersEnableMiddlePhase",
           "displayName": "",
           "description": "",
@@ -235,7 +248,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "51a36701-5199-460b-812f-2813d2f9b0cf",
+          "id": "a13171ba-93f3-4c56-bb6a-7e3a0082d433",
           "name": "campaignOffersMiddlePhaseOverlayColor",
           "displayName": "",
           "description": "",
@@ -248,7 +261,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "03fe5f7e-721e-4356-b4c8-f2808f5dda6c",
+          "id": "7bafa334-6a69-4b49-8861-9f1af8ca6fea",
           "name": "campaignOfferCountdownStyleIsLineSuccessPage",
           "displayName": "",
           "description": "",
@@ -261,7 +274,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "69846210-3d44-4420-a1e2-8c76623208ed",
+          "id": "70d35c3f-50c1-46c1-ac36-a0ed78b3054e",
           "name": "buttonBgColor",
           "displayName": "",
           "description": "",
@@ -274,7 +287,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "ff1f8d65-48d5-4e45-b3c2-d2900d52d11e",
+          "id": "83ab0e97-3699-4655-8538-2ce30377a880",
           "name": "buttonTextColor",
           "displayName": "",
           "description": "",
@@ -287,7 +300,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "2c503e63-bdf4-42bb-85e6-760e12140d46",
+          "id": "d2627f53-ce6b-41cf-8000-9ae850612266",
           "name": "buttonDisabledBgColor",
           "displayName": "",
           "description": "",
@@ -300,7 +313,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "ece0995c-4e3c-43da-9b8d-23ea35640377",
+          "id": "4df788e5-36fd-4c7b-aeab-8ab220720345",
           "name": "buttonDisabledTextColor",
           "displayName": "",
           "description": "",
@@ -313,7 +326,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "f9cc0add-92d3-4c29-8043-579843623fdb",
+          "id": "880a38d6-0ace-43ab-af27-3b6c42bbbaf7",
           "name": "primaryTextColor",
           "displayName": "",
           "description": "",
@@ -326,7 +339,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "f13669d1-662e-49e4-9c39-ddb09f1b199b",
+          "id": "423993fe-6f90-4cc8-833d-b5ff260d8a04",
           "name": "secondaryTextColor",
           "displayName": "",
           "description": "",
@@ -339,7 +352,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "97fb5fd6-4137-45c8-9e0d-7891bbc8eab8",
+          "id": "44d6134d-1871-4831-8c38-ce5a0bc0faca",
           "name": "primaryBgColor",
           "displayName": "",
           "description": "",
@@ -352,7 +365,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "3a291f03-c846-485a-9cdc-390e29d24dfb",
+          "id": "6fd7b33c-14eb-4692-bac5-1e5fe4649777",
           "name": "secondaryBgColor",
           "displayName": "",
           "description": "",
@@ -365,7 +378,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "fd2baa5b-a97e-487a-acb4-34dc3a4fa849",
+          "id": "ca9a2e76-ee23-497f-aef5-3800190584e7",
           "name": "borderColor",
           "displayName": "",
           "description": "",
@@ -378,7 +391,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "94275b3a-78d4-492b-a4ed-b60ba5b0855b",
+          "id": "616c5104-2fc9-4e1b-871c-cf801b6fbc15",
           "name": "cardBgColor",
           "displayName": "",
           "description": "",
@@ -391,7 +404,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "32b18814-0580-4d97-91a3-5da4f38f3f3e",
+          "id": "d1edff9a-2107-46a6-800b-384e8eca07fe",
           "name": "errorColor",
           "displayName": "",
           "description": "",
@@ -404,7 +417,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "bc19d02d-3b26-4f74-aa06-54cbbb4bc850",
+          "id": "6a8e2ded-e9fd-4627-87a3-c06752bcc34c",
           "name": "errorLightColor",
           "displayName": "",
           "description": "",
@@ -417,7 +430,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "00365f4f-a0aa-4026-a975-beb16e79bf46",
+          "id": "e543ca2e-137f-44bd-b9dc-0becab3ce1fd",
           "name": "warningColor",
           "displayName": "",
           "description": "",
@@ -430,7 +443,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "4a71117f-5135-475e-bfe2-8b7536f7335f",
+          "id": "3ee5d0bb-a283-4932-9e8c-2e887f2afe8e",
           "name": "warningLightColor",
           "displayName": "",
           "description": "",
@@ -443,7 +456,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "c01a57d0-e60f-449a-a48a-8ba58dda7404",
+          "id": "5814c709-bdb5-4e0c-8d4e-08cbaec8dc78",
           "name": "successColor",
           "displayName": "",
           "description": "",
@@ -456,7 +469,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "fab1b8e1-2a21-4bf4-b0c4-67171a743cf0",
+          "id": "a0c00f60-5258-4d3a-8e85-c7049a770b1e",
           "name": "successLightColor",
           "displayName": "",
           "description": "",
@@ -469,7 +482,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "c1bd6377-2e86-4950-a38b-95bbda509677",
+          "id": "8abc5047-0601-40ae-82f2-db077d27a7c6",
           "name": "secondaryButtonBgColor",
           "displayName": "",
           "description": "",
@@ -482,7 +495,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "46310a7e-7d4d-4c93-9bc5-e76580454836",
+          "id": "d9906f9e-1296-4e58-aab2-f07b24e80661",
           "name": "secondaryButtonTextColor",
           "displayName": "",
           "description": "",
@@ -495,7 +508,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "56f80627-0d64-445c-b091-4e5d834a6630",
+          "id": "510e7082-82a2-46df-a6b4-4a8d44a70f98",
           "name": "secondaryButtonBorderColor",
           "displayName": "",
           "description": "",
@@ -520,6 +533,7 @@
         "showCampaignIsBiggerImage": null,
         "campaignOffersTitleColor": null,
         "campaignOffersDescriptionColor": null,
+        "campaignOffersContainerBgColor": null,
         "showCampaignShowDiscountSettings": null,
         "showCampaignHideDiscountBadge": null,
         "campaignOffersDiscountPercentageColor": null,
@@ -797,8 +811,6 @@
         "slides": [
           {
             "left_hero": {
-              "left_no_title": false,
-              "left_no_button": false,
               "left_image": {
                 "id": "theme-images/c8cf38ef-f948-4079-896a-2f09b907cda6",
                 "altText": null
@@ -818,7 +830,9 @@
               "left_button_background": "#ffffffff",
               "left_button_color": "#020007ff",
               "left_has_filter": true,
-              "left_position": "BOTTOM_RIGHT"
+              "left_position": "BOTTOM_RIGHT",
+              "left_no_title": false,
+              "left_no_button": false
             },
             "right_hero": {
               "right_image": {
@@ -3203,7 +3217,7 @@
       "isFooter": false,
       "translations": {},
       "defaultPropValuesTranslations": {},
-      "defaultPropValues": null,
+      "defaultPropValues": {},
       "commonPropValues": null
     },
     {
@@ -3232,7 +3246,7 @@
       "isFooter": false,
       "translations": {},
       "defaultPropValuesTranslations": {},
-      "defaultPropValues": null,
+      "defaultPropValues": {},
       "commonPropValues": null
     },
     {
@@ -3247,7 +3261,7 @@
       "isFooter": false,
       "translations": {},
       "defaultPropValuesTranslations": {},
-      "defaultPropValues": null,
+      "defaultPropValues": {},
       "commonPropValues": null
     },
     {
@@ -3262,7 +3276,78 @@
       "isFooter": false,
       "translations": {},
       "defaultPropValuesTranslations": {},
-      "defaultPropValues": null,
+      "defaultPropValues": {},
+      "commonPropValues": null
+    },
+    {
+      "id": "354a9fd3-f917-49fa-8391-6afd0c867671",
+      "dir": "about-page",
+      "displayName": "About Page",
+      "description": "",
+      "type": "COMPONENT",
+      "componentJson": null,
+      "props": [
+        {
+          "id": "865fd6e2-7f23-49dc-82b7-0785984796ee",
+          "name": "aboutHugeTitle",
+          "displayName": "Büyük Başlık",
+          "description": "",
+          "type": "TEXT",
+          "isRequired": true,
+          "sliderData": {},
+          "translations": {},
+          "groupId": "",
+          "excludedFields": [],
+          "excludedFieldsCategory": []
+        },
+        {
+          "id": "1dd8abf1-0398-41c7-917a-9c4fe7ee6b86",
+          "name": "aboutDescription",
+          "displayName": "Hakkımızda Metni",
+          "description": "",
+          "type": "RICH_TEXT",
+          "isRequired": true,
+          "sliderData": {},
+          "translations": {},
+          "groupId": "",
+          "excludedFields": [],
+          "excludedFieldsCategory": []
+        },
+        {
+          "id": "8d48018b-d794-4e2a-8416-87f6dac92335",
+          "name": "images",
+          "displayName": "Görseller",
+          "description": "",
+          "type": "IMAGE_LIST",
+          "isRequired": true,
+          "sliderData": {},
+          "translations": {},
+          "groupId": "",
+          "excludedFields": [],
+          "excludedFieldsCategory": []
+        }
+      ],
+      "isHeader": false,
+      "isFooter": false,
+      "translations": {},
+      "defaultPropValuesTranslations": {},
+      "defaultPropValues": {
+        "aboutHugeTitle": "NORDBRON",
+        "aboutDescription": "<p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\">Doğanın adımlarını izliyoruz. Karşı konulmaz biçimde yenilenirken her özgür ruhun arzuladığı biçimde yalın ve güçlü o...</p><p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\"><br></p><p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\">Bir geyiğin ağaç dallarıyla ilişkisi kadar benzer, şehirdeki kontrastı kadar özgün. Göğe doğru kıvrılarak büyüyen ağaç dalları gibi, onun yenilenme güdüsünden ilhamla yenilikçi tasarımlar üretiyor ve büyüyoruz.</p><p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\"><br></p><p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\">Bitmeyen merak ve bilgelikle geleneksel neslin uzmanlığından yararlanıyor, yeni neslin kurgusunda bir iletişim yolu açıyoruz.</p><p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\"><br></p><p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\">Dün olduğu gibi bugün ve yarın da onun büyüleyici kılavuzluğunda bir yaşam rehberi olmayı sürdüreceğiz.</p>",
+        "images": [
+          {
+            "id": "theme-images/5a0a62f2-e1ac-46e4-ab17-11d4e59dc78f",
+            "altText": null
+          },
+          {
+            "id": "theme-images/9f567570-8a6b-43eb-be7a-2adb6f3bc800",
+            "altText": null
+          },
+          {
+            "id": "theme-images/ce363610-82e5-4b57-8513-8ed21fd10f26"
+          }
+        ]
+      },
       "commonPropValues": null
     }
   ],
@@ -3625,11 +3710,14 @@
                 "subLinks": []
               },
               {
-                "id": "e1140aee-91bf-48e9-9253-00fdd5fad019",
+                "id": "ad37c506-cd88-4c2a-9fa0-803e7a5f6335",
                 "linkType": "PAGE",
-                "label": "Ödeme Sayfası",
-                "pageId": "checkout",
-                "pageType": "CHECKOUT",
+                "label": "Hakkımızda",
+                "pageId": "cd773f77-3ca9-4d3e-af3f-cd23f107177a",
+                "pageType": "CUSTOM",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
                 "pageComponentId": null,
                 "subLinks": []
               }
@@ -3904,11 +3992,14 @@
                 "subLinks": []
               },
               {
-                "id": "e1140aee-91bf-48e9-9253-00fdd5fad019",
+                "id": "ad37c506-cd88-4c2a-9fa0-803e7a5f6335",
                 "linkType": "PAGE",
-                "label": "Ödeme Sayfası",
-                "pageId": "checkout",
-                "pageType": "CHECKOUT",
+                "label": "Hakkımızda",
+                "pageId": "cd773f77-3ca9-4d3e-af3f-cd23f107177a",
+                "pageType": "CUSTOM",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
                 "pageComponentId": null,
                 "subLinks": []
               }
@@ -3970,6 +4061,7 @@
             "showCampaignIsBiggerImage": false,
             "campaignOffersTitleColor": null,
             "campaignOffersDescriptionColor": null,
+            "campaignOffersContainerBgColor": null,
             "showCampaignShowDiscountSettings": false,
             "showCampaignHideDiscountBadge": false,
             "campaignOffersDiscountPercentageColor": null,
@@ -4330,11 +4422,14 @@
                 "subLinks": []
               },
               {
-                "id": "e1140aee-91bf-48e9-9253-00fdd5fad019",
+                "id": "ad37c506-cd88-4c2a-9fa0-803e7a5f6335",
                 "linkType": "PAGE",
-                "label": "Ödeme Sayfası",
-                "pageId": "checkout",
-                "pageType": "CHECKOUT",
+                "label": "Hakkımızda",
+                "pageId": "cd773f77-3ca9-4d3e-af3f-cd23f107177a",
+                "pageType": "CUSTOM",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
                 "pageComponentId": null,
                 "subLinks": []
               }
@@ -4524,11 +4619,14 @@
                 "subLinks": []
               },
               {
-                "id": "e1140aee-91bf-48e9-9253-00fdd5fad019",
+                "id": "ad37c506-cd88-4c2a-9fa0-803e7a5f6335",
                 "linkType": "PAGE",
-                "label": "Ödeme Sayfası",
-                "pageId": "checkout",
-                "pageType": "CHECKOUT",
+                "label": "Hakkımızda",
+                "pageId": "cd773f77-3ca9-4d3e-af3f-cd23f107177a",
+                "pageType": "CUSTOM",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
                 "pageComponentId": null,
                 "subLinks": []
               }
@@ -4703,11 +4801,14 @@
                 "subLinks": []
               },
               {
-                "id": "e1140aee-91bf-48e9-9253-00fdd5fad019",
+                "id": "ad37c506-cd88-4c2a-9fa0-803e7a5f6335",
                 "linkType": "PAGE",
-                "label": "Ödeme Sayfası",
-                "pageId": "checkout",
-                "pageType": "CHECKOUT",
+                "label": "Hakkımızda",
+                "pageId": "cd773f77-3ca9-4d3e-af3f-cd23f107177a",
+                "pageType": "CUSTOM",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
                 "pageComponentId": null,
                 "subLinks": []
               }
@@ -4882,11 +4983,14 @@
                 "subLinks": []
               },
               {
-                "id": "e1140aee-91bf-48e9-9253-00fdd5fad019",
+                "id": "ad37c506-cd88-4c2a-9fa0-803e7a5f6335",
                 "linkType": "PAGE",
-                "label": "Ödeme Sayfası",
-                "pageId": "checkout",
-                "pageType": "CHECKOUT",
+                "label": "Hakkımızda",
+                "pageId": "cd773f77-3ca9-4d3e-af3f-cd23f107177a",
+                "pageType": "CUSTOM",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
                 "pageComponentId": null,
                 "subLinks": []
               }
@@ -5061,11 +5165,14 @@
                 "subLinks": []
               },
               {
-                "id": "e1140aee-91bf-48e9-9253-00fdd5fad019",
+                "id": "ad37c506-cd88-4c2a-9fa0-803e7a5f6335",
                 "linkType": "PAGE",
-                "label": "Ödeme Sayfası",
-                "pageId": "checkout",
-                "pageType": "CHECKOUT",
+                "label": "Hakkımızda",
+                "pageId": "cd773f77-3ca9-4d3e-af3f-cd23f107177a",
+                "pageType": "CUSTOM",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
                 "pageComponentId": null,
                 "subLinks": []
               }
@@ -5240,11 +5347,14 @@
                 "subLinks": []
               },
               {
-                "id": "e1140aee-91bf-48e9-9253-00fdd5fad019",
+                "id": "ad37c506-cd88-4c2a-9fa0-803e7a5f6335",
                 "linkType": "PAGE",
-                "label": "Ödeme Sayfası",
-                "pageId": "checkout",
-                "pageType": "CHECKOUT",
+                "label": "Hakkımızda",
+                "pageId": "cd773f77-3ca9-4d3e-af3f-cd23f107177a",
+                "pageType": "CUSTOM",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
                 "pageComponentId": null,
                 "subLinks": []
               }
@@ -5419,11 +5529,14 @@
                 "subLinks": []
               },
               {
-                "id": "e1140aee-91bf-48e9-9253-00fdd5fad019",
+                "id": "ad37c506-cd88-4c2a-9fa0-803e7a5f6335",
                 "linkType": "PAGE",
-                "label": "Ödeme Sayfası",
-                "pageId": "checkout",
-                "pageType": "CHECKOUT",
+                "label": "Hakkımızda",
+                "pageId": "cd773f77-3ca9-4d3e-af3f-cd23f107177a",
+                "pageType": "CUSTOM",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
                 "pageComponentId": null,
                 "subLinks": []
               }
@@ -5598,11 +5711,14 @@
                 "subLinks": []
               },
               {
-                "id": "e1140aee-91bf-48e9-9253-00fdd5fad019",
+                "id": "ad37c506-cd88-4c2a-9fa0-803e7a5f6335",
                 "linkType": "PAGE",
-                "label": "Ödeme Sayfası",
-                "pageId": "checkout",
-                "pageType": "CHECKOUT",
+                "label": "Hakkımızda",
+                "pageId": "cd773f77-3ca9-4d3e-af3f-cd23f107177a",
+                "pageType": "CUSTOM",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
                 "pageComponentId": null,
                 "subLinks": []
               }
@@ -5777,11 +5893,14 @@
                 "subLinks": []
               },
               {
-                "id": "e1140aee-91bf-48e9-9253-00fdd5fad019",
+                "id": "ad37c506-cd88-4c2a-9fa0-803e7a5f6335",
                 "linkType": "PAGE",
-                "label": "Ödeme Sayfası",
-                "pageId": "checkout",
-                "pageType": "CHECKOUT",
+                "label": "Hakkımızda",
+                "pageId": "cd773f77-3ca9-4d3e-af3f-cd23f107177a",
+                "pageType": "CUSTOM",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
                 "pageComponentId": null,
                 "subLinks": []
               }
@@ -5956,11 +6075,14 @@
                 "subLinks": []
               },
               {
-                "id": "e1140aee-91bf-48e9-9253-00fdd5fad019",
+                "id": "ad37c506-cd88-4c2a-9fa0-803e7a5f6335",
                 "linkType": "PAGE",
-                "label": "Ödeme Sayfası",
-                "pageId": "checkout",
-                "pageType": "CHECKOUT",
+                "label": "Hakkımızda",
+                "pageId": "cd773f77-3ca9-4d3e-af3f-cd23f107177a",
+                "pageType": "CUSTOM",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
                 "pageComponentId": null,
                 "subLinks": []
               }
@@ -6137,11 +6259,14 @@
                 "subLinks": []
               },
               {
-                "id": "e1140aee-91bf-48e9-9253-00fdd5fad019",
+                "id": "ad37c506-cd88-4c2a-9fa0-803e7a5f6335",
                 "linkType": "PAGE",
-                "label": "Ödeme Sayfası",
-                "pageId": "checkout",
-                "pageType": "CHECKOUT",
+                "label": "Hakkımızda",
+                "pageId": "cd773f77-3ca9-4d3e-af3f-cd23f107177a",
+                "pageType": "CUSTOM",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
                 "pageComponentId": null,
                 "subLinks": []
               }
@@ -6184,10 +6309,24 @@
           }
         },
         {
-          "id": "f8f66174-15a8-4335-b6b0-caf8cb3f8c48",
-          "componentId": "471dfb8e-49ae-4974-aa19-8029a5671040",
+          "id": "9966fa4c-6cb5-4acd-852d-7cb745c5980c",
+          "componentId": "354a9fd3-f917-49fa-8391-6afd0c867671",
           "propValues": {
-            "title": "Hakkımızda"
+            "aboutHugeTitle": "NORDBRON",
+            "aboutDescription": "<p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\">Doğanın adımlarını izliyoruz. Karşı konulmaz biçimde yenilenirken her özgür ruhun arzuladığı biçimde yalın ve güçlü o...</p><p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\"><br></p><p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\">Bir geyiğin ağaç dallarıyla ilişkisi kadar benzer, şehirdeki kontrastı kadar özgün. Göğe doğru kıvrılarak büyüyen ağaç dalları gibi, onun yenilenme güdüsünden ilhamla yenilikçi tasarımlar üretiyor ve büyüyoruz.</p><p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\"><br></p><p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\">Bitmeyen merak ve bilgelikle geleneksel neslin uzmanlığından yararlanıyor, yeni neslin kurgusunda bir iletişim yolu açıyoruz.</p><p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\"><br></p><p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\">Dün olduğu gibi bugün ve yarın da onun büyüleyici kılavuzluğunda bir yaşam rehberi olmayı sürdüreceğiz.</p>",
+            "images": [
+              {
+                "id": "theme-images/74131e61-1591-46f2-b702-c3b9b53dc48f",
+                "altText": null
+              },
+              {
+                "id": "theme-images/4156278a-7b61-48d7-89c4-06d8ed17bb32",
+                "altText": null
+              },
+              {
+                "id": "theme-images/6d71c9d6-3a81-48f3-a9d4-4ab2ffd956d6"
+              }
+            ]
           }
         }
       ],

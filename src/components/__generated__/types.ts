@@ -254,3 +254,9 @@ export type CartProps = {
 	summaryText?: string;
 };
 
+export type AboutPageProps = {
+	aboutHugeTitle: string;
+	aboutDescription: string;
+	images: IkasImage[];
+};
+
