@@ -8,9 +8,9 @@ const AboutPage = ({ ...props }: AboutPageProps) => {
         <h1 className="text-[10vw]">{props.aboutHugeTitle}</h1>
         <p dangerouslySetInnerHTML={{ __html: props.aboutDescription }}></p>
       </div>
-      <div className="grid grid-cols-3 my-20 xs:my-10 sm:gap-5 w-full">
+      <div className="grid grid-cols-2 my-20 xs:my-10 sm:gap-5 w-full">
         {props.images.map((image, index) => (
-          <div key={index} className="col-span-1 sm:col-span-3">
+          <div key={index} className="col-span-1 sm:col-span-2">
             <img src={image.src} alt={image.altText || ""} className="w-full" />
           </div>
         ))}

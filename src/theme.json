@@ -14,7 +14,7 @@
       "componentJson": null,
       "props": [
         {
-          "id": "b5e85602-ddd7-4997-a0ee-8ed7bfaa9041",
+          "id": "4b863258-52e9-42ac-992d-0fdbd5b87c18",
           "name": "logo",
           "displayName": "",
           "description": "",
@@ -27,7 +27,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "47fe8fdc-7e3c-47f1-bada-7117ac7bd830",
+          "id": "6238791e-e294-48cc-85da-3657889646d4",
           "name": "showTax",
           "displayName": "",
           "description": "",
@@ -40,7 +40,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "6c27fea2-b606-439d-907a-88d3babb91ba",
+          "id": "4d79dd7b-72c1-4b7a-8ee3-339ae2664f78",
           "name": "showCampaignOffersDesign",
           "displayName": "",
           "description": "",
@@ -53,7 +53,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "5f8597df-da88-4cc2-930b-1ea5e2cd71eb",
+          "id": "9dc7f6f3-2dc0-40df-af5d-7d420cb5a18b",
           "name": "campaignOfferIsSmallDesign",
           "displayName": "",
           "description": "",
@@ -66,7 +66,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "d0cce5ff-3196-4c73-821f-203512f8c964",
+          "id": "6366905a-25c9-431c-b2dc-6a7997c725cb",
           "name": "showCampaignIsBiggerImage",
           "displayName": "",
           "description": "",
@@ -79,7 +79,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "78cd583a-cf5c-4a9a-8883-f55f50e2850d",
+          "id": "4c4dda36-74ee-4d32-a989-3456bcc11292",
           "name": "campaignOffersTitleColor",
           "displayName": "",
           "description": "",
@@ -92,7 +92,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "4c80773f-cc93-490c-b350-48bff5b2e58c",
+          "id": "fde9535c-e798-4641-ab7f-d6f0fa86b0ec",
           "name": "campaignOffersDescriptionColor",
           "displayName": "",
           "description": "",
@@ -105,7 +105,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "d158c4a6-04a0-4702-8f6c-f8be838a5008",
+          "id": "66937105-5556-4b3b-b113-67f060ab9990",
           "name": "campaignOffersContainerBgColor",
           "displayName": "",
           "description": "",
@@ -118,7 +118,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "4d3799ab-30fe-4e2e-bf80-bb9c352009ae",
+          "id": "53f64cf6-1c6d-495b-9870-2a52f342a71f",
           "name": "showCampaignShowDiscountSettings",
           "displayName": "",
           "description": "",
@@ -131,7 +131,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "c3694303-5e64-40c3-991b-dd9651659d50",
+          "id": "02c3ef51-2b8f-4c69-a070-093bf1331851",
           "name": "showCampaignHideDiscountBadge",
           "displayName": "",
           "description": "",
@@ -144,7 +144,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "456524d0-50e1-4179-b276-3a30703d0a5b",
+          "id": "b735303b-7e65-49ab-8568-547c86e743ea",
           "name": "campaignOffersDiscountPercentageColor",
           "displayName": "",
           "description": "",
@@ -157,7 +157,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "bcca4021-21aa-4b81-951f-d3b6f7c43d4c",
+          "id": "05e89029-2927-44c2-a01e-45840f9fea7f",
           "name": "campaignOffersDiscountPercentageBgColor",
           "displayName": "",
           "description": "",
@@ -170,7 +170,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "630a691b-d6a9-4b57-a6cf-24dff200c2d2",
+          "id": "62bb85fe-b833-43bd-a73c-a0f6e67bc25a",
           "name": "showCampaignShowCountdownSettings",
           "displayName": "",
           "description": "",
@@ -183,7 +183,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "452a8070-7823-42fd-b15a-f6d83c5bbe41",
+          "id": "789eceb7-05eb-4f00-936f-5670e35f33db",
           "name": "campaignOfferCountdownStyleIsLine",
           "displayName": "",
           "description": "",
@@ -196,7 +196,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "71ff2552-1b17-47c9-8dcf-03e840024d8a",
+          "id": "0eba6f6c-ac0b-4c19-851f-c98dfc8d35b5",
           "name": "campaignOffersCountdownTextColor",
           "displayName": "",
           "description": "",
@@ -209,7 +209,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "129ce027-4bf0-41d0-89b9-3331d3ce9527",
+          "id": "340b4316-8de2-4400-935c-ada5288f2d0c",
           "name": "campaignOffersCountdownTimeColor",
           "displayName": "",
           "description": "",
@@ -222,7 +222,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "ab3664bd-b76d-4a37-abc4-3b7824d145fb",
+          "id": "d7934eb6-de2c-4071-adaa-217e8c4e8a7d",
           "name": "campaignOffersCountdownBgColor",
           "displayName": "",
           "description": "",
@@ -235,7 +235,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "742feff5-19f7-4ed0-93c0-0fdb3c708964",
+          "id": "c21c7f21-5ce9-48b3-a29a-42cf84dedd68",
           "name": "campaignOffersEnableMiddlePhase",
           "displayName": "",
           "description": "",
@@ -248,7 +248,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "7352dcff-8312-47f4-8c62-2f3bdf8bd673",
+          "id": "41c939a4-533c-49fd-8154-7e82d16166ae",
           "name": "campaignOffersMiddlePhaseOverlayColor",
           "displayName": "",
           "description": "",
@@ -261,7 +261,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "967d0cab-3167-4b03-b752-1b8843bf279a",
+          "id": "2ae94f2c-30e6-41ee-af13-d72e3a48140d",
           "name": "campaignOfferCountdownStyleIsLineSuccessPage",
           "displayName": "",
           "description": "",
@@ -274,7 +274,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "23536d93-fb3f-4231-b4b2-5a60a284fa24",
+          "id": "5e3a31c6-2745-4b40-af01-be471eb73e13",
           "name": "buttonBgColor",
           "displayName": "",
           "description": "",
@@ -287,7 +287,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "fccf49ca-157a-4451-b1aa-84050813693f",
+          "id": "72e69238-8883-49d9-84d5-69704ee0ff98",
           "name": "buttonTextColor",
           "displayName": "",
           "description": "",
@@ -300,7 +300,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "e6ea4a34-03f2-4fea-b4d7-773638ace810",
+          "id": "f44ff90a-7e0e-4926-b5e7-cc16173e4f97",
           "name": "buttonDisabledBgColor",
           "displayName": "",
           "description": "",
@@ -313,7 +313,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "af96fe90-347c-4e7f-a0ae-1ccf91c2003b",
+          "id": "433eec00-af52-4205-9efd-157b59cd8344",
           "name": "buttonDisabledTextColor",
           "displayName": "",
           "description": "",
@@ -326,7 +326,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "a81ff565-47cc-4e5a-8913-add122fb8c8d",
+          "id": "1655551d-81bf-4390-a882-fd3fcec478a3",
           "name": "primaryTextColor",
           "displayName": "",
           "description": "",
@@ -339,7 +339,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "c5e9fd89-3f67-4c70-9228-a76ce5382c4b",
+          "id": "eb146e23-f0f1-438f-85ac-0f2404948794",
           "name": "secondaryTextColor",
           "displayName": "",
           "description": "",
@@ -352,7 +352,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "0a75f17d-b4f8-4924-8c72-fff141019daa",
+          "id": "f7168926-6817-4b2f-bd31-af413eef6e04",
           "name": "primaryBgColor",
           "displayName": "",
           "description": "",
@@ -365,7 +365,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "0682c160-6f1a-4879-bf01-4f99a1591b7a",
+          "id": "c46ba152-32a7-43d5-b10d-2dc7e7cf7d9e",
           "name": "secondaryBgColor",
           "displayName": "",
           "description": "",
@@ -378,7 +378,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "dd109239-a619-42cb-a63d-152b2d6bdf6e",
+          "id": "bb8179ab-19bd-4bf1-806c-9d7aeb995108",
           "name": "borderColor",
           "displayName": "",
           "description": "",
@@ -391,7 +391,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "add8b06a-a8eb-4288-95ee-456da3a01974",
+          "id": "a4e90fcc-9847-4930-8d70-04a8b9b44a1b",
           "name": "cardBgColor",
           "displayName": "",
           "description": "",
@@ -404,7 +404,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "38ab6c94-54f8-4bd8-bd6f-fdad7c4fdd8a",
+          "id": "6e8feec0-e097-4fe2-aa70-d969b708b8fb",
           "name": "errorColor",
           "displayName": "",
           "description": "",
@@ -417,7 +417,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "9e65de8f-ced8-48c1-96dd-ff4ef7db06f0",
+          "id": "e1e7d820-95bd-45d8-8f61-0f811dd06fc9",
           "name": "errorLightColor",
           "displayName": "",
           "description": "",
@@ -430,7 +430,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "5ca1aab3-ce45-404b-9f40-e9ba91561821",
+          "id": "0b924834-086c-4180-98f0-7c6873d3ea24",
           "name": "warningColor",
           "displayName": "",
           "description": "",
@@ -443,7 +443,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "95a98af6-065b-42a2-b118-7ce803a69278",
+          "id": "0a4b8f46-885a-4ac6-8ae0-bea66d1803eb",
           "name": "warningLightColor",
           "displayName": "",
           "description": "",
@@ -456,7 +456,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "5f08e485-f781-4fe8-a063-85620f90ee0f",
+          "id": "63dd3efd-0f0c-468d-8f5f-1a9042844a23",
           "name": "successColor",
           "displayName": "",
           "description": "",
@@ -469,7 +469,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "7ce362d5-7ebc-43db-b005-084cd86fd834",
+          "id": "673ad6c3-b4fa-4421-a189-5fb885f20544",
           "name": "successLightColor",
           "displayName": "",
           "description": "",
@@ -482,7 +482,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "f15bdc86-d564-46ab-8eea-e4f616c57212",
+          "id": "432d3d0f-f487-49aa-b7ec-7ab048f4ae5e",
           "name": "secondaryButtonBgColor",
           "displayName": "",
           "description": "",
@@ -495,7 +495,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "740b2d9d-b22f-46be-a1d7-d1c34824fecc",
+          "id": "909baf76-f3b0-439d-8256-df9183b28e75",
           "name": "secondaryButtonTextColor",
           "displayName": "",
           "description": "",
@@ -508,7 +508,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "b11dfabb-880f-44de-9d66-ba6fe1321cc9",
+          "id": "94cae147-b6d6-4565-8e59-0df7bebfffde",
           "name": "secondaryButtonBorderColor",
           "displayName": "",
           "description": "",
@@ -3506,7 +3506,7 @@
               {
                 "left_hero": {
                   "left_image": {
-                    "id": "theme-images/60084186-d71c-4501-b29b-cd35c5d097fe",
+                    "id": "theme-images/892de0f9-4e16-4c39-912f-b77bc8914399",
                     "altText": null
                   },
                   "left_title": "Şapkalarımız şahane",
@@ -3531,7 +3531,7 @@
                 },
                 "right_hero": {
                   "right_image": {
-                    "id": "theme-images/3dfbe380-193f-4b6a-9612-d0899ac7768a",
+                    "id": "theme-images/d2baa9dd-b3ea-4dfe-8e2b-aeb945b6a020",
                     "altText": null
                   },
                   "right_title": "Çantalarımız da şahane!",
@@ -3571,13 +3571,13 @@
               "subLinks": []
             },
             "firstCategoryImage": {
-              "id": "theme-images/42e5c835-52fa-417f-ac4c-68bbb025d660",
+              "id": "theme-images/61d41d0a-b864-414e-807d-ed1a48176d33",
               "altText": null
             },
-            "firstCategoryText": "Kategori 1",
+            "firstCategoryText": "Erkek Çanta",
             "firstCategoryTextBackground": "#ffffffff",
             "firstCategoryTextColor": "#000000ff",
-            "firstCategoryHasFilter": true,
+            "firstCategoryHasFilter": false,
             "secondCategoryLink": {
               "id": "e320550b-87d9-454c-be20-f136db5fb5a7",
               "linkType": "PAGE",
@@ -3588,13 +3588,13 @@
               "subLinks": []
             },
             "secondCategoryImage": {
-              "id": "theme-images/e26954d0-3d05-4d82-8ddf-f0b0963f4007",
+              "id": "theme-images/6b180705-c137-4a47-a072-162ff671692d",
               "altText": null
             },
-            "secondCategoryText": "Kategori 2",
+            "secondCategoryText": "Kadın Çanta",
             "secondCategoryTextBackground": "#ffffffff",
             "secondCategoryTextColor": "#000000ff",
-            "secondCategoryHasFilter": true,
+            "secondCategoryHasFilter": false,
             "hasMarginTop": true,
             "categoriesHasText": true
           }
@@ -3613,10 +3613,10 @@
               "subLinks": []
             },
             "firstCategoryImage": {
-              "id": "theme-images/3b7f0192-8a85-4f40-ad31-cc696764b111",
+              "id": "theme-images/21c3a61b-c771-43e9-a451-bcd47bfc484c",
               "altText": null
             },
-            "firstCategoryText": "Kategori 1",
+            "firstCategoryText": "X Çanta",
             "firstCategoryTextBackground": "#ffffffff",
             "firstCategoryTextColor": "#000000ff",
             "firstCategoryHasFilter": false,
@@ -3630,10 +3630,10 @@
               "subLinks": []
             },
             "secondCategoryImage": {
-              "id": "theme-images/b0f1c18d-d948-4983-9f42-3def8bcb3256",
+              "id": "theme-images/b1670275-ce4e-411c-826e-4448607d962e",
               "altText": null
             },
-            "secondCategoryText": "Kategori 2",
+            "secondCategoryText": "Y Çanta",
             "secondCategoryTextBackground": "#ffffffff",
             "secondCategoryTextColor": "#000000ff",
             "thirdCategoryLink": {
@@ -3646,14 +3646,15 @@
               "subLinks": []
             },
             "thirdCategoryImage": {
-              "id": "theme-images/07ecb33e-4672-4040-a3ee-f36cb0276b28",
+              "id": "theme-images/0f2127f8-865d-469d-bd47-f0bfe1bf2fc6",
               "altText": null
             },
-            "thirdCategoryText": "Kategori 3",
+            "thirdCategoryText": "Z Çanta",
             "thirdCategoryTextBackground": "#ffffffff",
             "thirdCategoryTextColor": "#000000ff",
             "hasMarginTop": true,
-            "categoriesHasText": true
+            "categoriesHasText": true,
+            "thirdCategoryHasFilter": false
           }
         },
         {
@@ -6555,15 +6556,11 @@
             "aboutDescription": "<p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\">Doğanın adımlarını izliyoruz. Karşı konulmaz biçimde yenilenirken her özgür ruhun arzuladığı biçimde yalın ve güçlü o...</p><p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\"><br></p><p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\">Bir geyiğin ağaç dallarıyla ilişkisi kadar benzer, şehirdeki kontrastı kadar özgün. Göğe doğru kıvrılarak büyüyen ağaç dalları gibi, onun yenilenme güdüsünden ilhamla yenilikçi tasarımlar üretiyor ve büyüyoruz.</p><p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\"><br></p><p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\">Bitmeyen merak ve bilgelikle geleneksel neslin uzmanlığından yararlanıyor, yeni neslin kurgusunda bir iletişim yolu açıyoruz.</p><p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\"><br></p><p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\">Dün olduğu gibi bugün ve yarın da onun büyüleyici kılavuzluğunda bir yaşam rehberi olmayı sürdüreceğiz.</p>",
             "images": [
               {
-                "id": "theme-images/74131e61-1591-46f2-b702-c3b9b53dc48f",
+                "id": "theme-images/f600ea9a-9c60-4401-b080-50feb5d4352c",
                 "altText": null
               },
               {
-                "id": "theme-images/4156278a-7b61-48d7-89c4-06d8ed17bb32",
-                "altText": null
-              },
-              {
-                "id": "theme-images/6d71c9d6-3a81-48f3-a9d4-4ab2ffd956d6"
+                "id": "theme-images/27ebac57-63e1-49a3-8ce4-3ceabf797161"
               }
             ]
           }

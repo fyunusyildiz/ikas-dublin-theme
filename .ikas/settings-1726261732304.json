@@ -11,8 +11,8 @@
     "localizations": [
       {
         "_id": "48a9828e-aa31-45f7-8ef6-f0f75d38e0ff",
-        "createdAt": "2024-09-06T14:20:57.972Z",
-        "updatedAt": "2024-09-06T14:20:57.972Z",
+        "createdAt": "2024-09-06T21:20:36.630Z",
+        "updatedAt": "2024-09-06T21:20:36.630Z",
         "deleted": false,
         "name": "Türkçe",
         "isDefault": true,
@@ -23,8 +23,8 @@
     "routings": [
       {
         "_id": "f63442ad-463f-4ae6-8d08-c346f64cb7dc",
-        "createdAt": "2024-09-06T14:20:57.972Z",
-        "updatedAt": "2024-09-06T14:20:57.972Z",
+        "createdAt": "2024-09-06T21:20:36.630Z",
+        "updatedAt": "2024-09-06T21:20:36.630Z",
         "deleted": false,
         "countryCodes": null,
         "priceListId": null,
@@ -37,8 +37,8 @@
     "themes": [
       {
         "_id": "ae16442d-4b96-4321-9638-5f22267f0bea",
-        "createdAt": "2024-09-06T14:20:57.972Z",
-        "updatedAt": "2024-09-06T14:20:57.972Z",
+        "createdAt": "2024-09-06T21:20:36.630Z",
+        "updatedAt": "2024-09-06T21:20:36.630Z",
         "deleted": false,
         "name": "Kombos",
         "status": "READY",
@@ -48,23 +48,23 @@
         "id": "ae16442d-4b96-4321-9638-5f22267f0bea"
       },
       {
-        "_id": "3e9e9bbc-57f5-4d3a-a54e-e9c1152ef61c",
-        "createdAt": "2024-09-06T14:20:57.972Z",
-        "updatedAt": "2024-09-06T14:20:57.972Z",
+        "_id": "c0288a96-161b-4669-b32c-e2c1879a3d7a",
+        "createdAt": "2024-09-06T21:20:36.630Z",
+        "updatedAt": "2024-09-06T21:20:36.630Z",
         "deleted": false,
-        "name": "Dublin",
+        "name": "test",
         "status": "FAILED",
         "isMainTheme": false,
         "themeId": "4d096cda-46b1-4dd3-869c-91e13c741ee5",
-        "themeVersionId": "05a40c38-97df-46e5-85f5-c33066818570",
-        "id": "3e9e9bbc-57f5-4d3a-a54e-e9c1152ef61c"
+        "themeVersionId": "2932d858-788c-4b29-a630-37f86f8bcb4d",
+        "id": "c0288a96-161b-4669-b32c-e2c1879a3d7a"
       }
     ],
     "socialLoginSettings": [],
     "metaTemplates": [],
     "createdAt": "2023-01-02T19:32:05.867Z",
-    "updatedAt": "2024-09-06T14:20:57.972Z",
-    "__v": 2,
+    "updatedAt": "2024-09-06T21:20:36.630Z",
+    "__v": 3,
     "indexPageSeoSettings": [],
     "type": "STOREFRONT",
     "id": "fc638939-04a5-42b9-975b-4dc6170215a1"

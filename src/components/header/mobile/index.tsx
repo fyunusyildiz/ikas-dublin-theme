@@ -287,10 +287,18 @@ export const SearchInput = observer((props: HeaderProps) => {
         onChange={onChange}
         onKeyPress={onKeyPress}
         placeholder="Ürün Ara"
-        className={`absolute top-full left-0 focus:outline-none w-full h-10 p-2 border border-solid border-gray-three transition-all duration-300 z-10 ease-in-out ${
-          searchClicked ? "h-fit" : "h-0 py-0 border-none"
+        className={`absolute top-full left-0 focus:outline-none w-full h-10 p-2 border border-solid border-gray-two transition-all duration-300 z-10 ease-in-out ${
+          searchClicked ? "translate-x-0 opacity-100 z-20" : "-translate-x-full -z-10 opacity-0"
         }`}
       />
+      <button
+        onClick={() => router.push(`/search?s=${uiStore.searchKeyword}`)}
+        className={`absolute top-full mt-1 right-1 ease-in bg-[#6F6448] text-white font-bold h-8 px-3 z-30 transition-all duration-300 ${
+          searchClicked ? "opacity-100 translate-x-0" : "opacity-0 translate-x-2"
+        }`}
+      >
+        Ara
+      </button>
     </>
   );
 });
