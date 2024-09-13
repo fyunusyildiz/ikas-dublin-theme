@@ -19,8 +19,6 @@ const Slider: React.FC<SliderProps> = ({ slides }) => {
       slides,
     });
 
-  const router = useRouter();
-
   const getLeftSlidePositionClass = React.useCallback((slide: Slide) => {
     switch (slide.left_hero.left_position) {
       case Position.TOP_LEFT:
