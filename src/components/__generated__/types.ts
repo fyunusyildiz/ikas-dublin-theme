@@ -280,3 +280,14 @@ export type FullBannerProps = {
 	marginBottomMobile?: IkasSlider;
 };
 
+export type AboutHomeProps = {
+	marginTopDesktop?: IkasSlider;
+	marginBottomDesktop?: IkasSlider;
+	marginTopMobile?: IkasSlider;
+	marginBottomMobile?: IkasSlider;
+	title: string;
+	subtitle: string;
+	description: string;
+	url: IkasNavigationLink;
+};
+

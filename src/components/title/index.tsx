@@ -12,10 +12,12 @@ const Title: React.FC<TitleProps> = (props) => {
   } = props;
 
   const getMargin = useCallback(() => {
-    if (window.innerWidth > 768) {
-      return `${marginTopDesktop.value}px 0 ${marginBottomDesktop.value}px 0`;
-    } else {
-      return `${marginTopMobile.value}px 0 ${marginBottomMobile.value}px 0`;
+    if (typeof window !== "undefined") {
+      if (window.innerWidth > 768) {
+        return `${marginTopDesktop.value}px 0 ${marginBottomDesktop.value}px 0`;
+      } else {
+        return `${marginTopMobile.value}px 0 ${marginBottomMobile.value}px 0`;
+      }
     }
   }, [
     marginTopDesktop,

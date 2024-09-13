@@ -3,7 +3,7 @@ import { FullBannerProps } from "../__generated__/types";
 import { useCallback } from "react";
 import { Link } from "@ikas/storefront";
 
-const Title: React.FC<FullBannerProps> = (props) => {
+const FullBanner: React.FC<FullBannerProps> = (props) => {
   const {
     title,
     backgroundImage,
@@ -25,10 +25,12 @@ const Title: React.FC<FullBannerProps> = (props) => {
   }, [backgroundImage]);
 
   const getMargin = useCallback(() => {
-    if (window.innerWidth > 768) {
-      return `${marginTopDesktop?.value}px 0 ${marginBottomDesktop?.value}px 0`;
-    } else {
-      return `${marginTopMobile?.value}px 0 ${marginBottomMobile?.value}px 0`;
+    if (typeof window !== "undefined") {
+      if (window.innerWidth > 768) {
+        return `${marginTopDesktop?.value}px 0 ${marginBottomDesktop?.value}px 0`;
+      } else {
+        return `${marginTopMobile?.value}px 0 ${marginBottomMobile?.value}px 0`;
+      }
     }
   }, [
     marginTopDesktop,
@@ -65,4 +67,4 @@ const Title: React.FC<FullBannerProps> = (props) => {
   );
 };
 
-export default observer(Title);
+export default observer(FullBanner);
