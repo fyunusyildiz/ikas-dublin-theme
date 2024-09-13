@@ -268,3 +268,15 @@ export type PageSearchProps = {
 	productList: IkasProductList;
 };
 
+export type FullBannerProps = {
+	backgroundImage: IkasImage;
+	hasFilter: boolean;
+	title: string;
+	description: string;
+	url: IkasNavigationLink;
+	marginTopDesktop?: IkasSlider;
+	marginBottomDesktop?: IkasSlider;
+	marginTopMobile?: IkasSlider;
+	marginBottomMobile?: IkasSlider;
+};
+

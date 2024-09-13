@@ -41,6 +41,7 @@ const config: Config = {
       xl: "32px",
       "2xl": "36px",
       "3xl": "48px",
+      "4xl": "64px",
     },
     extend: {
       borderRadius: {
