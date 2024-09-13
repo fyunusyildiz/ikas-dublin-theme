@@ -24,8 +24,8 @@ const Register = (props: RegisterProps) => {
   const { formAlert, onFormAlertClose, form } = register;
 
   return (
-    <div className="w-full flex flex-col items-center">
-      <div className="w-full max-w-[500px] px-5 md:my-10">
+    <div className="w-full flex flex-col items-center my-5">
+      <div className="w-full max-w-[500px] px-5">
         <h1 className="text-xl xs:text-lg font-normal text-black mb-2">
           Kayıt Ol
         </h1>
