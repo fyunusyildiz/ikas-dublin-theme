@@ -147,7 +147,7 @@ const ProductAttributeValue = ({ attribute }: AttributeValueProps) => {
   useEffect(() => {
     const set = async () => {
       setPending(true);
-      const _products = await attribute.getProducts();
+      const _products = await attribute.products;
       setPending(false);
       _products && setProducts(_products);
     };
