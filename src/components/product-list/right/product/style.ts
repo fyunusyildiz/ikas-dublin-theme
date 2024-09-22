@@ -10,7 +10,6 @@ type ImageWrapperProps = {
 
 export const ImageWrapper = styled.figure<ImageWrapperProps>`
   position: relative;
-  margin-bottom: 12px;
 
   ${({ $hasStock }) => {
     if ($hasStock) return ``;
