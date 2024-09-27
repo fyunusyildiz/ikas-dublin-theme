@@ -28,11 +28,11 @@ const DesktopHeader = (props: HeaderProps) => {
         <Announcement {...props} />
       )}
       <header
-        className={`w-full transition-all duration-300 shadow-md ${
+        className={`w-full transition-all duration-300 border-b border-solid border-[#222222] ${
           props.noTransparentHeader
             ? ""
             : "fixed top-[0px] z-[999] transition-all duration-300 ease-in-out"
-        } ${isScrolled ? "fixed top-0 z-[999] shadow-sm" : ""}`}
+        } ${isScrolled ? "fixed top-0 z-[999]" : ""}`}
         style={{
           backgroundColor: props.noTransparentHeader
             ? props.headerBackgroundColor
@@ -41,7 +41,7 @@ const DesktopHeader = (props: HeaderProps) => {
             : "transparent",
         }}
       >
-        <div className="w-full p-5">
+        <div className="w-full p-[14px]">
           <div className="w-full flex justify-between items-center">
             <LeftSide {...props} />
             <Center {...props} />
@@ -175,7 +175,7 @@ const NavItem = (props: { link: LinkProps } & HeaderProps) => {
         <a
           onMouseEnter={toggleLinkHover}
           onMouseLeave={toggleLinkHover}
-          className={`flex text-base p-2 transition-colors duration-300 ease-in-out uppercase`}
+          className={`flex text-xs p-2 transition-colors duration-300 ease-in-out uppercase`}
           style={{
             color: linkHoverState
               ? props.headerLinkHoverColor
@@ -302,7 +302,7 @@ const RightSide = observer((props: HeaderProps) => {
         </Link>
         <button className="relative" onClick={() => setOpenDrawer(!openDrawer)}>
           <span
-            className="absolute -right-1 -top-1 rounded-full text-xs"
+            className="absolute -right-2 -top-3 font-bold rounded-full text-2xs"
             style={{
               color: props.noTransparentHeader
                 ? props.headerLinkColor

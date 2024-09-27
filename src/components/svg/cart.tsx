@@ -1,18 +1,25 @@
 const svg = ({ stroke }: any) => (
   <svg
-    width="32"
-    height="32"
-    viewBox="0 0 32 32"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect x="6.5" y="11.5" width="17" height="13" rx="2.375" stroke={stroke} />
-    <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M11 9V15H12V9C12 8.44772 12.4477 8 13 8H17C17.5523 8 18 8.44772 18 9V15H19V9C19 7.89543 18.1046 7 17 7H13C11.8954 7 11 7.89543 11 9Z"
-      fill={stroke}
-    />
+    <g clip-path="url(#clip0_618_184)">
+      <path
+        d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6M10 21C10 21.5523 9.55228 22 9 22C8.44772 22 8 21.5523 8 21C8 20.4477 8.44772 20 9 20C9.55228 20 10 20.4477 10 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21Z"
+        stroke={stroke}
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_618_184">
+        <rect width="24" height="24" fill="white" />
+      </clipPath>
+    </defs>
   </svg>
 );
 

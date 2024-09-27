@@ -8,7 +8,7 @@ import Product from "./product";
 
 const Right = ({ productList }: ProductListProps) => {
   return (
-    <div className="w-full mt-10">
+    <div className="w-full">
       <Header productList={productList} />
       <ul className="w-full flex flex-wrap">
         {productList.data.map((product) => (

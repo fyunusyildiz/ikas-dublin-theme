@@ -21,7 +21,6 @@ type HeaderProps = {
 
 export const Header = observer((props: HeaderProps) => {
   const { productList } = props;
-  const { t } = useTranslation();
   const { isMobile } = useScreen();
   const [activeModal, setModal] = useState<"sort" | "filter" | null>(null);
 
@@ -29,24 +28,21 @@ export const Header = observer((props: HeaderProps) => {
     setModal(null);
   };
 
-  const totalProductCount = `Toplam: ${productList.data.length}`;
-
   if (isMobile) return <MobileHeader {...props} />;
   return (
-    <header className="w-full flex justify-between items-center border-t border-b border-solid border-gray-three ">
-      <p className="text-xs pl-3">{totalProductCount}</p>
-      <div className="flex items-center w-1/4 md:w-1/3 sm:w-1/2">
+    <header className="w-full flex justify-end items-center bg-[#d9d9d9]">
+      <div className="flex items-center gap-[14px] w-fit pr-[30px]">
         <button
-          className="flex items-center justify-center w-1/2 gap-2 bg-gray-two py-3"
+          className="flex items-center justify-center text-[12px] gap-2 py-[3px] text-[#222222]"
           onClick={() => setModal("filter")}
         >
-          <FilterSVG /> Filtrele
+          FİLTRELE
         </button>
         <button
-          className="flex items-center w-1/2 justify-center gap-3 bg-gray-one py-3"
+          className="flex items-center justify-center gap-3 text-[12px] py-[3px] text-[#222222]"
           onClick={() => setModal("sort")}
         >
-          <SortSVG /> Sırala
+         SIRALA
         </button>
         {activeModal === "filter" && (
           <FilterModal productList={productList} onClose={onModalClose} />

@@ -14,50 +14,16 @@ const Product = (props: Props) => {
   const a11yTitle = product.selectedVariant.hasStock ? "" : "Bu ürün tükendi";
 
   return (
-    <li className="w-1/4 md:w-1/3 sm:w-1/2 relative">
+    <li className="w-1/4 md:w-1/3 sm:w-1/2 relative border border-[#222222d2]">
       <Link passHref href={product.href}>
         <a title={a11yTitle}>
-          <S.ImageWrapper $hasStock={product.selectedVariant.hasStock}>
+          <S.ImageWrapper className="border-b border-solid border-[#222222d2]" $hasStock={product.selectedVariant.hasStock}>
             <ProductImage {...props} />
             <DiscountBadge {...props} />
           </S.ImageWrapper>
           <div className="w-full flex flex-wrap justify-between px-2 py-2 xs:flex-col xs:gap-y-2">
-            <ProductCategory {...props} />
             <ProductTitle {...props} />
             <Price {...props} />
-            <div className="w-full flex items-center justify-between mt-1">
-              {product.variantTypes.map((variantType) =>
-                variantType.variantType.name === "Beden" ? (
-                  <div className="flex gap-1">
-                    {product.variantTypes.map((variantType) =>
-                      variantType.variantType.name === "Beden"
-                        ? variantType.variantType.values.map((value) => (
-                            <span
-                              key={value.id}
-                              className="text-2xs leading-none"
-                            >
-                              {value.name}
-                            </span>
-                          ))
-                        : null
-                    )}
-                  </div>
-                ) : null
-              )}
-              <div className="flex gap-1">
-                {product.variantTypes.map((variantType) =>
-                  variantType.variantType.name === "Renk"
-                    ? variantType.variantType.values.map((value) => (
-                        <span
-                          key={value.id}
-                          className={`w-3 h-3 rounded-full border border-solid border-gray-three`}
-                          style={{ backgroundColor: value.colorCode || "#fff" }}
-                        ></span>
-                      ))
-                    : null
-                )}
-              </div>
-            </div>
           </div>
         </a>
       </Link>
@@ -111,13 +77,13 @@ const DiscountBadge = observer(({ product }: Props) => {
 
 const Price = observer(({ product }: Props) => {
   return (
-    <div className="flex flex-col items-end xs:items-start min-w-[70px]">
+    <div className="flex flex-col items-end xs:items-start min-w-[75px]">
       {product.selectedVariant.price.hasDiscount && (
         <span className="text-2xs xs:text-[12px] line-through">
           {product.selectedVariant.price.formattedSellPrice}
         </span>
       )}
-      <span className="text-xs font-bold">
+      <span className="text-[14px]">
         {product.selectedVariant.price.formattedFinalPrice}
       </span>
     </div>
@@ -125,12 +91,7 @@ const Price = observer(({ product }: Props) => {
 });
 
 const ProductTitle = observer(({ product }: Props) => (
-  <p className="text-2xs font-medium uppercase leading-relaxed flex-1">
+  <p className="text-[13px] h-[22px] uppercase leading-relaxed flex-1 whitespace-nowrap overflow-hidden relative after:absolute after:h-full after:w-5 after:top-0 after:right-0 after:bg-gradient-to-l after:from-white after:to-transparent after:content-['']">
     {product.name}
-  </p>
-));
-const ProductCategory = observer(({ product }: Props) => (
-  <p className="text-[12px] text-[#9e9e9e] font-medium uppercase leading-relaxed w-full">
-    {product.brand?.name}
   </p>
 ));
