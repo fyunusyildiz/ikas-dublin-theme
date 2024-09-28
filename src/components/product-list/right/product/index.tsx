@@ -1,4 +1,5 @@
 import { IkasProduct, Image, Link, useTranslation } from "@ikas/storefront";
+import { useAddToCart } from "src/utils/hooks/useAddToCart";
 
 import { observer } from "mobx-react-lite";
 import * as S from "./style";
@@ -10,16 +11,29 @@ type Props = {
 const Product = (props: Props) => {
   const { t } = useTranslation();
   const { product } = props;
+  const { addToCart } = useAddToCart();
 
   const a11yTitle = product.selectedVariant.hasStock ? "" : "Bu ürün tükendi";
 
   return (
-    <li className="w-1/4 md:w-1/3 sm:w-1/2 relative border border-[#222222d2]">
+    <li className="w-1/4 md:w-1/3 sm:w-1/2 relative border border-[#222222d2] group">
       <Link passHref href={product.href}>
         <a title={a11yTitle}>
-          <S.ImageWrapper className="border-b border-solid border-[#222222d2]" $hasStock={product.selectedVariant.hasStock}>
+          <S.ImageWrapper
+            className="border-b border-solid border-[#222222d2] relative"
+            $hasStock={product.selectedVariant.hasStock}
+          >
             <ProductImage {...props} />
             <DiscountBadge {...props} />
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                addToCart(product, 1);
+              }}
+              className="w-[90%] hover:bg-[#222] hover:text-white absolute opacity-0 group-hover:opacity-100 bottom-5 left-0 right-0 mx-auto py-3 border border-solid border-[#222] flex items-center justify-center md:!hidden"
+            >
+              SEPETE EKLE
+            </button>
           </S.ImageWrapper>
           <div className="w-full flex flex-wrap justify-between px-2 py-2 xs:flex-col xs:gap-y-2">
             <ProductTitle {...props} />
