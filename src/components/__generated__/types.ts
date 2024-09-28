@@ -291,3 +291,13 @@ export type AboutHomeProps = {
 	url: IkasNavigationLink;
 };
 
+export type HeroProps = {
+	heroLink: IkasNavigationLink;
+	hasButton: boolean;
+	hasFilter: boolean;
+	desktopImage: IkasImage;
+	mobileImage: IkasImage;
+	heroTitle?: string;
+	heroDescription?: string;
+};
+
