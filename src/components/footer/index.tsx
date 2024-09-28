@@ -8,8 +8,9 @@ export const NS = "footer"; // Namespace for translation (i18n);
 
 const Footer = (props: FooterProps) => {
   return (
-    <div className="w-full mt-20 border-t border-solid border-t-gray-two">
-      <div className="w-full flex items-stretch px-5 py-10 flex-wrap md:gap-y-10 xs:px-2 xs:gap-y-7">
+    <div className="w-full">
+      <div className="w-full h-[22px] bg-[#D9D9D9] border-b border-t border-solid border-[#222]"></div>
+      <div className="w-full flex items-stretch flex-wrap">
         <BrandArea {...props} />
         <EmailSubscriptionArea {...props} />
         <InformationArea {...props} />
@@ -23,7 +24,7 @@ export default observer(Footer);
 
 const EmailSubscriptionArea = observer((props: FooterProps) => {
   return (
-    <div className="w-1/4 md:w-1/2 xs:w-full flex flex-col gap-y-1 px-4 xs:px-2 border-l border-solid border-gray-two xs:border-none">
+    <div className="w-1/4 md:w-1/2 xs:w-full flex flex-col gap-y-1 border-l border-solid border-[#222] xs:border-l-0 py-10 px-5 sm:py-5  md:border-b md:border-solid md:border-[#222]">
       <EmailSubscription {...props} />
     </div>
   );
@@ -31,12 +32,12 @@ const EmailSubscriptionArea = observer((props: FooterProps) => {
 
 const BrandArea = observer((props: FooterProps) => {
   return (
-    <div className="w-1/4 md:w-1/2 xs:w-full flex flex-col gap-y-1 px-4 xs:px-2">
+    <div className="w-1/4 md:w-1/2 xs:w-full flex flex-col gap-y-3 py-10 px-5 sm:py-5 md:border-b md:border-solid md:border-[#222]">
       <h6 className="text-base font-semibold text-black">
         {props.brandTextTitle}
       </h6>
       <div
-        className="text-2xs font-normal text-black"
+        className="text-xs xs:text-2xs font-normal text-black"
         dangerouslySetInnerHTML={{ __html: props.brandText }}
       />
     </div>
@@ -45,7 +46,7 @@ const BrandArea = observer((props: FooterProps) => {
 
 const InformationArea = observer((props: FooterProps) => {
   return (
-    <div className="w-1/4 md:w-1/2 xs:w-full flex flex-col gap-y-1 px-4 xs:px-2 border-l border-r border-solid border-gray-two md:border-none">
+    <div className="w-1/4 md:w-1/2 xs:w-full flex flex-col gap-y-1 border-l border-r border-solid border-[#222] md:border-r-0 py-10 px-5 sm:py-5 xs:border-b">
       <h6 className="text-base font-semibold text-black">
         {props.informationBlockTitle}
       </h6>
@@ -54,7 +55,7 @@ const InformationArea = observer((props: FooterProps) => {
           <Link key={link.href} href={link.href}>
             <a
               target={link.isExternal ? "_blank" : undefined}
-              className="text-2xs font-normal text-black"
+              className="text-xs xs:text-2xs font-normal text-black"
             >
               {link.label}
             </a>
@@ -67,7 +68,7 @@ const InformationArea = observer((props: FooterProps) => {
 
 const SocialMediaArea = observer((props: FooterProps) => {
   return (
-    <div className="w-1/4 md:w-1/2 xs:w-full flex flex-col gap-y-1 px-4 xs:px-2 border-solid border-gray-two md:border-l xs:border-none">
+    <div className="w-1/4 md:w-1/2 xs:w-full flex flex-col gap-y-1 border-solid border-[#222] md:border-l xs:border-none py-10 px-5 sm:py-5">
       <h6 className="text-base font-semibold text-black">
         {props.socialMediaTitle}
       </h6>
@@ -76,7 +77,7 @@ const SocialMediaArea = observer((props: FooterProps) => {
           <Link key={link.href} href={link.href}>
             <a
               target={link.isExternal ? "_blank" : undefined}
-              className="text-2xs font-normal text-black"
+              className="text-xs xs:text-2xs font-normal text-black"
             >
               {link.label}
             </a>

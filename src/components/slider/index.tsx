@@ -102,11 +102,11 @@ const Slider: React.FC<SliderProps> = ({ slides }) => {
           <div
             key={index}
             className={
-              "snap-start relative flex-[0_0_100%] w-full flex flex-wrap"
+              "snap-start relative flex-[0_0_100%] md:h-fit w-full flex flex-wrap"
             }
           >
             <Link href={slide.left_hero.left_button.href} passHref>
-              <a className={"relative w-1/2 h-full md:w-full xs:h-1/2"}>
+              <a className={"relative w-1/2 md:w-full h-screen border-r border-solid border-[#222] md:border-r-0 md:border-b"}>
                 <Image
                   layout="fill"
                   objectFit="cover"
@@ -147,7 +147,7 @@ const Slider: React.FC<SliderProps> = ({ slides }) => {
               </a>
             </Link>
             <Link href={slide.right_hero.right_button.href} passHref>
-              <a className={"relative w-1/2 h-full md:w-full xs:h-1/2"}>
+              <a className={"relative w-1/2 md:w-full h-screen"}>
                 <Image
                   layout="fill"
                   objectFit="cover"

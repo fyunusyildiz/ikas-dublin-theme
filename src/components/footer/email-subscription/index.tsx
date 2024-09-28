@@ -8,14 +8,15 @@ import Input from "src/components/components/input";
 import Modal from "src/components/components/modal";
 import useEmailSubscription from "./useEmailSubscription";
 
-
 import { FooterProps } from "src/components/__generated__/types";
 
-const EmailSubscription = ({newsletterTitle, newsletterText}: FooterProps) => {
+const EmailSubscription = ({
+  newsletterTitle,
+  newsletterText,
+}: FooterProps) => {
   const {
     pending,
     responseStatus,
-    visible,
     onSubmit,
     isModalVisible,
     onModalClose,
@@ -27,7 +28,7 @@ const EmailSubscription = ({newsletterTitle, newsletterText}: FooterProps) => {
     <div className="w-full">
       <h6 className="text-base font-semibold text-black">{newsletterTitle}</h6>
       <p
-        className="text-2xs font-normal text-black mb-5"
+        className="text-base font-normal text-black mb-5"
         dangerouslySetInnerHTML={{ __html: newsletterText }}
       />
       <Form onSubmit={onSubmit}>
@@ -36,19 +37,27 @@ const EmailSubscription = ({newsletterTitle, newsletterText}: FooterProps) => {
             required
             type="email"
             value={email}
-            placeholder={"Email"}
+            placeholder={"E-Posta"}
             onChange={(event) => setEmail(event.target.value)}
           />
         </FormItem>
         <GoogleCaptcha i18nFileName="footer" />
-        <Button block type="submit" size="small" disabled={!email || pending}>
+        <Button block type="submit" size="middle" disabled={!email || pending}>
           {pending ? "Loading..." : "Subscribe"}
         </Button>
       </Form>
       <Modal visible={isModalVisible} onClose={onModalClose}>
         {responseStatus && (
-          <p className={`${responseStatus === "success" ? "text-google-green" : "text-orange-two"}`}>
-            {responseStatus === "success" ? "Aboneliğiniz oluşturuldu." : "Bir hata oluştu."}
+          <p
+            className={`${
+              responseStatus === "success"
+                ? "text-google-green"
+                : "text-orange-two"
+            }`}
+          >
+            {responseStatus === "success"
+              ? "Aboneliğiniz oluşturuldu."
+              : "Bir hata oluştu."}
           </p>
         )}
       </Modal>

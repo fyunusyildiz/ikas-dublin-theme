@@ -13,7 +13,7 @@ const Hero = ({
 }: HeroProps) => {
   return (
     <Link href={heroLink.href}>
-      <a className="w-full h-screen relative flex items-center justify-center">
+      <a className="w-full h-screen relative flex items-center justify-center border-b border-solid border-[#222]">
         {hasFilter && (
           <div className="w-full h-full absolute z-[1] bg-black bg-opacity-35 top-0 left-0" />
         )}

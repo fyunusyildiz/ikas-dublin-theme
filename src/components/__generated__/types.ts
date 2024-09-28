@@ -271,8 +271,9 @@ export type PageSearchProps = {
 export type FullBannerProps = {
 	backgroundImage: IkasImage;
 	hasFilter: boolean;
-	title: string;
-	description: string;
+	hasButton: boolean;
+	title?: string;
+	description?: string;
 	url: IkasNavigationLink;
 	marginTopDesktop?: IkasSlider;
 	marginBottomDesktop?: IkasSlider;

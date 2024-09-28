@@ -332,7 +332,7 @@ const RightSide = observer((props: HeaderProps) => {
       <Link href="/cart" passHref>
         <a className="relative">
           <span
-            className="absolute -right-[2px] -top-1 rounded-full text-xs"
+            className="absolute -right-2 -top-3 rounded-full text-2xs font-bold"
             style={{
               color: props.noTransparentHeader
                 ? props.headerLinkColor

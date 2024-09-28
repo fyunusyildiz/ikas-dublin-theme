@@ -16,10 +16,11 @@ export const ButtonSizes: Record<ButtonSize, number> = {
 
 export const Button = styled.button<ButtonProps>`
   text-align: center;
-  font-weight: 500;
+  font-weight: 400;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
   ${({ $buttonType }) => {
     if ($buttonType === "primary") {
@@ -68,11 +69,11 @@ export const Button = styled.button<ButtonProps>`
 
     if ($size === "large") {
       return css`
-        font-size: 18px;
+        font-size: 16px;
         line-height: 30px;
-        height: ${ButtonSizes.large}px;
+        height: 54px;
         padding: 0;
-        background-color: #212529;
+        background-color: #222;
         margin-top: 20px;
         color: #fff;
       `;
@@ -80,7 +81,6 @@ export const Button = styled.button<ButtonProps>`
   }}
 
   ${({ $block }) => $block && `width: 100%;`};
-  border-radius: 12px;
 
   :hover,
   :focus {

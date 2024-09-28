@@ -47,15 +47,15 @@ export const Input = styled.input<StyledInputProps>`
   border: 1px solid
     ${({ $status }) => {
       if ($status === "error") {
-        return theme.color.red;
+        return "#f00000";
       }
 
-      return theme.color.inputBorder;
+      return "#222";
     }};
 
       color: ${theme.color.inputText};
       font-size: ${theme.fontSize.sm};
-      border-radius: ${theme.inputBorderRadius};
+      border-radius: 0;
 
   :disabled {
     color: #dadada;

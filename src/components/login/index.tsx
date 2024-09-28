@@ -17,10 +17,10 @@ const Login = () => {
   const { formAlert, onFormAlertClose, form } = login;
 
   return (
-    <div className="w-full flex flex-col items-center my-5">
+    <div className="w-full flex flex-col items-center my-20">
       <div className="w-full max-w-[500px] px-5">
-        <h1 className="text-xl xs:text-lg font-normal text-black mb-2">
-          Giriş Yap
+        <h1 className="text-lg xs:text-base font-normal text-black mb-4 w-full text-center">
+          Oturum Aç
         </h1>
         <LoginFormAlert
           formAlert={formAlert}
@@ -61,23 +61,17 @@ const LoginFormComponent = observer(
   ({ status, isPending, form, onFormSubmit }: LoginFormProps) => {
     return (
       <Form onSubmit={onFormSubmit}>
-        <FormItem
-          label={"E-mail"}
-          help={form.emailErrorMessage}
-          status={status.email}
-        >
+        <FormItem help={form.emailErrorMessage} status={status.email}>
           <Input
             status={status.email}
             value={form.email}
+            placeholder="E-POSTA"
             onChange={(event) => form.onEmailChange(event.target.value)}
           />
         </FormItem>
-        <FormItem
-          label={"Parola"}
-          help={form.passwordErrorMessage}
-          status={status.password}
-        >
+        <FormItem help={form.passwordErrorMessage} status={status.password}>
           <Input
+            placeholder="ŞİFRE"
             type="password"
             status={status.password}
             value={form.password}
@@ -85,7 +79,7 @@ const LoginFormComponent = observer(
           />
         </FormItem>
         <Link passHref href={`/account/forgot-password`}>
-          <a className="w-full text-right block underline text-2xs">
+          <a className="w-full text-left block underline text-2xs text-[#616161]">
             Parolamı unuttum
           </a>
         </Link>
@@ -97,7 +91,7 @@ const LoginFormComponent = observer(
           loading={isPending}
           disabled={isPending}
         >
-          Giriş Yap
+          GİRİŞ YAP
         </Button>
       </Form>
     );
@@ -112,10 +106,9 @@ const Footer = ({ redirect }: FooterProps) => {
   const redirectHref = redirect ? "?redirect=" + redirect : "";
   return (
     <footer className="mt-10 py-7 border-t border-solid border-gray-three">
-      <p className="font-normal text-base">Hesabın yok mu?</p>
       <Link passHref href={`/account/register${redirectHref}`}>
-        <a className="block w-full text-center py-3 mt-2 text-white text-sm bg-gray-four rounded-sm">
-          Kayıt Ol
+        <a className="block w-full text-center py-3 mt-2 text-[#222] text-xs">
+          HESAP OLUŞTUR
         </a>
       </Link>
     </footer>

@@ -24,9 +24,9 @@ const Register = (props: RegisterProps) => {
   const { formAlert, onFormAlertClose, form } = register;
 
   return (
-    <div className="w-full flex flex-col items-center my-5">
+    <div className="w-full flex flex-col items-center my-20">
       <div className="w-full max-w-[500px] px-5">
-        <h1 className="text-xl xs:text-lg font-normal text-black mb-2">
+        <h1 className="text-lg xs:text-base font-normal text-black mb-4 w-full text-center">
           Kayıt Ol
         </h1>
         <RegisterFormAlert
@@ -75,14 +75,14 @@ const RegisterFormComponent = observer((props: RegisterFormProps) => {
 
   return (
     <Form onSubmit={onFormSubmit}>
-      <Row gutter={[24, 0]}>
+      <Row gutter={[12, 0]}>
         <Col span={12}>
           <FormItem
-            label="Ad"
             help={form.firstNameErrorMessage}
             status={status.firstName}
           >
             <Input
+              placeholder="AD"
               status={status.firstName}
               value={form.firstName}
               onChange={(event) => form.onFirstNameChange(event.target.value)}
@@ -91,11 +91,11 @@ const RegisterFormComponent = observer((props: RegisterFormProps) => {
         </Col>
         <Col span={12}>
           <FormItem
-            label="Soyad"
             help={form.lastNameErrorMessage}
             status={status.lastName}
           >
             <Input
+              placeholder="SOYAD"
               status={status.lastName}
               value={form.lastName}
               onChange={(event) => form.onLastNameChange(event.target.value)}
@@ -104,29 +104,44 @@ const RegisterFormComponent = observer((props: RegisterFormProps) => {
         </Col>
       </Row>
       <FormItem
-        label="E-mail"
         help={form.emailErrorMessage}
         status={status.email}
       >
         <Input
+          type="email"
+          placeholder="E-POSTA"
           status={status.email}
           value={form.email}
           onChange={(event) => form.onEmailChange(event.target.value)}
         />
       </FormItem>
       <FormItem
-        label="Parola"
         help={form.passwordErrorMessage}
         status={status.password}
       >
         <Input
           type="password"
+          placeholder="ŞİFRE"
           status={status.password}
           value={form.password}
           onChange={(event) => form.onPasswordChange(event.target.value)}
         />
       </FormItem>
       <GoogleCaptcha i18nFileName="register" />
+        {!!props.showMarketingEmailCheckbox && (
+          <FormItem
+            status={marketingEmailFormItemStatus}
+            help={marketingEmailFormItemHelp}
+          >
+            <Checkbox
+              status={marketingEmailFormItemStatus}
+              checked={form.isMarketingAccepted}
+              onChange={onMarketingEmailCheckboxChange}
+            >
+              {props.marketingEmailCheckboxText}
+            </Checkbox>
+          </FormItem>
+        )}
       <FormItem>
         <Button
           size="large"
@@ -135,23 +150,9 @@ const RegisterFormComponent = observer((props: RegisterFormProps) => {
           loading={isPending}
           disabled={isPending}
         >
-          Kayıt Ol
+          KAYIT OL
         </Button>
       </FormItem>
-      {!!props.showMarketingEmailCheckbox && (
-        <FormItem
-          status={marketingEmailFormItemStatus}
-          help={marketingEmailFormItemHelp}
-        >
-          <Checkbox
-            status={marketingEmailFormItemStatus}
-            checked={form.isMarketingAccepted}
-            onChange={onMarketingEmailCheckboxChange}
-          >
-            {props.marketingEmailCheckboxText}
-          </Checkbox>
-        </FormItem>
-      )}
     </Form>
   );
 });
@@ -164,9 +165,8 @@ const Footer = ({ redirect }: FooterProps) => {
   const redirectHref = redirect ? "?redirect=" + redirect : "";
   return (
     <footer className="mt-10 py-7 border-t border-solid border-gray-three">
-      <p className="font-normal text-base">Hesabın var mı?</p>
       <Link passHref href={`/account/login${redirectHref}`}>
-        <a className="block w-full text-center py-3 mt-2 text-white text-sm bg-gray-four rounded-sm">
+        <a className="block w-full text-center py-3 text-[#222] text-sm">
           Giriş Yap
         </a>
       </Link>
