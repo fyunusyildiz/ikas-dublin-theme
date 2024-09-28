@@ -58,7 +58,7 @@ const FullBanner: React.FC<FullBannerProps> = (props) => {
                 {title}
               </h1>
             )}
-            {description && (
+            {description?.length && (
               <p
                 className="text-white text-2xl md:text-xl xs:text-base font-medium drop-shadow-2xl"
                 dangerouslySetInnerHTML={{ __html: description }}

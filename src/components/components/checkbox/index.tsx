@@ -45,7 +45,7 @@ const CheckSVG = () => (
       stroke="#22252A"
       strokeWidth="1.5"
       strokeLinecap="round"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
     />
   </svg>
 );

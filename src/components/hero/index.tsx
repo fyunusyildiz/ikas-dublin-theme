@@ -34,9 +34,9 @@ const Hero = ({
                 {heroTitle}
               </h2>
             )}
-            {heroDescription && (
+            {heroDescription?.length && (
               <p
-                className="text-lg md:text-base xs:text-sm text-white text-center"
+                className="text-lg md:text-base xs:text-sm"
                 dangerouslySetInnerHTML={{ __html: heroDescription }}
               />
             )}

@@ -1,7 +1,7 @@
 const svg = ({className}: any) => (
   <svg
     stroke="currentColor"
-    fill="#6F6448"
+    fill="#222"
     strokeWidth="0"
     viewBox="0 0 512 512"
     height="1em"
