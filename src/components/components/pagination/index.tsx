@@ -37,7 +37,7 @@ const Pagination = (props: Props) => {
 
   if (!count) return null;
   return (
-    <footer className="w-full mt-10 flex items-center justify-center gap-5">
+    <footer className="w-full my-10 flex items-center justify-center gap-5">
       <S.PrevButton
         disabled={prevButtonDisabled}
         title={t("pagination.previousPage")}

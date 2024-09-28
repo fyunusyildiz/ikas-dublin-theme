@@ -1,5 +1,6 @@
 import { IkasProduct, Image, Link, useTranslation } from "@ikas/storefront";
 import { useAddToCart } from "src/utils/hooks/useAddToCart";
+import { useState } from "react";
 
 import { observer } from "mobx-react-lite";
 import * as S from "./style";
@@ -9,14 +10,14 @@ type Props = {
 };
 
 const Product = (props: Props) => {
-  const { t } = useTranslation();
+  const [addToCartText, setAddToCartText] = useState("SEPETE EKLE");
   const { product } = props;
   const { addToCart } = useAddToCart();
 
   const a11yTitle = product.selectedVariant.hasStock ? "" : "Bu ürün tükendi";
 
   return (
-    <li className="w-1/4 md:w-1/3 sm:w-1/2 relative border border-[#222222d2] group">
+    <li className="w-1/4 md:w-1/3 sm:w-1/2 xs:w-full relative border border-[#222222d2] group">
       <Link passHref href={product.href}>
         <a title={a11yTitle}>
           <S.ImageWrapper
@@ -25,17 +26,23 @@ const Product = (props: Props) => {
           >
             <ProductImage {...props} />
             <DiscountBadge {...props} />
-            <button
-              onClick={(e) => {
-                e.preventDefault();
-                addToCart(product, 1);
-              }}
-              className="w-[90%] hover:bg-[#222] hover:text-white absolute opacity-0 group-hover:opacity-100 bottom-5 left-0 right-0 mx-auto py-3 border border-solid border-[#222] flex items-center justify-center md:!hidden"
-            >
-              SEPETE EKLE
-            </button>
+            {product.selectedVariant.hasStock && (
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  addToCart(product, 1);
+                  setAddToCartText("SEPETE EKLENDİ");
+                  setTimeout(() => {
+                    setAddToCartText("SEPETE EKLE");
+                  }, 2000);
+                }}
+                className="w-[90%] hover:bg-[#222] hover:text-white absolute opacity-0 group-hover:opacity-100 bottom-5 left-0 right-0 mx-auto py-3 border border-solid border-[#222] flex items-center justify-center md:!hidden"
+              >
+                {addToCartText}
+              </button>
+            )}
           </S.ImageWrapper>
-          <div className="w-full flex flex-wrap justify-between px-2 py-2 xs:flex-col xs:gap-y-2">
+          <div className="w-full flex flex-wrap justify-between px-2 py-2 xs:gap-y-2">
             <ProductTitle {...props} />
             <Price {...props} />
           </div>
@@ -91,7 +98,7 @@ const DiscountBadge = observer(({ product }: Props) => {
 
 const Price = observer(({ product }: Props) => {
   return (
-    <div className="flex flex-col items-end xs:items-start min-w-[75px]">
+    <div className="flex flex-col items-end min-w-[75px]">
       {product.selectedVariant.price.hasDiscount && (
         <span className="text-2xs xs:text-[12px] line-through">
           {product.selectedVariant.price.formattedSellPrice}

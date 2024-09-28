@@ -21,14 +21,12 @@ type HeaderProps = {
 
 export const Header = observer((props: HeaderProps) => {
   const { productList } = props;
-  const { isMobile } = useScreen();
   const [activeModal, setModal] = useState<"sort" | "filter" | null>(null);
 
   const onModalClose = () => {
     setModal(null);
   };
 
-  if (isMobile) return <MobileHeader {...props} />;
   return (
     <header className="w-full flex justify-end items-center bg-[#d9d9d9]">
       <div className="flex items-center gap-[14px] w-fit pr-[30px]">
