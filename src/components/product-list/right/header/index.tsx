@@ -28,8 +28,8 @@ export const Header = observer((props: HeaderProps) => {
   };
 
   return (
-    <header className="w-full flex justify-end items-center bg-[#d9d9d9]">
-      <div className="flex items-center gap-[14px] w-fit pr-[30px]">
+    <header className="w-full flex justify-end items-center bg-[#d9d9d9] relative z-50">
+      <div className="flex items-center gap-[14px] w-fit pr-[30px] xs:px-3 xs:justify-between xs:w-full">
         <button
           className="flex items-center justify-center text-[12px] gap-2 py-[3px] text-[#222222]"
           onClick={() => setModal("filter")}

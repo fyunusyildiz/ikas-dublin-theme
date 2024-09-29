@@ -17,7 +17,7 @@ const Product = (props: Props) => {
   const a11yTitle = product.selectedVariant.hasStock ? "" : "Bu ürün tükendi";
 
   return (
-    <li className="w-1/4 md:w-1/3 sm:w-1/2 xs:w-full relative border border-[#222222d2] group">
+    <li className="w-1/4 md:w-1/3 sm:w-1/2 relative border border-[#222222d2] group">
       <Link passHref href={product.href}>
         <a title={a11yTitle}>
           <S.ImageWrapper
@@ -42,7 +42,7 @@ const Product = (props: Props) => {
               </button>
             )}
           </S.ImageWrapper>
-          <div className="w-full flex flex-wrap justify-between px-2 py-2 xs:gap-y-2">
+          <div className="w-full flex flex-wrap justify-between px-2 py-2 xs:gap-y-0 xs:flex-col overflow-hidden">
             <ProductTitle {...props} />
             <Price {...props} />
           </div>
@@ -98,7 +98,7 @@ const DiscountBadge = observer(({ product }: Props) => {
 
 const Price = observer(({ product }: Props) => {
   return (
-    <div className="flex flex-col items-end min-w-[75px]">
+    <div className="flex flex-col items-end min-w-[75px] xs:min-w-[unset] xs:flex-row xs:gap-2">
       {product.selectedVariant.price.hasDiscount && (
         <span className="text-2xs xs:text-[12px] line-through">
           {product.selectedVariant.price.formattedSellPrice}
@@ -112,7 +112,7 @@ const Price = observer(({ product }: Props) => {
 });
 
 const ProductTitle = observer(({ product }: Props) => (
-  <p className="text-[13px] h-[22px] uppercase leading-relaxed flex-1 whitespace-nowrap overflow-hidden relative after:absolute after:h-full after:w-5 after:top-0 after:right-0 after:bg-gradient-to-l after:from-white after:to-transparent after:content-['']">
+  <p className="text-[13px] h-[22px] xs:w-full uppercase leading-relaxed flex-1 whitespace-nowrap overflow-hidden relative after:absolute after:h-full after:w-5 after:top-0 after:right-0 after:bg-gradient-to-l after:from-white after:to-transparent after:content-['']">
     {product.name}
   </p>
 ));

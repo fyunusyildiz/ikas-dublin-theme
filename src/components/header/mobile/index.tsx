@@ -1,7 +1,7 @@
 import { IkasNavigationLink, Link, useStore } from "@ikas/storefront";
 import { observer } from "mobx-react-lite";
-import { useState } from "react";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 import UIStore from "src/store/ui-store";
 
@@ -10,11 +10,11 @@ import MaxQuantityPerCartModal from "src/components/components/modal-max-quantit
 import AccountSVG from "src/components/svg/account";
 import CartSVG from "src/components/svg/cart";
 
-import IOCloseSVG from "./svg/io-close";
-import Search from "./svg/search";
-import IOMenuSVG from "./svg/io-menu";
+import { useCallback, useEffect, useMemo } from "react";
 import ArrowRight from "./svg/arrow-right";
-import { useEffect, useCallback, useMemo } from "react";
+import IOCloseSVG from "./svg/io-close";
+import IOMenuSVG from "./svg/io-menu";
+import Search from "./svg/search";
 
 const MobileHeader = (props: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -183,15 +183,12 @@ const Navigation = (props: HeaderProps) => {
 const NavigationListItem = ({ link }: { link: IkasNavigationLink }) => {
   const [showSubLinks, setSubLinks] = useState(false);
   const uiStore = UIStore.getInstance();
-  console.log(link);
 
   return (
     <li>
       <div className="flex items-center justify-between text-xs border-b border-solid border-[#222]">
         <Link href={link.href} passHref>
-          <a
-            className="flex uppercase items-center justify-between w-full px-5 py-4"
-          >
+          <a className="flex uppercase items-center justify-between w-full px-5 py-4">
             {link.label}
             <ArrowRight />
           </a>
