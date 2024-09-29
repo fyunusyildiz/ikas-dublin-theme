@@ -15,7 +15,7 @@ import {
 import ProductImagePlaceholder from "src/components/svg/product-image-placeholder";
 import { maxQuantityPerCartHandler } from "src/utils/hooks/useAddToCart";
 import { QuantityButton } from "src/components/product-detail/detail/add-to-cart";
-import { ColorSwatch } from "src/components/components/swatch/style";
+import { Swatch } from "src/components/components/swatch/";
 
 import AiOutlineCloudDownloadSVG from "./svg/ai-outline-cloud-download";
 import RemoveSVG from "./svg/remove";
@@ -202,15 +202,11 @@ const ItemOptions = observer(
             <div>
               <OptionMeta />
               {" - "}
-              <ColorSwatch
-                as="span"
-                style={{
-                  display: "inline-block",
-                  verticalAlign: "middle",
-                }}
-                $noMargin
-                $isSelected={false}
-                $color={value.value}
+              <Swatch
+                title={value.name || ""}
+                colorCode={value.value}
+                selected={false}
+                onClick={() => {}}
               />
             </div>
           );
