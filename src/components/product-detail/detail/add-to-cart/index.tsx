@@ -13,7 +13,7 @@ export const AddToCart = observer((props: ProductDetailProps) => {
   const [quantity, setQuantity] = useState(1);
 
   return (
-    <div className="flex gap-3">
+    <div className="flex flex-1 gap-3 xs:gap-2">
       <QuantityButton quantity={quantity} onChange={setQuantity} />
       <AddToCartButton product={props.product} quantity={quantity} />
       <BackInStock product={props.product} />
@@ -43,7 +43,11 @@ const AddToCartButton = observer(
     });
 
     return (
-      <button className="w-full" disabled={disabled} onClick={onButtonClick}>
+      <button
+        className="w-full flex flex-1 justify-center items-center h-[60px] md:h-[50px] bg-[#222] text-white uppercase"
+        disabled={disabled}
+        onClick={onButtonClick}
+      >
         {buttonText}
         {buttonState === "backInStock" && (
           <span className="ml-2">
@@ -62,11 +66,7 @@ type QuantityButtonProps = {
   onChange: (value: number) => void;
 };
 
-export const QuantityButton = ({
-  isFullWidth = true,
-  quantity,
-  onChange,
-}: QuantityButtonProps) => {
+export const QuantityButton = ({ quantity, onChange }: QuantityButtonProps) => {
   const handleDecrease = () => {
     if (!(quantity > 1)) return;
     onChange(quantity - 1);
@@ -77,18 +77,18 @@ export const QuantityButton = ({
   };
 
   return (
-    <div className="relative inline-block rounded-[12px] h-12 shrink-0 overflow-hidden bg-gray-one border border-solid border-gray-two text-black">
+    <div className="relative flex items-center h-[60px] md:h-[50px] shrink-0 overflow-hidden bg-[#d9d9d9] text-[#222]">
       <button
-        className="w-[35px] h-full inline-block focus:outline-none hover:bg-gray-two focus-visible:bg-gray-two"
+        className="w-[35px] xs:w-[25px] transition-all duration-300 h-full inline-block focus:outline-none"
         onClick={handleDecrease}
       >
         <MinusSVG />
       </button>
-      <span className="inline-block text-center w-[calc(100%-70px)] px-[10px]">
+      <span className="inline-block text-center w-[calc(100%-70px)] px-[10px] xs:w-[calc(100%-50px)]">
         {quantity}
       </span>
       <button
-        className="w-[35px] h-full inline-block focus:outline-none hover:bg-gray-two focus-visible:bg-gray-two"
+        className="w-[35px] xs:w-[25px] h-full inline-block focus:outline-none"
         onClick={handleIncrease}
       >
         <PlusSVG />
@@ -99,8 +99,8 @@ export const QuantityButton = ({
 
 const MinusSVG = () => (
   <svg
-    width="8"
-    height="8"
+    width="12"
+    height="12"
     viewBox="0 0 8 8"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -112,8 +112,8 @@ const MinusSVG = () => (
 
 const PlusSVG = () => (
   <svg
-    width="8"
-    height="8"
+    width="12"
+    height="12"
     viewBox="0 0 8 8"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

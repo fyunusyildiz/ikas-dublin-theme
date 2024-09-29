@@ -11,13 +11,12 @@ import { ProductDetailProps } from "src/components/__generated__/types";
 import Checkbox from "src/components/components/checkbox";
 import Loading from "src/components/svg/loading";
 import breakpoints, { point } from "src/styles/breakpoints";
-
-import * as S from "./style";
+import Collapse from "src/components/components/collapse";
 
 export const ProductAttributes = observer(({ product }: ProductDetailProps) => {
   if (!product.selectedVariant.attributes) return null;
   return (
-    <div className="mt-5">
+    <div className="w-full">
       {product.selectedVariant.attributes.map((attribute) => (
         <AttributeValue
           key={attribute.productAttributeId}
@@ -61,11 +60,7 @@ const AttributeValueWrapper = (props: {
   header?: string;
   children: React.ReactNode;
 }) => {
-  return (
-    <S.AttributeValueWrapper header={props.header || ""}>
-      {props.children}
-    </S.AttributeValueWrapper>
-  );
+  return <Collapse header={props.header || ""}>{props.children}</Collapse>;
 };
 
 const BooleanAttributeValue = ({ attribute }: AttributeValueProps) => {

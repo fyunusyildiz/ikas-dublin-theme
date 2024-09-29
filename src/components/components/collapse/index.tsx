@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-import * as S from "./style";
-
 type CollapseProps = {
   className?: string;
   defaultActive?: boolean;
@@ -17,51 +15,45 @@ const Collapse = (props: CollapseProps) => {
   };
 
   return (
-    <details className={props.className}>
-      <S.CollapseHeader
+    <details className={`${props.className} border-b border-solid border-[#222]`}>
+      <summary
         aria-expanded={active}
-        $active={active}
-        className="collapse-header"
+        className="w-full flex items-center justify-between py-3 md:py-2 cursor-pointer text-sm xs:text-xs leading-8 text-[#222]"
         onClick={handleButton}
       >
         {props.header}
-        <S.CollapseIcon>
-          {active ? <MdOutlineExpandLessSVG /> : <MdOutlineExpandMoreSVG />}
-        </S.CollapseIcon>
-      </S.CollapseHeader>
-      <div className="collapse-children">{active && props.children}</div>
+        <div className="w-3 h-3">{active ? <MinusSVG /> : <PlusSVG />}</div>
+      </summary>
+      <div>{active && props.children}</div>
     </details>
   );
 };
 
 export default Collapse;
 
-const MdOutlineExpandLessSVG = () => (
+const MinusSVG = () => (
   <svg
-    stroke="currentColor"
-    fill="currentColor"
-    strokeWidth="0"
-    viewBox="0 0 24 24"
-    height="1em"
-    width="1em"
+    width="12"
+    height="12"
+    viewBox="0 0 8 8"
+    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className="w-full"
   >
-    <path fill="none" d="M0 0h24v24H0V0z"></path>
-    <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14l-6-6z"></path>
+    <path d="M0 4H8" stroke="#22252A" />
   </svg>
 );
 
-const MdOutlineExpandMoreSVG = () => (
+const PlusSVG = () => (
   <svg
-    stroke="currentColor"
-    fill="currentColor"
-    strokeWidth="0"
-    viewBox="0 0 24 24"
-    height="1em"
-    width="1em"
+    width="12"
+    height="12"
+    viewBox="0 0 8 8"
+    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className="w-full"
   >
-    <path fill="none" d="M24 24H0V0h24v24z" opacity=".87"></path>
-    <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"></path>
+    <path d="M0 4H8" stroke="#22252A" />
+    <path d="M4 8L4 2.38419e-07" stroke="#22252A" />
   </svg>
 );

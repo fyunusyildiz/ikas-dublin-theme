@@ -18,3 +18,12 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.slick-prev {
+  left: 5px !important;
+  z-index: 1;
+}
+.slick-next {
+  right: 5px !important;
+  z-index: 1;
+}

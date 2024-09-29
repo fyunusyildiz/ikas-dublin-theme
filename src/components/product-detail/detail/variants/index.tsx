@@ -2,20 +2,16 @@ import {
   IkasDisplayedVariantType,
   IkasDisplayedVariantValue,
   IkasProduct,
-  useTranslation,
 } from "@ikas/storefront";
 import { observer } from "mobx-react-lite";
 
 import { ProductDetailProps } from "src/components/__generated__/types";
-import Select, {
-  SelectOnChangeParamType,
-} from "src/components/components/select";
+import { SelectOnChangeParamType } from "src/components/components/select";
 import { Swatch } from "src/components/components/swatch";
-import { NS } from "src/components/product-detail";
 
 export const Variants = observer(({ product }: ProductDetailProps) => {
   return (
-    <div>
+    <div className="w-full flex flex-col mt-3 sm:mt-0">
       {product.displayedVariantTypes.map((dVT) => (
         <VariantType key={dVT.variantType.id} product={product} dVT={dVT} />
       ))}
@@ -32,10 +28,12 @@ type VariantTypeProps = {
 
 const VariantType = observer(({ dVT, product }: VariantTypeProps) => {
   return (
-    <div className="mb-6">
-      <div className="font-light text-xs leading-7 mb-1 text-blue-one">
-        {dVT.variantType.name}
-      </div>
+    <div className="mb-8 sm:mb-0 sm:py-3 sm:border-b sm:border-solid sm:border-[#828282] flex flex-col gap-3">
+      {dVT.variantType.isColorSelection && (
+        <div className="font-light text-xs leading-none text-[#222]">
+          {dVT.variantType.name}: {product.selectedVariantValues[0]?.name}
+        </div>
+      )}
       <VariantValues dVT={dVT} product={product} />
     </div>
   );
@@ -53,18 +51,22 @@ const VariantValues = observer(({ dVT, product }: VariantValueType) => {
 
   if (dVT.variantType.isColorSelection) {
     return (
-      <SwatchVariantValue
-        dVT={dVT}
-        onVariantValueChange={onVariantValueChange}
-      />
+      <div className="flex items-center gap-2">
+        <SwatchVariantValue
+          dVT={dVT}
+          onVariantValueChange={onVariantValueChange}
+        />
+      </div>
     );
   }
   return (
-    <SelectVariantValue
-      product={product}
-      dVT={dVT}
-      onVariantValueChange={onVariantValueChange}
-    />
+    <div className="flex items-center">
+      <SelectVariantValue
+        product={product}
+        dVT={dVT}
+        onVariantValueChange={onVariantValueChange}
+      />
+    </div>
   );
 });
 
@@ -76,8 +78,6 @@ type SelectVariantValueProps = {
 
 const SelectVariantValue = observer(
   ({ dVT, product, onVariantValueChange }: SelectVariantValueProps) => {
-    const { t } = useTranslation();
-
     const selectOptions = dVT.displayedVariantValues.map((dVV) => ({
       value: dVV.variantValue.id,
       label: dVV.variantValue.name,
@@ -85,7 +85,7 @@ const SelectVariantValue = observer(
 
     const selectValue = product.selectedVariantValues.find(
       (sVV) => sVV.variantTypeId === dVT.variantType.id
-    )?.id;
+    )?.name;
 
     const onChange = (value: SelectOnChangeParamType) => {
       const dVV = dVT.displayedVariantValues.find(
@@ -95,12 +95,20 @@ const SelectVariantValue = observer(
     };
 
     return (
-      <Select
-        placeholder={t(`${NS}:detail.variantType.selectPlaceholder`)}
-        options={selectOptions}
-        value={selectValue}
-        onChange={onChange}
-      />
+      <div className="w-full flex items-center gap-2 flex-wrap">
+        {selectOptions.map((option) => (
+          <button
+            onClick={() => onChange(option.value)}
+            className={`px-10 md:px-6 py-3 md:py-2 xs:px-4 bg-[#D9D9D9] text-xs border border-solid text-[#222] ${
+              selectValue === option.label
+                ? "border-[#222]"
+                : "border-transparent"
+            }`}
+          >
+            {option.label}
+          </button>
+        ))}
+      </div>
     );
   }
 );

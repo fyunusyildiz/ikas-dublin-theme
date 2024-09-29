@@ -32,14 +32,11 @@ export const FavoriteButton = observer(({ product }: ProductDetailProps) => {
   return (
     <>
       <button
-        className="absolute top-2 right-0 w-8 h-8 text-black"
+        className="w-[70px] xs:w-[50px] md:w-[60px] md:h-[50px] h-[60px] bg-[#d9d9d9] text-[#222] flex items-center justify-center"
         disabled={pending}
         onClick={toggleFavorite}
       >
-        <Tooltip noCursor text={tooltipText} placement="left">
-          {/* {pending && <Loading />} */}
-          {!pending && <FavoriteSVG fill={isProductFavorite} />}
-        </Tooltip>
+        {!pending && <FavoriteSVG stroke={"#222"} fill={isProductFavorite} />}
       </button>
       <ModalLoginRequired
         isModalVisible={showLoginModal}

@@ -1,8 +1,6 @@
 import React from "react";
 import { IkasImage } from "@ikas/storefront";
 
-import * as S from "./style";
-
 type SwatchProps = {
   selected: boolean;
   title: string;
@@ -20,18 +18,29 @@ export const Swatch = ({
 }: SwatchProps) => {
   if (image?.id) {
     return (
-      <S.ImageSwatch title={title} onClick={onClick}>
-        <S.ImageSwatchImg src={image?.thumbnailSrc} $isSelected={selected} />
-      </S.ImageSwatch>
+      <button
+        title={title}
+        onClick={onClick}
+        className={`w-10 h-10 md:w-8 md:h-8 xs:w-7 xs:h-7 cursor-pointer border border-solid disabled:opacity-50 ${
+          selected ? "border-[#222]" : "border-transparent"
+        }`}
+      >
+        <img
+          src={image?.thumbnailSrc}
+          className="w-full h-full object-cover object-center"
+        />
+      </button>
     );
   }
 
   return (
-    <S.ColorSwatch
+    <button
       title={title}
-      $isSelected={selected}
-      $color={colorCode || ""}
       onClick={onClick}
+      className={`cursor-pointer w-10 m-0 h-10 border border-solid md:w-8 md:h-8 xs:w-7 xs:h-7 ${
+        selected ? "border-[#222]" : "border-gray-two"
+      } p-0`}
+      style={{ backgroundColor: colorCode ? `${colorCode}` : "transparent" }}
     />
   );
 };
