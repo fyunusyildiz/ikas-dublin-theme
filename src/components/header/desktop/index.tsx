@@ -3,16 +3,16 @@ import { observer } from "mobx-react-lite";
 
 import { HeaderProps, TextPosition } from "src/components/__generated__/types";
 
+import { useRouter } from "next/router";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import MaxQuantityPerCartModal from "src/components/components/modal-max-quantity-per-cart";
+import ArrowDown from "src/components/header/desktop/svg/arrow-down";
+import Search from "src/components/header/desktop/svg/search";
 import AccountSVG from "src/components/svg/account";
 import CartSVG from "src/components/svg/cart";
 import Close from "src/components/svg/close";
 import FavoriteSVG from "src/components/svg/favorite";
-import ArrowDown from "src/components/header/desktop/svg/arrow-down";
-import Search from "src/components/header/desktop/svg/search";
-import { useState, useCallback, useMemo, useEffect } from "react";
 import UIStore from "src/store/ui-store";
-import { useRouter } from "next/router";
 
 const DesktopHeader = (props: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,20 +29,22 @@ const DesktopHeader = (props: HeaderProps) => {
       )}
       <header
         className={`w-full transition-all duration-300 border-b border-solid border-[#222222] ${
+          isScrolled ? "fixed top-0 z-[999]" : ""
+        } ${
           props.noTransparentHeader
             ? ""
+            : isScrolled
+            ? "fixed top-0 z-[999]"
             : "fixed top-[0px] z-[999] transition-all duration-300 ease-in-out"
-        } ${isScrolled ? "fixed top-0 z-[999]" : ""}`}
+        }`}
         style={{
           backgroundColor: props.noTransparentHeader
             ? props.headerBackgroundColor
-            : isScrolled
-            ? "white"
             : "transparent",
         }}
       >
-        <div className="w-full p-[14px]">
-          <div className="w-full flex justify-between items-center">
+        <div className="w-full px-[14px] h-[80px]">
+          <div className="w-full h-full flex justify-between items-center">
             <LeftSide {...props} />
             <Center {...props} />
             <RightSide {...props} />
@@ -96,9 +98,9 @@ const LeftSide = (props: HeaderProps) => {
 
 const Navigation = (props: HeaderProps) => {
   return (
-    <nav className="w-[40%]">
+    <nav className="w-[40%] h-full">
       <ul
-        className={`w-full flex items-center gap-x-5 ${
+        className={`w-full h-full flex items-center ${
           props.isCentered ? "justify-center" : "justify-start"
         }`}
       >
@@ -109,6 +111,234 @@ const Navigation = (props: HeaderProps) => {
     </nav>
   );
 };
+
+interface LinkProps {
+  href: string;
+  label: string;
+  subLinks: { href: string; label: string }[];
+}
+
+const NavItem = (props: { link: LinkProps } & HeaderProps) => {
+  const [linkHoverState, setLinkHoverState] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [hoveredLink, setHoveredLink] = useState("");
+  const [categoryOrder, setCategoryOrder] = useState(0);
+  const [firstImageOfCategory, setFirstImageOfCategory] = useState("");
+  const [secondImageOfCategory, setSecondImageOfCategory] = useState("");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    props.links.forEach((link, index) => {
+      if (link.label === hoveredLink) {
+        setCategoryOrder(index);
+      }
+    });
+
+    if (categoryOrder === 0) {
+      setFirstImageOfCategory(props.firstCategoryImages?.[0]?.src ?? "");
+      setSecondImageOfCategory(props.firstCategoryImages?.[1]?.src ?? "");
+    } else if (categoryOrder === 1) {
+      setFirstImageOfCategory(props.secondCategoryImages?.[0]?.src ?? "");
+      setSecondImageOfCategory(props.secondCategoryImages?.[1]?.src ?? "");
+    } else {
+      setFirstImageOfCategory(props.thirdCategoryImages?.[0]?.src ?? "");
+      setSecondImageOfCategory(props.thirdCategoryImages?.[1]?.src ?? "");
+    }
+  }, [hoveredLink, categoryOrder, props]);
+
+  const toggleLinkHover = () => {
+    setLinkHoverState(!linkHoverState);
+    setHoveredLink(props.link.label);
+  };
+
+  const { link } = props;
+
+  return (
+    <li className="flex items-center group h-full">
+      <Link href={link.href} passHref>
+        <a
+          onMouseEnter={toggleLinkHover}
+          onMouseLeave={toggleLinkHover}
+          className={`flex hover:opacity-50 text-xs h-full items-center p-2 uppercase`}
+          style={{
+            color: linkHoverState
+              ? props.headerLinkHoverColor
+              : props.noTransparentHeader
+              ? props.headerLinkColor
+              : isScrolled
+              ? "black"
+              : "white",
+            backgroundColor: linkHoverState
+              ? props.headerLinkHoverBg
+              : "transparent",
+          }}
+        >
+          {link.label}
+          {!!link.subLinks.length && (
+            <ArrowDown
+              fill={
+                linkHoverState
+                  ? props.headerLinkHoverColor
+                  : props.noTransparentHeader
+                  ? props.headerLinkColor
+                  : isScrolled
+                  ? "black"
+                  : "white"
+              }
+            />
+          )}
+        </a>
+      </Link>
+      {!!link.subLinks.length && (
+        <div
+          className="hidden group-hover:flex fixed top-[79px] left-0 bg-white z-[9999] w-full flex-col border-b border-solid border-[#222]"
+          onMouseEnter={() => setLinkHoverState(true)}
+          onMouseLeave={() => setLinkHoverState(false)}
+        >
+          <div className="w-full h-[22px] bg-[#d9d9d9] border-y border-solid border-[#222]"></div>
+          <div className="w-full grid grid-cols-4 h-[450px]">
+            <div className="col-span-1 p-5 border-r border-solid border-[#222]">
+              <ul className="w-full flex flex-col gap-3">
+                {link.subLinks.slice(0, 6).map((subLink, subIndex) => (
+                  <li key={subIndex}>
+                    <Link href={subLink.href} passHref>
+                      <a className="flex items-center gap-3 hover:opacity-60">
+                        {subLink.label}
+                      </a>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="col-span-1 p-5 border-r border-solid border-[#222]">
+              <ul className="w-full flex flex-col gap-3">
+                {link.subLinks.slice(6).map((subLink, subIndex) => (
+                  <li key={subIndex}>
+                    <Link href={subLink.href} passHref>
+                      <a className="flex items-center gap-3 hover:opacity-60">
+                        {subLink.label}
+                      </a>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="col-span-1 overflow-hidden border-r border-solid border-[#222]">
+              <img
+                src={firstImageOfCategory}
+                alt={link.label}
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
+            <div className="col-span-1 overflow-hidden">
+              <img
+                src={secondImageOfCategory}
+                alt={link.label}
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
+          </div>
+        </div>
+      )}
+    </li>
+  );
+};
+
+export const SearchInput = observer((props: HeaderProps) => {
+  const [openSearchDrawer, setOpenSearchDrawer] = useState(false);
+  const uiStore = UIStore.getInstance();
+  const router = useRouter();
+
+  const onKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      router.push(`/search?s=${uiStore.searchKeyword}`);
+    }
+  };
+
+  const toggleSearchDrawer = () => {
+    setOpenSearchDrawer(!openSearchDrawer);
+  };
+
+  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    uiStore.searchKeyword = event.target.value;
+  };
+
+  return (
+    <>
+      <button onClick={toggleSearchDrawer}>
+        <Search
+          fill={props.noTransparentHeader ? props.headerLinkColor : "black"}
+        />
+      </button>
+      <div
+        className={`w-[660px] fixed top-[80px] z-[999] h-[640px] border border-solid border-[#222] bg-white flex flex-col ${
+          openSearchDrawer ? "right-0" : "-right-full"
+        } transition-all duration-300 ease-in-out`}
+      >
+        <div className="w-full flex items-center gap-5 h-[37px]">
+          <input
+            className="text-2xs h-full px-4 flex-1 focus:outline-none placeholder:text-[#A1A1A1]"
+            type="search"
+            value={uiStore.searchKeyword}
+            placeholder={"ÜRÜN ARA"}
+            onKeyPress={onKeyPress}
+            onChange={onChange}
+          />
+          <button
+            className="h-full text-2xs flex items-center justify-center p-2 text-[#222]"
+            onClick={() => router.push(`/search?s=${uiStore.searchKeyword}`)}
+          >
+            ARA
+          </button>
+          <button
+            className="h-full text-2xs flex items-center justify-center p-2 text-[#A1A1A1]"
+            onClick={toggleSearchDrawer}
+          >
+            KAPAT
+          </button>
+        </div>
+        <div className="block w-full h-[22px] bg-[#D9D9D9] border-y border-solid border-[#222]">
+          <div className="w-[160.75px] h-full border-r border-solid border-[#222]"></div>
+        </div>
+        <div className="w-full flex flex-1 overflow-y-scroll flex-wrap bg-[#D9D9D9]">
+          <ul className="w-[25%] sticky top-0 h-full flex flex-col gap-2 p-4">
+            {props.searchCategories?.map((category, index) => (
+              <li key={index}>
+                <Link href={category.href} passHref>
+                  <a className="text-2xs">{category.label}</a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div className="flex flex-wrap h-full w-3/4 pr-[1px]">
+            {props.searchProducts?.data.map((product, index) => (
+              <Link href={product.href} key={index} passHref>
+                <a className="w-1/2 h-[250px] outline outline-1">
+                  <img
+                    src={product.selectedVariant.mainImage?.image?.src}
+                    alt={product.name}
+                    className="w-full h-full object-cover object-center"
+                  />
+                </a>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+});
 
 const Center = (props: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -146,118 +376,6 @@ const Center = (props: HeaderProps) => {
     </div>
   );
 };
-
-interface LinkProps {
-  href: string;
-  label: string;
-  subLinks: { href: string; label: string }[];
-}
-
-const NavItem = (props: { link: LinkProps } & HeaderProps) => {
-  const [linkHoverState, setLinkHoverState] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setIsScrolled(window.scrollY > 20);
-    });
-  }, []);
-
-  const toggleLinkHover = () => {
-    setLinkHoverState(!linkHoverState);
-  };
-
-  const { link } = props;
-
-  return (
-    <li className="relative inline-block group">
-      <Link href={link.href} passHref>
-        <a
-          onMouseEnter={toggleLinkHover}
-          onMouseLeave={toggleLinkHover}
-          className={`flex text-xs p-2 transition-colors duration-300 ease-in-out uppercase`}
-          style={{
-            color: linkHoverState
-              ? props.headerLinkHoverColor
-              : props.noTransparentHeader
-              ? props.headerLinkColor
-              : isScrolled
-              ? "black"
-              : "white",
-            backgroundColor: linkHoverState
-              ? props.headerLinkHoverBg
-              : "transparent",
-          }}
-        >
-          {link.label}
-          {!!link.subLinks.length && (
-            <ArrowDown
-              fill={
-                linkHoverState
-                  ? props.headerLinkHoverColor
-                  : props.noTransparentHeader
-                  ? props.headerLinkColor
-                  : isScrolled
-                  ? "black"
-                  : "white"
-              }
-            />
-          )}
-        </a>
-      </Link>
-      {!!link.subLinks.length && (
-        <div
-          className="hidden group-hover:block absolute top-full bg-white z-50 p-5"
-          onMouseEnter={() => setLinkHoverState(true)}
-          onMouseLeave={() => setLinkHoverState(false)}
-        >
-          <ul>
-            {link.subLinks.map((subLink, subIndex) => (
-              <li key={subIndex}>
-                <Link href={subLink.href} passHref>
-                  <a className="flex items-center gap-3">{subLink.label}</a>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-    </li>
-  );
-};
-
-export const SearchInput = observer((props: HeaderProps) => {
-  const uiStore = UIStore.getInstance();
-  const router = useRouter();
-
-  const onKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      router.push(`/search?s=${uiStore.searchKeyword}`);
-    }
-  };
-
-  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    uiStore.searchKeyword = event.target.value;
-  };
-
-  return (
-    <div className="relative">
-      <input
-        className="border border-solid text-2xs border-gray-two py-2 px-4 w-[200px] rounded-[5px] focus:outline-none"
-        type="search"
-        value={uiStore.searchKeyword}
-        placeholder={"Ürün Ara"}
-        onKeyPress={onKeyPress}
-        onChange={onChange}
-      />
-      <Search
-        className="absolute right-2 top-2 z-10"
-        fill={props.noTransparentHeader ? props.headerLinkColor : "black"}
-      />
-    </div>
-  );
-});
 
 const RightSide = observer((props: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);

@@ -2,9 +2,9 @@ import {
 	IkasImage,
 	IkasNavigationLink,
 	IkasSlider,
+	IkasProductList,
 	IkasProduct,
 	IkasCategory,
-	IkasProductList,
 } from "@ikas/storefront"
 
 export enum Position{ 
@@ -189,6 +189,11 @@ export type HeaderProps = {
 	headerSublinkColor: string;
 	headerLinkHoverBg: string;
 	headerLinkHoverColor: string;
+	firstCategoryImages?: IkasImage[];
+	secondCategoryImages?: IkasImage[];
+	thirdCategoryImages?: IkasImage[];
+	searchCategories: IkasNavigationLink[];
+	searchProducts: IkasProductList;
 };
 
 export type ProductDetailProps = {

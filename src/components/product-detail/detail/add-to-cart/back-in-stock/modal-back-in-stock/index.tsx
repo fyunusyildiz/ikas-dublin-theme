@@ -33,12 +33,17 @@ const ModalBackInStock = ({ isModalVisible, product, onClose }: Props) => {
     onFormAlertClose,
     onSubmit,
   } = useModalBackInStock({ product });
-  const SUB_NS = `${NS}:detail.addToCart.backInStockModal`;
-  const i18nText = (key: string) => t(`${SUB_NS}.${key}`);
 
   return (
-    <Modal visible={isModalVisible} title={i18nText("title")} onClose={onClose}>
-      <S.Text>{i18nText("text")}</S.Text>
+    <Modal
+      visible={isModalVisible}
+      title={"GELİNCE HABER VER"}
+      onClose={onClose}
+    >
+      <S.Text>
+        Bu ürün stoğa döndüğünde haberdar olmak için lütfen e-posta adresinizi
+        yazın.
+      </S.Text>
       {formAlert && (
         <AlertComponent
           closable
@@ -56,14 +61,14 @@ const ModalBackInStock = ({ isModalVisible, product, onClose }: Props) => {
           >
             <Input
               type="text"
-              placeholder={i18nText("form.email")}
+              placeholder={"E-posta adresiniz"}
               value={model.email}
               status={status.email}
               onChange={(event) => (model.email = event.target.value)}
             />
           </FormItem>
           <Button block loading={pending} disabled={pending}>
-            {i18nText("form.submit")}
+            GÖNDER
           </Button>
         </Form>
       )}

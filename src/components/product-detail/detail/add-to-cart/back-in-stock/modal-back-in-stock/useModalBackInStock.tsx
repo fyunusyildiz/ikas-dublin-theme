@@ -10,7 +10,6 @@ import {
 import { FormAlertType } from "src/components/components/alert";
 import { FormItemStatus } from "src/components/components/form/form-item";
 
-import { NS } from "src/components/product-detail";
 
 type Status = {
   email: FormItemStatus;
@@ -26,16 +25,14 @@ export default function useModalBackInStock({ product }: Props) {
   const [pending, setPending] = useState(false);
   const [formAlert, setFormAlert] = useState<FormAlertType | null>();
 
-  const SUB_NS = `${NS}:detail.addToCart.backInStockModal`;
-  const i18nText = (key: string) => t(`${SUB_NS}.${key}`);
 
   const [validator] = useState(
     new Validator(model, [
       new EmailRule({
         fieldKey: "email",
-        fieldName: i18nText("form.email"),
+        fieldName: "E-posta",
         valuePath: "email",
-        message: i18nText("form.validation.emailRule"),
+        message: "Lütfen bir e-posta adresi girin.",
       }),
     ])
   );
@@ -60,16 +57,16 @@ export default function useModalBackInStock({ product }: Props) {
           : "success";
       const title =
         status === "error"
-          ? i18nText(".alert.errorTitle")
+          ? "Hata"
           : status === "info"
           ? undefined
-          : i18nText("alert.successTitle");
+          : "Başarılı";
       const text =
         status === "error"
-          ? i18nText("alert.errorText")
+          ? "Bir hata oluştu. Lütfen tekrar deneyin."
           : status === "info"
-          ? i18nText("alert.alreadySavedText")
-          : i18nText("alert.successText");
+          ? "Bu e-posta adresi zaten kayıtlı."
+          : "Başarıyla kaydedildi.";
 
       setFormAlert({ status, title, text });
       if (status !== "error") model.email = "";
@@ -77,8 +74,8 @@ export default function useModalBackInStock({ product }: Props) {
       console.log("error", error);
       setFormAlert({
         status: "error",
-        title: i18nText("alert.errorTitle"),
-        text: i18nText("alert.errorText"),
+        title: "Hata",
+        text: "Bir hata oluştu. Lütfen tekrar deneyin.",
       });
     } finally {
       setPending(false);
