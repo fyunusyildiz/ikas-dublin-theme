@@ -264,9 +264,16 @@ export type CartProps = {
 };
 
 export type AboutPageProps = {
-	aboutHugeTitle: string;
-	aboutDescription: string;
-	images: IkasImage[];
+	firstBlockImage: IkasImage;
+	firstBlockYear: string;
+	firstBlockMonth: string;
+	firstBlockText: string;
+	secondBlockImage: IkasImage;
+	secondBlockYear: string;
+	secondBlockMonth: string;
+	secondBlockText: string;
+	thirdBlockYear: string;
+	thirdBlockText: string;
 };
 
 export type PageSearchProps = {
