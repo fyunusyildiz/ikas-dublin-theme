@@ -47,7 +47,7 @@ const AboutPage = ({ ...props }: AboutPageProps) => {
           />
         </div>
       </div>
-      <div className="w-full p-12 pt-20 md:pt-12 sm:p-10 sm:py-16 xs:px-6 gap-10 flex flex-col sm:gap-3">
+      <div className="w-full px-12 py-20 md:pt-12 sm:p-10 sm:py-16 xs:px-6 gap-10 flex flex-col sm:gap-3">
         <h3 className="w-full text-center text-[64px] sm:text-[40px] xs:text-[30px] text-[#222]">
           {props.thirdBlockYear}
         </h3>
