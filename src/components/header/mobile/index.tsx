@@ -12,6 +12,7 @@ import CartSVG from "src/components/svg/cart";
 
 import { useCallback, useEffect, useMemo } from "react";
 import ArrowRight from "./svg/arrow-right";
+import ArrowLeft from "./svg/arrow-left";
 import IOCloseSVG from "./svg/io-close";
 import IOMenuSVG from "./svg/io-menu";
 import Search from "./svg/search";
@@ -170,7 +171,7 @@ const Sidenav = observer((props: HeaderProps) => {
 
 const Navigation = (props: HeaderProps) => {
   return (
-    <nav className="flex items-center w-full mb-6 mx-0">
+    <nav className="flex items-center relative w-full mb-6 mx-0">
       <ul className="w-full">
         {props.links?.map((link, index) => (
           <NavigationListItem key={index} link={link} />
@@ -184,24 +185,65 @@ const NavigationListItem = ({ link }: { link: IkasNavigationLink }) => {
   const [showSubLinks, setSubLinks] = useState(false);
   const uiStore = UIStore.getInstance();
 
+  const handleShowSubLinks = () => {
+    setSubLinks(!showSubLinks);
+  };
+
   return (
     <li>
       <div className="flex items-center justify-between text-xs border-b border-solid border-[#222]">
-        <Link href={link.href} passHref>
-          <a className="flex uppercase items-center justify-between w-full px-5 py-4">
-            {link.label}
-            <ArrowRight />
-          </a>
-        </Link>
+        {link.subLinks.length > 0 ? (
+          <>
+            <button
+              className="flex text-base uppercase items-center justify-between w-full px-5 py-4"
+              onClick={handleShowSubLinks}
+            >
+              {link.label}
+              <ArrowRight />
+            </button>
+            <div
+              className={`z-[101] fixed flex flex-col top-0 bg-white left-0 w-full h-full transition-all duration-300 ${
+                showSubLinks ? "translate-x-0" : "-translate-x-full"
+              }`}
+            >
+              <div className="w-full flex items-center uppercase px-5 py-4 relative bg-[#d9d9d9]">
+                <button onClick={handleShowSubLinks} className="z-10">
+                  <ArrowLeft />
+                </button>
+                <h2 className="text-base text-[#222] absolute left-0 right-0 w-full text-center">
+                  {link.label}
+                </h2>
+              </div>
+              {link.subLinks.map((subLink, index) => (
+                <Link href={subLink.href} key={index} passHref>
+                  <a
+                    className="flex uppercase text-[#222] border-b border-solid border-[#222] items-center justify-between w-full px-5 py-4"
+                    onClick={uiStore.toggleSidenav}
+                  >
+                    {subLink.label}
+                    <ArrowRight />
+                  </a>
+                </Link>
+              ))}
+            </div>
+          </>
+        ) : (
+          <Link href={link.href} passHref>
+            <a className="flex uppercase items-center justify-between w-full px-5 py-4">
+              {link.label}
+              <ArrowRight />
+            </a>
+          </Link>
+        )}
       </div>
     </li>
   );
 };
 
 export const SearchInput = observer((props: HeaderProps) => {
+  const [openSearchDrawer, setOpenSearchDrawer] = useState(false);
   const uiStore = UIStore.getInstance();
   const router = useRouter();
-  const [searchClicked, setSearchClicked] = useState(false);
 
   const onKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
@@ -210,39 +252,81 @@ export const SearchInput = observer((props: HeaderProps) => {
     }
   };
 
+  const handleSearch = () => {
+    router.push(`/search?s=${uiStore.searchKeyword}`);
+    toggleSearchDrawer();
+  };
+
+  const toggleSearchDrawer = () => {
+    setOpenSearchDrawer(!openSearchDrawer);
+  };
+
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     uiStore.searchKeyword = event.target.value;
   };
 
   return (
     <>
-      <button onClick={() => setSearchClicked((prev) => !prev)}>
+      <button onClick={toggleSearchDrawer}>
         <Search
           fill={props.noTransparentHeader ? props.headerLinkColor : "black"}
         />
       </button>
-      <input
-        type="text"
-        value={uiStore.searchKeyword}
-        onChange={onChange}
-        onKeyPress={onKeyPress}
-        placeholder="Ürün Ara"
-        className={`absolute top-full left-0 focus:outline-none w-full h-10 p-2 border border-solid border-gray-two transition-all duration-300 z-10 ease-in-out ${
-          searchClicked
-            ? "translate-x-0 opacity-100 z-20"
-            : "-translate-x-full -z-10 opacity-0"
-        }`}
-      />
-      <button
-        onClick={() => router.push(`/search?s=${uiStore.searchKeyword}`)}
-        className={`absolute top-full mt-1 right-1 ease-in bg-[#6F6448] text-white font-bold h-8 px-3 z-30 transition-all duration-300 ${
-          searchClicked
-            ? "opacity-100 translate-x-0"
-            : "opacity-0 translate-x-2"
-        }`}
+      <div
+        className={`w-full fixed top-[60px] z-[999] h-[calc(100vh-60px)] border border-solid border-[#222] bg-white flex flex-col ${
+          openSearchDrawer ? "right-0" : "-right-full"
+        } transition-all duration-300 ease-in-out`}
       >
-        Ara
-      </button>
+        <div className="w-full flex items-center gap-5 h-[37px]">
+          <input
+            className="text-2xs h-full px-4 flex-1 focus:outline-none placeholder:text-[#A1A1A1]"
+            type="search"
+            value={uiStore.searchKeyword}
+            placeholder={"ÜRÜN ARA"}
+            onKeyPress={onKeyPress}
+            onChange={onChange}
+          />
+          <button
+            className="h-full text-2xs flex items-center justify-center p-2 text-[#222]"
+            onClick={handleSearch}
+          >
+            ARA
+          </button>
+          <button
+            className="h-full text-2xs flex items-center justify-center p-2 text-[#A1A1A1]"
+            onClick={toggleSearchDrawer}
+          >
+            KAPAT
+          </button>
+        </div>
+        <div className="block w-full h-[15px] bg-[#D9D9D9] border-y border-solid border-[#222]">
+          <div className="w-[35%] h-full border-r border-solid border-[#222]"></div>
+        </div>
+        <div className="w-full flex flex-1 overflow-y-scroll flex-wrap bg-[#D9D9D9]">
+          <ul className="w-[35%] sticky top-0 h-full flex flex-col gap-2 p-2">
+            {props.searchCategories?.map((category, index) => (
+              <li key={index}>
+                <Link href={category.href} passHref>
+                  <a className="text-2xs">{category.label}</a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div className="flex flex-wrap h-full w-[65%] pr-[1px]">
+            {props.searchProducts?.data.map((product, index) => (
+              <Link href={product.href} key={index} passHref>
+                <a className="w-1/2 outline outline-1">
+                  <img
+                    src={product.selectedVariant.mainImage?.image?.src}
+                    alt={product.name}
+                    className="w-full h-full object-cover object-center"
+                  />
+                </a>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
     </>
   );
 });
