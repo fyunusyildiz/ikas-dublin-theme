@@ -46,7 +46,7 @@ const BrandArea = observer((props: FooterProps) => {
 
 const InformationArea = observer((props: FooterProps) => {
   return (
-    <div className="w-1/4 md:w-1/2 xs:w-full flex flex-col gap-y-1 border-l border-r border-solid border-[#222] md:border-r-0 py-10 px-5 sm:py-5 xs:border-b">
+    <div className="w-1/4 md:w-1/2 xs:w-full flex flex-col gap-y-1 border-l border-r border-solid border-[#222] md:border-r-0 md:border-l-0 py-10 px-5 sm:py-5 xs:border-b">
       <h6 className="text-base font-semibold text-black">
         {props.informationBlockTitle}
       </h6>
