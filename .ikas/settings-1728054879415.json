@@ -6,8 +6,8 @@
     "domains": [
       {
         "_id": "d68a9c5c-aa35-4e3d-82a1-181d43682d55",
-        "createdAt": "2024-10-04T14:01:04.070Z",
-        "updatedAt": "2024-10-04T14:01:04.070Z",
+        "createdAt": "2024-10-04T14:10:51.116Z",
+        "updatedAt": "2024-10-04T14:10:51.116Z",
         "deleted": false,
         "merchantDomainId": "ce65b223-aae3-405e-87a0-23973ddb8be9",
         "name": "nordbron.com",
@@ -19,8 +19,8 @@
     "localizations": [
       {
         "_id": "0e7c4a42-53a2-48bd-8800-0e322bbdc235",
-        "createdAt": "2024-10-04T14:01:04.070Z",
-        "updatedAt": "2024-10-04T14:01:04.070Z",
+        "createdAt": "2024-10-04T14:10:51.116Z",
+        "updatedAt": "2024-10-04T14:10:51.116Z",
         "deleted": false,
         "name": "Türkçe",
         "isDefault": true,
@@ -29,8 +29,8 @@
       },
       {
         "_id": "2e0ac2a3-9001-447a-8dec-b2bb963fe1ea",
-        "createdAt": "2024-10-04T14:01:04.070Z",
-        "updatedAt": "2024-10-04T14:01:04.070Z",
+        "createdAt": "2024-10-04T14:10:51.116Z",
+        "updatedAt": "2024-10-04T14:10:51.116Z",
         "deleted": false,
         "name": "English",
         "isDefault": false,
@@ -43,8 +43,8 @@
     "routings": [
       {
         "_id": "f0b52c42-372b-4de5-aef8-5bb5a9c83e8f",
-        "createdAt": "2024-10-04T14:01:04.070Z",
-        "updatedAt": "2024-10-04T14:01:04.070Z",
+        "createdAt": "2024-10-04T14:10:51.116Z",
+        "updatedAt": "2024-10-04T14:10:51.116Z",
         "deleted": false,
         "countryCodes": [
           "TR"
@@ -60,8 +60,8 @@
       },
       {
         "_id": "345afa62-d6d0-4d78-a9bb-211128a3a679",
-        "createdAt": "2024-10-04T14:01:04.070Z",
-        "updatedAt": "2024-10-04T14:01:04.070Z",
+        "createdAt": "2024-10-04T14:10:51.116Z",
+        "updatedAt": "2024-10-04T14:10:51.116Z",
         "deleted": false,
         "countryCodes": [
           "UM",
@@ -190,8 +190,8 @@
     "themes": [
       {
         "_id": "d8cc2bef-3dd5-48d1-9083-9ed8464c59fd",
-        "createdAt": "2024-10-04T14:01:04.070Z",
-        "updatedAt": "2024-10-04T14:01:04.070Z",
+        "createdAt": "2024-10-04T14:10:51.116Z",
+        "updatedAt": "2024-10-04T14:10:51.116Z",
         "deleted": false,
         "name": "Deneme [ESAT]",
         "status": "READY",
@@ -202,8 +202,8 @@
       },
       {
         "_id": "d5a32466-16f9-48e1-bd49-5e461ce39c38",
-        "createdAt": "2024-10-04T14:01:04.070Z",
-        "updatedAt": "2024-10-04T14:01:04.070Z",
+        "createdAt": "2024-10-04T14:10:51.116Z",
+        "updatedAt": "2024-10-04T14:10:51.116Z",
         "deleted": false,
         "name": "Eski Tema - Sun",
         "status": "READY",
@@ -214,8 +214,8 @@
       },
       {
         "_id": "11849667-3698-493f-b8bd-1ef8fe1e3450",
-        "createdAt": "2024-10-04T14:01:04.070Z",
-        "updatedAt": "2024-10-04T14:01:04.070Z",
+        "createdAt": "2024-10-04T14:10:51.116Z",
+        "updatedAt": "2024-10-04T14:10:51.116Z",
         "deleted": false,
         "name": "KORU _ FW _ ARALIK",
         "status": "READY",
@@ -226,8 +226,8 @@
       },
       {
         "_id": "25175a34-81a2-4461-8481-03f438785e5b",
-        "createdAt": "2024-10-04T14:01:04.070Z",
-        "updatedAt": "2024-10-04T14:01:04.070Z",
+        "createdAt": "2024-10-04T14:10:51.116Z",
+        "updatedAt": "2024-10-04T14:10:51.116Z",
         "deleted": false,
         "name": "KORU - SEZON_SONU",
         "status": "READY",
@@ -238,8 +238,8 @@
       },
       {
         "_id": "764221ec-323f-44fc-9f3b-3486a3255b2d",
-        "createdAt": "2024-10-04T14:01:04.070Z",
-        "updatedAt": "2024-10-04T14:01:04.070Z",
+        "createdAt": "2024-10-04T14:10:51.116Z",
+        "updatedAt": "2024-10-04T14:10:51.116Z",
         "deleted": false,
         "name": "KORU_1_NISAN",
         "status": "READY",
@@ -250,8 +250,8 @@
       },
       {
         "_id": "e544d4e0-1340-4d2b-8479-b0f42a0ea6e6",
-        "createdAt": "2024-10-04T14:01:04.070Z",
-        "updatedAt": "2024-10-04T14:01:04.070Z",
+        "createdAt": "2024-10-04T14:10:51.116Z",
+        "updatedAt": "2024-10-04T14:10:51.116Z",
         "deleted": false,
         "name": "dublin",
         "status": "READY",
@@ -262,7 +262,7 @@
       }
     ],
     "createdAt": "2021-09-02T08:09:18.507Z",
-    "updatedAt": "2024-10-04T14:01:04.070Z",
+    "updatedAt": "2024-10-04T14:10:51.116Z",
     "__v": 105,
     "fbpId": "848249679295662",
     "gtmId": "GTM-T32CP5J",

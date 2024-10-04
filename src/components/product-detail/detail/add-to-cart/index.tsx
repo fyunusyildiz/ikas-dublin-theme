@@ -64,9 +64,15 @@ type QuantityButtonProps = {
   isFullWidth?: boolean;
   quantity: number;
   onChange: (value: number) => void;
+  lightBackground?: boolean;
 };
 
-export const QuantityButton = ({ quantity, onChange }: QuantityButtonProps) => {
+export const QuantityButton = ({
+  quantity,
+  onChange,
+  lightBackground,
+  isFullWidth,
+}: QuantityButtonProps) => {
   const handleDecrease = () => {
     if (!(quantity > 1)) return;
     onChange(quantity - 1);
@@ -77,7 +83,11 @@ export const QuantityButton = ({ quantity, onChange }: QuantityButtonProps) => {
   };
 
   return (
-    <div className="relative flex items-center h-[60px] md:h-[50px] shrink-0 overflow-hidden bg-[#d9d9d9] text-[#222]">
+    <div
+      className={`relative flex items-center h-[60px] md:h-[50px] shrink-0 overflow-hidden text-[#222] ${
+        lightBackground ? "bg-[#f8f8f8]" : "bg-[#d9d9d9]"
+      } ${isFullWidth ? "w-full" : "w-fit"}`}
+    >
       <button
         className="w-[35px] xs:w-[25px] transition-all duration-300 h-full inline-block focus:outline-none"
         onClick={handleDecrease}

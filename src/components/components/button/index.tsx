@@ -20,6 +20,7 @@ interface ButtonProps {
   loading?: boolean;
   title?: string;
   children: React.ReactNode;
+  className?: string;
   onClick?: (
     event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
   ) => void;
@@ -42,6 +43,7 @@ function Button(props: ButtonProps) {
       $block={!!props.block}
       $size={props.size || "middle"}
       onClick={onClick}
+      className={props.className}
     >
       {props.loading && <Loading />}
       {props.children}

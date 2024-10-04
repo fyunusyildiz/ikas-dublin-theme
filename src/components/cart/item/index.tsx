@@ -33,12 +33,17 @@ const Item = ({ item }: { item: IkasOrderLineItem }) => {
   const store = useStore();
 
   return (
-    <S.Item>
-      <ItemProductColumn item={item} store={store} />
-      <ItemQuantityColumn item={item} store={store} />
+    <li className="w-full flex items-stretch gap-6">
+      <ItemImage item={item} />
+      <div className="flex-1 flex flex-col justify-between">
+        <ItemProductColumn item={item} store={store} />
+        <div className="flex items-center gap-3">
+          <ItemQuantityColumn item={item} store={store} />
+          <ItemRemoveColumn item={item} store={store} />
+        </div>
+      </div>
       <ItemPriceColumn item={item} />
-      <ItemRemoveColumn item={item} store={store} />
-    </S.Item>
+    </li>
   );
 };
 
@@ -46,26 +51,37 @@ export default observer(Item);
 
 const ItemProductColumn = observer(
   ({ item, store }: { item: IkasOrderLineItem; store: IkasBaseStore }) => {
-    const variantValuesText = item.variant.variantValues
-      ?.map((vV) => vV.variantValueName)
-      .join(", ");
+    const colorVariant = item.variant.variantValues?.find(
+      (variantValue) => variantValue.variantTypeName === "Color"
+    );
+
+    const sizeVariant = item.variant.variantValues?.find(
+      (variantValue) => variantValue.variantTypeName === "Size"
+    );
     return (
-      <ProductColumn>
-        <S.ItemProductImageAndNameWrapper>
-          <ItemImage item={item} />
-          <div>
-            <S.ItemProductName>{item.variant.name}</S.ItemProductName>
-            <S.ItemProductVariantValuesText>
-              {variantValuesText}
-            </S.ItemProductVariantValuesText>
-            <ItemOptions
-              item={item}
-              currencyCode={store.cartStore.cart!.currencyCode || ""}
-              currencySymbol={store.cartStore.cart!.currencySymbol || ""}
-            />
+      <div className="w-full flex flex-col gap-2">
+        <h2 className="text-[#222] text-[32px] lg:text-[27px] leading-none">
+          {item.variant.name}
+        </h2>
+        <h2 className="text-[20px] text-[#222]">{item.formattedFinalPrice}</h2>
+        {colorVariant && (
+          <div className="flex items-center gap-2 font-light">
+            <span className="font-normal">Renk:</span>
+            {colorVariant?.variantValueName}
           </div>
-        </S.ItemProductImageAndNameWrapper>
-      </ProductColumn>
+        )}
+        {sizeVariant && (
+          <div className="flex items-center gap-2 font-light">
+            <span className="font-normal">Beden:</span>
+            {sizeVariant?.variantValueName}
+          </div>
+        )}
+        <ItemOptions
+          item={item}
+          currencyCode={store.cartStore.cart!.currencyCode || ""}
+          currencySymbol={store.cartStore.cart!.currencySymbol || ""}
+        />
+      </div>
     );
   }
 );
@@ -82,45 +98,48 @@ const ItemQuantityColumn = observer(
       }
     };
     return (
-      <QuantityColumn>
+      <div className="w-[150px]">
         <QuantityButton
-          isFullWidth={false}
+          lightBackground
+          isFullWidth
           quantity={item.quantity}
           onChange={handleQuantityChange}
         />
-      </QuantityColumn>
+      </div>
     );
   }
 );
 
 const ItemPriceColumn = observer(({ item }: { item: IkasOrderLineItem }) => {
   return (
-    <PriceColumn>
-      <S.ItemPriceWrapper>
+    <div className="text-[24px]">
+      <div>
         {item.discountPrice !== null && (
-          <S.ItemSellPrice>{item.formattedPriceWithQuantity}</S.ItemSellPrice>
+          <div className="text-base line-through">
+            {item.formattedPriceWithQuantity}
+          </div>
         )}
-        <S.ItemPrice>{item.formattedFinalPriceWithQuantity}</S.ItemPrice>
-      </S.ItemPriceWrapper>
-    </PriceColumn>
+        <span className="text-[24px]">
+          {item.formattedFinalPriceWithQuantity}
+        </span>
+      </div>
+    </div>
   );
 });
 
 const ItemRemoveColumn = observer(
   ({ item, store }: { item: IkasOrderLineItem; store: IkasBaseStore }) => {
     return (
-      <RemoveColumn>
-        <S.ItemRemove onClick={() => store.cartStore.removeItem(item)}>
-          <RemoveSVG />
-        </S.ItemRemove>
-      </RemoveColumn>
+      <button onClick={() => store.cartStore.removeItem(item)}>
+        <RemoveSVG />
+      </button>
     );
   }
 );
 
 const ItemImage = observer(({ item }: { item: IkasOrderLineItem }) => {
   return (
-    <S.ItemProductImage>
+    <picture className="w-[160px] h-[270px] relative">
       <Link passHref href={item.variant.href || ""}>
         <a>
           {!item.variant.mainImage?.id ? (
@@ -128,16 +147,16 @@ const ItemImage = observer(({ item }: { item: IkasOrderLineItem }) => {
           ) : (
             <Image
               image={item.variant.mainImage}
-              layout="responsive"
+              layout="fill"
               width="1"
               height="1"
               sizes="200px"
-              className="object-cover"
+              className="object-cover object-center"
             />
           )}
         </a>
       </Link>
-    </S.ItemProductImage>
+    </picture>
   );
 });
 

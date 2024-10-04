@@ -2,50 +2,6 @@ import breakpoints from "src/styles/breakpoints";
 import styled from "styled-components";
 import { theme } from "src/styles/styled";
 
-export const Cart = styled.div`
-  margin-top: 24px;
-  margin-bottom: 80px;
-`;
-export const Title = styled.h1`
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 48px;
-  margin-bottom: 24px;
-`;
-
-export const Section = styled.section`
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 48px;
-
-  @media screen and (max-width: ${breakpoints.lg}) {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-  }
-`;
-export const Main = styled.main`
-  grid-column: span 8 / span 8;
-`;
-export const Items = styled.ul``;
-export const Summary = styled.aside`
-  grid-column: span 4 / span 4;
-`;
-
-export const ItemsHeader = styled.header`
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  border-bottom: 1px solid ${theme.color.border};
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 24px;
-  padding: 10px 0;
-
-  @media screen and (max-width: ${breakpoints.md}) {
-    display: none;
-  }
-`;
-
 export const ProductColumn = styled.div`
   grid-column: span 6 / span 6;
 

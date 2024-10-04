@@ -24,6 +24,7 @@ import Input from "../components/input";
 import Row from "../components/grid/row";
 import Col from "../components/grid/col";
 import Modal from "../components/modal";
+import { ArrowRight } from "../slider/components/icons";
 
 export const NS = "cart";
 
@@ -34,18 +35,23 @@ const Cart = (props: CartProps) => {
   const isCartEmpty = !cart || !cart?.itemCount;
   const title = `Sepetim (${cart?.itemQuantity || 0})`;
   return (
-    <Container>
+    <div className="w-full">
       {isCartEmpty && <EmptyCart />}
       {!isCartEmpty && (
-        <S.Cart>
-          <S.Title>{title}</S.Title>
-          <S.Section>
+        <div className="w-full flex flex-col">
+          <div className="w-full flex items-end py-10 px-[100px] gap-[20px] border-b border-solid border-[#222]">
+            <h6 className="text-[48px] text-[#222] leading-none">Sepet</h6>
+            <span className="text-base text-[#222]">
+              {cart?.itemQuantity} öğe
+            </span>
+          </div>
+          <section className="grid grid-cols-12 gap-20 w-full justify-between pl-[100px] pr-[30px]">
             <Main />
             <Summary {...props} />
-          </S.Section>
-        </S.Cart>
+          </section>
+        </div>
       )}
-    </Container>
+    </div>
   );
 };
 
@@ -53,62 +59,37 @@ export default observer(Cart);
 
 export const Main = () => {
   return (
-    <S.Main>
-      <ItemsHeader />
+    <div className="col-span-8 py-[60px]">
       <Items />
-    </S.Main>
+    </div>
   );
 };
 
 const Items = observer(() => {
   const store = useStore();
   return (
-    <S.Items>
+    <ul className="flex flex-col gap-10">
       {store.cartStore.cart?.items.map((item) => (
         <Item key={item.id} item={item} />
       ))}
-    </S.Items>
+    </ul>
   );
 });
 
-const ItemsHeader = () => {
-  const { t } = useTranslation();
-
-  return (
-    <S.ItemsHeader>
-      <S.ProductColumn>
-        Ürün
-      </S.ProductColumn>
-      <S.QuantityColumn>
-        Adet
-      </S.QuantityColumn>
-      <S.PriceColumn>
-        Fiyat
-      </S.PriceColumn>
-      <S.RemoveColumn />
-    </S.ItemsHeader>
-  );
-};
-
 const Summary = observer((props: CartProps) => {
-  const { t } = useTranslation();
   const store = useStore();
   const cart = store.cartStore.cart;
 
   const subTotal = (
     <S.SummaryBoxText>
-      <span>
-        Ara Toplam
-      </span>
+      <span>Ara Toplam</span>
       <span>{cart?.formattedTotalPrice}</span>
     </S.SummaryBoxText>
   );
 
   const totalFinalPrice = (
     <S.TotalFinalPrice>
-      <span>
-        Genel Toplam
-      </span>
+      <span>Genel Toplam</span>
       <span>{cart?.formattedTotalFinalPrice}</span>
     </S.TotalFinalPrice>
   );
@@ -118,8 +99,22 @@ const Summary = observer((props: CartProps) => {
       <Button buttonType="default" block anchor href="/">
         Alışverişe Devam Et
       </Button>
-      <Button anchor block href={store.cartStore.checkoutUrl}>
-        Ödeme Yap
+      <Button
+        size="large"
+        className="!flex items-center !justify-between !px-5"
+        block
+        href={store.cartStore.checkoutUrl}
+      >
+        Siparişi Tamamla
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+        >
+          <path d="M8 16H24M24 16L18 10M24 16L18 22" stroke="white" />
+        </svg>
       </Button>
     </S.SummaryButtonWrapper>
   );
@@ -134,21 +129,21 @@ const Summary = observer((props: CartProps) => {
   ) : null;
 
   return (
-    <S.Summary>
-      <S.SummaryBox>
-        <S.BoxTitle>
+    <div className="col-span-4 mt-10">
+      <div className="w-full border border-solid border-[#222] p-6">
+        <p className="w-full border-b border-solid border-[#222] pb-4 mb-5">
           Sepet Özeti
-        </S.BoxTitle>
-        <S.SummaryBoxInner>
+        </p>
+        <div>
+          <Coupon />
           {subTotal}
           <Adjustments cart={cart} />
           {totalFinalPrice}
-          <Coupon />
           {summaryButtons}
           {summaryText}
-        </S.SummaryBoxInner>
-      </S.SummaryBox>
-    </S.Summary>
+        </div>
+      </div>
+    </div>
   );
 });
 
@@ -191,14 +186,13 @@ const Coupon = observer(() => {
     onModalClose,
   } = useCoupon();
 
-  const inputPlaceholder =
-    cart?.couponCode || "Kupon kodunuz";
+  const inputPlaceholder = cart?.couponCode || "Kupon kodunuz";
   const inputStyle = cart?.couponCode
     ? { paddingRight: `${S.REMOVE_COUPON_BUTTON_WIDTH + 5}px` }
     : undefined;
 
   return (
-    <S.Coupon>
+    <div className="mb-5 pb-5 border-b border-solid border-[#222]">
       <Form onSubmit={addCoupon}>
         <Row align="flex-end" gutter={[8]}>
           <Col span={16}>
@@ -238,7 +232,7 @@ const Coupon = observer(() => {
       <Modal visible={modalVisible} onClose={onModalClose}>
         <p>{modalText}</p>
       </Modal>
-    </S.Coupon>
+    </div>
   );
 });
 
