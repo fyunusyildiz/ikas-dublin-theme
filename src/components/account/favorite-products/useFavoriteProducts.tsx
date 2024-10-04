@@ -20,6 +20,10 @@ export default function useFavoriteProducts() {
     }
   };
 
+  useEffect(() => {
+    getFavoriteProducts();
+  }, []);
+
   return {
     isPending,
     products,

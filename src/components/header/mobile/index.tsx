@@ -378,7 +378,7 @@ const RightSide = observer((props: HeaderProps) => {
               <Close />
             </button>
           </div>
-          <div className="w-full h-full my-2 grid grid-cols-1 gap-16 p-5 pb-20 overflow-y-scroll">
+          <div className="w-full h-full my-2 grid grid-cols-1 gap-16 p-5 pb-20 overflow-y-auto">
             {isPending && (
               <div className="col-span-3 h-full flex items-center justify-center">
                 <h3 className="text-4xl text-[#222] text-center">

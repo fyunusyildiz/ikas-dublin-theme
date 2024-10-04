@@ -32,7 +32,7 @@ const EmailSubscription = ({
         dangerouslySetInnerHTML={{ __html: newsletterText }}
       />
       <Form onSubmit={onSubmit}>
-        <FormItem>
+        <FormItem className="!mb-0">
           <Input
             required
             type="email"
@@ -41,7 +41,6 @@ const EmailSubscription = ({
             onChange={(event) => setEmail(event.target.value)}
           />
         </FormItem>
-        <GoogleCaptcha i18nFileName="footer" />
         <Button block type="submit" size="middle" disabled={!email || pending}>
           {pending ? "Loading..." : "Subscribe"}
         </Button>

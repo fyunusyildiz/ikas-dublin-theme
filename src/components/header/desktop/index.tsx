@@ -497,6 +497,7 @@ const RightSide = observer((props: HeaderProps) => {
               router.push("/account/login");
               return;
             }
+            getFavoriteProducts();
             handleOpenFavoriteDrawer();
           }}
         >
@@ -519,7 +520,7 @@ const RightSide = observer((props: HeaderProps) => {
                 <Close />
               </button>
             </div>
-            <div className="w-[95%] h-full my-5 grid grid-cols-3 md:grid-cols-2 px-20 gap-20 xl:gap-10 xl:px-10 md:gap-10 overflow-y-scroll">
+            <div className="w-[95%] h-full my-5 grid grid-cols-3 md:grid-cols-2 px-20 gap-20 xl:gap-10 xl:px-10 md:gap-10 overflow-y-auto">
               {isPending && (
                 <div className="col-span-3 h-full flex items-center justify-center">
                   <h3 className="text-4xl text-[#222] text-center">
