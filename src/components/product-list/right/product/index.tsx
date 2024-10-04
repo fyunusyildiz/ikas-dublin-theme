@@ -7,6 +7,7 @@ import * as S from "./style";
 
 type Props = {
   product: IkasProduct;
+  className?: string;
 };
 
 const Product = (props: Props) => {
@@ -17,7 +18,9 @@ const Product = (props: Props) => {
   const a11yTitle = product.selectedVariant.hasStock ? "" : "Bu ürün tükendi";
 
   return (
-    <li className="w-1/4 md:w-1/3 sm:w-1/2 relative border border-[#222222d2] group">
+    <li
+      className={`w-1/4 md:w-1/3 sm:w-1/2 relative border border-[#222222d2] group ${props.className}`}
+    >
       <Link passHref href={product.href}>
         <a title={a11yTitle}>
           <S.ImageWrapper

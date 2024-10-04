@@ -1,44 +1,35 @@
-import React from "react";
+import { Link, useStore } from "@ikas/storefront";
 import { observer } from "mobx-react-lite";
-import {
-  Link,
-  useTranslation,
-  IkasProduct,
-  useStore,
-  IkasBaseStore,
-} from "@ikas/storefront";
 
-import Product from "src/components/product-list/right/product";
 import Header from "src/components/account/components/header";
-import Tooltip from "src/components/components/tooltip";
 import Loading from "src/components/account/components/loading";
+import { FavoriteProduct } from "src/components/header/desktop";
 import useFavoriteProducts from "./useFavoriteProducts";
-
-import FavoriteSVG from "src/components/svg/favorite";
-
-import { NS } from "src/components/account";
-
-import * as S from "./style";
 
 const FavoriteProducts = () => {
   const store = useStore();
-  const { t } = useTranslation();
   const { products, isPending, getFavoriteProducts } = useFavoriteProducts();
 
-  const headerTitle =
-    "Favori Ürünlerim" + ` (${products.length})`;
+  const headerTitle = "Favori Ürünlerim" + ` (${products.length})`;
 
   return (
     <div>
       <Header title={headerTitle} />
-      {isPending && <Loading>{t(`${NS}:loading`)}</Loading>}
+      {isPending && <Loading>Yükleniyor...</Loading>}
       {!isPending && products.length === 0 && <NoProducts />}
       {!isPending && !!products.length && (
-        <Products
-          products={products}
-          store={store}
-          getFavoriteProducts={getFavoriteProducts}
-        />
+        <div className="w-full grid grid-cols-2 xs:grid-cols-1 gap-x-5 gap-y-10">
+          {products.map((product, index) => {
+            return (
+              <FavoriteProduct
+                key={product.id + index}
+                product={product}
+                getFavoriteProducts={getFavoriteProducts}
+                store={store}
+              />
+            );
+          })}
+        </div>
       )}
     </div>
   );
@@ -46,50 +37,13 @@ const FavoriteProducts = () => {
 
 export default observer(FavoriteProducts);
 
-type ProductsProps = {
-  products: IkasProduct[];
-  store: IkasBaseStore;
-  getFavoriteProducts: () => void;
-};
-
-const Products = observer(
-  ({ store, products, getFavoriteProducts }: ProductsProps) => {
-    return (
-      <S.Products>
-        {products.map((product, index) => {
-          const onClick = async () => {
-            await store.customerStore.removeProductFromFavorites(product.id);
-            getFavoriteProducts();
-          };
-
-          return (
-            <S.ProductWrapper key={product.id + index}>
-              <S.ProductFavoriteButton onClick={onClick}>
-                <Tooltip noCursor text="Favorilerden kaldır">
-                  <FavoriteSVG fill />
-                </Tooltip>
-              </S.ProductFavoriteButton>
-              <Product product={product} />
-            </S.ProductWrapper>
-          );
-        })}
-      </S.Products>
-    );
-  }
-);
-
 const NoProducts = () => {
-  const { t } = useTranslation();
   return (
-    <S.NoProducts>
-      <S.NoProductsTitle className="text-xl mb-4">
-        Favori ürününüz bulunmamaktadır.
-      </S.NoProductsTitle>
+    <div className="w-full flex flex-col items-center my-5">
+      <h5 className="text-xl xs:text-base mb-4">Favori ürününüz bulunmamaktadır.</h5>
       <Link passHref href="/">
-        <a>
-          Ürünlerimize göz atmak için tıklayınız.
-        </a>
+        <a className="underline">Ürünlerimize göz atmak için tıklayınız.</a>
       </Link>
-    </S.NoProducts>
+    </div>
   );
 };

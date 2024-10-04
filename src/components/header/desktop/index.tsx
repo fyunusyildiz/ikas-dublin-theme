@@ -1,4 +1,10 @@
-import { Link, useStore } from "@ikas/storefront";
+import {
+  IkasBaseStore,
+  IkasProduct,
+  Image,
+  Link,
+  useStore,
+} from "@ikas/storefront";
 import { observer } from "mobx-react-lite";
 
 import { HeaderProps, TextPosition } from "src/components/__generated__/types";
@@ -13,6 +19,9 @@ import CartSVG from "src/components/svg/cart";
 import Close from "src/components/svg/close";
 import FavoriteSVG from "src/components/svg/favorite";
 import UIStore from "src/store/ui-store";
+import { useAddToCart } from "src/utils/hooks/useAddToCart";
+import useFavoriteProducts from "../../account/favorite-products/useFavoriteProducts";
+import Delete from "./svg/delete";
 
 const DesktopHeader = (props: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -377,34 +386,176 @@ const Center = (props: HeaderProps) => {
   );
 };
 
+type FavoriteProductProps = {
+  product: IkasProduct;
+  store: IkasBaseStore;
+  getFavoriteProducts: () => void;
+};
+
+export const FavoriteProduct = observer((props: FavoriteProductProps) => {
+  const [addToCartText, setAddToCartText] = useState("SEPETE EKLE");
+
+  const { addToCart } = useAddToCart();
+  const { product, store, getFavoriteProducts } = props;
+
+  const handleDeleteFavoriteProduct = async () => {
+    await store.customerStore.removeProductFromFavorites(product.id);
+    getFavoriteProducts();
+  };
+  return (
+    <div className="h-full flex flex-col">
+      <Link href={product.href} passHref>
+        <a className="col-span-1 h-fit flex flex-col border border-solid border-[#222]">
+          <figure className="h-[540px] overflow-hidden border-b border-solid border-[#222222d2] relative">
+            {!product.selectedVariant.mainImage?.image?.id ? (
+              <img src="/product-dummy-image.jpeg" />
+            ) : product.selectedVariant.mainImage.image.isVideo ? (
+              <video src={product.selectedVariant.mainImage.image.src} />
+            ) : (
+              <Image
+                layout="fill"
+                width="125px"
+                height="200px"
+                className="object-cover object-center"
+                image={product.selectedVariant.mainImage?.image!}
+              />
+            )}
+          </figure>
+          <div className="w-full flex justify-between px-2 py-2 xs:gap-y-0 xs:flex-col overflow-hidden">
+            <p className="text-[13px] h-[22px] xs:w-full uppercase leading-relaxed flex-1 whitespace-nowrap overflow-hidden relative after:absolute after:h-full after:w-5 after:top-0 after:right-0 after:bg-gradient-to-l after:from-white after:to-transparent after:content-['']">
+              {product.name}
+            </p>
+            <div className="flex flex-col items-end min-w-[75px] xs:min-w-[unset] xs:flex-row xs:gap-2">
+              {product.selectedVariant.price.hasDiscount && (
+                <span className="text-2xs xs:text-[12px] line-through">
+                  {product.selectedVariant.price.formattedSellPrice}
+                </span>
+              )}
+              <span className="text-[14px]">
+                {product.selectedVariant.price.formattedFinalPrice}
+              </span>
+            </div>
+          </div>
+        </a>
+      </Link>
+      <div className="w-full flex items-center mt-4 xl:mt-2 gap-4">
+        {product.selectedVariant.hasStock && (
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              addToCart(product, 1);
+              setAddToCartText("SEPETE EKLENDİ");
+              setTimeout(() => {
+                setAddToCartText("SEPETE EKLE");
+              }, 2000);
+            }}
+            className="flex-1 h-14 xl:h-12 bg-[#222] text-white py-3 flex items-center justify-center"
+          >
+            {addToCartText}
+          </button>
+        )}
+        <button
+          className="w-24 h-14 xl:h-12 bg-[#222] flex items-center justify-center"
+          onClick={() => handleDeleteFavoriteProduct()}
+        >
+          <Delete />
+        </button>
+      </div>
+    </div>
+  );
+});
+
 const RightSide = observer((props: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [openDrawer, setOpenDrawer] = useState(false);
+  const [openFavoriteDrawer, setOpenFavoriteDrawer] = useState(false);
+  const { products, isPending, getFavoriteProducts } = useFavoriteProducts();
+  const router = useRouter();
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setIsScrolled(window.scrollY > 20);
     });
   }, []);
+
+  const handleOpenFavoriteDrawer = () => {
+    setOpenFavoriteDrawer(!openFavoriteDrawer);
+    if (!products.length) {
+      getFavoriteProducts();
+    }
+  };
+
   const store = useStore();
   const quantity = store.cartStore.cart?.itemQuantity ?? 0;
   return (
     <>
       <div className="flex items-center gap-3 w-[40%] justify-end">
         <SearchInput {...props} />
-        <Link href="/account/favorite-products" passHref>
-          <a>
-            <FavoriteSVG
-              stroke={
-                props.noTransparentHeader
-                  ? props.headerLinkColor
-                  : isScrolled
-                  ? "black"
-                  : "white"
-              }
-            />
-          </a>
-        </Link>
+        <button
+          onClick={() => {
+            if (!store.customerStore.customer) {
+              router.push("/account/login");
+              return;
+            }
+            handleOpenFavoriteDrawer();
+          }}
+        >
+          <FavoriteSVG
+            stroke={
+              props.noTransparentHeader
+                ? props.headerLinkColor
+                : isScrolled
+                ? "black"
+                : "white"
+            }
+            fill="transparent"
+          />
+        </button>
+        {openFavoriteDrawer && (
+          <div className="fixed border border-solid border-[#222] h-[85vh] w-[90%] top-20 left-0 bottom-0 right-0 flex flex-col items-center m-auto bg-white z-[100]">
+            <div className="w-full h-[30px] bg-[#D9D9D9] flex items-center justify-between p-[10px] border-b border-solid border-[#222]">
+              <h3 className="text-xs text-[#222] uppercase">FAVORİLER</h3>
+              <button onClick={handleOpenFavoriteDrawer}>
+                <Close />
+              </button>
+            </div>
+            <div className="w-[95%] h-full my-5 grid grid-cols-3 md:grid-cols-2 px-20 gap-20 xl:gap-10 xl:px-10 md:gap-10 overflow-y-scroll">
+              {isPending && (
+                <div className="col-span-3 h-full flex items-center justify-center">
+                  <h3 className="text-4xl text-[#222] text-center">
+                    Yükleniyor...
+                  </h3>
+                </div>
+              )}
+              {!isPending && products.length === 0 && (
+                <div className="col-span-3 h-full flex flex-col gap-5 items-center justify-center">
+                  <h3 className="text-4xl md:text-3xl text-[#222] leading-tight text-center">
+                    Favori ürününüz bulunmamaktadır.
+                  </h3>
+                  <button
+                    className="underline"
+                    onClick={() => {
+                      router.push("/");
+                      setOpenFavoriteDrawer(false);
+                    }}
+                  >
+                    Ürünlerimize göz atmak için tıklayınız.
+                  </button>
+                </div>
+              )}
+              {!isPending &&
+                !!products.length &&
+                products.map((product, index) => (
+                  <FavoriteProduct
+                    key={index}
+                    product={product}
+                    store={store}
+                    getFavoriteProducts={getFavoriteProducts}
+                  />
+                ))}
+            </div>
+          </div>
+        )}
         <Link href="/account" passHref>
           <a>
             <AccountSVG

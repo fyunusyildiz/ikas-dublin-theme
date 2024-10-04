@@ -36,7 +36,7 @@ export const FavoriteButton = observer(({ product }: ProductDetailProps) => {
         disabled={pending}
         onClick={toggleFavorite}
       >
-        {!pending && <FavoriteSVG stroke={"#222"} fill={isProductFavorite} />}
+        {!pending && <FavoriteSVG stroke={"#222"} fill={isProductFavorite ? "#222" : "transparent"} />}
       </button>
       <ModalLoginRequired
         isModalVisible={showLoginModal}
