@@ -44,11 +44,11 @@ export default observer(Item);
 const ItemProductColumn = observer(
   ({ item, store }: { item: IkasOrderLineItem; store: IkasBaseStore }) => {
     const colorVariant = item.variant.variantValues?.find(
-      (variantValue) => variantValue.variantTypeName === "Renk"
+      (variantValue) => variantValue.variantTypeName === "Color"
     );
 
     const sizeVariant = item.variant.variantValues?.find(
-      (variantValue) => variantValue.variantTypeName === "Beden"
+      (variantValue) => variantValue.variantTypeName === "Size"
     );
     return (
       <div className="w-full flex flex-col gap-2">

@@ -22,6 +22,7 @@ import UIStore from "src/store/ui-store";
 import { useAddToCart } from "src/utils/hooks/useAddToCart";
 import useFavoriteProducts from "../../account/favorite-products/useFavoriteProducts";
 import Delete from "./svg/delete";
+import { Items } from "src/components/cart";
 
 const DesktopHeader = (props: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,14 +38,14 @@ const DesktopHeader = (props: HeaderProps) => {
         <Announcement {...props} />
       )}
       <header
-        className={`w-full transition-all duration-300 border-b border-solid border-[#222222] ${
+        className={`w-full border-b border-solid border-[#222222] ${
           isScrolled ? "fixed top-0 z-[999]" : ""
         } ${
           props.noTransparentHeader
             ? ""
             : isScrolled
             ? "fixed top-0 z-[999]"
-            : "fixed top-[0px] z-[999] transition-all duration-300 ease-in-out"
+            : "fixed top-[0px] z-[999] ease-in-out"
         }`}
         style={{
           backgroundColor: props.noTransparentHeader
@@ -595,35 +596,51 @@ const RightSide = observer((props: HeaderProps) => {
         </button>
       </div>
       <div
-        className={`w-full fixed flex justify-end z-[999] top-0 transition-all duration-300 h-screen bg-black bg-opacity-30 ${
+        className={`w-full fixed flex justify-end z-[999] top-0 transition-all duration-300 h-screen ${
           openDrawer ? "right-0" : "-right-full"
         }`}
         onClick={() => setOpenDrawer(false)}
       >
         <div
-          className="w-1/3 h-full bg-white relative"
+          className="w-[800px] h-full flex flex-col bg-white relative border-l border-solid border-[#222]"
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="w-full py-3 border-b border-solid border-gray-two flex items-center justify-between px-5">
-            <h3 className="text-lg font-semibold">
-              Sepetim <span>({quantity})</span>
-            </h3>
-            <button onClick={() => setOpenDrawer(false)}>
-              <Close />
-            </button>
+          <div className="w-full flex items-center h-[81px] px-10 border-b border-solid border-[#222]">
+            <div className="flex items-end gap-[20px] sm:gap-5 xs:gap-3">
+              <h6 className="text-[40px] text-[#222] leading-none xs:leading-10 sm:text-2xl xs:text-xl">
+                Sepet
+              </h6>
+              <span className="text-base leading-tight text-[#222] sm:text-sm xs:text-xs">
+                {quantity} öğe
+              </span>
+            </div>
           </div>
-          <div className="w-full overflow-y-auto h-full"></div>
-          <div className="w-full flex items-center justify-between p-3 absolute left-0 bottom-0">
-            <Link passHref href={"/cart"}>
-              <a className="w-[48%] flex items-center justify-center py-3 bg-google-green rounded-sm font-semibold">
-                Sepete Git
-              </a>
-            </Link>
-            <Link passHref href={`${store.cartStore.checkoutUrl}`}>
-              <a className="w-[48%] flex items-center justify-center py-3 bg-google-green rounded-sm font-semibold">
-                Alışverişi Tamamla
-              </a>
-            </Link>
+          <div className="w-full flex-1 flex flex-col overflow-y-auto gap-10">
+            <Items insidePadding />
+          </div>
+          <div className="w-full flex flex-col sticky left-0 bottom-0 pb-5">
+            <div className="w-full py-[10px] bg-[#d9d9d9] border-y border-solid border-[#222]"></div>
+            <div className="flex items-center justify-between px-5 my-5">
+              <div className="flex flex-col">
+                Toplam
+                <span className="text-[#7a7a7a]">KDV Dahil</span>
+              </div>
+              <div className="text-[#222] text-[20px]">
+                {store.cartStore.cart?.formattedTotalPrice}
+              </div>
+            </div>
+            <div className="w-full flex items-center justify-between px-5">
+              <Link passHref href={"/cart"}>
+                <a className="w-[49%] flex items-center justify-center py-4 text-base font-semibold bg-[#222] text-white">
+                  Sepete Git
+                </a>
+              </Link>
+              <Link passHref href={`${store.cartStore.checkoutUrl}`}>
+                <a className="w-[49%] flex items-center justify-center py-4 text-base font-semibold bg-[#222] text-white">
+                  Satın Al
+                </a>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

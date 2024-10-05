@@ -33,7 +33,7 @@ const Cart = (props: CartProps) => {
       {!isCartEmpty && (
         <div className="w-full flex flex-col">
           <div className="w-full flex items-end py-10 px-[100px] sm:p-6 gap-[20px] sm:gap-5 xs:gap-3 border-b border-solid border-[#222]">
-            <h6 className="text-[48px] text-[#222] leading-10 sm:text-2xl xs:text-xl">
+            <h6 className="text-[48px] text-[#222] leading-none xs:leading-10 sm:text-2xl xs:text-xl">
               Sepet
             </h6>
             <span className="text-base text-[#222] sm:text-sm xs:text-xs">
@@ -60,10 +60,14 @@ export const Main = () => {
   );
 };
 
-const Items = observer(() => {
+type ItemsProps = {
+  insidePadding?: boolean;
+};
+
+export const Items = observer(({ insidePadding }: ItemsProps) => {
   const store = useStore();
   return (
-    <ul className="flex flex-col gap-10">
+    <ul className={`flex flex-col gap-10 ${insidePadding && "p-10"}`}>
       {store.cartStore.cart?.items.map((item) => (
         <Item key={item.id} item={item} />
       ))}
