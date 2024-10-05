@@ -25,7 +25,7 @@ const Item = ({ item }: { item: IkasOrderLineItem }) => {
   const store = useStore();
 
   return (
-    <li className="w-full flex xs:flex-col items-stretch gap-6 xs:border-b xs:border-solid xs:border-[#222] xs:pb-8 xs:items-start">
+    <li className="w-full flex xs:flex-col items-stretch gap-6 last:border-b-0 xs:border-b xs:border-solid xs:border-[#222] xs:pb-8 xs:items-start">
       <ItemImage item={item} />
       <div className="flex-1 flex flex-col justify-between">
         <ItemProductColumn item={item} store={store} />

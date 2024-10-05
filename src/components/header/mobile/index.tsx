@@ -14,7 +14,7 @@ import { useCallback, useEffect, useMemo } from "react";
 import useFavoriteProducts from "src/components/account/favorite-products/useFavoriteProducts";
 import Close from "src/components/svg/close";
 import FavoriteSVG from "src/components/svg/favorite";
-import { FavoriteProduct } from "../desktop";
+import { CartDrawer, FavoriteProduct } from "../desktop";
 import ArrowLeft from "./svg/arrow-left";
 import ArrowRight from "./svg/arrow-right";
 import IOCloseSVG from "./svg/io-close";
@@ -337,6 +337,7 @@ export const SearchInput = observer((props: HeaderProps) => {
 
 const RightSide = observer((props: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [openCartDrawer, setOpenCartDrawer] = useState(false);
   const [openFavoriteDrawer, setOpenFavoriteDrawer] = useState(false);
   const { products, isPending, getFavoriteProducts } = useFavoriteProducts();
   const router = useRouter();
@@ -356,68 +357,11 @@ const RightSide = observer((props: HeaderProps) => {
   const store = useStore();
   const quantity = store.cartStore.cart?.itemQuantity ?? 0;
   return (
-    <div className="flex items-center gap-0">
-      <SearchInput {...props} />
-      <button onClick={handleOpenFavoriteDrawer}>
-        <FavoriteSVG
-          stroke={
-            props.noTransparentHeader
-              ? props.headerLinkColor
-              : isScrolled
-              ? "black"
-              : "white"
-          }
-          fill="transparent"
-        />
-      </button>
-      {openFavoriteDrawer && (
-        <div className="fixed h-[calc(100vh-60px)] w-full top-[61px] left-0 bottom-0 right-0 flex flex-col items-center m-auto bg-white z-[100]">
-          <div className="w-full h-[30px] bg-[#D9D9D9] flex items-center justify-between p-[10px] px-5 border-b border-solid border-[#222]">
-            <h3 className="text-xs text-[#222] uppercase">FAVORİLER</h3>
-            <button onClick={handleOpenFavoriteDrawer}>
-              <Close />
-            </button>
-          </div>
-          <div className="w-full h-full my-2 grid grid-cols-1 gap-16 p-5 pb-20 overflow-y-auto">
-            {isPending && (
-              <div className="col-span-3 h-full flex items-center justify-center">
-                <h3 className="text-4xl text-[#222] text-center">
-                  Yükleniyor...
-                </h3>
-              </div>
-            )}
-            {!isPending && products.length === 0 && (
-              <div className="col-span-3 h-full w-full flex flex-col gap-5 items-center justify-center">
-                <h3 className="text-xl text-[#222] leading-tight text-center">
-                  Favori ürününüz bulunmamaktadır.
-                </h3>
-                <button
-                  className="underline"
-                  onClick={() => {
-                    router.push("/");
-                    setOpenFavoriteDrawer(false);
-                  }}
-                >
-                  Ürünlerimize göz atmak için tıklayınız.
-                </button>
-              </div>
-            )}
-            {!isPending &&
-              !!products.length &&
-              products.map((product, index) => (
-                <FavoriteProduct
-                  key={index}
-                  product={product}
-                  store={store}
-                  getFavoriteProducts={getFavoriteProducts}
-                />
-              ))}
-          </div>
-        </div>
-      )}
-      <Link href="/account" passHref>
-        <a>
-          <AccountSVG
+    <>
+      <div className="flex items-center gap-0">
+        <SearchInput {...props} />
+        <button onClick={handleOpenFavoriteDrawer}>
+          <FavoriteSVG
             stroke={
               props.noTransparentHeader
                 ? props.headerLinkColor
@@ -425,11 +369,68 @@ const RightSide = observer((props: HeaderProps) => {
                 ? "black"
                 : "white"
             }
+            fill="transparent"
           />
-        </a>
-      </Link>
-      <Link href="/cart" passHref>
-        <a className="relative">
+        </button>
+        {openFavoriteDrawer && (
+          <div className="fixed h-[calc(100vh-60px)] w-full top-[61px] left-0 bottom-0 right-0 flex flex-col items-center m-auto bg-white z-[100]">
+            <div className="w-full h-[30px] bg-[#D9D9D9] flex items-center justify-between p-[10px] px-5 border-b border-solid border-[#222]">
+              <h3 className="text-xs text-[#222] uppercase">FAVORİLER</h3>
+              <button onClick={handleOpenFavoriteDrawer}>
+                <Close />
+              </button>
+            </div>
+            <div className="w-full h-full my-2 grid grid-cols-1 gap-16 p-5 pb-20 overflow-y-auto">
+              {isPending && (
+                <div className="col-span-3 h-full flex items-center justify-center">
+                  <h3 className="text-4xl text-[#222] text-center">
+                    Yükleniyor...
+                  </h3>
+                </div>
+              )}
+              {!isPending && products.length === 0 && (
+                <div className="col-span-3 h-full w-full flex flex-col gap-5 items-center justify-center">
+                  <h3 className="text-xl text-[#222] leading-tight text-center">
+                    Favori ürününüz bulunmamaktadır.
+                  </h3>
+                  <button
+                    className="underline"
+                    onClick={() => {
+                      router.push("/");
+                      setOpenFavoriteDrawer(false);
+                    }}
+                  >
+                    Ürünlerimize göz atmak için tıklayınız.
+                  </button>
+                </div>
+              )}
+              {!isPending &&
+                !!products.length &&
+                products.map((product, index) => (
+                  <FavoriteProduct
+                    key={index}
+                    product={product}
+                    store={store}
+                    getFavoriteProducts={getFavoriteProducts}
+                  />
+                ))}
+            </div>
+          </div>
+        )}
+        <Link href="/account" passHref>
+          <a>
+            <AccountSVG
+              stroke={
+                props.noTransparentHeader
+                  ? props.headerLinkColor
+                  : isScrolled
+                  ? "black"
+                  : "white"
+              }
+            />
+          </a>
+        </Link>
+        <button onClick={() => setOpenCartDrawer(!openCartDrawer)}>
           <span
             className="absolute -right-2 -top-3 rounded-full text-2xs font-bold"
             style={{
@@ -451,8 +452,12 @@ const RightSide = observer((props: HeaderProps) => {
                 : "white"
             }
           />
-        </a>
-      </Link>
-    </div>
+        </button>
+      </div>
+      <CartDrawer
+        openDrawer={openCartDrawer}
+        setOpenDrawer={setOpenCartDrawer}
+      />
+    </>
   );
 });

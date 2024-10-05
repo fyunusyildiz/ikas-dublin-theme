@@ -260,7 +260,8 @@ export type PageCategoryProps = {
 };
 
 export type CartProps = {
-	summaryText?: string;
+	freeShippingLimit: string;
+	refundDayLimit: string;
 };
 
 export type AboutPageProps = {

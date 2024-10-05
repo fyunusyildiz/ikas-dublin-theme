@@ -13,7 +13,8 @@ import EmptyCart from "./empty-cart";
 import Item from "./item";
 
 import { CartProps } from "../__generated__/types";
-import FreeShippingCarSVG from "./svg/freeShippingCar";
+import ShippingIcon from "./svg/shipping";
+import ReturnIcon from "./svg/return";
 
 import Form from "../components/form";
 import Input from "../components/input";
@@ -26,7 +27,6 @@ const Cart = (props: CartProps) => {
   const store = useStore();
   const { cart } = store.cartStore;
   const isCartEmpty = !cart || !cart?.itemCount;
-  const title = `Sepetim (${cart?.itemQuantity || 0})`;
   return (
     <div className="w-full">
       {isCartEmpty && <EmptyCart />}
@@ -44,6 +44,27 @@ const Cart = (props: CartProps) => {
             <Main />
             <Summary {...props} />
           </section>
+          <div className="w-full py-20 bg-[#F5F5F5] flex items-center px-[100px] md:px-10 sm:px-6 sm:py-10 gap-[200px] sm:gap-6 xs:gap-10 xs:flex-col">
+            <div className="flex items-center gap-[10px] xs:w-full">
+              <ShippingIcon />
+              <div className="flex xs:flex-1 flex-col font-normal text-xs">
+                Ücretsiz Kargo
+                <span className="font-light">
+                  {props.freeShippingLimit} TL üzeri siparişlerde yurt içine
+                  ücretsiz kargo.
+                </span>
+              </div>
+            </div>
+            <div className="flex items-center gap-[10px] xs:w-full">
+              <ReturnIcon />
+              <div className="flex xs:flex-1 flex-col font-normal text-xs">
+                Ücretsiz İade
+                <span className="font-light">
+                  {props.refundDayLimit} gün içinde ücretsiz iade.
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </div>
@@ -67,7 +88,7 @@ type ItemsProps = {
 export const Items = observer(({ insidePadding }: ItemsProps) => {
   const store = useStore();
   return (
-    <ul className={`flex flex-col gap-10 ${insidePadding && "p-10"}`}>
+    <ul className={`flex flex-col gap-10 ${insidePadding && "p-10 sm:p-6"}`}>
       {store.cartStore.cart?.items.map((item) => (
         <Item key={item.id} item={item} />
       ))}
@@ -118,17 +139,8 @@ const Summary = observer((props: CartProps) => {
     </div>
   );
 
-  const summaryText = !!props.summaryText ? (
-    <S.SummaryFreeShippingText>
-      <span>
-        <FreeShippingCarSVG />
-      </span>
-      <span>{props.summaryText}</span>
-    </S.SummaryFreeShippingText>
-  ) : null;
-
   return (
-    <div className="col-span-4 mt-10 sm:col-span-12 xs:mt-4 sticky top-28 sm:relative sm:top-0">
+    <div className="col-span-4 h-fit mt-10 sm:col-span-12 xs:mt-4 sticky top-28 sm:relative sm:top-0">
       <div className="w-full border border-solid border-[#222] p-6 xs:p-4">
         <p className="w-full text-base border-b border-solid border-[#222] pb-4 mb-5">
           Sipariş Özeti
@@ -139,7 +151,6 @@ const Summary = observer((props: CartProps) => {
           <Adjustments cart={cart} />
           {totalFinalPrice}
           {summaryButtons}
-          {summaryText}
         </div>
       </div>
     </div>
