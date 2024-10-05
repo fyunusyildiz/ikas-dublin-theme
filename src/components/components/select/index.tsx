@@ -64,9 +64,9 @@ const Select = (props: Props) => {
           {placeholder}
         </option>
       )}
-      {options.map((option) => (
+      {options.map((option, index) => (
         <option
-          key={option.value}
+          key={index}
           value={option.value}
           aria-selected={props.value === option.value}
         >

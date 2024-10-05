@@ -96,8 +96,9 @@ const SelectVariantValue = observer(
 
     return (
       <div className="w-full flex items-center gap-2 flex-wrap">
-        {selectOptions.map((option) => (
+        {selectOptions.map((option, index) => (
           <button
+            key={index}
             onClick={() => onChange(option.value)}
             className={`px-10 md:px-6 py-3 md:py-2 xs:px-4 bg-[#D9D9D9] text-xs border border-solid text-[#222] ${
               selectValue === option.label

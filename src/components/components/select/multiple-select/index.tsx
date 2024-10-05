@@ -35,7 +35,7 @@ const MultipleSelect = observer(
         </S.CustomSelect>
         {showMultipleMenu && (
           <S.CustomSelectMenu>
-            {options.map((option) => {
+            {options.map((option, index) => {
               const checked = value.includes(option.value);
               const onChange = () => {
                 if (checked) {
@@ -46,7 +46,7 @@ const MultipleSelect = observer(
                 }
               };
               return (
-                <S.CustomSelectMenuOption key={option.value}>
+                <S.CustomSelectMenuOption key={index}>
                   <Checkbox checked={checked} onChange={onChange}>
                     {option.label}
                   </Checkbox>

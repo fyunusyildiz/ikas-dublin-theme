@@ -14,7 +14,7 @@
       "componentJson": null,
       "props": [
         {
-          "id": "a58cc0bc-96e1-4d7a-a75d-26962e468595",
+          "id": "c9d8ae29-56c5-42cd-b211-5d2dc057dd6e",
           "name": "logo",
           "displayName": "",
           "description": "",
@@ -27,7 +27,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "75d5c508-b785-4a16-932a-339f4d83a08a",
+          "id": "71669a0f-38d5-4676-b1a6-d7a7afc56a8d",
           "name": "showTax",
           "displayName": "",
           "description": "",
@@ -40,7 +40,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "1688e16d-f483-4369-bcd6-5cca27ff2916",
+          "id": "fd92f55a-ae83-4951-93b6-f20e36f2f7db",
           "name": "showCampaignOffersDesign",
           "displayName": "",
           "description": "",
@@ -53,7 +53,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "dacf85c8-92e4-4702-a26a-501e5bfdc907",
+          "id": "7ba13e02-150e-4274-9e9a-ddbfa5a0c89c",
           "name": "campaignOfferIsSmallDesign",
           "displayName": "",
           "description": "",
@@ -66,7 +66,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "12599aaa-bf1d-4af5-b531-1dda37ac7a23",
+          "id": "15b0b844-d67d-4586-9d84-c0b90548bb63",
           "name": "showCampaignIsBiggerImage",
           "displayName": "",
           "description": "",
@@ -79,7 +79,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "3dbf1173-9b10-4613-8210-b51a94c6f9ff",
+          "id": "5a67d7e3-2c15-4e22-a7c0-f0b8a230a452",
           "name": "campaignOffersTitleColor",
           "displayName": "",
           "description": "",
@@ -92,7 +92,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "df55c48d-ae36-4da5-a7e2-2ff17d692a60",
+          "id": "4f15ccee-2078-402a-be31-cc3bcd298d43",
           "name": "campaignOffersDescriptionColor",
           "displayName": "",
           "description": "",
@@ -105,7 +105,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "848654c2-4549-40db-ba04-a22630054737",
+          "id": "c62eabc1-4f8f-4faf-977b-c938a554722c",
           "name": "campaignOffersContainerBgColor",
           "displayName": "",
           "description": "",
@@ -118,7 +118,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "98053cfc-3504-4ab7-8db4-8554d3e86976",
+          "id": "c174897c-45a0-4d81-860f-c0cd96aca87d",
           "name": "showCampaignShowDiscountSettings",
           "displayName": "",
           "description": "",
@@ -131,7 +131,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "4789bc51-2438-4ce7-97e7-8b5c6d2170b1",
+          "id": "cdd0162b-42ea-424c-aa55-856f73824b39",
           "name": "showCampaignHideDiscountBadge",
           "displayName": "",
           "description": "",
@@ -144,7 +144,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "33745cbc-167c-42bb-8668-a147480498cf",
+          "id": "d98ee708-f093-4aa9-a51a-f77a69dc73d7",
           "name": "campaignOffersDiscountPercentageColor",
           "displayName": "",
           "description": "",
@@ -157,7 +157,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "300906a0-ab12-4552-a948-2729aa178795",
+          "id": "1c13238c-1bb0-475c-a320-e50d50e05b95",
           "name": "campaignOffersDiscountPercentageBgColor",
           "displayName": "",
           "description": "",
@@ -170,7 +170,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "a7a2cf25-6f08-4c9f-982f-215f8ae8298f",
+          "id": "8e608f1b-04b4-443d-8086-b73c588b19b4",
           "name": "showCampaignShowCountdownSettings",
           "displayName": "",
           "description": "",
@@ -183,7 +183,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "f5d428f4-9930-4afc-b1dd-9ea88066d389",
+          "id": "86baf3fa-fcac-4aa7-830e-5c40328e872d",
           "name": "campaignOfferCountdownStyleIsLine",
           "displayName": "",
           "description": "",
@@ -196,7 +196,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "6614d4de-7d9b-48c2-b86a-3ffb4add33a2",
+          "id": "404aec04-3340-46d3-ad53-c3cca4f32c04",
           "name": "campaignOffersCountdownTextColor",
           "displayName": "",
           "description": "",
@@ -209,7 +209,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "d0a43629-72e4-48bb-ba90-95c78334ad98",
+          "id": "6b55b27f-ed2c-4e7d-9f73-5fdd381797fe",
           "name": "campaignOffersCountdownTimeColor",
           "displayName": "",
           "description": "",
@@ -222,7 +222,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "16bdf28f-6882-444d-a029-a95274012882",
+          "id": "d751e5ae-b9c7-4e0a-9dcf-853e2aa99161",
           "name": "campaignOffersCountdownBgColor",
           "displayName": "",
           "description": "",
@@ -235,7 +235,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "aa3f8440-7e2e-4bf6-9384-88616a945554",
+          "id": "e1ad50e5-c90c-40b5-8d8c-7c38af731c9f",
           "name": "campaignOffersEnableMiddlePhase",
           "displayName": "",
           "description": "",
@@ -248,7 +248,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "019bcd59-5092-4733-8d09-3056f3bb5410",
+          "id": "5dfe6e9e-b754-48d8-bb3d-a0e804ebcba4",
           "name": "campaignOffersMiddlePhaseOverlayColor",
           "displayName": "",
           "description": "",
@@ -261,7 +261,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "e0a7402e-6143-45f6-8981-d0f7613fd6b7",
+          "id": "8a3e0000-eafd-464a-a5a6-c08596ad2508",
           "name": "campaignOfferCountdownStyleIsLineSuccessPage",
           "displayName": "",
           "description": "",
@@ -274,7 +274,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "69f971c6-17f8-4e3a-978e-8c5aa7522838",
+          "id": "da41379c-8430-4e12-b7b6-0af6212ce564",
           "name": "buttonBgColor",
           "displayName": "",
           "description": "",
@@ -287,7 +287,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "a1800957-7bb9-4890-bcef-83da0aaee1aa",
+          "id": "d3706087-dd29-450e-ad93-d4692873eca4",
           "name": "buttonTextColor",
           "displayName": "",
           "description": "",
@@ -300,7 +300,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "84cdc91a-c416-40b6-9380-a3f5a4977b44",
+          "id": "a9e27e89-e46e-4de4-9b85-1c935d939afc",
           "name": "buttonDisabledBgColor",
           "displayName": "",
           "description": "",
@@ -313,7 +313,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "00690c69-9498-484c-816f-d32308ba5982",
+          "id": "778e5375-a89f-4914-adbe-ebf8068dda70",
           "name": "buttonDisabledTextColor",
           "displayName": "",
           "description": "",
@@ -326,7 +326,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "2d4d6149-b86a-4f90-8d32-4d2f2e1aab64",
+          "id": "ee16a7e0-a834-4c66-af5f-73b57c203109",
           "name": "primaryTextColor",
           "displayName": "",
           "description": "",
@@ -339,7 +339,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "68f97d0c-b9a4-4a69-bf8e-3085fa351a0a",
+          "id": "bacacfdd-33e3-4795-8897-42715625f331",
           "name": "secondaryTextColor",
           "displayName": "",
           "description": "",
@@ -352,7 +352,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "df5c0a88-dd30-414c-97e2-53db21cdba98",
+          "id": "3ed23652-2772-4b4f-a385-c9c0bec5d683",
           "name": "primaryBgColor",
           "displayName": "",
           "description": "",
@@ -365,7 +365,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "cae16d56-73bf-4166-bbe6-6c3c10ca8ab1",
+          "id": "7d8ace9f-68a6-462e-94b5-c6d8f471cc30",
           "name": "secondaryBgColor",
           "displayName": "",
           "description": "",
@@ -378,7 +378,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "2687038b-9452-48a9-ad8a-25e475288665",
+          "id": "b632159c-f7fc-4fa2-9223-cc312d9d9d2e",
           "name": "borderColor",
           "displayName": "",
           "description": "",
@@ -391,7 +391,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "60facd32-02da-4645-ab68-3fc37708d26f",
+          "id": "347e6572-5c70-44c1-9956-348c5563c74d",
           "name": "cardBgColor",
           "displayName": "",
           "description": "",
@@ -404,7 +404,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "56e88bdd-513a-44b9-a0b0-49e89d5566bf",
+          "id": "7d48893f-0a15-4ae2-ae66-22d4bf9ce50c",
           "name": "errorColor",
           "displayName": "",
           "description": "",
@@ -417,7 +417,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "e9385b0d-ce25-4dbb-aedf-ad46ca989bea",
+          "id": "942867ea-eb5b-4a21-ace6-373858902aaf",
           "name": "errorLightColor",
           "displayName": "",
           "description": "",
@@ -430,7 +430,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "a4eb5cc1-7b26-4cbe-8d4f-0eef3b1e84c4",
+          "id": "8dfa4521-29ad-4ea2-89ae-27b361a2fd98",
           "name": "warningColor",
           "displayName": "",
           "description": "",
@@ -443,7 +443,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "73cdbf60-bcd2-4d13-a3fb-032938f9cb40",
+          "id": "9fc8d215-5785-4981-8b85-97ea4fa02cba",
           "name": "warningLightColor",
           "displayName": "",
           "description": "",
@@ -456,7 +456,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "e4e0c6d6-0873-4fdc-918b-30b26b9d0ac3",
+          "id": "3df3aceb-a34d-4fb7-8921-f47cfcd45175",
           "name": "successColor",
           "displayName": "",
           "description": "",
@@ -469,7 +469,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "89a6abcf-bb85-48d4-8e57-47a87b94827f",
+          "id": "6a6715ce-94bd-4c00-a0e3-77c8ca44d971",
           "name": "successLightColor",
           "displayName": "",
           "description": "",
@@ -482,7 +482,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "702390cf-939c-4b06-a4c9-c113e737b09d",
+          "id": "726b75e8-12a9-449f-81c6-f6966491ff71",
           "name": "secondaryButtonBgColor",
           "displayName": "",
           "description": "",
@@ -495,7 +495,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "ee0dfeb9-cbb0-43be-973f-db60a2f913f7",
+          "id": "5a415db3-4fc9-4793-b092-252f4bfe361c",
           "name": "secondaryButtonTextColor",
           "displayName": "",
           "description": "",
@@ -508,7 +508,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "a4f11153-9a47-430d-89b0-42bd32eaad08",
+          "id": "7fc1209b-948e-44ac-b41b-eded9c796e0c",
           "name": "secondaryButtonBorderColor",
           "displayName": "",
           "description": "",
@@ -2651,7 +2651,7 @@
           "name": "newsletterText",
           "displayName": "Newsletter Yazı",
           "description": "",
-          "type": "RICH_TEXT",
+          "type": "TEXT",
           "isRequired": true,
           "sliderData": {},
           "translations": {},
@@ -2720,7 +2720,6 @@
         "brandTextTitle": "Nordbron",
         "brandText": "<p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\">Doğanın adımlarını izliyoruz. Karşı konulmaz biçimde yenilenirken her özgür ruhun arzuladığı biçimde yalın ve güçlü o...</p><p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\"><br></p><p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\">Bir geyiğin ağaç dallarıyla ilişkisi kadar benzer, şehirdeki kontrastı kadar özgün. Göğe doğru kıvrılarak büyüyen ağaç dalları gibi, onun yenilenme güdüsünden ilhamla yenilikçi tasarımlar üretiyor ve büyüyoruz.</p><p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\"><br></p><p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\">Bitmeyen merak ve bilgelikle geleneksel neslin uzmanlığından yararlanıyor, yeni neslin kurgusunda bir iletişim yolu açıyoruz.</p><p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\"><br></p><p style=\"font-size: 18px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: &quot;Space Grotesk&quot;, -apple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.45px;\">Dün olduğu gibi bugün ve yarın da onun büyüleyici kılavuzluğunda bir yaşam rehberi olmayı sürdüreceğiz.</p>",
         "newsletterTitle": "Yeniliklerden Haberdar Ol",
-        "newsletterText": "<span style=\"font-size: 18px; font-weight: 400; background-color: white;\"><font color=\"#000000\" style=\"\">Yeniliklerden ve kampanyalardan siz de haberdar olun!</font></span>",
         "informationBlockTitle": "Faydalı Linkler",
         "informationLinks": [
           {
@@ -4693,7 +4692,7 @@
             "brandTextTitle": "Nordbron",
             "brandText": "<p>Doğanın adımlarını izliyoruz. Karşı konulmaz biçimde yenilenirken her özgür ruhun arzuladığı biçimde yalın ve güçlü o.</p><p><br></p><p>Bir geyiğin ağaç dallarıyla ilişkisi kadar benzer, şehirdeki kontrastı kadar özgün.</p>",
             "newsletterTitle": "Yeniliklerden Haberdar Ol",
-            "newsletterText": "<p style=\" font-weight: 400; font-size: 14px\">Yeniliklerden ve kampanyalardan siz de haberdar olun!</p>",
+            "newsletterText": "Kampanyalardan haberdar olun!",
             "informationBlockTitle": "Faydalı Linkler",
             "informationLinks": [
               {
@@ -5152,7 +5151,7 @@
             "brandTextTitle": "Nordbron",
             "brandText": "<p>Doğanın adımlarını izliyoruz. Karşı konulmaz biçimde yenilenirken her özgür ruhun arzuladığı biçimde yalın ve güçlü o.</p><p><br></p><p>Bir geyiğin ağaç dallarıyla ilişkisi kadar benzer, şehirdeki kontrastı kadar özgün.</p>",
             "newsletterTitle": "Yeniliklerden Haberdar Ol",
-            "newsletterText": "<p style=\" font-weight: 400; font-size: 14px\">Yeniliklerden ve kampanyalardan siz de haberdar olun!</p>",
+            "newsletterText": "Kampanyalardan haberdar olun!",
             "informationBlockTitle": "Faydalı Linkler",
             "informationLinks": [
               {
@@ -5658,7 +5657,7 @@
             "brandTextTitle": "Nordbron",
             "brandText": "<p>Doğanın adımlarını izliyoruz. Karşı konulmaz biçimde yenilenirken her özgür ruhun arzuladığı biçimde yalın ve güçlü o.</p><p><br></p><p>Bir geyiğin ağaç dallarıyla ilişkisi kadar benzer, şehirdeki kontrastı kadar özgün.</p>",
             "newsletterTitle": "Yeniliklerden Haberdar Ol",
-            "newsletterText": "<p style=\" font-weight: 400; font-size: 14px\">Yeniliklerden ve kampanyalardan siz de haberdar olun!</p>",
+            "newsletterText": "Kampanyalardan haberdar olun!",
             "informationBlockTitle": "Faydalı Linkler",
             "informationLinks": [
               {
@@ -6113,7 +6112,7 @@
             "brandTextTitle": "Nordbron",
             "brandText": "<p>Doğanın adımlarını izliyoruz. Karşı konulmaz biçimde yenilenirken her özgür ruhun arzuladığı biçimde yalın ve güçlü o.</p><p><br></p><p>Bir geyiğin ağaç dallarıyla ilişkisi kadar benzer, şehirdeki kontrastı kadar özgün.</p>",
             "newsletterTitle": "Yeniliklerden Haberdar Ol",
-            "newsletterText": "<p style=\" font-weight: 400; font-size: 14px\">Yeniliklerden ve kampanyalardan siz de haberdar olun!</p>",
+            "newsletterText": "Kampanyalardan haberdar olun!",
             "informationBlockTitle": "Faydalı Linkler",
             "informationLinks": [
               {
@@ -6560,7 +6559,7 @@
             "brandTextTitle": "Nordbron",
             "brandText": "<p>Doğanın adımlarını izliyoruz. Karşı konulmaz biçimde yenilenirken her özgür ruhun arzuladığı biçimde yalın ve güçlü o.</p><p><br></p><p>Bir geyiğin ağaç dallarıyla ilişkisi kadar benzer, şehirdeki kontrastı kadar özgün.</p>",
             "newsletterTitle": "Yeniliklerden Haberdar Ol",
-            "newsletterText": "<p style=\" font-weight: 400; font-size: 14px\">Yeniliklerden ve kampanyalardan siz de haberdar olun!</p>",
+            "newsletterText": "Kampanyalardan haberdar olun!",
             "informationBlockTitle": "Faydalı Linkler",
             "informationLinks": [
               {
@@ -7027,7 +7026,7 @@
             "brandTextTitle": "Nordbron",
             "brandText": "<p>Doğanın adımlarını izliyoruz. Karşı konulmaz biçimde yenilenirken her özgür ruhun arzuladığı biçimde yalın ve güçlü o.</p><p><br></p><p>Bir geyiğin ağaç dallarıyla ilişkisi kadar benzer, şehirdeki kontrastı kadar özgün.</p>",
             "newsletterTitle": "Yeniliklerden Haberdar Ol",
-            "newsletterText": "<p style=\" font-weight: 400; font-size: 14px\">Yeniliklerden ve kampanyalardan siz de haberdar olun!</p>",
+            "newsletterText": "Kampanyalardan haberdar olun!",
             "informationBlockTitle": "Faydalı Linkler",
             "informationLinks": [
               {
@@ -7479,7 +7478,7 @@
             "brandTextTitle": "Nordbron",
             "brandText": "<p>Doğanın adımlarını izliyoruz. Karşı konulmaz biçimde yenilenirken her özgür ruhun arzuladığı biçimde yalın ve güçlü o.</p><p><br></p><p>Bir geyiğin ağaç dallarıyla ilişkisi kadar benzer, şehirdeki kontrastı kadar özgün.</p>",
             "newsletterTitle": "Yeniliklerden Haberdar Ol",
-            "newsletterText": "<p style=\" font-weight: 400; font-size: 14px\">Yeniliklerden ve kampanyalardan siz de haberdar olun!</p>",
+            "newsletterText": "Kampanyalardan haberdar olun!",
             "informationBlockTitle": "Faydalı Linkler",
             "informationLinks": [
               {
@@ -7560,7 +7559,6 @@
           "id": "804e2978-b341-459e-9c9e-aa5c64ff1210",
           "componentId": "81316b63-50b6-4b3e-82c2-9e424895aaad",
           "propValues": {
-            "summaryText": "",
             "freeShippingLimit": "2500",
             "refundDayLimit": "14"
           }
@@ -7935,7 +7933,7 @@
             "brandTextTitle": "Nordbron",
             "brandText": "<p>Doğanın adımlarını izliyoruz. Karşı konulmaz biçimde yenilenirken her özgür ruhun arzuladığı biçimde yalın ve güçlü o.</p><p><br></p><p>Bir geyiğin ağaç dallarıyla ilişkisi kadar benzer, şehirdeki kontrastı kadar özgün.</p>",
             "newsletterTitle": "Yeniliklerden Haberdar Ol",
-            "newsletterText": "<p style=\" font-weight: 400; font-size: 14px\">Yeniliklerden ve kampanyalardan siz de haberdar olun!</p>",
+            "newsletterText": "Kampanyalardan haberdar olun!",
             "informationBlockTitle": "Faydalı Linkler",
             "informationLinks": [
               {
@@ -8387,7 +8385,7 @@
             "brandTextTitle": "Nordbron",
             "brandText": "<p>Doğanın adımlarını izliyoruz. Karşı konulmaz biçimde yenilenirken her özgür ruhun arzuladığı biçimde yalın ve güçlü o.</p><p><br></p><p>Bir geyiğin ağaç dallarıyla ilişkisi kadar benzer, şehirdeki kontrastı kadar özgün.</p>",
             "newsletterTitle": "Yeniliklerden Haberdar Ol",
-            "newsletterText": "<p style=\" font-weight: 400; font-size: 14px\">Yeniliklerden ve kampanyalardan siz de haberdar olun!</p>",
+            "newsletterText": "Kampanyalardan haberdar olun!",
             "informationBlockTitle": "Faydalı Linkler",
             "informationLinks": [
               {
@@ -8839,7 +8837,7 @@
             "brandTextTitle": "Nordbron",
             "brandText": "<p>Doğanın adımlarını izliyoruz. Karşı konulmaz biçimde yenilenirken her özgür ruhun arzuladığı biçimde yalın ve güçlü o.</p><p><br></p><p>Bir geyiğin ağaç dallarıyla ilişkisi kadar benzer, şehirdeki kontrastı kadar özgün.</p>",
             "newsletterTitle": "Yeniliklerden Haberdar Ol",
-            "newsletterText": "<p style=\" font-weight: 400; font-size: 14px\">Yeniliklerden ve kampanyalardan siz de haberdar olun!</p>",
+            "newsletterText": "Kampanyalardan haberdar olun!",
             "informationBlockTitle": "Faydalı Linkler",
             "informationLinks": [
               {
@@ -9291,7 +9289,7 @@
             "brandTextTitle": "Nordbron",
             "brandText": "<p>Doğanın adımlarını izliyoruz. Karşı konulmaz biçimde yenilenirken her özgür ruhun arzuladığı biçimde yalın ve güçlü o.</p><p><br></p><p>Bir geyiğin ağaç dallarıyla ilişkisi kadar benzer, şehirdeki kontrastı kadar özgün.</p>",
             "newsletterTitle": "Yeniliklerden Haberdar Ol",
-            "newsletterText": "<p style=\" font-weight: 400; font-size: 14px\">Yeniliklerden ve kampanyalardan siz de haberdar olun!</p>",
+            "newsletterText": "Kampanyalardan haberdar olun!",
             "informationBlockTitle": "Faydalı Linkler",
             "informationLinks": [
               {
@@ -9743,7 +9741,7 @@
             "brandTextTitle": "Nordbron",
             "brandText": "<p>Doğanın adımlarını izliyoruz. Karşı konulmaz biçimde yenilenirken her özgür ruhun arzuladığı biçimde yalın ve güçlü o.</p><p><br></p><p>Bir geyiğin ağaç dallarıyla ilişkisi kadar benzer, şehirdeki kontrastı kadar özgün.</p>",
             "newsletterTitle": "Yeniliklerden Haberdar Ol",
-            "newsletterText": "<p style=\" font-weight: 400; font-size: 14px\">Yeniliklerden ve kampanyalardan siz de haberdar olun!</p>",
+            "newsletterText": "Kampanyalardan haberdar olun!",
             "informationBlockTitle": "Faydalı Linkler",
             "informationLinks": [
               {
@@ -10195,7 +10193,7 @@
             "brandTextTitle": "Nordbron",
             "brandText": "<p>Doğanın adımlarını izliyoruz. Karşı konulmaz biçimde yenilenirken her özgür ruhun arzuladığı biçimde yalın ve güçlü o.</p><p><br></p><p>Bir geyiğin ağaç dallarıyla ilişkisi kadar benzer, şehirdeki kontrastı kadar özgün.</p>",
             "newsletterTitle": "Yeniliklerden Haberdar Ol",
-            "newsletterText": "<p style=\" font-weight: 400; font-size: 14px\">Yeniliklerden ve kampanyalardan siz de haberdar olun!</p>",
+            "newsletterText": "Kampanyalardan haberdar olun!",
             "informationBlockTitle": "Faydalı Linkler",
             "informationLinks": [
               {
@@ -10647,7 +10645,7 @@
             "brandTextTitle": "Nordbron",
             "brandText": "<p>Doğanın adımlarını izliyoruz. Karşı konulmaz biçimde yenilenirken her özgür ruhun arzuladığı biçimde yalın ve güçlü o.</p><p><br></p><p>Bir geyiğin ağaç dallarıyla ilişkisi kadar benzer, şehirdeki kontrastı kadar özgün.</p>",
             "newsletterTitle": "Yeniliklerden Haberdar Ol",
-            "newsletterText": "<p style=\" font-weight: 400; font-size: 14px\">Yeniliklerden ve kampanyalardan siz de haberdar olun!</p>",
+            "newsletterText": "Kampanyalardan haberdar olun!",
             "informationBlockTitle": "Faydalı Linkler",
             "informationLinks": [
               {
@@ -11113,7 +11111,7 @@
             "brandTextTitle": "Nordbron",
             "brandText": "<p>Doğanın adımlarını izliyoruz. Karşı konulmaz biçimde yenilenirken her özgür ruhun arzuladığı biçimde yalın ve güçlü o.</p><p><br></p><p>Bir geyiğin ağaç dallarıyla ilişkisi kadar benzer, şehirdeki kontrastı kadar özgün.</p>",
             "newsletterTitle": "Yeniliklerden Haberdar Ol",
-            "newsletterText": "<p style=\" font-weight: 400; font-size: 14px\">Yeniliklerden ve kampanyalardan siz de haberdar olun!</p>",
+            "newsletterText": "Kampanyalardan haberdar olun!",
             "informationBlockTitle": "Faydalı Linkler",
             "informationLinks": [
               {
@@ -11583,7 +11581,7 @@
             "brandTextTitle": "Nordbron",
             "brandText": "<p>Doğanın adımlarını izliyoruz. Karşı konulmaz biçimde yenilenirken her özgür ruhun arzuladığı biçimde yalın ve güçlü o.</p><p><br></p><p>Bir geyiğin ağaç dallarıyla ilişkisi kadar benzer, şehirdeki kontrastı kadar özgün.</p>",
             "newsletterTitle": "Yeniliklerden Haberdar Ol",
-            "newsletterText": "<p style=\" font-weight: 400; font-size: 14px\">Yeniliklerden ve kampanyalardan siz de haberdar olun!</p>",
+            "newsletterText": "Kampanyalardan haberdar olun!",
             "informationBlockTitle": "Faydalı Linkler",
             "informationLinks": [
               {
@@ -12050,7 +12048,7 @@
             "brandTextTitle": "Nordbron",
             "brandText": "<p>Doğanın adımlarını izliyoruz. Karşı konulmaz biçimde yenilenirken her özgür ruhun arzuladığı biçimde yalın ve güçlü o.</p><p><br></p><p>Bir geyiğin ağaç dallarıyla ilişkisi kadar benzer, şehirdeki kontrastı kadar özgün.</p>",
             "newsletterTitle": "Yeniliklerden Haberdar Ol",
-            "newsletterText": "<p style=\" font-weight: 400; font-size: 14px\">Yeniliklerden ve kampanyalardan siz de haberdar olun!</p>",
+            "newsletterText": "Kampanyalardan haberdar olun!",
             "informationBlockTitle": "Faydalı Linkler",
             "informationLinks": [
               {

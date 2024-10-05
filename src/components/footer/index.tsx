@@ -51,8 +51,8 @@ const InformationArea = observer((props: FooterProps) => {
         {props.informationBlockTitle}
       </h6>
       <div className="w-full flex flex-col gap-y-2 mt-2">
-        {props.informationLinks.map((link) => (
-          <Link key={link.href} href={link.href}>
+        {props.informationLinks.map((link, index) => (
+          <Link key={index} href={link.href}>
             <a
               target={link.isExternal ? "_blank" : undefined}
               className="text-xs xs:text-2xs font-normal text-black"
@@ -73,8 +73,8 @@ const SocialMediaArea = observer((props: FooterProps) => {
         {props.socialMediaTitle}
       </h6>
       <div className="w-full flex flex-col gap-y-2 mt-2">
-        {props.socialMediaLinks.map((link) => (
-          <Link key={link.href} href={link.href}>
+        {props.socialMediaLinks.map((link, index) => (
+          <Link key={index} href={link.href}>
             <a
               target={link.isExternal ? "_blank" : undefined}
               className="text-xs xs:text-2xs font-normal text-black"

@@ -133,15 +133,13 @@ const ItemImage = observer(({ item }: { item: IkasOrderLineItem }) => {
   return (
     <picture className="w-[160px] h-[270px] relative">
       <Link passHref href={item.variant.href || ""}>
-        <a>
+        <a className="relative">
           {!item.variant.mainImage?.id ? (
             <ProductImagePlaceholder />
           ) : (
             <Image
               image={item.variant.mainImage}
               layout="fill"
-              width="1"
-              height="1"
               sizes="200px"
               className="object-cover object-center"
             />
@@ -150,7 +148,7 @@ const ItemImage = observer(({ item }: { item: IkasOrderLineItem }) => {
       </Link>
     </picture>
   );
-});
+});ItemImage
 
 type ItemOptionsProps = {
   item: IkasOrderLineItem;

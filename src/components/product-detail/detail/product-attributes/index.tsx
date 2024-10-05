@@ -17,9 +17,9 @@ export const ProductAttributes = observer(({ product }: ProductDetailProps) => {
   if (!product.selectedVariant.attributes) return null;
   return (
     <div className="w-full">
-      {product.selectedVariant.attributes.map((attribute) => (
+      {product.selectedVariant.attributes.map((attribute, index) => (
         <AttributeValue
-          key={attribute.productAttributeId}
+          key={index}
           attribute={attribute}
         />
       ))}
@@ -153,7 +153,7 @@ const ProductAttributeValue = ({ attribute }: AttributeValueProps) => {
     <AttributeValueWrapper header={attribute.productAttribute?.name}>
       {pending && <Loading />}
       {!pending &&
-        products?.map((product) => <div key={product.id}>{product.name}</div>)}
+        products?.map((product, index) => <div key={index}>{product.name}</div>)}
     </AttributeValueWrapper>
   );
 };
@@ -166,8 +166,8 @@ const TableAttributeValue = ({ attribute }: AttributeValueProps) => {
           <tr>
             <td>{attribute.productAttribute?.name}</td>
             {attribute.productAttribute?.tableTemplate?.columns?.map(
-              (value) => (
-                <td key={value.id}>{value.name}</td>
+              (value, index) => (
+                <td key={index}>{value.name}</td>
               )
             )}
           </tr>

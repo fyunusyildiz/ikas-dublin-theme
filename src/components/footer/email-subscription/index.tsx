@@ -26,11 +26,8 @@ const EmailSubscription = ({
 
   return (
     <div className="w-full">
-      <h6 className="text-base font-semibold text-black">{newsletterTitle}</h6>
-      <p
-        className="text-base font-normal text-black mb-5"
-        dangerouslySetInnerHTML={{ __html: newsletterText }}
-      />
+      <h6 className="text-base font-semibold text-[#222]">{newsletterTitle}</h6>
+      <p className="text-xs font-normal text-[#222] mb-5">{newsletterText}</p>
       <Form onSubmit={onSubmit}>
         <FormItem className="!mb-0">
           <Input

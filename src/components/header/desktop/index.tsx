@@ -414,8 +414,7 @@ export const FavoriteProduct = observer((props: FavoriteProductProps) => {
             ) : (
               <Image
                 layout="fill"
-                width="125px"
-                height="200px"
+                priority
                 className="object-cover object-center"
                 image={product.selectedVariant.mainImage?.image!}
               />
