@@ -29,7 +29,7 @@ type StatusProps = {
 export const Input = styled.input<StyledInputProps>`
   width: 100%;
   height: 42px;
-
+  outline: none !important;
   ${({ $hasPrefix }) => {
     if ($hasPrefix) {
       return `padding: 0 8px 0 30px;`;
@@ -41,7 +41,7 @@ export const Input = styled.input<StyledInputProps>`
     if ($status === "error") {
       return theme.color.red + "25";
     }
-    return theme.color.inputBackground;
+    return "#f8f8f8";
   }};
 
   border: 1px solid

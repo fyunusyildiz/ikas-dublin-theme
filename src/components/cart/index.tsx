@@ -1,35 +1,28 @@
-import React, { useState } from "react";
-import { observer } from "mobx-react-lite";
+import { APIErrorCode } from "@ikas/fe-api-client";
 import {
   formatCurrency,
   IkasAdjustmentType,
   IkasCart,
+  Link,
   useStore,
-  useTranslation,
 } from "@ikas/storefront";
-import { APIErrorCode } from "@ikas/fe-api-client";
+import { observer } from "mobx-react-lite";
+import { useState } from "react";
 
-import Item from "./item";
 import EmptyCart from "./empty-cart";
+import Item from "./item";
 
-import Button from "../components/button";
-import { Container } from "../components/container";
 import { CartProps } from "../__generated__/types";
 import FreeShippingCarSVG from "./svg/freeShippingCar";
 
-import * as S from "./style";
-import FormItem from "../components/form/form-item";
 import Form from "../components/form";
 import Input from "../components/input";
-import Row from "../components/grid/row";
-import Col from "../components/grid/col";
 import Modal from "../components/modal";
-import { ArrowRight } from "../slider/components/icons";
+import * as S from "./style";
 
 export const NS = "cart";
 
 const Cart = (props: CartProps) => {
-  const { t } = useTranslation();
   const store = useStore();
   const { cart } = store.cartStore;
   const isCartEmpty = !cart || !cart?.itemCount;
@@ -39,13 +32,15 @@ const Cart = (props: CartProps) => {
       {isCartEmpty && <EmptyCart />}
       {!isCartEmpty && (
         <div className="w-full flex flex-col">
-          <div className="w-full flex items-end py-10 px-[100px] gap-[20px] border-b border-solid border-[#222]">
-            <h6 className="text-[48px] text-[#222] leading-none">Sepet</h6>
-            <span className="text-base text-[#222]">
+          <div className="w-full flex items-end py-10 px-[100px] sm:p-6 gap-[20px] sm:gap-5 xs:gap-3 border-b border-solid border-[#222]">
+            <h6 className="text-[48px] text-[#222] leading-10 sm:text-2xl xs:text-xl">
+              Sepet
+            </h6>
+            <span className="text-base text-[#222] sm:text-sm xs:text-xs">
               {cart?.itemQuantity} öğe
             </span>
           </div>
-          <section className="grid grid-cols-12 gap-20 w-full justify-between pl-[100px] pr-[30px]">
+          <section className="grid grid-cols-12 gap-20 w-full justify-between pl-[100px] pr-[30px] md:px-10 sm:px-6 md:gap-10 pb-20 xs:pt-6 xs:flex xs:flex-col">
             <Main />
             <Summary {...props} />
           </section>
@@ -59,7 +54,7 @@ export default observer(Cart);
 
 export const Main = () => {
   return (
-    <div className="col-span-8 py-[60px]">
+    <div className="col-span-8 pt-[60px] xs:w-full sm:pt-10 xs:pt-0 sm:col-span-12">
       <Items />
     </div>
   );
@@ -95,28 +90,28 @@ const Summary = observer((props: CartProps) => {
   );
 
   const summaryButtons = (
-    <S.SummaryButtonWrapper>
-      <Button buttonType="default" block anchor href="/">
-        Alışverişe Devam Et
-      </Button>
-      <Button
-        size="large"
-        className="!flex items-center !justify-between !px-5"
-        block
-        href={store.cartStore.checkoutUrl}
-      >
-        Siparişi Tamamla
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          viewBox="0 0 32 32"
-          fill="none"
-        >
-          <path d="M8 16H24M24 16L18 10M24 16L18 22" stroke="white" />
-        </svg>
-      </Button>
-    </S.SummaryButtonWrapper>
+    <div className="mt-4">
+      <Link href="/" passHref>
+        <a className="w-full text-center block py-5 xs:py-3 hover:underline">
+          Alışverişe Devam Et
+        </a>
+      </Link>
+      <Link href={store.cartStore.checkoutUrl || "/"} passHref>
+        <a className="flex items-center justify-between px-5 py-3 group bg-[#222] text-white">
+          Siparişi Tamamla
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            className="transform group-hover:translate-x-2 transition-transform duration-300"
+          >
+            <path d="M8 16H24M24 16L18 10M24 16L18 22" stroke="white" />
+          </svg>
+        </a>
+      </Link>
+    </div>
   );
 
   const summaryText = !!props.summaryText ? (
@@ -129,12 +124,12 @@ const Summary = observer((props: CartProps) => {
   ) : null;
 
   return (
-    <div className="col-span-4 mt-10">
-      <div className="w-full border border-solid border-[#222] p-6">
-        <p className="w-full border-b border-solid border-[#222] pb-4 mb-5">
-          Sepet Özeti
+    <div className="col-span-4 mt-10 sm:col-span-12 xs:mt-4 sticky top-28 sm:relative sm:top-0">
+      <div className="w-full border border-solid border-[#222] p-6 xs:p-4">
+        <p className="w-full text-base border-b border-solid border-[#222] pb-4 mb-5">
+          Sipariş Özeti
         </p>
-        <div>
+        <div className="w-full flex flex-col">
           <Coupon />
           {subTotal}
           <Adjustments cart={cart} />
@@ -173,7 +168,6 @@ const Adjustments = observer(
 );
 
 const Coupon = observer(() => {
-  const { t } = useTranslation();
   const {
     cart,
     pending,
@@ -191,45 +185,42 @@ const Coupon = observer(() => {
     ? { paddingRight: `${S.REMOVE_COUPON_BUTTON_WIDTH + 5}px` }
     : undefined;
 
+  console.log(modalVisible);
   return (
     <div className="mb-5 pb-5 border-b border-solid border-[#222]">
-      <Form onSubmit={addCoupon}>
-        <Row align="flex-end" gutter={[8]}>
-          <Col span={16}>
-            <FormItem noMargin style={{ position: "relative" }}>
-              <Input
-                placeholder={inputPlaceholder}
-                value={couponValue}
-                style={inputStyle}
-                onChange={(event) => {
-                  setCouponValue(event.target.value);
-                }}
-              />
-              {!!cart?.couponCode && (
-                <S.RemoveCouponButton
-                  title={"Kuponu Kaldır"}
-                  type="button"
-                  onClick={removeCoupon}
-                >
-                  <RemoveCouponSVG />
-                </S.RemoveCouponButton>
-              )}
-            </FormItem>
-          </Col>
-          <Col span={8}>
-            <Button
-              block
-              type="submit"
-              size="small"
-              loading={pending}
-              disabled={pending || !couponValue}
-            >
-              Ekle
-            </Button>
-          </Col>
-        </Row>
+      <Form onSubmit={addCoupon} className="w-full flex justify-between gap-3">
+        <Input
+          placeholder={inputPlaceholder}
+          value={couponValue}
+          style={inputStyle}
+          status={modalVisible ? "error" : undefined}
+          onChange={(event) => {
+            setCouponValue(event.target.value);
+          }}
+          wrapperClassName="flex-1"
+        />
+        {!!cart?.couponCode && (
+          <S.RemoveCouponButton
+            title={"Kuponu Kaldır"}
+            type="button"
+            onClick={removeCoupon}
+          >
+            <RemoveCouponSVG />
+          </S.RemoveCouponButton>
+        )}
+        <button
+          type="submit"
+          className="px-5 h-[42px] flex items-center border border-solid border-[#222] disabled:cursor-not-allowed"
+          disabled={pending || !couponValue}
+        >
+          Ekle
+        </button>
       </Form>
-      <Modal visible={modalVisible} onClose={onModalClose}>
+      <Modal
+        title="Kupon Kodu Ekleme"
+        visible={modalVisible}
+        onClose={onModalClose}
+      >
         <p>{modalText}</p>
       </Modal>
     </div>
@@ -238,7 +229,6 @@ const Coupon = observer(() => {
 
 function useCoupon() {
   const store = useStore();
-  const { t } = useTranslation();
   const [pending, setPending] = useState(false);
   const [couponValue, setCouponValue] = useState<string>("");
 
@@ -259,9 +249,9 @@ function useCoupon() {
       );
 
       if (couponError !== -1) {
-        setModalText(t(`${NS}:coupon.error.couponCodeNotExist`));
+        setModalText("Bu kupon kullanılabilir değil.");
       } else {
-        setModalText(t(`${NS}:coupon.error.unknown`));
+        setModalText("Kupon eklenirken bir hata oluştu.");
       }
       setModalVisible(true);
       return;

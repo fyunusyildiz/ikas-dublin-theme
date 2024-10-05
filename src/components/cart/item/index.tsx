@@ -1,43 +1,35 @@
-import React from "react";
-import { observer } from "mobx-react-lite";
 import {
   formatCurrency,
+  IkasBaseStore,
   IkasOrderLineItem,
   IkasOrderLineItemOption,
   IkasOrderLineItemOptionValue,
   IkasProductOptionType,
-  useStore,
   Image,
   Link,
-  IkasBaseStore,
+  useStore,
 } from "@ikas/storefront";
+import { observer } from "mobx-react-lite";
 
+import { Swatch } from "src/components/components/swatch/";
+import { QuantityButton } from "src/components/product-detail/detail/add-to-cart";
 import ProductImagePlaceholder from "src/components/svg/product-image-placeholder";
 import { maxQuantityPerCartHandler } from "src/utils/hooks/useAddToCart";
-import { QuantityButton } from "src/components/product-detail/detail/add-to-cart";
-import { Swatch } from "src/components/components/swatch/";
 
 import AiOutlineCloudDownloadSVG from "./svg/ai-outline-cloud-download";
 import RemoveSVG from "./svg/remove";
 
 import * as S from "./style";
 
-import {
-  PriceColumn,
-  ProductColumn,
-  QuantityColumn,
-  RemoveColumn,
-} from "../style";
-
 const Item = ({ item }: { item: IkasOrderLineItem }) => {
   const store = useStore();
 
   return (
-    <li className="w-full flex items-stretch gap-6">
+    <li className="w-full flex xs:flex-col items-stretch gap-6 xs:border-b xs:border-solid xs:border-[#222] xs:pb-8 xs:items-start">
       <ItemImage item={item} />
       <div className="flex-1 flex flex-col justify-between">
         <ItemProductColumn item={item} store={store} />
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 xs:mt-3">
           <ItemQuantityColumn item={item} store={store} />
           <ItemRemoveColumn item={item} store={store} />
         </div>
@@ -60,10 +52,12 @@ const ItemProductColumn = observer(
     );
     return (
       <div className="w-full flex flex-col gap-2">
-        <h2 className="text-[#222] text-[32px] lg:text-[27px] leading-none">
+        <h2 className="text-[#222] text-[32px] lg:text-[27px] md:text-lg xs:text-base leading-none">
           {item.variant.name}
         </h2>
-        <h2 className="text-[20px] text-[#222]">{item.formattedFinalPrice}</h2>
+        <h2 className="text-[20px] text-[#222] md:text-xs">
+          {item.formattedFinalPrice}
+        </h2>
         {colorVariant && (
           <div className="flex items-center gap-2 font-light">
             <span className="font-normal">Renk:</span>
@@ -112,17 +106,15 @@ const ItemQuantityColumn = observer(
 
 const ItemPriceColumn = observer(({ item }: { item: IkasOrderLineItem }) => {
   return (
-    <div className="text-[24px]">
-      <div>
-        {item.discountPrice !== null && (
-          <div className="text-base line-through">
-            {item.formattedPriceWithQuantity}
-          </div>
-        )}
-        <span className="text-[24px]">
-          {item.formattedFinalPriceWithQuantity}
-        </span>
-      </div>
+    <div className="xs:w-full">
+      {item.discountPrice !== null && (
+        <div className="text-base line-through">
+          {item.formattedPriceWithQuantity}
+        </div>
+      )}
+      <span className="text-[24px] md:text-base">
+        {item.formattedFinalPriceWithQuantity}
+      </span>
     </div>
   );
 });

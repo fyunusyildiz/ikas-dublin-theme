@@ -3,8 +3,6 @@ import React, { useEffect, useRef } from "react";
 import Close from "src/components/svg/close";
 import useOnClickOutside from "src/utils/hooks/useOnClickOutside";
 
-import * as S from "./style";
-
 type Props = {
   visible: boolean;
   title?: string;
@@ -28,23 +26,35 @@ const Modal = ({ visible, title, children, onClose }: Props) => {
 
   if (!visible) return null;
   return (
-    <S.Modal
-      $visible={visible}
+    <div
+      className={`fixed top-0 right-0 bottom-0 left-0 p-5 bg-black bg-opacity-40 z-[9999] ${
+        visible ? "flex" : "hidden"
+      }`}
       aria-hidden={!visible}
       role="dialog"
       aria-label="modal"
       aria-modal="true"
     >
-      <S.ModalInner ref={modalRef}>
-        <S.CloseButton onClick={onClose}>
+      <div
+        aria-label="modal-inner"
+        className="relative h-fit m-auto p-12 mx-auto w-full max-w-[500px] bg-white rounded-12"
+        ref={modalRef}
+      >
+        <button
+          className="absolute top-3 right-3 p-4"
+          aria-label="modal-close"
+          onClick={() => onClose && onClose()}
+        >
           <Close />
-        </S.CloseButton>
-        <S.ModalContent>
-          <S.ModalTitle>{title}</S.ModalTitle>
-          <S.ModalChildren>{children}</S.ModalChildren>
-        </S.ModalContent>
-      </S.ModalInner>
-    </S.Modal>
+        </button>
+        <div aria-label="modal-content">
+          <div className="mb-5 font-bold" aria-label="modal-title">
+            {title}
+          </div>
+          <div>{children}</div>
+        </div>
+      </div>
+    </div>
   );
 };
 

@@ -15,7 +15,6 @@ export type ColumnProps = {
 
 const Column = (props: ColumnProps) => {
   const { gutter } = useContext(RowContext);
-  console.log(props);
   return (
     <S.Columm
       $gutter={gutter}

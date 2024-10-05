@@ -5,13 +5,14 @@ import * as S from "./style";
 export type Props = {
   prefix?: string;
   status?: FormItemStatus;
+  wrapperClassName?: string;
 } & Omit<JSX.IntrinsicElements["input"], "prefix">;
 
 const Input = (props: Props) => {
   const { status, ref, prefix, ...restProps } = props;
 
   return (
-    <S.InputWrapper>
+    <div className={`${props.wrapperClassName} relative`}>
       {!!prefix && <S.Prefix>{prefix}</S.Prefix>}
       <S.Input $hasPrefix={!!prefix} $status={status} {...restProps} />
       {!!restProps.maxLength && typeof restProps.value === "string" && (
@@ -19,7 +20,7 @@ const Input = (props: Props) => {
           {restProps.value?.length || "0"} / {restProps.maxLength}
         </S.Length>
       )}
-    </S.InputWrapper>
+    </div>
   );
 };
 
