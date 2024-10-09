@@ -193,19 +193,6 @@ const NavItem = (props: { link: LinkProps } & HeaderProps) => {
           }}
         >
           {link.label}
-          {!!link.subLinks.length && (
-            <ArrowDown
-              fill={
-                linkHoverState
-                  ? props.headerLinkHoverColor
-                  : props.noTransparentHeader
-                  ? props.headerLinkColor
-                  : isScrolled
-                  ? "black"
-                  : "white"
-              }
-            />
-          )}
         </a>
       </Link>
       {!!link.subLinks.length && (
@@ -486,11 +473,13 @@ const RightSide = observer((props: HeaderProps) => {
 
   const store = useStore();
   const quantity = store.cartStore.cart?.itemQuantity ?? 0;
+  const favoriteQuantity = products?.length ?? 0;
   return (
     <>
       <div className="flex items-center gap-3 w-[40%] justify-end">
         <SearchInput {...props} />
         <button
+          className="relative"
           onClick={() => {
             if (!store.customerStore.customer) {
               router.push("/account/login");
@@ -510,6 +499,18 @@ const RightSide = observer((props: HeaderProps) => {
             }
             fill="transparent"
           />
+          <span
+            className="absolute -right-2 -top-[14px] font-bold rounded-full text-2xs"
+            style={{
+              color: props.noTransparentHeader
+                ? props.headerLinkColor
+                : isScrolled
+                ? "black"
+                : "white",
+            }}
+          >
+            {favoriteQuantity}
+          </span>
         </button>
         {openFavoriteDrawer && (
           <div className="fixed border border-solid border-[#222] h-[85vh] w-[90%] top-20 left-0 bottom-0 right-0 flex flex-col items-center m-auto bg-white z-[100]">
@@ -571,7 +572,7 @@ const RightSide = observer((props: HeaderProps) => {
         </Link>
         <button className="relative" onClick={() => setOpenDrawer(!openDrawer)}>
           <span
-            className="absolute -right-2 -top-3 font-bold rounded-full text-2xs"
+            className="absolute -right-3 -top-[14px] font-bold rounded-full text-2xs"
             style={{
               color: props.noTransparentHeader
                 ? props.headerLinkColor
@@ -616,7 +617,7 @@ export const CartDrawer = observer((props: CartDrawerProps) => {
       onClick={() => setOpenDrawer(false)}
     >
       <div
-        className="w-[800px] sm:w-full h-full flex flex-col bg-white relative border-l border-solid border-[#222]"
+        className="w-[700px] sm:w-full h-full flex flex-col bg-white relative border-l border-solid border-[#222]"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="w-full flex items-center justify-between h-[81px] px-10 sm:px-6 border-b border-solid border-[#222]">
@@ -628,7 +629,10 @@ export const CartDrawer = observer((props: CartDrawerProps) => {
               {quantity} öğe
             </span>
           </div>
-          <button className="hidden sm:flex" onClick={() => setOpenDrawer(false)}>
+          <button
+            className="hidden sm:flex"
+            onClick={() => setOpenDrawer(false)}
+          >
             <Close />
           </button>
         </div>

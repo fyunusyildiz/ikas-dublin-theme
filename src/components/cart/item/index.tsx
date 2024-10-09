@@ -52,7 +52,7 @@ const ItemProductColumn = observer(
     );
     return (
       <div className="w-full flex flex-col gap-2">
-        <h2 className="text-[#222] text-[32px] lg:text-[27px] md:text-lg xs:text-base leading-none">
+        <h2 className="text-[#222] text-[27px] md:text-lg xs:text-base leading-none">
           {item.variant.name}
         </h2>
         <h2 className="text-[20px] text-[#222] md:text-xs">
@@ -92,7 +92,7 @@ const ItemQuantityColumn = observer(
       }
     };
     return (
-      <div className="w-[150px]">
+      <div>
         <QuantityButton
           lightBackground
           isFullWidth

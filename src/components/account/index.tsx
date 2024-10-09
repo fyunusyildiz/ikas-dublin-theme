@@ -18,14 +18,8 @@ import * as S from "./style";
 export const NS = "account";
 
 const AccountPage = () => {
-  const {
-    hasCustomer,
-    isAccount,
-    isFavoriteProducts,
-    isAddresses,
-    isOrderDetail,
-    isOrders,
-  } = useAccount();
+  const { hasCustomer, isAccount, isAddresses, isOrderDetail, isOrders } =
+    useAccount();
 
   if (!hasCustomer) return null;
   return (
@@ -35,7 +29,6 @@ const AccountPage = () => {
         <S.Main>
           {isAccount && <AccountInfo />}
           {isAddresses && <Address />}
-          {isFavoriteProducts && <FavoriteProducts />}
           {isOrders && <Orders />}
           {isOrderDetail && <OrderDetail />}
         </S.Main>

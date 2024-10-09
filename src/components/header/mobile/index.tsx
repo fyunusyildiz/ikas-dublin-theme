@@ -362,11 +362,12 @@ const RightSide = observer((props: HeaderProps) => {
   }, []);
   const store = useStore();
   const quantity = store.cartStore.cart?.itemQuantity ?? 0;
+  const favoriteQuantity = products.length ?? 0;
   return (
     <>
       <div className="flex items-center gap-0">
         <SearchInput {...props} />
-        <button onClick={handleOpenFavoriteDrawer}>
+        <button onClick={handleOpenFavoriteDrawer} className="relative">
           <FavoriteSVG
             stroke={
               props.noTransparentHeader
@@ -377,6 +378,18 @@ const RightSide = observer((props: HeaderProps) => {
             }
             fill="transparent"
           />
+          <span
+            className="absolute -right-[6px] -top-3 rounded-full text-2xs font-bold"
+            style={{
+              color: props.noTransparentHeader
+                ? props.headerLinkColor
+                : isScrolled
+                ? "black"
+                : "white",
+            }}
+          >
+            {favoriteQuantity}
+          </span>
         </button>
         {openFavoriteDrawer && (
           <div className="fixed h-[calc(100vh-60px)] w-full top-[61px] left-0 bottom-0 right-0 flex flex-col items-center m-auto bg-white z-[100]">
@@ -436,7 +449,10 @@ const RightSide = observer((props: HeaderProps) => {
             />
           </a>
         </Link>
-        <button onClick={() => setOpenCartDrawer(!openCartDrawer)}>
+        <button
+          onClick={() => setOpenCartDrawer(!openCartDrawer)}
+          className="relative"
+        >
           <span
             className="absolute -right-2 -top-3 rounded-full text-2xs font-bold"
             style={{

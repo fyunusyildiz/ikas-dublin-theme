@@ -14,7 +14,6 @@ export const AlertWrapper = styled.div<AlertProps>`
   padding-right: 20px;
   margin-bottom: 24px;
   border: 1px solid ${theme.color.border};
-  border-radius: 8px;
 
   ${({ $status }) => {
     if ($status === "error") {

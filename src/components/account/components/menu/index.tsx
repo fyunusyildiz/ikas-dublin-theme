@@ -20,11 +20,6 @@ const menu = [
     href: "/account",
   },
   {
-    label: "Favori Ürünlerim",
-    pageType: IkasThemeJsonPageType.FAVORITE_PRODUCTS,
-    href: "/account/favorite-products",
-  },
-  {
     label: "Siparişlerim",
     pageType: IkasThemeJsonPageType.ORDERS,
     href: "/account/orders",

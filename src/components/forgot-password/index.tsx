@@ -16,10 +16,10 @@ const ForgotPassword = () => {
   const { formAlert, onFormAlertClose, form } = forgotPassword;
 
   return (
-    <div className="w-full flex flex-col items-center my-5">
+    <div className="w-full flex flex-col items-center my-20">
       <div className="w-full max-w-[500px] px-5">
-        <h1 className="text-xl xs:text-lg font-normal text-black mb-2">
-          Şifremi Unuttum
+        <h1 className="text-lg xs:text-base font-normal text-black mb-4 w-full text-center">
+          Oturum Aç
         </h1>
         <ForgotPasswordFormAlert
           formAlert={formAlert}
@@ -61,11 +61,11 @@ const ForgotPasswordFormComponent = observer(
     return (
       <Form onSubmit={onFormSubmit}>
         <FormItem
-          label="E-posta"
           help={form.emailErrorMessage}
           status={status.email}
         >
           <Input
+            placeholder="E-posta"
             status={status.email}
             value={form.email}
             onChange={(event) => form.onEmailChange(event.target.value)}
@@ -73,8 +73,15 @@ const ForgotPasswordFormComponent = observer(
         </FormItem>
 
         <GoogleCaptcha i18nFileName="forgot-password" />
-        <Button block type="submit" loading={isPending} disabled={isPending}>
-          Gönder
+        <Button
+          size="large"
+          className="!mt-0"
+          block
+          type="submit"
+          loading={isPending}
+          disabled={isPending}
+        >
+          GÖNDER
         </Button>
       </Form>
     );
@@ -92,7 +99,7 @@ const Footer = ({ redirect }: FooterProps) => {
       <div>
         Hesabınız yok mu?{" "}
         <Link passHref href={`/account/register${redirectHref}`}>
-          <a className="block w-full text-center py-3 mt-2 text-white text-sm bg-gray-four rounded-sm">
+          <a className="block w-full text-center py-3 mt-2 text-white text-sm bg-[#222]">
             Kayıt Ol
           </a>
         </Link>
@@ -100,7 +107,7 @@ const Footer = ({ redirect }: FooterProps) => {
       <div className="mt-5">
         Hesabın var mı?
         <Link passHref href={`/account/login${redirectHref}`}>
-          <a className="block w-full text-center py-3 mt-2 text-white text-sm bg-gray-four rounded-sm">
+          <a className="block w-full text-center py-3 mt-2 text-white text-sm bg-[#222]">
             Giriş Yap
           </a>
         </Link>

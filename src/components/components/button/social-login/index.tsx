@@ -35,6 +35,7 @@ const SocialLoginButton = (props: Props) => {
         event.preventDefault();
         onClick();
       }}
+      className="col-span-1 xs:col-span-2"
     >
       <S.Icon>{icon}</S.Icon>
       <S.Line $bgColor={lineColor} />

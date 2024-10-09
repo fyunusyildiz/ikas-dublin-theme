@@ -9,7 +9,7 @@ export const NS = "product-detail"; // for translation (i18n)
 const ProductDetail = (props: ProductDetailProps) => {
   return (
     <section className="w-full">
-      <div className="grid grid-cols-[1fr_1fr] xs:mt-0 mb-32 h-full gap-9 md:gap-6 xs:gap-0 sm:grid-cols-[1fr]">
+      <div className="grid grid-cols-10 xs:mt-0 mb-32 h-full gap-9 md:gap-6 xs:gap-0 sm:grid-cols-[1fr]">
         <SliderArea {...props} />
         <Detail {...props} />
       </div>

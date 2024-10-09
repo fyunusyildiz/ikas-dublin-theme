@@ -28,7 +28,7 @@ const SliderArea = (props: ProductDetailProps) => {
   }, [props.product.selectedVariant]);
 
   return (
-    <div className="flex overflow-x-hidden flex-col relative mb-auto">
+    <div className="flex col-span-4 overflow-x-hidden flex-col relative mb-auto">
       {/* <Thumbnails activeImage={activeImage} {...props} /> */}
       <MainImage activeImage={activeImage} {...props} />
     </div>

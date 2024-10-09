@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { ButtonSizes } from "../style";
+import { theme } from "src/styles/styled";
 
 type ButtonProps = {
   $bgColor: string;
@@ -11,7 +12,7 @@ export const Button = styled.button<ButtonProps>`
   position: relative;
   display: flex;
   align-items: center;
-  border-radius: ${({ theme }) => theme.inputBorderRadius};
+  border-radius: 0
   width: 100%;
   border: 1px solid ${({ $borderColor }) => $borderColor};
   background-color: ${({ $bgColor }) => $bgColor};
@@ -28,7 +29,7 @@ export const Icon = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: ${({ theme }) => theme.fontSize["2xl"]};
+  font-size: 24px;
 `;
 
 type LineProps = {
@@ -40,7 +41,7 @@ export const Line = styled.div<LineProps>`
   height: 100%;
   left: 46px;
   width: 1px;
-  background-color: ${({ $bgColor }) => $bgColor};
+  background-color: #222;
 `;
 
 export const Content = styled.div`
@@ -54,13 +55,13 @@ export const Content = styled.div`
 
 export const Text = styled.span`
   display: block;
-  font-size: ${({ theme }) => theme.fontSize.base};
+  font-size: 16px;
   line-height: 1;
   font-weight: 500;
 `;
 
 export const SubText = styled.span`
-  font-size: ${({ theme }) => theme.fontSize.xs};
+  font-size: 14px;
   margin-top: 2px;
   line-height: 1;
   font-weight: 300;

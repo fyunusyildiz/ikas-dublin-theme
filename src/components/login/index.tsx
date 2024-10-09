@@ -7,8 +7,12 @@ import Form from "src/components/components/form";
 import FormItem from "src/components/components/form/form-item";
 import GoogleCaptcha from "src/components/components/google-captcha";
 import Input from "src/components/components/input";
+import SocialLoginButton from "src/components/components/button/social-login";
 
 import useLogin from "./useLogin";
+import useSocialLogin from "src/utils/hooks/useSocialLogin";
+import FacebookSVG from "src/components/svg/social-login/facebook";
+import GoogleSVG from "src/components/svg/social-login/google";
 
 export const NS = "login";
 
@@ -58,7 +62,24 @@ const LoginFormAlert = observer(
 type LoginFormProps = ReturnType<typeof useLogin>;
 
 const LoginFormComponent = observer(
-  ({ status, isPending, form, onFormSubmit }: LoginFormProps) => {
+  ({ status, isPending, setFormAlert, form, onFormSubmit }: LoginFormProps) => {
+    const { onSocialLogin } = useSocialLogin({
+      onStatusSuccess: () => {
+        setFormAlert({
+          status: "success",
+          title: "Başarılı",
+          text: "Başarıyla giriş yaptınız.",
+        });
+      },
+      onStatusFail: (error?: string | null) => {
+        setFormAlert({
+          status: "error",
+          title: "Hata",
+          text: error || "Bir hata oluştu.",
+        });
+      },
+    });
+
     return (
       <Form onSubmit={onFormSubmit}>
         <FormItem help={form.emailErrorMessage} status={status.email}>
@@ -80,7 +101,7 @@ const LoginFormComponent = observer(
         </FormItem>
         <Link passHref href={`/account/forgot-password`}>
           <a className="w-full text-left block underline text-2xs text-[#616161]">
-            Parolamı unuttum
+            Şifremi unuttum
           </a>
         </Link>
         <GoogleCaptcha i18nFileName="login" />
@@ -93,6 +114,28 @@ const LoginFormComponent = observer(
         >
           GİRİŞ YAP
         </Button>
+        <div className="w-full gap-2 xs:gap-4 grid grid-cols-2 mt-7">
+          <SocialLoginButton
+            color="#fff"
+            bgColor="#3a5a98"
+            borderColor="#3a5a98"
+            lineColor="#000"
+            text="Facebook"
+            subText="ile giriş yap"
+            icon={<FacebookSVG />}
+            onClick={() => onSocialLogin("facebook")}
+          />
+          <SocialLoginButton
+            color="#000"
+            bgColor="#fff"
+            borderColor="#ddd"
+            lineColor="#ddd"
+            text="Google"
+            subText="ile giriş yap"
+            icon={<GoogleSVG />}
+            onClick={() => onSocialLogin("google")}
+          />
+        </div>
       </Form>
     );
   }
