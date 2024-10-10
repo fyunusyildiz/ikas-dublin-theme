@@ -61,7 +61,6 @@ const AddToCartButton = observer(
 );
 
 type QuantityButtonProps = {
-  isFullWidth?: boolean;
   quantity: number;
   onChange: (value: number) => void;
   lightBackground?: boolean;
@@ -71,7 +70,6 @@ export const QuantityButton = ({
   quantity,
   onChange,
   lightBackground,
-  isFullWidth,
 }: QuantityButtonProps) => {
   const handleDecrease = () => {
     if (!(quantity > 1)) return;
@@ -86,7 +84,7 @@ export const QuantityButton = ({
     <div
       className={`relative w-[105px] sm:w-[90px] flex items-center h-[60px] md:h-[50px] shrink-0 overflow-hidden text-[#222] ${
         lightBackground ? "bg-[#f8f8f8]" : "bg-[#d9d9d9]"
-      } ${isFullWidth ? "w-full" : "w-fit"}`}
+      }`}
     >
       <button
         className="w-[35px] xs:w-[25px] h-full inline-block focus:outline-none"

@@ -91,8 +91,6 @@ const MainImage = observer((props: MainImageProps) => {
   var settings = {
     infinite: true,
     speed: 500,
-    autoplay: true,
-    autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
@@ -102,37 +100,52 @@ const MainImage = observer((props: MainImageProps) => {
   return (
     <>
       <div className="flex flex-wrap h-full border-r border-solid border-[#222] sm:hidden">
-        {product.selectedVariant.images?.map((image, index) => (
-          <figure
-            key={index}
-            className="w-full md:h-[700px] h-[1000px] relative border-b border-solid border-[#222]"
-          >
-            <Image
-              useBlur
-              image={image.image!}
-              layout="fill"
-              width={width}
-              height={height}
-              objectFit="cover"
-              sizes={`(max-width: 1440px) 100vw, ${point.xxl / 2}px`}
-            />
-          </figure>
-        ))}
-      </div>
-      <div className="w-full hidden sm:block border-b border-solid border-[#222] relative">
-        <Slider {...settings}>
-          {product.selectedVariant.images?.map((image, index) => (
-            <Image
+        {product.selectedVariant.images?.map((image, index) =>
+          !image.isVideo ? (
+            <figure
               key={index}
-              useBlur
-              image={image.image!}
-              layout="responsive"
-              width={width}
-              height={height}
-              objectFit="cover"
-              sizes="100%"
-            />
-          ))}
+              className="w-full md:h-[700px] h-[1000px] relative border-b border-solid border-[#222]"
+            >
+              <Image
+                useBlur
+                image={image.image!}
+                layout="fill"
+                width={width}
+                height={height}
+                objectFit="cover"
+                sizes={`(max-width: 1440px) 100vw, ${point.xxl / 2}px`}
+              />
+            </figure>
+          ) : (
+            <video key={index} autoPlay loop muted>
+              <source src={image.image?.src} type="video/mp4" />
+            </video>
+          )
+        )}
+      </div>
+      <div className="w-full hidden h-[80vh] sm:block border-b border-solid border-[#222] relative">
+        <Slider {...settings} className="h-full">
+          {product.selectedVariant.images?.map((image, index) =>
+            !image.isVideo ? (
+              <figure key={index} className="w-full h-[80vh] relative">
+                <Image
+                  key={index}
+                  useBlur
+                  image={image.image!}
+                  layout="fill"
+                  width={width}
+                  height={height}
+                  objectFit="cover"
+                  className="h-full"
+                  sizes="100%"
+                />
+              </figure>
+            ) : (
+              <video key={index} autoPlay loop muted className="h-full">
+                <source src={image.image?.src} type="video/mp4" />
+              </video>
+            )
+          )}
         </Slider>
       </div>
     </>

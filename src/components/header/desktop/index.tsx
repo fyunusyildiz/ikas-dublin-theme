@@ -304,15 +304,15 @@ export const SearchInput = observer((props: HeaderProps) => {
             KAPAT
           </button>
         </div>
-        <div className="block w-full h-[22px] bg-[#D9D9D9] border-y border-solid border-[#222]">
-          <div className="w-[160.75px] h-full border-r border-solid border-[#222]"></div>
+        <div className="block w-full h-[22px] bg-[#D9D9D9] border-y border-solid border-[#222] pr-[15px]">
+          <div className="w-1/4 h-full border-r border-solid border-[#222]"></div>
         </div>
         <div className="w-full flex flex-1 overflow-y-scroll flex-wrap bg-[#D9D9D9]">
-          <ul className="w-[25%] sticky top-0 h-full flex flex-col gap-2 p-4">
+          <ul className="w-[25%] sticky top-0 h-full flex flex-col gap-2 p-3">
             {props.searchCategories?.map((category, index) => (
               <li key={index}>
                 <Link href={category.href} passHref>
-                  <a className="text-2xs">{category.label}</a>
+                  <a className="text-[12px]">{category.label}</a>
                 </Link>
               </li>
             ))}
@@ -637,32 +637,43 @@ export const CartDrawer = observer((props: CartDrawerProps) => {
           </button>
         </div>
         <div className="w-full flex-1 flex flex-col overflow-y-auto gap-10">
-          <Items insidePadding />
-        </div>
-        <div className="w-full flex flex-col sticky left-0 bottom-0 pb-5">
-          <div className="w-full py-[10px] xs:py-[5px] bg-[#d9d9d9] border-y border-solid border-[#222]"></div>
-          <div className="flex items-center justify-between px-5 my-5 xs:my-3">
-            <div className="flex flex-col">
-              Toplam
-              <span className="text-[#7a7a7a]">KDV Dahil</span>
+          {quantity === 0 ? (
+            <div className="w-full h-full flex flex-col gap-5 items-center justify-center">
+              <h3 className="text-2xl text-[#222]">Sepetiniz boş.</h3>
+              <Link href="/" passHref>
+                <a className="text-[#222] text-sm underline">Ürünlerimize göz atın.</a>
+              </Link>
             </div>
-            <div className="text-[#222] text-[20px]">
-              {store.cartStore.cart?.formattedTotalPrice}
+          ) : (
+            <Items insidePadding />
+          )}
+        </div>
+        {quantity > 0 && (
+          <div className="w-full flex flex-col sticky left-0 bottom-0 pb-5">
+            <div className="w-full py-[10px] xs:py-[5px] bg-[#d9d9d9] border-y border-solid border-[#222]"></div>
+            <div className="flex items-center justify-between px-5 my-5 xs:my-3">
+              <div className="flex flex-col">
+                Toplam
+                <span className="text-[#7a7a7a]">KDV Dahil</span>
+              </div>
+              <div className="text-[#222] text-[20px]">
+                {store.cartStore.cart?.formattedTotalPrice}
+              </div>
+            </div>
+            <div className="w-full flex items-center justify-between px-5">
+              <Link passHref href={"/cart"}>
+                <a className="w-[49%] flex items-center justify-center py-4 xs:py-3 text-base xs:text-sm font-semibold bg-[#222] text-white">
+                  Sepete Git
+                </a>
+              </Link>
+              <Link passHref href={`${store.cartStore.checkoutUrl}`}>
+                <a className="w-[49%] flex items-center justify-center py-4 xs:py-3 text-base xs:text-sm font-semibold bg-[#222] text-white">
+                  Satın Al
+                </a>
+              </Link>
             </div>
           </div>
-          <div className="w-full flex items-center justify-between px-5">
-            <Link passHref href={"/cart"}>
-              <a className="w-[49%] flex items-center justify-center py-4 xs:py-3 text-base xs:text-sm font-semibold bg-[#222] text-white">
-                Sepete Git
-              </a>
-            </Link>
-            <Link passHref href={`${store.cartStore.checkoutUrl}`}>
-              <a className="w-[49%] flex items-center justify-center py-4 xs:py-3 text-base xs:text-sm font-semibold bg-[#222] text-white">
-                Satın Al
-              </a>
-            </Link>
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );
