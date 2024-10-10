@@ -1,6 +1,6 @@
-import { IkasProduct, Image, Link, useTranslation } from "@ikas/storefront";
-import { useAddToCart } from "src/utils/hooks/useAddToCart";
+import { IkasProduct, Image, Link } from "@ikas/storefront";
 import { useState } from "react";
+import { useAddToCart } from "src/utils/hooks/useAddToCart";
 
 import { observer } from "mobx-react-lite";
 import * as S from "./style";
@@ -76,24 +76,35 @@ const ProductImage = observer(({ product }: Props) => {
 });
 
 const DiscountBadge = observer(({ product }: Props) => {
-  const { t } = useTranslation();
   if (
     !product.selectedVariant.price.hasDiscount &&
     product.selectedVariant.hasStock
   )
     return null;
   return (
-    <div className="flex flex-col items-center justify-center rounded-full border border-solid border-gray-three absolute right-3 z-10 top-3 bg-white w-14 h-14 xs:w-12 xs:h-12 xs:top-2 xs:right-2">
+    <div className="flex flex-col items-center justify-center border border-solid border-[#D9D9D9] absolute left-3 z-10 top-3 bg-white p-[10px] xs:p-1">
       {!product.selectedVariant.hasStock && (
         <span className="text-2xs font-semibold leading-none">Tükendi</span>
       )}
       {product.selectedVariant.hasStock && (
-        <>
-          <span className="text-2xs font-semibold leading-none xs:text-[12px]">
-            %{product.selectedVariant.price.discountPercentage}
+        <div className="flex items-center text-[#7A6A48]">
+          <svg
+            width="34"
+            height="9"
+            viewBox="0 0 34 9"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="mr-4 md:mr-3 xs:mr-2"
+          >
+            <path
+              d="M17.014 5.89482L20.2547 8.8562L26.7642 2.90551L32.5752 8.21364L34 6.64914L26.7642 -3.16288e-07L20.2547 5.97864L17.014 2.98932L13.7453 -8.85362e-07L7.23583 5.97864L1.45275 0.6705L-9.76951e-08 2.235L7.23583 8.8562L13.7453 2.90551L17.014 5.89482Z"
+              fill="#7A6A49"
+            />
+          </svg>
+          <span className="text-xs xs:text-[12px]">
+            %{product.selectedVariant.price.discountPercentage} İNDİRİM
           </span>
-          <span className="text-[10px] leading-tight">İndirim</span>
-        </>
+        </div>
       )}
     </div>
   );

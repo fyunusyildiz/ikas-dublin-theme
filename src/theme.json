@@ -14,7 +14,7 @@
       "componentJson": null,
       "props": [
         {
-          "id": "c9d8ae29-56c5-42cd-b211-5d2dc057dd6e",
+          "id": "a11b9482-9b12-4f9b-bdd3-b9b754fef4f9",
           "name": "logo",
           "displayName": "",
           "description": "",
@@ -27,7 +27,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "71669a0f-38d5-4676-b1a6-d7a7afc56a8d",
+          "id": "eb2828d1-6c15-4d82-aac4-fec93df67dc5",
           "name": "showTax",
           "displayName": "",
           "description": "",
@@ -40,7 +40,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "fd92f55a-ae83-4951-93b6-f20e36f2f7db",
+          "id": "2b1166f4-dcfa-4b82-928e-c62019d593de",
           "name": "showCampaignOffersDesign",
           "displayName": "",
           "description": "",
@@ -53,7 +53,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "7ba13e02-150e-4274-9e9a-ddbfa5a0c89c",
+          "id": "1982142a-5783-4f2a-bb60-46a86840d3c2",
           "name": "campaignOfferIsSmallDesign",
           "displayName": "",
           "description": "",
@@ -66,7 +66,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "15b0b844-d67d-4586-9d84-c0b90548bb63",
+          "id": "e27cee49-0e5c-4157-8b4d-5eba4f483430",
           "name": "showCampaignIsBiggerImage",
           "displayName": "",
           "description": "",
@@ -79,7 +79,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "5a67d7e3-2c15-4e22-a7c0-f0b8a230a452",
+          "id": "7d97f732-3130-4c95-8632-06fdeb78d920",
           "name": "campaignOffersTitleColor",
           "displayName": "",
           "description": "",
@@ -92,7 +92,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "4f15ccee-2078-402a-be31-cc3bcd298d43",
+          "id": "dabf1ca0-3935-4da6-a818-9c4823b7c819",
           "name": "campaignOffersDescriptionColor",
           "displayName": "",
           "description": "",
@@ -105,7 +105,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "c62eabc1-4f8f-4faf-977b-c938a554722c",
+          "id": "8fe04224-a116-4bd7-94c2-867a1d1940fa",
           "name": "campaignOffersContainerBgColor",
           "displayName": "",
           "description": "",
@@ -118,7 +118,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "c174897c-45a0-4d81-860f-c0cd96aca87d",
+          "id": "9b8d0ff7-39f1-4a4b-832a-3c9705b3d108",
           "name": "showCampaignShowDiscountSettings",
           "displayName": "",
           "description": "",
@@ -131,7 +131,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "cdd0162b-42ea-424c-aa55-856f73824b39",
+          "id": "64e07155-26b9-4987-a9b3-2bc89fb03da1",
           "name": "showCampaignHideDiscountBadge",
           "displayName": "",
           "description": "",
@@ -144,7 +144,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "d98ee708-f093-4aa9-a51a-f77a69dc73d7",
+          "id": "cf2d66a4-7e55-4203-a13d-fe8905de1045",
           "name": "campaignOffersDiscountPercentageColor",
           "displayName": "",
           "description": "",
@@ -157,7 +157,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "1c13238c-1bb0-475c-a320-e50d50e05b95",
+          "id": "859a3454-6ef0-488c-811f-08417c45b26c",
           "name": "campaignOffersDiscountPercentageBgColor",
           "displayName": "",
           "description": "",
@@ -170,7 +170,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "8e608f1b-04b4-443d-8086-b73c588b19b4",
+          "id": "3a3f22a3-bc79-4eef-8a61-e2b3d9beb97f",
           "name": "showCampaignShowCountdownSettings",
           "displayName": "",
           "description": "",
@@ -183,7 +183,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "86baf3fa-fcac-4aa7-830e-5c40328e872d",
+          "id": "903e49fc-4693-412f-be91-d45e24b3f6b1",
           "name": "campaignOfferCountdownStyleIsLine",
           "displayName": "",
           "description": "",
@@ -196,7 +196,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "404aec04-3340-46d3-ad53-c3cca4f32c04",
+          "id": "cbe693fd-6051-4df9-a5fd-b656b787e509",
           "name": "campaignOffersCountdownTextColor",
           "displayName": "",
           "description": "",
@@ -209,7 +209,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "6b55b27f-ed2c-4e7d-9f73-5fdd381797fe",
+          "id": "4358f06f-a147-4c31-b10b-de577807dbc8",
           "name": "campaignOffersCountdownTimeColor",
           "displayName": "",
           "description": "",
@@ -222,7 +222,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "d751e5ae-b9c7-4e0a-9dcf-853e2aa99161",
+          "id": "fe37275f-5521-4196-90e0-2d8c81b93692",
           "name": "campaignOffersCountdownBgColor",
           "displayName": "",
           "description": "",
@@ -235,7 +235,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "e1ad50e5-c90c-40b5-8d8c-7c38af731c9f",
+          "id": "101d411a-4fdf-4651-8969-8e3b1d544c86",
           "name": "campaignOffersEnableMiddlePhase",
           "displayName": "",
           "description": "",
@@ -248,7 +248,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "5dfe6e9e-b754-48d8-bb3d-a0e804ebcba4",
+          "id": "fafe9443-9188-4185-b7a2-52f3c156c212",
           "name": "campaignOffersMiddlePhaseOverlayColor",
           "displayName": "",
           "description": "",
@@ -261,7 +261,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "8a3e0000-eafd-464a-a5a6-c08596ad2508",
+          "id": "d3419367-2893-4516-804e-367a74dd07a5",
           "name": "campaignOfferCountdownStyleIsLineSuccessPage",
           "displayName": "",
           "description": "",
@@ -274,7 +274,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "da41379c-8430-4e12-b7b6-0af6212ce564",
+          "id": "790ec88b-eec6-4e67-98b3-1f2c8c2d9ab9",
           "name": "buttonBgColor",
           "displayName": "",
           "description": "",
@@ -287,7 +287,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "d3706087-dd29-450e-ad93-d4692873eca4",
+          "id": "c38fdaae-c026-4668-a87c-99480133d3e7",
           "name": "buttonTextColor",
           "displayName": "",
           "description": "",
@@ -300,7 +300,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "a9e27e89-e46e-4de4-9b85-1c935d939afc",
+          "id": "119fe302-b033-47e1-a824-6aa24bb1e31c",
           "name": "buttonDisabledBgColor",
           "displayName": "",
           "description": "",
@@ -313,7 +313,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "778e5375-a89f-4914-adbe-ebf8068dda70",
+          "id": "f477c216-8659-425c-9db9-e7e9cc816f0e",
           "name": "buttonDisabledTextColor",
           "displayName": "",
           "description": "",
@@ -326,7 +326,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "ee16a7e0-a834-4c66-af5f-73b57c203109",
+          "id": "2f72a68f-c59b-4dd1-b581-058ca4be5738",
           "name": "primaryTextColor",
           "displayName": "",
           "description": "",
@@ -339,7 +339,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "bacacfdd-33e3-4795-8897-42715625f331",
+          "id": "f16799c5-3dac-4c4d-b180-ae71d5d40e5c",
           "name": "secondaryTextColor",
           "displayName": "",
           "description": "",
@@ -352,7 +352,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "3ed23652-2772-4b4f-a385-c9c0bec5d683",
+          "id": "7101cf25-2fe9-4510-a6e6-786804600a40",
           "name": "primaryBgColor",
           "displayName": "",
           "description": "",
@@ -365,7 +365,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "7d8ace9f-68a6-462e-94b5-c6d8f471cc30",
+          "id": "3132688f-7fd6-4afe-94cb-c2210ce7e63f",
           "name": "secondaryBgColor",
           "displayName": "",
           "description": "",
@@ -378,7 +378,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "b632159c-f7fc-4fa2-9223-cc312d9d9d2e",
+          "id": "6dc47918-1fd0-4aa8-bc7b-59507a2bf3a3",
           "name": "borderColor",
           "displayName": "",
           "description": "",
@@ -391,7 +391,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "347e6572-5c70-44c1-9956-348c5563c74d",
+          "id": "902a2de3-c07e-41d9-81e8-3b5cdd01b397",
           "name": "cardBgColor",
           "displayName": "",
           "description": "",
@@ -404,7 +404,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "7d48893f-0a15-4ae2-ae66-22d4bf9ce50c",
+          "id": "2e402504-e39b-4088-abad-3c6594cd8bbc",
           "name": "errorColor",
           "displayName": "",
           "description": "",
@@ -417,7 +417,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "942867ea-eb5b-4a21-ace6-373858902aaf",
+          "id": "6b46375a-0417-40b9-bac3-d2f6580d3069",
           "name": "errorLightColor",
           "displayName": "",
           "description": "",
@@ -430,7 +430,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "8dfa4521-29ad-4ea2-89ae-27b361a2fd98",
+          "id": "0cb92a22-c7de-4b34-8822-0b85c80e55f5",
           "name": "warningColor",
           "displayName": "",
           "description": "",
@@ -443,7 +443,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "9fc8d215-5785-4981-8b85-97ea4fa02cba",
+          "id": "60a8e315-7b61-47b2-9b97-a0783aeace79",
           "name": "warningLightColor",
           "displayName": "",
           "description": "",
@@ -456,7 +456,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "3df3aceb-a34d-4fb7-8921-f47cfcd45175",
+          "id": "6eeaa50e-2d92-462b-bdee-cda978cfa3f6",
           "name": "successColor",
           "displayName": "",
           "description": "",
@@ -469,7 +469,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "6a6715ce-94bd-4c00-a0e3-77c8ca44d971",
+          "id": "42941551-3604-40a6-a7f9-68d4b48b7793",
           "name": "successLightColor",
           "displayName": "",
           "description": "",
@@ -482,7 +482,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "726b75e8-12a9-449f-81c6-f6966491ff71",
+          "id": "836418e7-fe04-4de9-8fd1-fc15faf99503",
           "name": "secondaryButtonBgColor",
           "displayName": "",
           "description": "",
@@ -495,7 +495,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "5a415db3-4fc9-4793-b092-252f4bfe361c",
+          "id": "e73ed878-7605-4d09-8486-e5c3237fb11f",
           "name": "secondaryButtonTextColor",
           "displayName": "",
           "description": "",
@@ -508,7 +508,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "7fc1209b-948e-44ac-b41b-eded9c796e0c",
+          "id": "16aa7131-fee9-4597-a2e2-58a6c4facd60",
           "name": "secondaryButtonBorderColor",
           "displayName": "",
           "description": "",
@@ -2352,7 +2352,7 @@
           "isRequired": true,
           "sliderData": {},
           "translations": {},
-          "groupId": "",
+          "groupId": "3259e597-276a-4208-8e41-990195c4b390",
           "excludedFields": [],
           "excludedFieldsCategory": []
         },
@@ -2365,7 +2365,7 @@
           "isRequired": true,
           "sliderData": {},
           "translations": {},
-          "groupId": "",
+          "groupId": "3259e597-276a-4208-8e41-990195c4b390",
           "excludedFields": [
             "RESULTS__CUSTOMER_REVIEW_SUMMARIES",
             "RESULTS__STARS",
@@ -2384,6 +2384,32 @@
             "RESULTS__VARIANTS__BARCODE_LIST",
             "RESULTS__VARIANTS__ATTRIBUTES"
           ],
+          "excludedFieldsCategory": []
+        },
+        {
+          "id": "aaa4723d-3871-4111-b4da-15f5271f5df2",
+          "name": "suggestedProductsTitle",
+          "displayName": "Sepet Önerilen Ürünler Başlığı",
+          "description": "",
+          "type": "TEXT",
+          "isRequired": true,
+          "sliderData": {},
+          "translations": {},
+          "groupId": "83832760-d575-453e-b36a-e6899fd8f14c",
+          "excludedFields": [],
+          "excludedFieldsCategory": []
+        },
+        {
+          "id": "e46c5cce-14c1-4bad-89bf-a6effbfbf3cd",
+          "name": "suggestedProductsList",
+          "displayName": "Sepet Önerilen Ürünler",
+          "description": "",
+          "type": "PRODUCT_LIST",
+          "isRequired": true,
+          "sliderData": {},
+          "translations": {},
+          "groupId": "83832760-d575-453e-b36a-e6899fd8f14c",
+          "excludedFields": [],
           "excludedFieldsCategory": []
         }
       ],
@@ -2546,7 +2572,36 @@
             "pageComponentId": null,
             "subLinks": []
           }
-        ]
+        ],
+        "searchProducts": {
+          "id": "d984dd95-5236-4d98-9f06-6d30d53c4938",
+          "productListType": "ALL",
+          "initialSort": "LAST_ADDED",
+          "initialLimit": 20,
+          "productCount": null,
+          "productIds": null,
+          "category": null,
+          "usePageFilter": null,
+          "relatedProductsType": null,
+          "recommendedProductsType": {
+            "recommendedProductType": "CATEGORY"
+          }
+        },
+        "suggestedProductsList": {
+          "id": "bbe97eec-c506-486d-affe-9c4bceefeeb7",
+          "productListType": "ALL",
+          "initialSort": "LAST_ADDED",
+          "initialLimit": 20,
+          "productCount": null,
+          "productIds": null,
+          "category": null,
+          "usePageFilter": null,
+          "relatedProductsType": null,
+          "recommendedProductsType": {
+            "recommendedProductType": "CATEGORY"
+          }
+        },
+        "suggestedProductsTitle": "BUNLARI DA BEĞENEBİLİRSİNİZ"
       },
       "commonPropValues": null
     },
@@ -4205,6 +4260,64 @@
         "heroDescription": "Test açıklama"
       },
       "commonPropValues": null
+    },
+    {
+      "id": "d968cf7b-a197-4120-8da7-aa7dd581ddaf",
+      "dir": "product-slider",
+      "displayName": "Ürün Sliderı",
+      "description": "",
+      "type": "COMPONENT",
+      "componentJson": null,
+      "props": [
+        {
+          "id": "e145e625-f31d-4f81-a20c-ea00a45a3746",
+          "name": "sliderTitle",
+          "displayName": "Başlık",
+          "description": "",
+          "type": "TEXT",
+          "isRequired": true,
+          "sliderData": {},
+          "translations": {},
+          "groupId": "",
+          "excludedFields": [],
+          "excludedFieldsCategory": []
+        },
+        {
+          "id": "24629325-bcd7-4fed-a7b7-b0c5ee14fbc5",
+          "name": "sliderProducts",
+          "displayName": "Ürünler",
+          "description": "",
+          "type": "PRODUCT_LIST",
+          "isRequired": true,
+          "sliderData": {},
+          "translations": {},
+          "groupId": "",
+          "excludedFields": [],
+          "excludedFieldsCategory": []
+        }
+      ],
+      "isHeader": false,
+      "isFooter": false,
+      "translations": {},
+      "defaultPropValuesTranslations": {},
+      "defaultPropValues": {
+        "sliderProducts": {
+          "id": "f35dbcc2-85dd-412b-b1b8-77bfbb899b6f",
+          "productListType": "ALL",
+          "initialSort": "LAST_ADDED",
+          "initialLimit": 20,
+          "productCount": null,
+          "productIds": null,
+          "category": null,
+          "usePageFilter": null,
+          "relatedProductsType": null,
+          "recommendedProductsType": {
+            "recommendedProductType": "CATEGORY"
+          }
+        },
+        "sliderTitle": "ÖNERİLEN ÜRÜNLER"
+      },
+      "commonPropValues": null
     }
   ],
   "pages": [
@@ -4564,7 +4677,22 @@
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
               }
-            }
+            },
+            "suggestedProductsList": {
+              "id": "678cc88f-efe3-45d2-893c-1a92d1fd0d62",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "suggestedProductsTitle": "BUNLARI DA BEĞENEBİLİRSİNİZ"
           }
         },
         {
@@ -5129,7 +5257,22 @@
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
               }
-            }
+            },
+            "suggestedProductsList": {
+              "id": "678cc88f-efe3-45d2-893c-1a92d1fd0d62",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "suggestedProductsTitle": "BUNLARI DA BEĞENEBİLİRSİNİZ"
           }
         },
         {
@@ -5642,7 +5785,22 @@
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
               }
-            }
+            },
+            "suggestedProductsList": {
+              "id": "678cc88f-efe3-45d2-893c-1a92d1fd0d62",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "suggestedProductsTitle": "BUNLARI DA BEĞENEBİLİRSİNİZ"
           }
         },
         {
@@ -6094,7 +6252,22 @@
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
               }
-            }
+            },
+            "suggestedProductsList": {
+              "id": "678cc88f-efe3-45d2-893c-1a92d1fd0d62",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "suggestedProductsTitle": "BUNLARI DA BEĞENEBİLİRSİNİZ"
           }
         },
         {
@@ -6549,7 +6722,22 @@
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
               }
-            }
+            },
+            "suggestedProductsList": {
+              "id": "678cc88f-efe3-45d2-893c-1a92d1fd0d62",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "suggestedProductsTitle": "BUNLARI DA BEĞENEBİLİRSİNİZ"
           }
         },
         {
@@ -6654,6 +6842,27 @@
               "usePageFilter": null,
               "relatedProductsType": null
             }
+          }
+        },
+        {
+          "id": "abfd0537-8030-438c-8ee4-26eff59ed82f",
+          "componentId": "d968cf7b-a197-4120-8da7-aa7dd581ddaf",
+          "propValues": {
+            "sliderProducts": {
+              "id": "f35dbcc2-85dd-412b-b1b8-77bfbb899b6f",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "sliderTitle": "ÖNERİLEN ÜRÜNLER"
           }
         }
       ],
@@ -7016,7 +7225,22 @@
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
               }
-            }
+            },
+            "suggestedProductsList": {
+              "id": "678cc88f-efe3-45d2-893c-1a92d1fd0d62",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "suggestedProductsTitle": "BUNLARI DA BEĞENEBİLİRSİNİZ"
           }
         },
         {
@@ -7468,7 +7692,22 @@
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
               }
-            }
+            },
+            "suggestedProductsList": {
+              "id": "678cc88f-efe3-45d2-893c-1a92d1fd0d62",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "suggestedProductsTitle": "BUNLARI DA BEĞENEBİLİRSİNİZ"
           }
         },
         {
@@ -7923,7 +8162,22 @@
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
               }
-            }
+            },
+            "suggestedProductsList": {
+              "id": "678cc88f-efe3-45d2-893c-1a92d1fd0d62",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "suggestedProductsTitle": "BUNLARI DA BEĞENEBİLİRSİNİZ"
           }
         },
         {
@@ -8375,7 +8629,22 @@
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
               }
-            }
+            },
+            "suggestedProductsList": {
+              "id": "678cc88f-efe3-45d2-893c-1a92d1fd0d62",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "suggestedProductsTitle": "BUNLARI DA BEĞENEBİLİRSİNİZ"
           }
         },
         {
@@ -8827,7 +9096,22 @@
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
               }
-            }
+            },
+            "suggestedProductsList": {
+              "id": "678cc88f-efe3-45d2-893c-1a92d1fd0d62",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "suggestedProductsTitle": "BUNLARI DA BEĞENEBİLİRSİNİZ"
           }
         },
         {
@@ -9279,7 +9563,22 @@
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
               }
-            }
+            },
+            "suggestedProductsList": {
+              "id": "678cc88f-efe3-45d2-893c-1a92d1fd0d62",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "suggestedProductsTitle": "BUNLARI DA BEĞENEBİLİRSİNİZ"
           }
         },
         {
@@ -9731,7 +10030,22 @@
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
               }
-            }
+            },
+            "suggestedProductsList": {
+              "id": "678cc88f-efe3-45d2-893c-1a92d1fd0d62",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "suggestedProductsTitle": "BUNLARI DA BEĞENEBİLİRSİNİZ"
           }
         },
         {
@@ -10183,7 +10497,22 @@
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
               }
-            }
+            },
+            "suggestedProductsList": {
+              "id": "678cc88f-efe3-45d2-893c-1a92d1fd0d62",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "suggestedProductsTitle": "BUNLARI DA BEĞENEBİLİRSİNİZ"
           }
         },
         {
@@ -10635,7 +10964,22 @@
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
               }
-            }
+            },
+            "suggestedProductsList": {
+              "id": "678cc88f-efe3-45d2-893c-1a92d1fd0d62",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "suggestedProductsTitle": "BUNLARI DA BEĞENEBİLİRSİNİZ"
           }
         },
         {
@@ -11101,7 +11445,22 @@
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
               }
-            }
+            },
+            "suggestedProductsList": {
+              "id": "678cc88f-efe3-45d2-893c-1a92d1fd0d62",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "suggestedProductsTitle": "BUNLARI DA BEĞENEBİLİRSİNİZ"
           }
         },
         {
@@ -11571,7 +11930,22 @@
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
               }
-            }
+            },
+            "suggestedProductsList": {
+              "id": "678cc88f-efe3-45d2-893c-1a92d1fd0d62",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "suggestedProductsTitle": "BUNLARI DA BEĞENEBİLİRSİNİZ"
           }
         },
         {
@@ -11676,6 +12050,27 @@
                 "recommendedProductType": "CATEGORY"
               }
             }
+          }
+        },
+        {
+          "id": "c286a52e-0fd4-411b-ab2b-a05bc589bd98",
+          "componentId": "d968cf7b-a197-4120-8da7-aa7dd581ddaf",
+          "propValues": {
+            "sliderProducts": {
+              "id": "f35dbcc2-85dd-412b-b1b8-77bfbb899b6f",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "sliderTitle": "ÖNERİLEN ÜRÜNLER"
           }
         }
       ],
@@ -12038,7 +12433,22 @@
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
               }
-            }
+            },
+            "suggestedProductsList": {
+              "id": "678cc88f-efe3-45d2-893c-1a92d1fd0d62",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "suggestedProductsTitle": "BUNLARI DA BEĞENEBİLİRSİNİZ"
           }
         },
         {
@@ -12779,6 +13189,16 @@
     {
       "id": "c7fc244b-e074-45d2-9257-9d131db159d5",
       "name": "Boşluklar",
+      "translations": {}
+    },
+    {
+      "id": "3259e597-276a-4208-8e41-990195c4b390",
+      "name": "Arama Modalı",
+      "translations": {}
+    },
+    {
+      "id": "83832760-d575-453e-b36a-e6899fd8f14c",
+      "name": "Sepet Önerilen Ürünler",
       "translations": {}
     }
   ],

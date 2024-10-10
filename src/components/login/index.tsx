@@ -116,22 +116,18 @@ const LoginFormComponent = observer(
         </Button>
         <div className="w-full gap-2 xs:gap-4 grid grid-cols-2 mt-7">
           <SocialLoginButton
-            color="#fff"
-            bgColor="#3a5a98"
-            borderColor="#3a5a98"
-            lineColor="#000"
-            text="Facebook"
-            subText="ile giriş yap"
+            color="#494949"
+            bgColor="#F4F4F4"
+            borderColor="#222"
+            subText="İLE GİRİŞ YAP"
             icon={<FacebookSVG />}
             onClick={() => onSocialLogin("facebook")}
           />
           <SocialLoginButton
-            color="#000"
-            bgColor="#fff"
-            borderColor="#ddd"
-            lineColor="#ddd"
-            text="Google"
-            subText="ile giriş yap"
+            color="#494949"
+            bgColor="#F4F4F4"
+            borderColor="#222"
+            subText="İLE GİRİŞ YAP"
             icon={<GoogleSVG />}
             onClick={() => onSocialLogin("google")}
           />

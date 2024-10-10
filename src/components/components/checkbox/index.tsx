@@ -14,7 +14,7 @@ const Checkbox = (props: Props) => {
     <S.Wrapper $status={props.status}>
       <S.HiddenCheckbox
         type="checkbox"
-        className="visually-hidden"
+        className="visually-hidden hidden"
         checked={!!props.checked}
         onChange={(event) =>
           props.onChange && props.onChange(!!event.target.checked)

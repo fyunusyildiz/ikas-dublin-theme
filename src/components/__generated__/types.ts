@@ -194,6 +194,8 @@ export type HeaderProps = {
 	thirdCategoryImages?: IkasImage[];
 	searchCategories: IkasNavigationLink[];
 	searchProducts: IkasProductList;
+	suggestedProductsTitle: string;
+	suggestedProductsList: IkasProductList;
 };
 
 export type ProductDetailProps = {
@@ -313,5 +315,10 @@ export type HeroProps = {
 	mobileImage: IkasImage;
 	heroTitle?: string;
 	heroDescription?: string;
+};
+
+export type ProductSliderProps = {
+	sliderTitle: string;
+	sliderProducts: IkasProductList;
 };
 

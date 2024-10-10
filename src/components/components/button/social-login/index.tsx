@@ -6,8 +6,6 @@ type Props = {
   color: string;
   bgColor: string;
   borderColor: string;
-  lineColor: string;
-  text: string;
   subText: string;
   icon: React.ReactNode;
   onClick: () => void;
@@ -18,8 +16,6 @@ const SocialLoginButton = (props: Props) => {
     color,
     bgColor,
     borderColor,
-    lineColor,
-    text,
     subText,
     icon,
     onClick,
@@ -38,9 +34,7 @@ const SocialLoginButton = (props: Props) => {
       className="col-span-1 xs:col-span-2"
     >
       <S.Icon>{icon}</S.Icon>
-      <S.Line $bgColor={lineColor} />
       <S.Content>
-        <S.Text>{text}</S.Text>
         <S.SubText>{subText}</S.SubText>
       </S.Content>
     </S.Button>
