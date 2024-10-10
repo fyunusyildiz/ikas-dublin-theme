@@ -22,11 +22,7 @@ export const NumberRangeListFilter = observer(
   ({ filter, currency, currencySymbol, lastChild }: Props) => {
     if (!filter.displayedValues || !filter.displayedValues.length) return null;
     return (
-      <FiltersWrapper
-        settings={filter.settings}
-        title={filter.name}
-        noBorder={lastChild}
-      >
+      <FiltersWrapper settings={filter.settings} title={filter.name}>
         <S.Wrapper>
           {filter.numberRangeListOptions?.map((option, index) => (
             <NumberRangeList

@@ -19,7 +19,7 @@ const ForgotPassword = () => {
     <div className="w-full flex flex-col items-center my-20">
       <div className="w-full max-w-[500px] px-5">
         <h1 className="text-lg xs:text-base font-normal text-black mb-4 w-full text-center">
-          Oturum Aç
+          Şifremi Unuttum
         </h1>
         <ForgotPasswordFormAlert
           formAlert={formAlert}

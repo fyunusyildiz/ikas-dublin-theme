@@ -13,6 +13,7 @@ const config: Config = {
       md: { max: "1280px" },
       sm: { max: "1024px" },
       xs: { max: "768px" },
+      "header-sm": { max: "959px" },
     },
     colors: {
       transparent: "transparent",

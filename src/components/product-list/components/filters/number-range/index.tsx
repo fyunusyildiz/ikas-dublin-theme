@@ -1,13 +1,12 @@
-import React from "react";
-import { observer } from "mobx-react-lite";
 import { useTranslation } from "@ikas/storefront";
+import { observer } from "mobx-react-lite";
 
 import Col from "src/components/components/grid/col";
 import Row from "src/components/components/grid/row";
 import Input from "src/components/components/input";
 
-import { FiltersProps } from "../index/index";
 import { FiltersWrapper } from "../components/filters-wrapper";
+import { FiltersProps } from "../index/index";
 import useNumberRange from "./useNumberRange";
 
 type NumberRangeFiltersProps = {
@@ -23,11 +22,7 @@ export const NumberRangeFilters = observer((props: NumberRangeFiltersProps) => {
   });
 
   return (
-    <FiltersWrapper
-      settings={filter.settings}
-      title={filter.name}
-      noBorder={lastChild}
-    >
+    <FiltersWrapper settings={filter.settings} title={filter.name}>
       <Row gutter={24}>
         <Col span={12}>
           <span>{t("productList.numberRangeFilters.from")}</span>

@@ -18,9 +18,9 @@ export const FilterCheckbox = ({
 }: FilterCheckboxProps) => {
   return (
     <Checkbox checked={checked} onChange={onChange}>
-      <S.FilterCheckboxLabel $isSelected={checked}>
+      <div className={`${checked ? "font-normal" : "font-light"} text-2xs`}>
         {label} ({resultCount})
-      </S.FilterCheckboxLabel>
+      </div>
     </Checkbox>
   );
 };

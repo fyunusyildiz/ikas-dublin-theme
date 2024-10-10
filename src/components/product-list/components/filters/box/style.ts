@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components";
 
 export const BoxWrapper = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 `;
 
@@ -12,10 +12,10 @@ type Props = {
 };
 
 export const Box = styled.button<Props>`
-  border-radius: 12px;
+  grid-column: span 1 / span 1;
   padding: 4px 12px;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 24px;
   background: #ffffff;
   border: 1px solid #dfe2e6;

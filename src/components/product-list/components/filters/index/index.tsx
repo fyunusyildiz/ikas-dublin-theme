@@ -61,7 +61,3 @@ export const Filters = observer(({ productList }: FiltersComponentProps) => {
 
   return <>{renderFilters}</>;
 });
-
-const DateRangeFilters = observer((props: FiltersProps) => {
-  return <div />;
-});

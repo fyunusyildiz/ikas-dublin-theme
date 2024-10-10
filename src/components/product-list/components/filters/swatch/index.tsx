@@ -13,7 +13,6 @@ export const SwatchFilters = observer(({ filter, lastChild }: FiltersProps) => {
   return (
     <FiltersWrapper
       title={filter.name}
-      noBorder={lastChild}
       settings={filter.settings}
     >
       <StyledSwatchFilters>

@@ -1,54 +1,23 @@
-import React, { useState } from "react";
 import { IkasProductFilterSettings } from "@ikas/storefront";
-import { useScreen } from "src/utils/hooks/useScreen";
-
-import * as S from "./style";
+import React from "react";
 
 type FiltersWrapperProps = {
-  noBorder?: boolean;
   title: string;
   settings?: IkasProductFilterSettings | null | undefined;
   children: React.ReactNode;
 };
 
 export const FiltersWrapper = (props: FiltersWrapperProps) => {
-  const { settings } = props;
-  const { isMobile } = useScreen();
-  const [active, setActive] = useState(
-    isMobile
-      ? !!settings?.showCollapsedOnMobile
-      : !!settings?.showCollapsedOnDesktop
-  );
-
   return (
-    <S.FiltersWrapper $noBorder={props.noBorder}>
-      <FilterTitle
-        active={active}
-        title={props.title}
-        onClickExpandButton={() => setActive((prev) => !prev)}
-      />
-      {active && props.children}
-    </S.FiltersWrapper>
-  );
-};
-
-type FilterTitleProps = {
-  title: string;
-  active: boolean;
-  onClickExpandButton: () => void;
-};
-
-export const FilterTitle = ({
-  title,
-  active,
-  onClickExpandButton,
-}: FilterTitleProps) => {
-  return (
-    <S.FilterTitleWrapper onClick={onClickExpandButton}>
-      <S.FilterTitle>{title}</S.FilterTitle>
-      <S.FilterTitleExpandButton>
-        {active ? "-" : "+"}
-      </S.FilterTitleExpandButton>
-    </S.FilterTitleWrapper>
+    <div
+      className={`flex col-span-1 sm:col-span-4 flex-col h-fit gap-3 header-sm:gap-0 header-sm:mb-10 header-sm:last:mb-0 header-sm:last:border-b-0 border-b border-x border-solid border-[#222] header-sm:border-x-0`}
+    >
+      <p className="text-2xs px-6 header-sm:px-5 header-sm:py-2 py-3 border-b header-sm:border-y border-solid border-[#222] uppercase">
+        {props.title}
+      </p>
+      <div className="w-full flex flex-1 overflow-y-auto flex-col px-6 py-3">
+        {props.children}
+      </div>
+    </div>
   );
 };
