@@ -479,6 +479,8 @@ const RightSide = observer((props: HeaderProps) => {
       <CartDrawer
         openDrawer={openCartDrawer}
         setOpenDrawer={setOpenCartDrawer}
+        suggestedProductsList={props.suggestedProductsList.data}
+        suggestedProductsTitle={props.suggestedProductsTitle}
       />
     </>
   );

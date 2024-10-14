@@ -11,9 +11,10 @@ import { HeaderProps, TextPosition } from "src/components/__generated__/types";
 
 import { useRouter } from "next/router";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { Items } from "src/components/cart";
 import MaxQuantityPerCartModal from "src/components/components/modal-max-quantity-per-cart";
-import ArrowDown from "src/components/header/desktop/svg/arrow-down";
 import Search from "src/components/header/desktop/svg/search";
+import Product from "src/components/product-list/right/product";
 import AccountSVG from "src/components/svg/account";
 import CartSVG from "src/components/svg/cart";
 import Close from "src/components/svg/close";
@@ -22,7 +23,9 @@ import UIStore from "src/store/ui-store";
 import { useAddToCart } from "src/utils/hooks/useAddToCart";
 import useFavoriteProducts from "../../account/favorite-products/useFavoriteProducts";
 import Delete from "./svg/delete";
-import { Items } from "src/components/cart";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 
 const DesktopHeader = (props: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -594,7 +597,12 @@ const RightSide = observer((props: HeaderProps) => {
           />
         </button>
       </div>
-      <CartDrawer openDrawer={openDrawer} setOpenDrawer={setOpenDrawer} />
+      <CartDrawer
+        openDrawer={openDrawer}
+        setOpenDrawer={setOpenDrawer}
+        suggestedProductsList={props.suggestedProductsList.data}
+        suggestedProductsTitle={props.suggestedProductsTitle}
+      />
     </>
   );
 });
@@ -602,12 +610,32 @@ const RightSide = observer((props: HeaderProps) => {
 type CartDrawerProps = {
   openDrawer: boolean;
   setOpenDrawer: (open: boolean) => void;
+  suggestedProductsList: IkasProduct[];
+  suggestedProductsTitle: string;
 };
 
 export const CartDrawer = observer((props: CartDrawerProps) => {
   const store = useStore();
   const { openDrawer, setOpenDrawer } = props;
   const quantity = store.cartStore.cart?.itemQuantity ?? 0;
+
+  var settings = {
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    slidesToShow: 3,
+    autoplaySpeed: 2000,
+    slidesToScroll: 1,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
+  };
 
   return (
     <div
@@ -641,11 +669,28 @@ export const CartDrawer = observer((props: CartDrawerProps) => {
             <div className="w-full h-full flex flex-col gap-5 items-center justify-center">
               <h3 className="text-2xl text-[#222]">Sepetiniz boş.</h3>
               <Link href="/" passHref>
-                <a className="text-[#222] text-sm underline">Ürünlerimize göz atın.</a>
+                <a className="text-[#222] text-sm underline">
+                  Ürünlerimize göz atın.
+                </a>
               </Link>
             </div>
           ) : (
-            <Items insidePadding />
+            <div className="w-full p-10 sm:p-6 flex flex-col gap-16 header-sm:gap-6">
+              <Items />
+              <div className="w-full flex flex-col gap-3">
+                <h2 className="text-base header-sm:text-sm">{props.suggestedProductsTitle}</h2>
+                <Slider {...settings} className="border border-solid border-[#222] border-r-2 header-sm:border-none">
+                  {props.suggestedProductsList?.filter((product) => product.selectedVariant.hasStock)
+                    .map((product) => (
+                      <Product
+                        key={product.selectedVariant.id}
+                        product={product}
+                        className="!w-full list-none"
+                      />
+                    ))}
+                </Slider>
+              </div>
+            </div>
           )}
         </div>
         {quantity > 0 && (
