@@ -180,14 +180,78 @@ const Sidenav = observer((props: HeaderProps) => {
 });
 
 const Navigation = (props: HeaderProps) => {
+  const [openFavoriteDrawer, setOpenFavoriteDrawer] = useState(false);
+  const router = useRouter();
+  const { products, isPending, getFavoriteProducts } = useFavoriteProducts();
+  const handleOpenFavoriteDrawer = () => {
+    setOpenFavoriteDrawer(!openFavoriteDrawer);
+    if (!products.length) {
+      getFavoriteProducts();
+    }
+  };
+  const store = useStore();
   return (
-    <nav className="flex items-center relative w-full mb-6 mx-0">
-      <ul className="w-full">
-        {props.links?.map((link, index) => (
-          <NavigationListItem key={index} link={link} />
-        ))}
-      </ul>
-    </nav>
+    <>
+      <nav className="flex items-center relative w-full mb-6 mx-0">
+        <ul className="w-full">
+          {props.links?.map((link, index) => (
+            <NavigationListItem key={index} link={link} />
+          ))}
+          <button
+            onClick={handleOpenFavoriteDrawer}
+            className="flex uppercase items-center text-base justify-between w-full px-5 py-4 border-b border-solid border-[#222]"
+          >
+            FAVORİLERİM
+            <ArrowRight />
+          </button>
+        </ul>
+      </nav>
+      {openFavoriteDrawer && (
+        <div className="fixed h-[calc(100vh-60px)] w-full top-0 left-0 bottom-0 right-0 flex flex-col items-center m-auto bg-white z-[100]">
+          <div className="w-full h-[30px] bg-[#D9D9D9] flex items-center justify-between p-[10px] px-5 border-b border-solid border-[#222]">
+            <h3 className="text-xs text-[#222] uppercase">FAVORİLER</h3>
+            <button onClick={handleOpenFavoriteDrawer}>
+              <Close />
+            </button>
+          </div>
+          <div className="w-full h-full my-2 grid grid-cols-1 gap-16 p-5 pb-20 overflow-y-auto">
+            {isPending && (
+              <div className="col-span-3 h-full flex items-center justify-center">
+                <h3 className="text-4xl text-[#222] text-center">
+                  Yükleniyor...
+                </h3>
+              </div>
+            )}
+            {!isPending && products.length === 0 && (
+              <div className="col-span-3 h-full w-full flex flex-col gap-5 items-center justify-center">
+                <h3 className="text-xl text-[#222] leading-tight text-center">
+                  Favori ürününüz bulunmamaktadır.
+                </h3>
+                <button
+                  className="underline"
+                  onClick={() => {
+                    router.push("/");
+                    setOpenFavoriteDrawer(false);
+                  }}
+                >
+                  Ürünlerimize göz atmak için tıklayınız.
+                </button>
+              </div>
+            )}
+            {!isPending &&
+              !!products.length &&
+              products.map((product, index) => (
+                <FavoriteProduct
+                  key={index}
+                  product={product}
+                  store={store}
+                  getFavoriteProducts={getFavoriteProducts}
+                />
+              ))}
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
@@ -362,80 +426,10 @@ const RightSide = observer((props: HeaderProps) => {
   }, []);
   const store = useStore();
   const quantity = store.cartStore.cart?.itemQuantity ?? 0;
-  const favoriteQuantity = products.length ?? 0;
   return (
     <>
       <div className="flex items-center gap-0">
         <SearchInput {...props} />
-        <button onClick={handleOpenFavoriteDrawer} className="relative">
-          <FavoriteSVG
-            stroke={
-              props.noTransparentHeader
-                ? props.headerLinkColor
-                : isScrolled
-                ? "black"
-                : "white"
-            }
-            fill="transparent"
-          />
-          <span
-            className="absolute -right-[6px] -top-3 rounded-full text-2xs font-bold"
-            style={{
-              color: props.noTransparentHeader
-                ? props.headerLinkColor
-                : isScrolled
-                ? "black"
-                : "white",
-            }}
-          >
-            {favoriteQuantity}
-          </span>
-        </button>
-        {openFavoriteDrawer && (
-          <div className="fixed h-[calc(100vh-60px)] w-full top-[61px] left-0 bottom-0 right-0 flex flex-col items-center m-auto bg-white z-[100]">
-            <div className="w-full h-[30px] bg-[#D9D9D9] flex items-center justify-between p-[10px] px-5 border-b border-solid border-[#222]">
-              <h3 className="text-xs text-[#222] uppercase">FAVORİLER</h3>
-              <button onClick={handleOpenFavoriteDrawer}>
-                <Close />
-              </button>
-            </div>
-            <div className="w-full h-full my-2 grid grid-cols-1 gap-16 p-5 pb-20 overflow-y-auto">
-              {isPending && (
-                <div className="col-span-3 h-full flex items-center justify-center">
-                  <h3 className="text-4xl text-[#222] text-center">
-                    Yükleniyor...
-                  </h3>
-                </div>
-              )}
-              {!isPending && products.length === 0 && (
-                <div className="col-span-3 h-full w-full flex flex-col gap-5 items-center justify-center">
-                  <h3 className="text-xl text-[#222] leading-tight text-center">
-                    Favori ürününüz bulunmamaktadır.
-                  </h3>
-                  <button
-                    className="underline"
-                    onClick={() => {
-                      router.push("/");
-                      setOpenFavoriteDrawer(false);
-                    }}
-                  >
-                    Ürünlerimize göz atmak için tıklayınız.
-                  </button>
-                </div>
-              )}
-              {!isPending &&
-                !!products.length &&
-                products.map((product, index) => (
-                  <FavoriteProduct
-                    key={index}
-                    product={product}
-                    store={store}
-                    getFavoriteProducts={getFavoriteProducts}
-                  />
-                ))}
-            </div>
-          </div>
-        )}
         <Link href="/account" passHref>
           <a>
             <AccountSVG
