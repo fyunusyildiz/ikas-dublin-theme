@@ -14,44 +14,53 @@ const Product = (props: Props) => {
   const [addToCartText, setAddToCartText] = useState("SEPETE EKLE");
   const { product } = props;
   const { addToCart } = useAddToCart();
+  const [showNotify, setShowNotify] = useState(false);
 
   const a11yTitle = product.selectedVariant.hasStock ? "" : "Bu ürün tükendi";
 
   return (
-    <li
-      className={`w-1/4 md:w-1/3 sm:w-1/2 relative border border-[#222222d2] group ${props.className}`}
-    >
-      <Link passHref href={product.href}>
-        <a title={a11yTitle}>
-          <S.ImageWrapper
-            className="border-b border-solid border-[#222222d2] relative"
-            $hasStock={product.selectedVariant.hasStock}
-          >
-            <ProductImage {...props} />
-            <DiscountBadge {...props} />
-            {product.selectedVariant.hasStock && (
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  addToCart(product, 1);
-                  setAddToCartText("SEPETE EKLENDİ");
-                  setTimeout(() => {
-                    setAddToCartText("SEPETE EKLE");
-                  }, 2000);
-                }}
-                className="w-[90%] hover:bg-[#222] hover:text-white absolute opacity-0 group-hover:opacity-100 bottom-5 left-0 right-0 mx-auto py-3 border border-solid border-[#222] flex items-center justify-center md:!hidden"
-              >
-                {addToCartText}
-              </button>
-            )}
-          </S.ImageWrapper>
-          <div className="w-full flex flex-wrap justify-between px-2 py-2 xs:gap-y-0 xs:flex-col overflow-hidden">
-            <ProductTitle {...props} />
-            <Price {...props} />
-          </div>
-        </a>
-      </Link>
-    </li>
+    <>
+      <li
+        className={`w-1/4 md:w-1/3 sm:w-1/2 relative border border-[#222222d2] group ${props.className}`}
+      >
+        <Link passHref href={product.href}>
+          <a title={a11yTitle}>
+            <S.ImageWrapper
+              className="border-b border-solid border-[#222222d2] relative"
+              $hasStock={product.selectedVariant.hasStock}
+            >
+              <ProductImage {...props} />
+              <DiscountBadge {...props} />
+              {product.selectedVariant.hasStock && (
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setShowNotify(true);
+                    addToCart(product, 1);
+                    setAddToCartText("SEPETE EKLENDİ");
+                    setTimeout(() => {
+                      setAddToCartText("SEPETE EKLE");
+                    }, 2000);
+                  }}
+                  className="w-[90%] hover:bg-[#222] hover:text-white absolute opacity-0 group-hover:opacity-100 bottom-5 left-0 right-0 mx-auto py-3 border border-solid border-[#222] flex items-center justify-center md:!hidden"
+                >
+                  {addToCartText}
+                </button>
+              )}
+            </S.ImageWrapper>
+            <div className="w-full flex flex-wrap justify-between px-2 py-2 xs:gap-y-0 xs:flex-col overflow-hidden">
+              <ProductTitle {...props} />
+              <Price {...props} />
+            </div>
+          </a>
+        </Link>
+      </li>
+      {showNotify && (
+        <div className="fixed top-0 right-0 bg-white p-4 border border-solid border-[#222]">
+          Ürün sepete eklendi
+        </div>
+      )}
+    </>
   );
 };
 
