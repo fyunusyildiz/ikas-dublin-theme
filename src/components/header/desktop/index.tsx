@@ -307,8 +307,8 @@ export const SearchInput = observer((props: HeaderProps) => {
             KAPAT
           </button>
         </div>
-        <div className="block w-full h-[22px] bg-[#D9D9D9] border-y border-solid border-[#222] pr-[15px]">
-          <div className="w-1/4 h-full border-r border-solid border-[#222]"></div>
+        <div className="block w-full h-[22px] bg-[#D9D9D9] border-y border-solid border-[#222] pr-[17px]">
+          <div className="w-3/4 h-full ml-auto border-l border-solid border-[#222]"></div>
         </div>
         <div className="w-full flex flex-1 overflow-y-scroll flex-wrap bg-[#D9D9D9]">
           <ul className="w-[25%] sticky top-0 h-full flex flex-col gap-2 p-3">
