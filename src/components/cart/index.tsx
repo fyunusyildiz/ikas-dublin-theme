@@ -19,6 +19,7 @@ import ReturnIcon from "./svg/return";
 import Form from "../components/form";
 import Input from "../components/input";
 import Modal from "../components/modal";
+import RemoveSVG from "./item/svg/remove";
 import * as S from "./style";
 
 export const NS = "cart";
@@ -141,7 +142,7 @@ const Summary = observer((props: CartProps) => {
 
   return (
     <div className="col-span-4 h-fit mt-10 sm:col-span-12 xs:mt-4 sticky top-28 sm:relative sm:top-0">
-      <div className="w-full border border-solid border-[#222] p-6 xs:p-4">
+      <div className="w-full border border-solid border-[#222] p-6 xs:p-5">
         <p className="w-full text-base border-b border-solid border-[#222] pb-4 mb-5">
           Sipariş Özeti
         </p>
@@ -159,6 +160,7 @@ const Summary = observer((props: CartProps) => {
 
 const Adjustments = observer(
   ({ cart }: { cart: IkasCart | null | undefined }) => {
+    const { removeCoupon } = useCoupon();
     return (
       <>
         {cart?.orderAdjustments?.map((adjustment, index) => {
@@ -170,10 +172,22 @@ const Adjustments = observer(
           return (
             <S.SummaryBoxText key={index}>
               <span>{adjustment.name}</span>
-              <span>
-                {adjustment.type === IkasAdjustmentType.DECREMENT ? "-" : "+"}
-                {price}
-              </span>
+              <div className="flex relative items-center">
+                <span className="leading-none">
+                  {adjustment.type === IkasAdjustmentType.DECREMENT ? "-" : "+"}
+                  {price}
+                </span>
+                {!!cart?.couponCode && (
+                  <button
+                    title={"Kuponu Kaldır"}
+                    type="button"
+                    onClick={removeCoupon}
+                    className="text-orange-two absolute -right-[22px] top-0 xs:-right-4 xs:top-[2.5px]"
+                  >
+                    <RemoveSVG className="w-5 h-5 xs:w-4 xs:h-4" fillRed />
+                  </button>
+                )}
+              </div>
             </S.SummaryBoxText>
           );
         })}
@@ -189,7 +203,6 @@ const Coupon = observer(() => {
     addCoupon,
     modalText,
     modalVisible,
-    removeCoupon,
     couponValue,
     setCouponValue,
     onModalClose,
@@ -214,15 +227,6 @@ const Coupon = observer(() => {
           }}
           wrapperClassName="flex-1"
         />
-        {!!cart?.couponCode && (
-          <S.RemoveCouponButton
-            title={"Kuponu Kaldır"}
-            type="button"
-            onClick={removeCoupon}
-          >
-            <RemoveCouponSVG />
-          </S.RemoveCouponButton>
-        )}
         <button
           type="submit"
           className="px-5 h-[42px] flex items-center border border-solid border-[#222] disabled:cursor-not-allowed"
@@ -296,21 +300,3 @@ function useCoupon() {
     onModalClose,
   };
 }
-
-export const RemoveCouponSVG = () => (
-  <svg
-    stroke="currentColor"
-    fill="none"
-    strokeWidth="2"
-    viewBox="0 0 24 24"
-    strokeLinecap="round"
-    stroke-linejoin="round"
-    height="1em"
-    width="1em"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path d="M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"></path>
-    <line x1="18" y1="9" x2="12" y2="15"></line>
-    <line x1="12" y1="9" x2="18" y2="15"></line>
-  </svg>
-);

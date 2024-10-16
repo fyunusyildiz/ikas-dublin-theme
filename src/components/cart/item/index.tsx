@@ -105,7 +105,7 @@ const ItemQuantityColumn = observer(
 
 const ItemPriceColumn = observer(({ item }: { item: IkasOrderLineItem }) => {
   return (
-    <div className="xs:w-full min-w-[100px] flex justify-end">
+    <div className="xs:w-full min-w-[100px] flex">
       {item.discountPrice !== null && (
         <div className="text-base line-through">
           {item.formattedPriceWithQuantity}
@@ -141,6 +141,7 @@ const ItemImage = observer(({ item }: { item: IkasOrderLineItem }) => {
               layout="fill"
               sizes="200px"
               className="object-cover object-center"
+              priority
             />
           )}
         </a>
