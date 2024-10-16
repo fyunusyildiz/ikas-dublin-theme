@@ -23,9 +23,21 @@ a {
   left: 5px !important;
   z-index: 1;
 }
+.slick-prev.cart {
+  left: -40px !important;
+  @media screen and (max-width: 768px) {
+    left: -32px !important;
+  }
+}
 .slick-next {
   right: 5px !important;
   z-index: 1;
+}
+.slick-next.cart {
+  right: -40px !important;
+  @media screen and (max-width: 768px) {
+    right: -32px !important;
+  }
 }
 
 input[type="search"]::-webkit-search-decoration,

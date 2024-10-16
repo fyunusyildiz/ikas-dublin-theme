@@ -26,6 +26,7 @@ import Delete from "./svg/delete";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import { NextArrow, PrevArrow } from "src/components/product-detail/slider";
 
 const DesktopHeader = (props: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -626,7 +627,9 @@ export const CartDrawer = observer((props: CartDrawerProps) => {
     slidesToShow: 3,
     autoplaySpeed: 2000,
     slidesToScroll: 1,
-    arrows: false,
+    arrows: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 768,

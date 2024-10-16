@@ -152,12 +152,12 @@ const MainImage = observer((props: MainImageProps) => {
   );
 });
 
-function NextArrow(props: any) {
+export function NextArrow(props: any) {
   const { onClick, className } = props;
   return (
     <div
       className={
-        "!w-10 !h-10 !flex items-center justify-center opacity-90 before:hidden " +
+        "!w-10 !h-10 !flex items-center justify-center opacity-90 before:hidden cart " +
         className
       }
       onClick={onClick}
@@ -181,12 +181,12 @@ function NextArrow(props: any) {
   );
 }
 
-function PrevArrow(props: any) {
+export function PrevArrow(props: any) {
   const { onClick, className } = props;
   return (
     <div
       className={
-        "!w-10 !h-10 !flex items-center justify-center opacity-90 before:hidden " +
+        "!w-10 !h-10 !flex items-center justify-center opacity-90 before:hidden cart " +
         className
       }
       onClick={onClick}

@@ -1,6 +1,7 @@
 import { IkasProduct, Image, Link } from "@ikas/storefront";
 import { useState } from "react";
 import { useAddToCart } from "src/utils/hooks/useAddToCart";
+import CartIcon from "src/components/svg/cart";
 
 import { observer } from "mobx-react-lite";
 import * as S from "./style";
@@ -40,6 +41,7 @@ const Product = (props: Props) => {
                     setAddToCartText("SEPETE EKLENDİ");
                     setTimeout(() => {
                       setAddToCartText("SEPETE EKLE");
+                      setShowNotify(false);
                     }, 2000);
                   }}
                   className="w-[90%] hover:bg-[#222] hover:text-white absolute opacity-0 group-hover:opacity-100 bottom-5 left-0 right-0 mx-auto py-3 border border-solid border-[#222] flex items-center justify-center md:!hidden"
@@ -55,11 +57,16 @@ const Product = (props: Props) => {
           </a>
         </Link>
       </li>
-      {showNotify && (
-        <div className="fixed top-0 right-0 bg-white p-4 border border-solid border-[#222]">
-          Ürün sepete eklendi
-        </div>
-      )}
+      <div
+        className={`fixed flex items-center gap-2 z-[999] top-[10px] right-0 bg-white p-4 border border-solid border-[#222] transition-all duration-300 ${
+          showNotify
+            ? "-translate-x-2 opacity-100"
+            : "translate-x-full opacity-0"
+        }`}
+      >
+        <CartIcon stroke="#222" />
+        Ürün sepete eklendi!
+      </div>
     </>
   );
 };
