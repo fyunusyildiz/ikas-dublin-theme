@@ -2,6 +2,7 @@ import { IkasProduct, Image, Link } from "@ikas/storefront";
 import { useState } from "react";
 import { useAddToCart } from "src/utils/hooks/useAddToCart";
 import CartIcon from "src/components/svg/cart";
+import { useRouter } from "next/router";
 
 import { observer } from "mobx-react-lite";
 import * as S from "./style";
@@ -16,6 +17,7 @@ const Product = (props: Props) => {
   const { product } = props;
   const { addToCart } = useAddToCart();
   const [showNotify, setShowNotify] = useState(false);
+  const router = useRouter();
 
   const a11yTitle = product.selectedVariant.hasStock ? "" : "Bu ürün tükendi";
 
@@ -24,7 +26,14 @@ const Product = (props: Props) => {
       <li
         className={`w-1/4 md:w-1/3 sm:w-1/2 relative border border-[#222222d2] group ${props.className}`}
       >
-        <Link passHref href={product.href}>
+        <Link
+          passHref
+          href={product.href}
+          onClick={(e) => {
+            e.preventDefault();
+            router.push(product.href);
+          }}
+        >
           <a title={a11yTitle}>
             <S.ImageWrapper
               className="border-b border-solid border-[#222222d2] relative"
