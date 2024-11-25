@@ -26,14 +26,7 @@ const Product = (props: Props) => {
       <li
         className={`w-1/4 md:w-1/3 sm:w-1/2 relative border border-[#222222d2] group ${props.className}`}
       >
-        <Link
-          passHref
-          href={product.href}
-          onClick={(e) => {
-            e.preventDefault();
-            router.push(product.href);
-          }}
-        >
+        <Link passHref href={product.href}>
           <a title={a11yTitle}>
             <S.ImageWrapper
               className="border-b border-solid border-[#222222d2] relative"
