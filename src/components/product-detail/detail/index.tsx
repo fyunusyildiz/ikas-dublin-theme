@@ -11,30 +11,28 @@ import { Title } from "./title";
 import { Variants } from "./variants";
 
 const Detail = (props: ProductDetailProps) => {
-  console.log(props.product.groupedAttributeValues);
+  console.log(props.specialAreaForTop);
   return (
     <div className="sticky col-span-6 h-[80vh] sm:h-fit pr-[30px] sm:top-0 top-32 md:top-28 overflow-y-auto overflow-x-hidden sm:px-5 xs:px-3">
       <div className="w-full flex items-center gap-10 xs:gap-10 sm:border-b sm:border-solid sm:border-[#828282] sm:py-3">
         <Title {...props} />
         <Price {...props} />
       </div>
-      {props.hasSpecialArea && (
-        <p
-          dangerouslySetInnerHTML={{
-            __html:
-              props.product.groupedAttributeValues.find(
-                (attr) => attr.attribute.name === "Ozel Alan Nordbron"
-              )?.values[0].value || "",
-          }}
-        />
-      )}
+      {props.specialAreaForTop &&
+        props.specialAreaForTop.values.map((value, index) => {
+          return (
+            <div key={index} className="w-full">
+              {value.values}
+            </div>
+          );
+        })}
       <Description {...props} />
       <Variants {...props} />
       <div className="w-full flex items-center gap-4 sm:mt-3 xs:gap-2">
         <FavoriteButton {...props} />
         <AddToCart {...props} />
       </div>
-      <ProductAttributes {...props} />
+      {/* <ProductAttributes {...props} /> */}
       {/* <ProductOptions {...props} /> */}
     </div>
   );
