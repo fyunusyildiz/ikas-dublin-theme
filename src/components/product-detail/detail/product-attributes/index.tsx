@@ -1,27 +1,29 @@
-import React, { useState, useEffect } from "react";
 import {
-  Image,
   IkasProduct,
   IkasProductAttributeType,
   IkasProductAttributeValue,
+  Image,
 } from "@ikas/storefront";
 import { observer } from "mobx-react-lite";
+import React, { useEffect, useState } from "react";
 
 import { ProductDetailProps } from "src/components/__generated__/types";
 import Checkbox from "src/components/components/checkbox";
+import Collapse from "src/components/components/collapse";
 import Loading from "src/components/svg/loading";
 import breakpoints, { point } from "src/styles/breakpoints";
-import Collapse from "src/components/components/collapse";
 
 export const ProductAttributes = observer(({ product }: ProductDetailProps) => {
   if (!product.selectedVariant.attributes) return null;
+  const filteredAttributes = product.selectedVariant.attributes.filter(
+    (attribute) => attribute.productAttribute?.name !== "Storybox"
+  );
+
+  console.log(filteredAttributes);
   return (
     <div className="w-full">
-      {product.selectedVariant.attributes.map((attribute, index) => (
-        <AttributeValue
-          key={index}
-          attribute={attribute}
-        />
+      {filteredAttributes.map((attribute, index) => (
+        <AttributeValue key={index} attribute={attribute} />
       ))}
     </div>
   );
@@ -153,7 +155,9 @@ const ProductAttributeValue = ({ attribute }: AttributeValueProps) => {
     <AttributeValueWrapper header={attribute.productAttribute?.name}>
       {pending && <Loading />}
       {!pending &&
-        products?.map((product, index) => <div key={index}>{product.name}</div>)}
+        products?.map((product, index) => (
+          <div key={index}>{product.name}</div>
+        ))}
     </AttributeValueWrapper>
   );
 };

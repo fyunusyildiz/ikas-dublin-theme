@@ -4,7 +4,6 @@ import {
 	IkasSlider,
 	IkasProductList,
 	IkasProduct,
-	IkasAttributeList,
 	IkasCategory,
 } from "@ikas/storefront"
 
@@ -202,8 +201,6 @@ export type HeaderProps = {
 export type ProductDetailProps = {
 	product: IkasProduct;
 	imageAspectRatio: ImageAspectRatio;
-	specialAreaForTop?: IkasAttributeList;
-	specialAreaForBottom?: IkasAttributeList;
 };
 
 export type FooterProps = {
