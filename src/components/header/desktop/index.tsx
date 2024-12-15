@@ -308,20 +308,10 @@ export const SearchInput = observer((props: HeaderProps) => {
             KAPAT
           </button>
         </div>
-        <div className="block w-full h-[22px] bg-[#D9D9D9] border-y border-solid border-[#222] pr-[17px]">
-          <div className="w-3/4 h-full ml-auto border-l border-solid border-[#222]"></div>
+        <div className="block w-full h-[22px] bg-[#D9D9D9] border-y border-solid border-[#222]">
         </div>
         <div className="w-full flex flex-1 overflow-y-scroll flex-wrap bg-[#D9D9D9]">
-          <ul className="w-[25%] sticky top-0 h-full flex flex-col gap-2 p-3">
-            {props.searchCategories?.map((category, index) => (
-              <li key={index}>
-                <Link href={category.href} passHref>
-                  <a className="text-[12px]">{category.label}</a>
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <div className="flex flex-wrap h-full w-3/4 pr-[1px]">
+          <div className="flex flex-wrap h-full w-full">
             {props.searchProducts?.data.map((product, index) => (
               <Link href={product.href} key={index} passHref>
                 <a className="w-1/2 h-[250px] outline outline-1">

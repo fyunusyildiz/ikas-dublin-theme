@@ -1,4 +1,4 @@
-import { Link, useTranslation } from "@ikas/storefront";
+import { Link } from "@ikas/storefront";
 import { observer } from "mobx-react-lite";
 
 import Alert from "src/components/components/alert";
@@ -59,8 +59,6 @@ type RecoverPasswordFormProps = ReturnType<typeof useRecoverPassword>;
 
 const RecoverPasswordFormComponent = observer(
   ({ status, isPending, form, onFormSubmit }: RecoverPasswordFormProps) => {
-    const { t } = useTranslation();
-
     return (
       <Form onSubmit={onFormSubmit}>
         <FormItem
@@ -114,7 +112,7 @@ const Footer = ({ redirect }: FooterProps) => {
       <div>
         Hesabınız yok mu?{" "}
         <Link passHref href={`/account/register${redirectHref}`}>
-          <a className="block w-full text-center py-3 mt-2 text-white text-sm bg-gray-four rounded-sm">
+          <a className="block w-full text-center py-3 mt-2 text-white text-sm bg-[#222]">
             Kayıt Ol
           </a>
         </Link>
@@ -122,7 +120,7 @@ const Footer = ({ redirect }: FooterProps) => {
       <div className="mt-5">
         Hesabın var mı?
         <Link passHref href={`/account/login${redirectHref}`}>
-          <a className="block w-full text-center py-3 mt-2 text-white text-sm bg-gray-four rounded-sm">
+          <a className="block w-full text-center py-3 mt-2 text-white text-sm bg-[#222]">
             Giriş Yap
           </a>
         </Link>

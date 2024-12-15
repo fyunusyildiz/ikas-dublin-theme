@@ -374,19 +374,9 @@ export const SearchInput = observer((props: HeaderProps) => {
           </button>
         </div>
         <div className="block w-full h-[15px] bg-[#D9D9D9] border-y border-solid border-[#222]">
-          <div className="w-[35%] h-full border-r border-solid border-[#222]"></div>
         </div>
         <div className="w-full flex flex-1 overflow-y-scroll flex-wrap bg-[#D9D9D9]">
-          <ul className="w-[35%] sticky top-0 h-full flex flex-col gap-2 p-2">
-            {props.searchCategories?.map((category, index) => (
-              <li key={index}>
-                <Link href={category.href} passHref>
-                  <a className="text-2xs">{category.label}</a>
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <div className="flex flex-wrap h-full w-[65%] pr-[1px]">
+          <div className="flex flex-wrap h-full w-full">
             {props.searchProducts?.data.map((product, index) => (
               <Link href={product.href} key={index} passHref>
                 <a className="w-1/2 outline outline-1">

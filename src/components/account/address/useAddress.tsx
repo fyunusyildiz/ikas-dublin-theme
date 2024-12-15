@@ -1,18 +1,14 @@
-import React, { useState, useEffect } from "react";
 import {
   IkasAddressForm,
   IkasCustomer,
   IkasCustomerAddress,
   IkasLocalizedCustomerAddress,
   useStore,
-  useTranslation,
 } from "@ikas/storefront";
-
-import { NS } from "../";
+import { useEffect, useState } from "react";
 
 export default function useAddress() {
   const store = useStore();
-  const { t } = useTranslation();
   const [addressForm, setAddressForm] = useState<IkasAddressForm>();
   const [isNewAddressFormVisible, setAddressFormVisibility] = useState(false);
 
