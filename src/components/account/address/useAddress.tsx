@@ -24,10 +24,9 @@ export default function useAddress() {
     return new IkasAddressForm({
       address: address || new IkasLocalizedCustomerAddress(),
       message: {
-        requiredRule: t(`${NS}:address.requiredRule`),
-        invalidRule: (model) => t(`${NS}:address.invalidRule`),
-        phoneRule: (model) =>
-          t(`${NS}:address.phoneRule`, { phoneNumber: model.phone || "" }),
+        requiredRule: "Zorunlu alan",
+        invalidRule: "Geçersiz",
+        phoneRule: "Geçersiz Telefon Numarası",
       },
     });
   };

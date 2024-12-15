@@ -8,34 +8,32 @@ type StyledSelectProps = {
 
 export const Select = styled.select<StyledSelectProps>`
   width: 100%;
-  min-width: 68px;
   height: 42px;
-  padding: 12px 32px 12px 16px;
+  outline: none !important;
 
-  color: #000;
   background-color: ${({ $status }) => {
     if ($status === "error") {
       return theme.color.red + "25";
     }
-    return theme.color.inputBackground;
+    return "#f8f8f8";
   }};
 
   border: 1px solid
     ${({ $status }) => {
       if ($status === "error") {
-        return theme.color.red;
+        return "#f00000";
       }
 
-      return theme.color.inputBorder;
+      return "#222";
     }};
 
-  border-radius: 12px;
+  color: ${theme.color.inputText};
+  font-size: ${theme.fontSize.sm};
+  border-radius: 0;
 
-  appearance: none;
-
-  background-size: 16px 16px;
-  background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='M1 1L7 7L13 1' stroke='%2322252A' /%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position-x: calc(100% - 16px);
-  background-position-y: 50%;
+  :disabled {
+    color: #dadada;
+    background-color: #fafafa;
+    cursor: not-allowed;
+  }
 `;

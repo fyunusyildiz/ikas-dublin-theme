@@ -1,24 +1,18 @@
-import React, { useState } from "react";
+import { AddressFormItem, IkasAddressForm } from "@ikas/storefront";
 import { observer } from "mobx-react-lite";
-import {
-  IkasAddressForm,
-  useTranslation,
-  AddressFormItem,
-} from "@ikas/storefront";
+import React, { useState } from "react";
 
 import Button from "src/components/components/button";
-import Input from "src/components/components/input";
-import Select from "src/components/components/select";
+import { Loading as LoadingSVG } from "src/components/components/button/index";
 import Form from "src/components/components/form";
 import FormItem, {
   FormItemStatus,
 } from "src/components/components/form/form-item";
-import Row from "src/components/components/grid/row";
 import Col, { ColumnProps } from "src/components/components/grid/col";
+import Row from "src/components/components/grid/row";
+import Input from "src/components/components/input";
+import Select from "src/components/components/select";
 import Loading from "../../components/loading";
-import { Loading as LoadingSVG } from "src/components/components/button/index";
-
-import { NS } from "src/components/account";
 
 type Props = {
   addressForm: IkasAddressForm;
@@ -26,7 +20,6 @@ type Props = {
 };
 
 const NewAddress = ({ addressForm, ...props }: Props) => {
-  const { t } = useTranslation();
   const [isPending, setPending] = useState(false);
 
   const onSubmit = async () => {
@@ -43,7 +36,6 @@ const NewAddress = ({ addressForm, ...props }: Props) => {
     );
   }
 
-  const titleLabel = `* Adres Başlığı`;
   const titleStatus = addressForm.validationResult?.title.hasError
     ? "error"
     : undefined;
@@ -51,22 +43,19 @@ const NewAddress = ({ addressForm, ...props }: Props) => {
   const renderFormItem = (item: AddressFormItem) => {
     const required = !!(addressForm?.fieldSettings || {})[item]?.required;
 
-    const placeholder =
-      (addressForm?.fieldLabels || {})[item]?.placeholder ||
-      t(`${NS}:address.form.placeholder.${item}`);
-
     const status: FormItemStatus | undefined =
       ((addressForm?.validationResult as any) || {})[item]?.hasError
         ? "error"
         : undefined;
 
     let children: React.ReactNode;
+
     switch (item) {
       case AddressFormItem.ADDRESS_LINE_1: {
         children = (
           <Input
             required={required}
-            placeholder={placeholder}
+            placeholder={"Adres Satırı 1"}
             status={status}
             value={addressForm.address.addressLine1 || ""}
             onChange={(event) =>
@@ -80,7 +69,7 @@ const NewAddress = ({ addressForm, ...props }: Props) => {
         children = (
           <Input
             required={required}
-            placeholder={placeholder}
+            placeholder={"Adres Satırı 2"}
             status={status}
             value={addressForm.address.addressLine2 || ""}
             onChange={(event) =>
@@ -96,7 +85,7 @@ const NewAddress = ({ addressForm, ...props }: Props) => {
             {addressForm.isFreeTextCity && (
               <Input
                 required={required}
-                placeholder={placeholder}
+                placeholder={"Şehir"}
                 status={status}
                 value={addressForm.address.city?.name || ""}
                 onChange={(event) =>
@@ -107,7 +96,7 @@ const NewAddress = ({ addressForm, ...props }: Props) => {
             {!addressForm.isFreeTextCity && (
               <Select
                 required={required}
-                placeholder={placeholder}
+                placeholder={"Şehir"}
                 disabled={addressForm.isCitiesPending}
                 status={status}
                 value={addressForm.address.city?.id || ""}
@@ -123,7 +112,7 @@ const NewAddress = ({ addressForm, ...props }: Props) => {
         children = (
           <Select
             required={required}
-            placeholder={placeholder}
+            placeholder={"Ülke"}
             disabled={addressForm.isCountriesPending}
             status={status}
             value={addressForm.address.country?.id || ""}
@@ -139,7 +128,7 @@ const NewAddress = ({ addressForm, ...props }: Props) => {
             {addressForm.isFreeTextDistrict && (
               <Input
                 required={required}
-                placeholder={placeholder}
+                placeholder={"İlçe"}
                 status={status}
                 value={addressForm.address.district?.name || ""}
                 onChange={(event) =>
@@ -151,7 +140,7 @@ const NewAddress = ({ addressForm, ...props }: Props) => {
               <Select
                 required={required}
                 status={status}
-                placeholder={placeholder}
+                placeholder={"İlçe"}
                 disabled={addressForm.isDistrictsPending}
                 value={addressForm.address.district?.id || ""}
                 options={addressForm.districtOptions}
@@ -168,7 +157,7 @@ const NewAddress = ({ addressForm, ...props }: Props) => {
         children = (
           <Input
             required={required}
-            placeholder={placeholder}
+            placeholder={"Ad"}
             status={status}
             value={addressForm.address.firstName || ""}
             onChange={(event) =>
@@ -182,7 +171,7 @@ const NewAddress = ({ addressForm, ...props }: Props) => {
         children = (
           <Input
             required={required}
-            placeholder={placeholder}
+            placeholder={"Soyad"}
             status={status}
             value={addressForm.address.lastName || ""}
             onChange={(event) =>
@@ -196,7 +185,7 @@ const NewAddress = ({ addressForm, ...props }: Props) => {
         children = (
           <Input
             required={required}
-            placeholder={placeholder}
+            placeholder={"Telefon"}
             status={status}
             value={addressForm.address.phone || ""}
             onChange={(event) => addressForm.onPhoneChange(event.target.value)}
@@ -210,7 +199,7 @@ const NewAddress = ({ addressForm, ...props }: Props) => {
           <Input
             required={required}
             status={status}
-            placeholder={placeholder}
+            placeholder={"Posta Kodu"}
             value={addressForm.address.postalCode || ""}
             onChange={(event) =>
               addressForm.onAddressPostalCodeChange(event.target.value)
@@ -223,7 +212,7 @@ const NewAddress = ({ addressForm, ...props }: Props) => {
         children = (
           <Select
             required={required}
-            placeholder={placeholder}
+            placeholder={"İl"}
             disabled={addressForm.isStatesPending}
             status={status}
             value={addressForm.address.state?.id || ""}
@@ -235,17 +224,10 @@ const NewAddress = ({ addressForm, ...props }: Props) => {
       }
     }
 
-    const formItemLabel =
-      (addressForm.fieldLabels || {})[item]?.label ||
-      t(`${NS}:address.form.${item}`);
     const formItemHelp = ((addressForm?.validationResult as any) || {})[item]
       ?.message;
     return (
-      <FormItem
-        label={(required ? "*" : "") + formItemLabel}
-        help={formItemHelp}
-        status={status}
-      >
+      <FormItem help={formItemHelp} status={status}>
         {children}
       </FormItem>
     );
@@ -272,13 +254,12 @@ const NewAddress = ({ addressForm, ...props }: Props) => {
   return (
     <Form onSubmit={onSubmit}>
       <FormItem
-        label={titleLabel}
         help={addressForm.validationResult?.title.message}
         status={titleStatus}
       >
         <Input
           required
-          placeholder={t(`${NS}:address.form.placeholder.title`)}
+          placeholder={"Adres Başlığı"}
           status={titleStatus}
           value={addressForm.address.title || ""}
           onChange={(event) => addressForm.onTitleChange(event.target.value)}
@@ -286,8 +267,8 @@ const NewAddress = ({ addressForm, ...props }: Props) => {
       </FormItem>
       {addressForm.addressFormat?.map(renderFormRow)}
       <div>
-        <Button loading={isPending} onClick={onSubmit}>
-          {t(`${NS}:address.save`)}
+        <Button loading={isPending} onClick={onSubmit} type="submit" size="large" block>
+          Kaydet
         </Button>
       </div>
     </Form>
