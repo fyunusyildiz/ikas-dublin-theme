@@ -15,11 +15,10 @@ import breakpoints, { point } from "src/styles/breakpoints";
 
 export const ProductAttributes = observer(({ product }: ProductDetailProps) => {
   if (!product.selectedVariant.attributes) return null;
-  const filteredAttributes = product.selectedVariant.attributes.filter(
+  const filteredAttributes = product.attributes.filter(
     (attribute) => attribute.productAttribute?.name !== "Storybox"
   );
 
-  console.log(filteredAttributes);
   return (
     <div className="w-full">
       {filteredAttributes.map((attribute, index) => (
