@@ -33,7 +33,7 @@ const Detail = (props: ProductDetailProps) => {
         <Price {...props} />
       </div>
       <p
-        className="w-full mt-6 xs:mt-4 text-xs xs:text-2xs text-black"
+        className="w-full font-light mt-6 xs:mt-4 text-xs xs:text-2xs text-black"
         dangerouslySetInnerHTML={{
           __html: storyboxAttr?.value || "",
         }}
