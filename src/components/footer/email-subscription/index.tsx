@@ -3,7 +3,6 @@ import { observer } from "mobx-react-lite";
 import Button from "src/components/components/button";
 import Form from "src/components/components/form";
 import FormItem from "src/components/components/form/form-item";
-import GoogleCaptcha from "src/components/components/google-captcha";
 import Input from "src/components/components/input";
 import Modal from "src/components/components/modal";
 import useEmailSubscription from "./useEmailSubscription";
@@ -13,6 +12,7 @@ import { FooterProps } from "src/components/__generated__/types";
 const EmailSubscription = ({
   newsletterTitle,
   newsletterText,
+  newsletterButtonText,
 }: FooterProps) => {
   const {
     pending,
@@ -39,7 +39,7 @@ const EmailSubscription = ({
           />
         </FormItem>
         <Button block type="submit" size="middle" disabled={!email || pending}>
-          {pending ? "Loading..." : "Subscribe"}
+          {pending ? "Lütfen Bekleyin..." : newsletterButtonText}
         </Button>
       </Form>
       <Modal visible={isModalVisible} onClose={onModalClose}>

@@ -14,7 +14,7 @@
       "componentJson": null,
       "props": [
         {
-          "id": "d5ed68d3-e2de-4438-a747-33db22e5eac0",
+          "id": "87718a3d-b494-411e-a27c-d903bffa8d45",
           "name": "logo",
           "displayName": "",
           "description": "",
@@ -27,7 +27,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "1b64edcc-58ef-4547-acc8-e5b32c48c415",
+          "id": "63d3fff8-eb92-4db6-ad7a-5e7953e69f65",
           "name": "showTax",
           "displayName": "",
           "description": "",
@@ -40,7 +40,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "579b8ce5-6111-4077-b866-be3d8d8cf272",
+          "id": "aab44aee-19c3-41ef-94dc-30f79c7df617",
           "name": "showCampaignOffersDesign",
           "displayName": "",
           "description": "",
@@ -53,7 +53,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "e4a86ecb-53be-406c-9e8d-2a8adf91ef40",
+          "id": "5fa09424-6b10-4b53-b69e-6de51c2b9701",
           "name": "campaignOfferIsSmallDesign",
           "displayName": "",
           "description": "",
@@ -66,7 +66,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "ec088b01-20cd-41a9-b9da-35706a523e15",
+          "id": "93ec5186-4144-4de4-81a6-49df7903e6da",
           "name": "showCampaignIsBiggerImage",
           "displayName": "",
           "description": "",
@@ -79,7 +79,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "79e0153f-04b7-4bec-a44e-7700c051c372",
+          "id": "e41871e2-bd82-4096-9bcf-442bc1f33d4b",
           "name": "campaignOffersTitleColor",
           "displayName": "",
           "description": "",
@@ -92,7 +92,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "5d8a0a8c-1bd5-4312-bb32-db8f7a15a6ec",
+          "id": "53fa7d0a-9133-4ac5-8c5b-c61b700e8eb3",
           "name": "campaignOffersDescriptionColor",
           "displayName": "",
           "description": "",
@@ -105,7 +105,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "9bb235a0-ba9e-4dd7-ac68-7021dcfec8fe",
+          "id": "dd52170f-55c9-4d88-bb17-95342ba7510f",
           "name": "campaignOffersContainerBgColor",
           "displayName": "",
           "description": "",
@@ -118,7 +118,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "7db7ad67-2a26-45e1-89c5-4d2555769db0",
+          "id": "71ded97a-3e5a-4a57-94d8-f2de80291d82",
           "name": "showCampaignShowDiscountSettings",
           "displayName": "",
           "description": "",
@@ -131,7 +131,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "49d33be1-dde1-407f-9d86-21b68aa97776",
+          "id": "b8725a52-e6ce-47e0-85ad-66e0bc53916d",
           "name": "showCampaignHideDiscountBadge",
           "displayName": "",
           "description": "",
@@ -144,7 +144,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "570b4139-309c-4d93-b633-e5c7a41fd919",
+          "id": "4d9abdcf-d85c-4d69-983d-6235949a182c",
           "name": "campaignOffersDiscountPercentageColor",
           "displayName": "",
           "description": "",
@@ -157,7 +157,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "8f308760-b39f-4269-be38-cc6b4d609e99",
+          "id": "47e6468f-33f1-40e0-a34f-66d4d3773bd9",
           "name": "campaignOffersDiscountPercentageBgColor",
           "displayName": "",
           "description": "",
@@ -170,7 +170,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "86e7c5ae-d527-4073-ae0b-f8522ea6c467",
+          "id": "1f40d818-e5fe-4b8e-9fbc-0d504aeb0ca3",
           "name": "showCampaignShowCountdownSettings",
           "displayName": "",
           "description": "",
@@ -183,7 +183,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "80b1f625-8960-4be0-9126-f2cf5122e44b",
+          "id": "0c79f472-bbf4-4d60-ab2f-3a7c7cadd05c",
           "name": "campaignOfferCountdownStyleIsLine",
           "displayName": "",
           "description": "",
@@ -196,7 +196,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "5bfd0e63-2a43-4837-8c1b-9dc11bb8fdac",
+          "id": "88b54afe-df16-4228-9238-114ec2ea2ec3",
           "name": "campaignOffersCountdownTextColor",
           "displayName": "",
           "description": "",
@@ -209,7 +209,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "fd18a1d7-8d30-4a72-b3fa-5f6bc838c6ff",
+          "id": "3e08de73-4ebb-43af-83a2-e106de945bc9",
           "name": "campaignOffersCountdownTimeColor",
           "displayName": "",
           "description": "",
@@ -222,7 +222,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "a3f34fd5-0801-46e2-a24e-10c2b2978537",
+          "id": "f834f28b-4c6b-4150-961c-0b51f79a5b61",
           "name": "campaignOffersCountdownBgColor",
           "displayName": "",
           "description": "",
@@ -235,7 +235,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "d3a057a3-09a1-4039-8d7d-da4b77d34567",
+          "id": "c7b7209d-ddda-44b4-803d-cdad776c9dd6",
           "name": "campaignOffersEnableMiddlePhase",
           "displayName": "",
           "description": "",
@@ -248,7 +248,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "58e94c57-3367-489e-903d-388580fd73a4",
+          "id": "ce47ab86-a8ee-4b70-95d2-b56aa260436a",
           "name": "campaignOffersMiddlePhaseOverlayColor",
           "displayName": "",
           "description": "",
@@ -261,7 +261,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "abeb407a-2087-4eee-bd24-e136275c83fa",
+          "id": "cbaec9c7-2ad3-477f-a4d0-698eceaf1f14",
           "name": "campaignOfferCountdownStyleIsLineSuccessPage",
           "displayName": "",
           "description": "",
@@ -274,7 +274,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "41d17147-5287-44ce-8565-c429eb44efb3",
+          "id": "44f5b0e6-4f38-4835-9e7f-6bdcb2024fef",
           "name": "buttonBgColor",
           "displayName": "",
           "description": "",
@@ -287,7 +287,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "bf6bbc22-38ac-4554-86bc-52921701b2cc",
+          "id": "ce4dcbbc-818b-4c12-819a-951048ca7247",
           "name": "buttonTextColor",
           "displayName": "",
           "description": "",
@@ -300,7 +300,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "c78733bb-65df-4362-b11a-0d24b090b79b",
+          "id": "58141d46-20f1-4adf-8fa2-b9fd50b7bf09",
           "name": "buttonDisabledBgColor",
           "displayName": "",
           "description": "",
@@ -313,7 +313,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "97b13b47-3bff-427f-a4e1-bfa645b6005c",
+          "id": "6404073a-77ee-4906-b2a1-0787646375fb",
           "name": "buttonDisabledTextColor",
           "displayName": "",
           "description": "",
@@ -326,7 +326,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "50accee1-0c4f-4a0c-bbc2-167ee3a152d3",
+          "id": "b07de6b5-b8b0-4e61-975b-fb17decf08fa",
           "name": "primaryTextColor",
           "displayName": "",
           "description": "",
@@ -339,7 +339,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "f47949d6-5100-42f6-9dc4-4a3cd5eb84a8",
+          "id": "a94f0c0a-3e36-47a9-9eb5-38654160b70f",
           "name": "secondaryTextColor",
           "displayName": "",
           "description": "",
@@ -352,7 +352,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "dd36ca5b-3fa4-4f5c-8cdd-32a1f10fc03f",
+          "id": "975686c5-975d-44c4-8fb0-252fb10a9d8b",
           "name": "primaryBgColor",
           "displayName": "",
           "description": "",
@@ -365,7 +365,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "a9303d2e-b898-4811-b8df-50ed9fdf5d78",
+          "id": "222fcc76-8cb0-44ec-ae73-fc68c4858945",
           "name": "secondaryBgColor",
           "displayName": "",
           "description": "",
@@ -378,7 +378,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "98b39b4d-bb41-45d4-912e-7d074f7d582c",
+          "id": "ba053ec4-0cff-4262-9b6c-9d8598fb1970",
           "name": "borderColor",
           "displayName": "",
           "description": "",
@@ -391,7 +391,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "8e366971-7502-4ce7-9dcd-b9118a76dd90",
+          "id": "c0eb43bb-75d9-4c30-83e4-9159569bc34a",
           "name": "cardBgColor",
           "displayName": "",
           "description": "",
@@ -404,7 +404,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "33f81f93-f1e2-4cb0-83ce-7d9873b60baf",
+          "id": "9a934b2b-4772-4bd0-84bf-e74223632e52",
           "name": "errorColor",
           "displayName": "",
           "description": "",
@@ -417,7 +417,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "b045906e-2a28-4455-bad9-f827b97fd40c",
+          "id": "de8db776-9caf-4ee7-9cad-db4255a4d617",
           "name": "errorLightColor",
           "displayName": "",
           "description": "",
@@ -430,7 +430,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "a71c15fb-b9b7-4440-bc1c-90980ff5e991",
+          "id": "c5acc665-55b5-44d8-b404-33dc57de6374",
           "name": "warningColor",
           "displayName": "",
           "description": "",
@@ -443,7 +443,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "2bf29e30-7f18-4787-81d9-0b03803999f7",
+          "id": "30ae1ce7-7588-4eef-97f5-9324f2607bf6",
           "name": "warningLightColor",
           "displayName": "",
           "description": "",
@@ -456,7 +456,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "9046d2c4-03cb-4d49-af46-89b6c588bbb0",
+          "id": "6d12a557-a122-4071-bd6c-ad3b2052a672",
           "name": "successColor",
           "displayName": "",
           "description": "",
@@ -469,7 +469,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "84af2e23-c151-4c04-9159-05e3131a4e4f",
+          "id": "3478fb05-96f7-49ef-a9d6-7c33987b0ed6",
           "name": "successLightColor",
           "displayName": "",
           "description": "",
@@ -482,7 +482,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "9a9cd62d-8259-4bcf-a7fd-0c80fcf4acef",
+          "id": "555a4735-3c54-4cd7-a495-1ed0415dfe30",
           "name": "secondaryButtonBgColor",
           "displayName": "",
           "description": "",
@@ -495,7 +495,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "26139e3e-8129-4e11-9309-c85b75d556e4",
+          "id": "d4a6cd35-c6b7-4228-964d-e24fe4f19459",
           "name": "secondaryButtonTextColor",
           "displayName": "",
           "description": "",
@@ -508,7 +508,7 @@
           "excludedFieldsCategory": []
         },
         {
-          "id": "9583025e-e9ed-48d1-83db-258b5476dd3c",
+          "id": "01d4998e-6d5e-40af-a80d-1e3aba9dc842",
           "name": "secondaryButtonBorderColor",
           "displayName": "",
           "description": "",
@@ -2716,6 +2716,19 @@
           "excludedFieldsCategory": []
         },
         {
+          "id": "84a18cd1-691e-4d3f-ba5d-e99bf72da96e",
+          "name": "newsletterButtonText",
+          "displayName": "Newsletter Buton Metni",
+          "description": "",
+          "type": "TEXT",
+          "isRequired": true,
+          "sliderData": {},
+          "translations": {},
+          "groupId": "2e4e4384-7bca-4a19-85c1-7bbd48e624b8",
+          "excludedFields": [],
+          "excludedFieldsCategory": []
+        },
+        {
           "id": "db0b79b9-c28e-41c2-82b3-047a8a7fb955",
           "name": "informationBlockTitle",
           "displayName": "Bilgi Linkleri Başlık",
@@ -2846,7 +2859,9 @@
             "pageComponentId": null,
             "subLinks": []
           }
-        ]
+        ],
+        "newsletterText": "Kampanyalardan haberdar olun!",
+        "newsletterButtonText": "Abone Ol"
       },
       "commonPropValues": null
     },
@@ -4895,7 +4910,8 @@
                 "pageComponentId": null,
                 "subLinks": []
               }
-            ]
+            ],
+            "newsletterButtonText": "Abone Ol"
           }
         }
       ],
@@ -5369,7 +5385,8 @@
                 "pageComponentId": null,
                 "subLinks": []
               }
-            ]
+            ],
+            "newsletterButtonText": "Abone Ol"
           }
         }
       ],
@@ -5890,7 +5907,8 @@
                 "pageComponentId": null,
                 "subLinks": []
               }
-            ]
+            ],
+            "newsletterButtonText": "Abone Ol"
           }
         }
       ],
@@ -6360,7 +6378,8 @@
                 "pageComponentId": null,
                 "subLinks": []
               }
-            ]
+            ],
+            "newsletterButtonText": "Abone Ol"
           }
         }
       ],
@@ -6822,7 +6841,8 @@
                 "pageComponentId": null,
                 "subLinks": []
               }
-            ]
+            ],
+            "newsletterButtonText": "Abone Ol"
           }
         },
         {
@@ -7325,7 +7345,8 @@
                 "pageComponentId": null,
                 "subLinks": []
               }
-            ]
+            ],
+            "newsletterButtonText": "Abone Ol"
           }
         },
         {
@@ -7792,7 +7813,8 @@
                 "pageComponentId": null,
                 "subLinks": []
               }
-            ]
+            ],
+            "newsletterButtonText": "Abone Ol"
           }
         },
         {
@@ -8262,7 +8284,8 @@
                 "pageComponentId": null,
                 "subLinks": []
               }
-            ]
+            ],
+            "newsletterButtonText": "Abone Ol"
           }
         },
         {
@@ -8729,7 +8752,8 @@
                 "pageComponentId": null,
                 "subLinks": []
               }
-            ]
+            ],
+            "newsletterButtonText": "Abone Ol"
           }
         },
         {
@@ -9196,7 +9220,8 @@
                 "pageComponentId": null,
                 "subLinks": []
               }
-            ]
+            ],
+            "newsletterButtonText": "Abone Ol"
           }
         },
         {
@@ -9663,7 +9688,8 @@
                 "pageComponentId": null,
                 "subLinks": []
               }
-            ]
+            ],
+            "newsletterButtonText": "Abone Ol"
           }
         },
         {
@@ -10130,7 +10156,8 @@
                 "pageComponentId": null,
                 "subLinks": []
               }
-            ]
+            ],
+            "newsletterButtonText": "Abone Ol"
           }
         },
         {
@@ -10597,7 +10624,8 @@
                 "pageComponentId": null,
                 "subLinks": []
               }
-            ]
+            ],
+            "newsletterButtonText": "Abone Ol"
           }
         },
         {
@@ -11064,7 +11092,8 @@
                 "pageComponentId": null,
                 "subLinks": []
               }
-            ]
+            ],
+            "newsletterButtonText": "Abone Ol"
           }
         },
         {
@@ -11545,7 +11574,8 @@
                 "pageComponentId": null,
                 "subLinks": []
               }
-            ]
+            ],
+            "newsletterButtonText": "Abone Ol"
           }
         },
         {
@@ -12030,7 +12060,8 @@
                 "pageComponentId": null,
                 "subLinks": []
               }
-            ]
+            ],
+            "newsletterButtonText": "Abone Ol"
           }
         },
         {
@@ -12533,7 +12564,8 @@
                 "pageComponentId": null,
                 "subLinks": []
               }
-            ]
+            ],
+            "newsletterButtonText": "Abone Ol"
           }
         }
       ],

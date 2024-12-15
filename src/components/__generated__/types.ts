@@ -208,6 +208,7 @@ export type FooterProps = {
 	brandText: string;
 	newsletterTitle: string;
 	newsletterText: string;
+	newsletterButtonText: string;
 	informationBlockTitle: string;
 	informationLinks: IkasNavigationLink[];
 	socialMediaTitle: string;

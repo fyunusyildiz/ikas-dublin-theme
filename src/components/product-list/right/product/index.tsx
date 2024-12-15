@@ -130,7 +130,7 @@ const DiscountBadge = observer(({ product }: Props) => {
 
 const Price = observer(({ product }: Props) => {
   return (
-    <div className="flex flex-col items-end min-w-[75px] xs:min-w-[unset] xs:flex-row xs:gap-2">
+    <div className="flex flex-col items-end min-w-[75px] xs:min-w-[unset] xs:flex-row gap-2">
       {product.selectedVariant.price.hasDiscount && (
         <span className="text-2xs xs:text-[12px] line-through">
           {product.selectedVariant.price.formattedSellPrice}

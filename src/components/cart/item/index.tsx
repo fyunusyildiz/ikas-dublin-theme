@@ -105,7 +105,7 @@ const ItemQuantityColumn = observer(
 
 const ItemPriceColumn = observer(({ item }: { item: IkasOrderLineItem }) => {
   return (
-    <div className="xs:w-full min-w-[100px] flex">
+    <div className="xs:w-full min-w-[100px] flex gap-2">
       {item.discountPrice !== null && (
         <div className="text-base line-through">
           {item.formattedPriceWithQuantity}
