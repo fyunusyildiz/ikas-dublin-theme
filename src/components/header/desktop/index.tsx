@@ -27,6 +27,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import { NextArrow, PrevArrow } from "src/components/product-detail/slider";
+import ProductList from "src/components/product-list";
 
 const DesktopHeader = (props: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -308,21 +309,10 @@ export const SearchInput = observer((props: HeaderProps) => {
             KAPAT
           </button>
         </div>
-        <div className="block w-full h-[22px] bg-[#D9D9D9] border-y border-solid border-[#222]">
-        </div>
+        <div className="block w-full h-[22px] bg-[#D9D9D9] border-y border-solid border-[#222]"></div>
         <div className="w-full flex flex-1 overflow-y-scroll flex-wrap bg-[#D9D9D9]">
-          <div className="flex flex-wrap h-full w-full">
-            {props.searchProducts?.data.map((product, index) => (
-              <Link href={product.href} key={index} passHref>
-                <a className="w-1/2 h-[250px] outline outline-1">
-                  <img
-                    src={product.selectedVariant.mainImage?.image?.src}
-                    alt={product.name}
-                    className="w-full h-full object-cover object-center"
-                  />
-                </a>
-              </Link>
-            ))}
+          <div className="w-full">
+              <ProductList isSearchModal source="search" productList={props.searchProducts} NS="" />
           </div>
         </div>
       </div>
@@ -671,9 +661,15 @@ export const CartDrawer = observer((props: CartDrawerProps) => {
             <div className="w-full p-10 sm:p-6 flex flex-col gap-16 header-sm:gap-6">
               <Items />
               <div className="w-full flex flex-col gap-3">
-                <h2 className="text-base header-sm:text-sm">{props.suggestedProductsTitle}</h2>
-                <Slider {...settings} className="border border-solid border-[#222] border-r-2 header-sm:border-none">
-                  {props.suggestedProductsList?.filter((product) => product.selectedVariant.hasStock)
+                <h2 className="text-base header-sm:text-sm">
+                  {props.suggestedProductsTitle}
+                </h2>
+                <Slider
+                  {...settings}
+                  className="border border-solid border-[#222] border-r-2 header-sm:border-none"
+                >
+                  {props.suggestedProductsList
+                    ?.filter((product) => product.selectedVariant.hasStock)
                     .map((product) => (
                       <Product
                         key={product.selectedVariant.id}

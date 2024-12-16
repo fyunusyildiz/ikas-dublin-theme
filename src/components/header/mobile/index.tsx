@@ -20,6 +20,7 @@ import ArrowRight from "./svg/arrow-right";
 import IOCloseSVG from "./svg/io-close";
 import IOMenuSVG from "./svg/io-menu";
 import Search from "./svg/search";
+import ProductList from "src/components/product-list";
 
 const MobileHeader = (props: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -373,21 +374,15 @@ export const SearchInput = observer((props: HeaderProps) => {
             KAPAT
           </button>
         </div>
-        <div className="block w-full h-[15px] bg-[#D9D9D9] border-y border-solid border-[#222]">
-        </div>
+        <div className="block w-full h-[15px] bg-[#D9D9D9] border-y border-solid border-[#222]"></div>
         <div className="w-full flex flex-1 overflow-y-scroll flex-wrap bg-[#D9D9D9]">
-          <div className="flex flex-wrap h-full w-full">
-            {props.searchProducts?.data.map((product, index) => (
-              <Link href={product.href} key={index} passHref>
-                <a className="w-1/2 outline outline-1">
-                  <img
-                    src={product.selectedVariant.mainImage?.image?.src}
-                    alt={product.name}
-                    className="w-full h-full object-cover object-center"
-                  />
-                </a>
-              </Link>
-            ))}
+          <div className="w-full">
+            <ProductList
+              isSearchModal
+              source="search"
+              productList={props.searchProducts}
+              NS=""
+            />
           </div>
         </div>
       </div>

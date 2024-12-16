@@ -20,7 +20,7 @@ export const ProductAttributes = observer(({ product }: ProductDetailProps) => {
   );
 
   return (
-    <div className="w-full font-light">
+    <div className="w-full font-light mt-4">
       {filteredAttributes.map((attribute, index) => (
         <AttributeValue key={index} attribute={attribute} />
       ))}

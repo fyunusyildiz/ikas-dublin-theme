@@ -12,13 +12,14 @@ export type ProductListProps = {
   category?: IkasCategory;
   brand?: IkasBrand;
   productList: IkasProductList;
+  isSearchModal?: boolean;
 };
 
 function ProductList(props: ProductListProps) {
   useProductList(props.productList);
 
   return (
-    <S.ProductList>
+    <S.ProductList className={`${props.isSearchModal ? "!mb-0" : ""}`}>
       <div className="w-full">
         <div className="w-full flex flex-col">
           <Right {...props} />

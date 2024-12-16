@@ -10,6 +10,7 @@ import * as S from "./style";
 type Props = {
   product: IkasProduct;
   className?: string;
+  isSearchModal?: boolean;
 };
 
 const Product = (props: Props) => {
@@ -24,7 +25,9 @@ const Product = (props: Props) => {
   return (
     <>
       <li
-        className={`w-1/4 md:w-1/3 sm:w-1/2 relative border border-[#222222d2] group ${props.className}`}
+        className={`w-1/4 md:w-1/3 sm:w-1/2 relative border border-[#222222d2] group ${
+          props.className
+        } ${props.isSearchModal ? "!w-full border-t-0 border-r border-l-0" : ""}`}
       >
         <Link passHref href={product.href}>
           <a title={a11yTitle}>
@@ -52,7 +55,7 @@ const Product = (props: Props) => {
                 </button>
               )}
             </S.ImageWrapper>
-            <div className="w-full flex flex-wrap justify-between px-2 py-2 xs:gap-y-0 xs:flex-col overflow-hidden">
+            <div className="w-full flex flex-wrap justify-between px-2 py-2 xs:gap-y-0 xs:flex-col overflow-hidden bg-white">
               <ProductTitle {...props} />
               <Price {...props} />
             </div>

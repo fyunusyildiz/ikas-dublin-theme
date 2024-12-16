@@ -15,7 +15,11 @@ const Collapse = (props: CollapseProps) => {
   };
 
   return (
-    <details className={`${props.className} border-b border-solid border-[#222]`}>
+    <details
+      className={`${props.className} border-b border-solid border-[#222] ${
+        active ? "pb-4" : ""
+      }`}
+    >
       <summary
         aria-expanded={active}
         className="w-full flex items-center justify-between py-3 md:py-2 cursor-pointer text-sm xs:text-xs leading-8 text-[#222]"

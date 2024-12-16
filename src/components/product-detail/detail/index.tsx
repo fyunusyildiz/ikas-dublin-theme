@@ -27,7 +27,7 @@ const Detail = (props: ProductDetailProps) => {
     }
   }, [props.product.attributes]);
   return (
-    <div className="sticky mt-5 sm:mt-0 col-span-6 max-h-screen sm:h-fit pr-[30px] sm:top-0 top-24 md:top-16 overflow-x-hidden sm:px-5 xs:px-3">
+    <div className="sticky mt-5 sm:mt-0 col-span-6 h-[calc(100vh-134px)] no-scrollbar overflow-y-auto sm:h-fit pr-[30px] sm:top-0 top-24 md:top-16 overflow-x-hidden sm:px-5 xs:px-3">
       <div className="w-full flex items-center gap-10 xs:gap-10 sm:border-b sm:border-solid sm:border-[#828282] sm:py-3">
         <Title {...props} />
         <Price {...props} />

@@ -5,17 +5,20 @@ import { Header } from "./header";
 import Pagination from "./pagination";
 import Product from "./product";
 
-
-const Right = ({ productList }: ProductListProps) => {
+const Right = ({ productList, isSearchModal }: ProductListProps) => {
   return (
     <div className="w-full">
-      <Header productList={productList} />
-      <ul className="w-full flex flex-wrap">
+      {!isSearchModal && <Header productList={productList} />}
+      <ul className={`w-full flex flex-wrap ${isSearchModal ? "grid grid-cols-2" : ""}`}>
         {productList.data.map((product) => (
-          <Product key={product.selectedVariant.id} product={product} />
+          <Product
+            key={product.selectedVariant.id}
+            product={product}
+            isSearchModal={isSearchModal}
+          />
         ))}
       </ul>
-      <Pagination productList={productList} />
+      {!isSearchModal && <Pagination productList={productList} />}
     </div>
   );
 };

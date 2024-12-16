@@ -10,13 +10,13 @@ export const NS = "product-detail"; // for translation (i18n)
 const ProductDetail = (props: ProductDetailProps) => {
   return (
     <section className="w-full">
-      <div className="w-full px-5 py-2 xs:pt-1 bg-[#D9D9D9] border-y border-solid border-b-black leading-none">
+      <div className="w-full px-5 py-2 xs:pt-1 bg-[#D9D9D9] border-b border-solid border-b-black leading-none">
         {props.product?.categories?.map((category) => (
           <Link key={category.id} passHref href={category.href}>
-            <a className="text-[#222] text-2xs xs:text-[10px] uppercase underline">{category.name} {"--> "}</a>
+            <a className="text-[#222] text-2xs xs:text-[10px] uppercase">{category.name} {"--> "}</a>
           </Link>
         ))}
-        <span className="text-[#222] text-2xs xs:text-[10px] uppercase underline">
+        <span className="text-[#222] text-2xs xs:text-[10px] uppercase">
           {props.product?.name}
         </span>
       </div>
