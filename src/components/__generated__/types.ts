@@ -324,3 +324,11 @@ export type ProductSliderProps = {
 	sliderProducts: IkasProductList;
 };
 
+export type AccordionProps = {
+	defaultActive?: boolean;
+	header: string;
+	children: string;
+	isCentered?: boolean;
+	width?: IkasSlider;
+};
+
