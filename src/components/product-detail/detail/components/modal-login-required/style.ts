@@ -1,8 +1,8 @@
-import { Link } from "@ikas/storefront";
+import { theme } from "src/styles/styled";
 import styled from "styled-components";
 
 export const Text = styled.p`
-  color: ${({ theme }) => theme.color.secondaryText};
+  color: #222;
   margin-bottom: 30px;
 `;
 

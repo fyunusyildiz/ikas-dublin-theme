@@ -48,7 +48,7 @@ const Modal = ({ visible, title, children, onClose }: Props) => {
           <Close />
         </button>
         <div aria-label="modal-content">
-          <div className="mb-5 font-bold" aria-label="modal-title">
+          <div className="mb-2 font-bold" aria-label="modal-title">
             {title}
           </div>
           <div>{children}</div>

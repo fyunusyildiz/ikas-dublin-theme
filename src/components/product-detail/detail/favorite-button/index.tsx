@@ -1,17 +1,13 @@
-import { useTranslation } from "@ikas/storefront";
 import { observer } from "mobx-react-lite";
 
 import { ProductDetailProps } from "src/components/__generated__/types";
-import Tooltip from "src/components/components/tooltip";
 import useFavorite from "./useFavorite";
 // import { Loading } from "src/components/components/button";
-import { NS } from "src/components/product-detail";
 import ModalLoginRequired from "../components/modal-login-required";
 
 import FavoriteSVG from "src/components/svg/favorite";
 
 export const FavoriteButton = observer(({ product }: ProductDetailProps) => {
-  const { t } = useTranslation();
   const {
     isProductFavorite,
     showLoginModal,
@@ -22,13 +18,6 @@ export const FavoriteButton = observer(({ product }: ProductDetailProps) => {
     productId: product.id,
   });
 
-  const tooltipText = isProductFavorite
-    ? t(`${NS}:detail.favorite.tooltipText.remove`)
-    : t(`${NS}:detail.favorite.tooltipText.add`);
-
-  const modalLoginText = (key: string) =>
-    t(`${NS}:detail.favorite.loginModal.${key}`);
-
   return (
     <>
       <button
@@ -36,15 +25,20 @@ export const FavoriteButton = observer(({ product }: ProductDetailProps) => {
         disabled={pending}
         onClick={toggleFavorite}
       >
-        {!pending && <FavoriteSVG stroke={"#222"} fill={isProductFavorite ? "#222" : "transparent"} />}
+        {!pending && (
+          <FavoriteSVG
+            stroke={"#222"}
+            fill={isProductFavorite ? "#222" : "transparent"}
+          />
+        )}
       </button>
       <ModalLoginRequired
         isModalVisible={showLoginModal}
-        title={modalLoginText("title")}
-        text={modalLoginText("text")}
-        loginButtonText={modalLoginText("loginButtonText")}
-        noAccountText={modalLoginText("noAccountText")}
-        redirectUrl={product.href}
+        title={"Giriş Yap"}
+        text={"Favorilere eklemek için giriş yapmanız gerekmektedir."}
+        loginButtonText={"Giriş Yap"}
+        noAccountText={"Hesabınız yok mu? Hemen üye olun!"}
+        redirectUrl={product.productHref}
         onClose={closeLoginModal}
       />
     </>

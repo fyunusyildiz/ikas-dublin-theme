@@ -124,29 +124,41 @@ const MainImage = observer((props: MainImageProps) => {
         )}
       </div>
       <div className="w-full hidden h-[80vh] sm:block border-b border-solid border-[#222] relative">
-        <Slider {...settings} className="h-full">
-          {product.selectedVariant.images?.map((image, index) =>
-            !image.isVideo ? (
-              <figure key={index} className="w-full h-[80vh] relative">
-                <Image
-                  key={index}
-                  useBlur
-                  image={image.image!}
-                  layout="fill"
-                  width={width}
-                  height={height}
-                  objectFit="cover"
-                  className="h-full"
-                  sizes="100%"
-                />
-              </figure>
-            ) : (
-              <video key={index} autoPlay loop muted className="h-full">
-                <source src={image.image?.src} type="video/mp4" />
-              </video>
-            )
-          )}
-        </Slider>
+        {product.selectedVariant.images?.length === 1 ? (
+          <Image
+            useBlur
+            image={image}
+            layout="fill"
+            width={width}
+            height={height}
+            objectFit="cover"
+            sizes="100%"
+          />
+        ) : (
+          <Slider {...settings} className="h-full">
+            {product.selectedVariant.images?.map((image, index) =>
+              !image.isVideo ? (
+                <figure key={index} className="w-full h-[80vh] relative">
+                  <Image
+                    key={index}
+                    useBlur
+                    image={image.image!}
+                    layout="fill"
+                    width={width}
+                    height={height}
+                    objectFit="cover"
+                    className="h-full"
+                    sizes="100%"
+                  />
+                </figure>
+              ) : (
+                <video key={index} autoPlay loop muted className="h-full">
+                  <source src={image.image?.src} type="video/mp4" />
+                </video>
+              )
+            )}
+          </Slider>
+        )}
       </div>
     </>
   );

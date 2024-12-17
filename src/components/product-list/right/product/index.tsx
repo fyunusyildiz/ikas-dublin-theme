@@ -49,7 +49,7 @@ const Product = (props: Props) => {
                       setShowNotify(false);
                     }, 2000);
                   }}
-                  className="w-[90%] hover:bg-[#222] hover:text-white absolute opacity-0 group-hover:opacity-100 bottom-5 left-0 right-0 mx-auto py-3 border border-solid border-[#222] flex items-center justify-center md:!hidden"
+                  className="w-[90%] bg-[#222] text-white absolute opacity-0 group-hover:opacity-100 bottom-5 left-0 right-0 mx-auto py-3 border border-solid border-white flex items-center justify-center md:!hidden"
                 >
                   {addToCartText}
                 </button>

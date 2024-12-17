@@ -446,6 +446,7 @@ const RightSide = observer((props: HeaderProps) => {
     window.addEventListener("scroll", () => {
       setIsScrolled(window.scrollY > 20);
     });
+    getFavoriteProducts();
   }, []);
 
   const handleOpenFavoriteDrawer = () => {

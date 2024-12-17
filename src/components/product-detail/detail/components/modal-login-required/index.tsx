@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "@ikas/storefront";
 import { observer } from "mobx-react-lite";
 
@@ -32,14 +31,17 @@ const LoginRequiredModal = ({
           passHref
           href={`/account/login?redirect=${decodeURIComponent(redirectUrl)}`}
         >
-          {/* <Button anchor>{loginButtonText}</Button> */}
+          <a className="bg-[#222] text-white text-xs w-full text-center h-[40px] flex items-center justify-center leading-9">
+            {loginButtonText}
+          </a>
         </Link>
       </S.Login>
       <S.Register>
         <Link
           href={`/account/register?redirect=${decodeURIComponent(redirectUrl)}`}
+          passHref
         >
-          {noAccountText}
+          <a className="underline w-full text-center block">{noAccountText}</a>
         </Link>
       </S.Register>
     </Modal>
