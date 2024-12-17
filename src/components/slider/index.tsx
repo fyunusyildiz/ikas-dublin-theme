@@ -132,7 +132,7 @@ const Slider: React.FC<SliderProps> = ({ slides }) => {
                     <Link href={slide.left_hero.left_button.href} passHref>
                       <a
                         className={
-                          "cursor-pointer px-10 py-[15px] rounded-[35px] text-lg z-[2] md:px-5 md:py-2 md:text-base xs:text-sm"
+                          "cursor-pointer px-10 py-[15px] text-lg z-[2] md:px-5 md:py-2 md:text-base xs:text-sm"
                         }
                         style={leftSlideButtonStyle(slide)}
                       >
@@ -173,7 +173,7 @@ const Slider: React.FC<SliderProps> = ({ slides }) => {
                     <Link href={slide.right_hero.right_button.href} passHref>
                       <a
                         className={
-                          "cursor-pointer px-10 py-[15px] rounded-[35px] text-lg z-[2] md:px-5 md:py-2 md:text-base xs:text-sm"
+                          "cursor-pointer px-10 py-[15px] text-lg z-[2] md:px-5 md:py-2 md:text-base xs:text-sm"
                         }
                         style={rightSlideButtonStyle(slide)}
                       >

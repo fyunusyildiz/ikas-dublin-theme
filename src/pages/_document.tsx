@@ -18,7 +18,7 @@ class MyDocument extends Document {
   render() {
     const favicon = IkasStorefrontConfig.getFavicon();
     return (
-      <Html lang={IkasStorefrontConfig.getCurrentLocale()}>
+      <Html lang={"tr"}>
         <Head>
           {favicon?.id && (
             <link
