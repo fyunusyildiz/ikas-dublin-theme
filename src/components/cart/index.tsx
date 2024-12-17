@@ -88,6 +88,7 @@ type ItemsProps = {
 
 export const Items = observer(({ insidePadding }: ItemsProps) => {
   const store = useStore();
+  console.log(store.cartStore.cart?.items);
   return (
     <ul className={`flex flex-col gap-10 ${insidePadding && "p-10 sm:p-6"}`}>
       {store.cartStore.cart?.items.map((item) => (
@@ -213,7 +214,6 @@ const Coupon = observer(() => {
     ? { paddingRight: `${S.REMOVE_COUPON_BUTTON_WIDTH + 5}px` }
     : undefined;
 
-  console.log(modalVisible);
   return (
     <div className="mb-5 pb-5 border-b border-solid border-[#222]">
       <Form onSubmit={addCoupon} className="w-full flex justify-between gap-3">
