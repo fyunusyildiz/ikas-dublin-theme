@@ -9,6 +9,7 @@ const Title: React.FC<TitleProps> = (props) => {
     marginTopDesktop,
     marginBottomMobile,
     marginTopMobile,
+    titleDescription,
   } = props;
 
   const getMargin = useCallback(() => {
@@ -26,12 +27,18 @@ const Title: React.FC<TitleProps> = (props) => {
     marginBottomMobile,
   ]);
   return (
-    <h1
-      className={`text-3xl font-semibold sm:text-2xl w-full text-center`}
-      style={{ margin: getMargin() }}
-    >
-      {title}
-    </h1>
+    <div style={{ margin: getMargin() }} className="w-full px-4">
+      <h1
+        className="text-3xl md:text-4xl lg:text-5xl font-bold"
+        dangerouslySetInnerHTML={{ __html: title }}
+      />
+      {titleDescription && (
+        <p
+          className="my-4"
+          dangerouslySetInnerHTML={{ __html: titleDescription }}
+        />
+      )}
+    </div>
   );
 };
 

@@ -68,6 +68,7 @@ export type RightFrame = {
 
 export type TitleProps = {
 	title: string;
+	titleDescription?: string;
 	marginTopDesktop: IkasSlider;
 	marginBottomDesktop: IkasSlider;
 	marginTopMobile: IkasSlider;
