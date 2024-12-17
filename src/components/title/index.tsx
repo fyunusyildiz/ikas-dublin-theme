@@ -29,7 +29,7 @@ const Title: React.FC<TitleProps> = (props) => {
   return (
     <div style={{ margin: getMargin() }} className="w-full px-4">
       <h1
-        className="text-3xl md:text-4xl lg:text-5xl font-bold"
+        className="xs:!text-xl sm:!text-2xl !text-3xl font-semibold"
         dangerouslySetInnerHTML={{ __html: title }}
       />
       {titleDescription && (

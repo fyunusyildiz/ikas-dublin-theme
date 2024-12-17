@@ -22,7 +22,7 @@ const Accordion = (props: AccordionProps) => {
 
   return (
     <details
-      className={`border-b border-solid mx-4 border-[#222] ${active ? "pb-4" : ""} ${
+      className={`border-b border-solid mx-4 border-[#222] px-5 ${active ? "pb-4" : ""} ${
         props.isCentered ? "mx-auto" : ""
       }`}
       style={{ width: getWidth() }}

@@ -337,3 +337,7 @@ export type SpaceProps = {
 	marginMobile: IkasSlider;
 };
 
+export type RichTextProps = {
+	richText: string;
+};
+
