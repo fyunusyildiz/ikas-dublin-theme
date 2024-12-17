@@ -332,3 +332,8 @@ export type AccordionProps = {
 	width?: IkasSlider;
 };
 
+export type SpaceProps = {
+	marginDesktop: IkasSlider;
+	marginMobile: IkasSlider;
+};
+
