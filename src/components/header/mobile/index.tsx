@@ -183,6 +183,7 @@ const Sidenav = observer((props: HeaderProps) => {
 const Navigation = (props: HeaderProps) => {
   const [openFavoriteDrawer, setOpenFavoriteDrawer] = useState(false);
   const router = useRouter();
+  const uiStore = UIStore.getInstance();
   const { products, isPending, getFavoriteProducts } = useFavoriteProducts();
   const handleOpenFavoriteDrawer = () => {
     setOpenFavoriteDrawer(!openFavoriteDrawer);
@@ -233,6 +234,7 @@ const Navigation = (props: HeaderProps) => {
                   onClick={() => {
                     router.push("/");
                     setOpenFavoriteDrawer(false);
+                    uiStore.toggleSidenav();
                   }}
                 >
                   Ürünlerimize göz atmak için tıklayınız.
