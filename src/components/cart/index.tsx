@@ -88,7 +88,6 @@ type ItemsProps = {
 
 export const Items = observer(({ insidePadding }: ItemsProps) => {
   const store = useStore();
-  console.log(store.cartStore.cart?.items);
   return (
     <ul className={`flex flex-col gap-10 ${insidePadding && "p-10 sm:p-6"}`}>
       {store.cartStore.cart?.items.map((item) => (

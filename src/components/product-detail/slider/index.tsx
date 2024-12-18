@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { observer } from "mobx-react-lite";
 import { Image } from "@ikas/storefront";
+import { observer } from "mobx-react-lite";
+import React, { useEffect, useState } from "react";
 
-import { ProductDetailProps } from "src/components/__generated__/types";
-import breakpoints, { point } from "src/styles/breakpoints";
-import formatImageAspectRatio from "src/utils/formatImageAspectRatio";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import { ProductDetailProps } from "src/components/__generated__/types";
+import { point } from "src/styles/breakpoints";
+import formatImageAspectRatio from "src/utils/formatImageAspectRatio";
 
 import * as S from "./style";
 

@@ -34,7 +34,6 @@ const Item = ({ item }: { item: IkasOrderLineItem }) => {
           <ItemRemoveColumn item={item} store={store} />
         </div>
       </div>
-      <ItemPriceColumn item={item} />
     </li>
   );
 };

@@ -6,6 +6,7 @@ import Config from "config.json";
 
 // You can remove this and add your own styles
 import "src/styles/global.css";
+import RouteLoader from "src/components/route-loader";
 
 IkasStorefrontConfig.init({
   ...Config,
@@ -16,7 +17,12 @@ IkasStorefrontConfig.init({
 const IkasThemeApp: React.FC<AppProps> = (props) => {
   const { Component, pageProps } = props;
 
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <RouteLoader />
+      <Component {...pageProps} />;
+    </>
+  );
 };
 
 export default IkasThemeApp;
