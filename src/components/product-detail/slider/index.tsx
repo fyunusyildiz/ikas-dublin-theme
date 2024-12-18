@@ -123,8 +123,8 @@ const MainImage = observer((props: MainImageProps) => {
           )
         )}
       </div>
-      <div className="w-full hidden h-[80vh] sm:block border-b border-solid border-[#222] relative">
-        {product.selectedVariant.images?.length === 1 ? (
+      {product.selectedVariant.images?.length === 1 ? (
+        <div className="w-full hidden h-[80vh] sm:block border-b border-solid border-[#222] relative">
           <Image
             useBlur
             image={image}
@@ -134,32 +134,32 @@ const MainImage = observer((props: MainImageProps) => {
             objectFit="cover"
             sizes="100%"
           />
-        ) : (
-          <Slider {...settings} className="h-full">
-            {product.selectedVariant.images?.map((image, index) =>
-              !image.isVideo ? (
-                <figure key={index} className="w-full h-[80vh] relative">
-                  <Image
-                    key={index}
-                    useBlur
-                    image={image.image!}
-                    layout="fill"
-                    width={width}
-                    height={height}
-                    objectFit="cover"
-                    className="h-full"
-                    sizes="100%"
-                  />
-                </figure>
-              ) : (
-                <video key={index} autoPlay loop muted className="h-full">
-                  <source src={image.image?.src} type="video/mp4" />
-                </video>
-              )
-            )}
-          </Slider>
-        )}
-      </div>
+        </div>
+      ) : (
+        <Slider {...settings} className="w-full">
+          {product.selectedVariant.images?.map((image, index) =>
+            !image.isVideo ? (
+              <figure key={index} className="w-full h-[80vh] relative">
+                <Image
+                  key={index}
+                  useBlur
+                  image={image.image!}
+                  layout="fill"
+                  width={width}
+                  height={height}
+                  objectFit="cover"
+                  className="h-full"
+                  sizes="100%"
+                />
+              </figure>
+            ) : (
+              <video key={index} autoPlay loop muted className="h-full">
+                <source src={image.image?.src} type="video/mp4" />
+              </video>
+            )
+          )}
+        </Slider>
+      )}
     </>
   );
 });
