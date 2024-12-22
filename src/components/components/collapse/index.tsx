@@ -15,21 +15,21 @@ const Collapse = (props: CollapseProps) => {
   };
 
   return (
-    <details
+    <div
       className={`${props.className} border-b border-solid border-[#222] ${
         active ? "pb-4" : ""
       }`}
     >
-      <summary
-        aria-expanded={active}
+      <div
         className="w-full flex items-center justify-between py-3 md:py-2 cursor-pointer text-sm xs:text-xs leading-8 text-[#222]"
         onClick={handleButton}
+        aria-expanded={active}
       >
         {props.header}
         <div className="w-3 h-3">{active ? <MinusSVG /> : <PlusSVG />}</div>
-      </summary>
-      <div>{active && props.children}</div>
-    </details>
+      </div>
+      {active && <div className="mt-0">{props.children}</div>}
+    </div>
   );
 };
 

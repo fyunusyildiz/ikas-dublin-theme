@@ -684,7 +684,7 @@ export const CartDrawer = observer((props: CartDrawerProps) => {
           )}
         </div>
         {quantity > 0 && (
-          <div className="w-full flex flex-col sticky left-0 bottom-0 pb-5">
+          <div className="w-full flex flex-col sticky left-0 bottom-0 pb-5 bg-white">
             <div className="w-full py-[10px] xs:py-[5px] bg-[#d9d9d9] border-y border-solid border-[#222]"></div>
             <div className="flex items-center justify-between px-5 my-5 xs:my-3">
               <div className="flex flex-col">

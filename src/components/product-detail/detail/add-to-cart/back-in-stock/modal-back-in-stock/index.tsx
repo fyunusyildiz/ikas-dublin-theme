@@ -58,6 +58,7 @@ const ModalBackInStock = ({ isModalVisible, product, onClose }: Props) => {
           <FormItem
             help={validator.results.email.errorMessage}
             status={status.email}
+            className="!mb-0"
           >
             <Input
               type="text"
@@ -67,7 +68,7 @@ const ModalBackInStock = ({ isModalVisible, product, onClose }: Props) => {
               onChange={(event) => (model.email = event.target.value)}
             />
           </FormItem>
-          <Button block loading={pending} disabled={pending}>
+          <Button block size="large" loading={pending} disabled={pending}>
             GÖNDER
           </Button>
         </Form>

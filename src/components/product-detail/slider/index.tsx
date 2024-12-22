@@ -96,6 +96,7 @@ const MainImage = observer((props: MainImageProps) => {
     arrows: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    adaptiveHeight: true,
   };
   return (
     <>
@@ -136,7 +137,7 @@ const MainImage = observer((props: MainImageProps) => {
           />
         </div>
       ) : (
-        <Slider {...settings} className="w-full">
+        <Slider {...settings} className="w-full !hidden sm:!block">
           {product.selectedVariant.images?.map((image, index) =>
             !image.isVideo ? (
               <figure key={index} className="w-full h-[80vh] relative">
@@ -153,7 +154,14 @@ const MainImage = observer((props: MainImageProps) => {
                 />
               </figure>
             ) : (
-              <video key={index} autoPlay loop muted className="h-full">
+              <video
+                key={index}
+                autoPlay
+                loop
+                controls={false}
+                muted
+                className="h-full"
+              >
                 <source src={image.image?.src} type="video/mp4" />
               </video>
             )

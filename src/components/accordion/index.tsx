@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import { useCallback, useState } from "react";
 import { AccordionProps } from "src/components/__generated__/types";
 
 const Accordion = (props: AccordionProps) => {
@@ -21,22 +21,26 @@ const Accordion = (props: AccordionProps) => {
   }, [props.width]);
 
   return (
-    <details
-      className={`border-b border-solid mx-4 border-[#222] px-5 ${active ? "pb-4" : ""} ${
-        props.isCentered ? "mx-auto" : ""
-      }`}
+    <div
+      className={`border-b border-solid mx-4 border-[#222] px-5 ${
+        active ? "pb-4" : ""
+      } ${props.isCentered ? "mx-auto" : ""}`}
       style={{ width: getWidth() }}
     >
-      <summary
-        aria-expanded={active}
+      <div
         className="w-full flex items-center justify-between py-3 md:py-2 cursor-pointer text-sm xs:text-xs leading-8 text-[#222]"
         onClick={handleButton}
+        aria-expanded={active}
       >
         <div dangerouslySetInnerHTML={{ __html: props.header }} />
         <div className="w-3 h-3">{active ? <MinusSVG /> : <PlusSVG />}</div>
-      </summary>
-      <div dangerouslySetInnerHTML={{ __html: active ? props.children : "" }} />
-    </details>
+      </div>
+      {active && (
+        <div
+          dangerouslySetInnerHTML={{ __html: props.children }}
+        />
+      )}
+    </div>
   );
 };
 
