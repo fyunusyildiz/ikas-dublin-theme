@@ -4,6 +4,7 @@ import { ProductOptionsStore } from "src/components/product-detail/detail/produc
 import { useAddToCart } from "src/utils/hooks/useAddToCart";
 import { useBackInStockStore } from "../back-in-stock/backInStockStore";
 import useBackInStock from "./useBackInStock";
+import { useState } from "react";
 
 type Props = {
   product: IkasProduct;
@@ -13,6 +14,7 @@ type Props = {
 export default function useAddToCartButton({ product, quantity }: Props) {
   const { t } = useTranslation();
   const backInStockStore = useBackInStockStore();
+  const [addToCartButtonText, setAddToCartButtonText] = useState("Sepete Ekle");
   const { loading: addToCartLoading, addToCart } = useAddToCart();
   const {
     isBackInStockEnabled,
@@ -29,7 +31,7 @@ export default function useAddToCartButton({ product, quantity }: Props) {
       backInStockStore.pending;
 
   const buttonText = hasStock
-    ? "Sepete Ekle"
+    ? addToCartButtonText
     : isBackInStockEnabled
     ? isBackInStockReminderSaved
       ? "Hatırlatma Kaydedildi"
@@ -45,6 +47,10 @@ export default function useAddToCartButton({ product, quantity }: Props) {
       return;
     }
     addToCart(product, quantity);
+    setAddToCartButtonText("Sepete Eklendi!");
+    setTimeout(() => {
+      setAddToCartButtonText("Sepete Ekle");
+    }, 1000);
   };
 
   const onButtonClick =
