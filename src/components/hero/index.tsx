@@ -1,6 +1,6 @@
 import { observer } from "mobx-react-lite";
 import { HeroProps } from "../__generated__/types";
-import { Link } from "@ikas/storefront";
+import { Image, Link } from "@ikas/storefront";
 
 const Hero = ({
   desktopImage,
@@ -17,16 +17,20 @@ const Hero = ({
         {hasFilter && (
           <div className="w-full h-full absolute z-[1] bg-black bg-opacity-35 top-0 left-0" />
         )}
-        <img
-          src={desktopImage.src}
-          alt={heroLink.label}
-          className="absolute top-0 left-0 w-full h-full object-cover object-center md:hidden"
-        />
-        <img
-          src={mobileImage.src}
-          alt={heroLink.label}
-          className="absolute top-0 left-0 w-full h-full object-cover object-top hidden md:block"
-        />
+        <div className="w-full h-full relative">
+          <Image
+            image={desktopImage}
+            alt={heroLink.label}
+            layout="fill"
+            className="absolute top-0 left-0 w-full h-full object-cover object-center md:hidden"
+          />
+          <Image
+            image={mobileImage}
+            alt={heroLink.label}
+            layout="fill"
+            className="absolute top-0 left-0 w-full h-full object-cover object-top hidden md:block"
+          />
+        </div>
         {(heroTitle || hasButton || heroDescription) && (
           <div className="flex flex-col gap-3 relative z-10 max-w-[760px] xs:w-[90%]">
             {heroTitle && (

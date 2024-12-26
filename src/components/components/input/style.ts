@@ -11,7 +11,7 @@ export const Prefix = styled.span`
   top: 50%;
   transform: translateY(-50%);
   left: 8px;
-  border-right: 1px solid ${theme.color.inputBorder};
+  border-right: 1px solid #222;
   padding-right: 4px;
   height: 100%;
   display: flex;

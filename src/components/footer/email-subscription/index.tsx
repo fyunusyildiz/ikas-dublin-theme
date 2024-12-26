@@ -29,7 +29,7 @@ const EmailSubscription = ({
       <h6 className="text-base font-semibold text-[#222]">{newsletterTitle}</h6>
       <p className="text-xs font-normal text-[#222] mb-5">{newsletterText}</p>
       <Form onSubmit={onSubmit}>
-        <FormItem className="!mb-0">
+        <FormItem>
           <Input
             required
             type="email"
@@ -38,7 +38,7 @@ const EmailSubscription = ({
             onChange={(event) => setEmail(event.target.value)}
           />
         </FormItem>
-        <Button block type="submit" size="middle" disabled={!email || pending}>
+        <Button block type="submit" size="large" className="!mt-0" disabled={!email || pending}>
           {pending ? "Lütfen Bekleyin..." : newsletterButtonText}
         </Button>
       </Form>
