@@ -1,6 +1,7 @@
 import { observer } from "mobx-react-lite";
 import { HeroProps } from "../__generated__/types";
 import { Image, Link } from "@ikas/storefront";
+import { useScreen } from "src/utils/hooks/useScreen";
 
 const Hero = ({
   desktopImage,
@@ -11,6 +12,7 @@ const Hero = ({
   heroDescription,
   heroTitle,
 }: HeroProps) => {
+  const { isMobile } = useScreen();
   return (
     <Link href={heroLink.href}>
       <a className="w-full h-screen relative flex items-center justify-center border-b border-solid border-[#222]">
@@ -18,18 +20,21 @@ const Hero = ({
           <div className="w-full h-full absolute z-[1] bg-black bg-opacity-35 top-0 left-0" />
         )}
         <div className="w-full h-full relative">
-          <Image
-            image={desktopImage}
-            alt={heroLink.label}
-            layout="fill"
-            className="absolute top-0 left-0 w-full h-full object-cover object-center md:hidden"
-          />
-          <Image
-            image={mobileImage}
-            alt={heroLink.label}
-            layout="fill"
-            className="absolute top-0 left-0 w-full h-full object-cover object-top hidden md:block"
-          />
+          {isMobile ? (
+            <Image
+              image={mobileImage}
+              alt={heroLink.label}
+              layout="fill"
+              className="absolute top-0 left-0 w-full h-full object-cover object-top"
+            />
+          ) : (
+            <Image
+              image={desktopImage}
+              alt={heroLink.label}
+              layout="fill"
+              className="absolute top-0 left-0 w-full h-full object-cover object-center"
+            />
+          )}
         </div>
         {(heroTitle || hasButton || heroDescription) && (
           <div className="flex flex-col gap-3 relative z-10 max-w-[760px] xs:w-[90%]">

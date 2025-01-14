@@ -13,14 +13,16 @@ export function useAddToCart() {
     );
 
     let result: IkasCartOperationResult;
-
+    console.log("item", item);
     setLoading(true);
     if (item) {
+      console.log("item var");
       result = await store.cartStore.changeItemQuantity(
         item,
         item.quantity + quantity
       );
     } else {
+      console.log("item yok");
       result = await store.cartStore.addItem(
         product.selectedVariant,
         product,

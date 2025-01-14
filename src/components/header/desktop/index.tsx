@@ -298,7 +298,10 @@ export const SearchInput = observer((props: HeaderProps) => {
           />
           <button
             className="h-full text-2xs flex items-center justify-center p-2 text-[#222]"
-            onClick={() => router.push(`/search?s=${uiStore.searchKeyword}`)}
+            onClick={() => {
+              toggleSearchDrawer();
+              router.push(`/search?s=${uiStore.searchKeyword}`);
+            }}
           >
             ARA
           </button>
@@ -648,7 +651,7 @@ export const CartDrawer = observer((props: CartDrawerProps) => {
             <Close />
           </button>
         </div>
-        <div className="w-full flex-1 flex flex-col overflow-y-auto gap-10">
+        <div className="w-full flex-1 flex flex-col overflow-y-auto gap-10 overflow-x-hidden">
           {quantity === 0 ? (
             <div className="w-full h-full flex flex-col gap-5 items-center justify-center">
               <h3 className="text-2xl text-[#222]">Sepetiniz boş.</h3>

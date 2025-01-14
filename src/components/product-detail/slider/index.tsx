@@ -159,6 +159,7 @@ const MainImage = observer((props: MainImageProps) => {
                 autoPlay
                 loop
                 controls={false}
+                playsInline
                 muted
                 className="h-full"
               >

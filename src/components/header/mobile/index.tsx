@@ -330,8 +330,8 @@ export const SearchInput = observer((props: HeaderProps) => {
   };
 
   const handleSearch = () => {
-    router.push(`/search?s=${uiStore.searchKeyword}`);
     toggleSearchDrawer();
+    router.push(`/search?s=${uiStore.searchKeyword}`);
   };
 
   const toggleSearchDrawer = () => {
