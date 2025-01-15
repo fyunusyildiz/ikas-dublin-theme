@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick.css";
 import { ProductDetailProps } from "src/components/__generated__/types";
 import { point } from "src/styles/breakpoints";
 import formatImageAspectRatio from "src/utils/formatImageAspectRatio";
+import { useScreen } from "src/utils/hooks/useScreen";
 
 import * as S from "./style";
 
@@ -81,6 +82,7 @@ type MainImageProps = {
 const MainImage = observer((props: MainImageProps) => {
   const { product, activeImage } = props;
   const { width, height } = formatImageAspectRatio(props.imageAspectRatio);
+  const { isMobile } = useScreen();
 
   const image = product.selectedVariant.images?.find(
     (image) => image.imageId === activeImage.id
@@ -100,32 +102,40 @@ const MainImage = observer((props: MainImageProps) => {
   };
   return (
     <>
-      <div className="flex flex-wrap h-full border-r border-solid border-[#222] sm:hidden">
-        {product.selectedVariant.images?.map((image, index) =>
-          !image.isVideo ? (
-            <figure
-              key={index}
-              className="w-full md:h-[700px] h-[1000px] relative border-b border-solid border-[#222]"
-            >
-              <Image
-                useBlur
-                image={image.image!}
-                layout="fill"
-                width={width}
-                height={height}
-                objectFit="cover"
-                sizes={`(max-width: 1440px) 100vw, ${point.xxl / 2}px`}
-              />
-            </figure>
-          ) : (
-            <video key={index} autoPlay loop muted>
-              <source src={image.image?.src} type="video/mp4" />
-            </video>
-          )
-        )}
-      </div>
-      {product.selectedVariant.images?.length === 1 ? (
-        <div className="w-full hidden h-[80vh] sm:block border-b border-solid border-[#222] relative">
+      {!isMobile ? (
+        <div className="flex flex-wrap h-full border-r border-solid border-[#222]">
+          {product.selectedVariant.images?.map((image, index) =>
+            !image.isVideo ? (
+              <figure
+                key={index}
+                className="w-full md:h-[700px] h-[1000px] relative border-b border-solid border-[#222]"
+              >
+                <Image
+                  useBlur
+                  image={image.image!}
+                  layout="fill"
+                  width={width}
+                  height={height}
+                  objectFit="cover"
+                  sizes={`(max-width: 1440px) 100vw, ${point.xxl / 2}px`}
+                />
+              </figure>
+            ) : (
+              <video
+                key={index}
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls={false}
+              >
+                <source src={image.image?.src} type="video/mp4" />
+              </video>
+            )
+          )}
+        </div>
+      ) : product.selectedVariant.images?.length === 1 ? (
+        <div className="w-full h-[80vh] block border-b border-solid border-[#222] relative">
           <Image
             useBlur
             image={image}
@@ -158,10 +168,9 @@ const MainImage = observer((props: MainImageProps) => {
                 key={index}
                 autoPlay
                 loop
-                controls={false}
-                playsInline
                 muted
-                className="h-full"
+                playsInline
+                controls={false}
               >
                 <source src={image.image?.src} type="video/mp4" />
               </video>

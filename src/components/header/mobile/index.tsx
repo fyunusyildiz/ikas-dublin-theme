@@ -321,6 +321,7 @@ export const SearchInput = observer((props: HeaderProps) => {
   const [openSearchDrawer, setOpenSearchDrawer] = useState(false);
   const uiStore = UIStore.getInstance();
   const router = useRouter();
+  const [searchKeyword, setSearchKeyword] = useState("");
 
   const onKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
@@ -331,6 +332,7 @@ export const SearchInput = observer((props: HeaderProps) => {
 
   const handleSearch = () => {
     toggleSearchDrawer();
+    uiStore.searchKeyword = searchKeyword;
     router.push(`/search?s=${uiStore.searchKeyword}`);
   };
 
@@ -339,7 +341,7 @@ export const SearchInput = observer((props: HeaderProps) => {
   };
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    uiStore.searchKeyword = event.target.value;
+    setSearchKeyword(event.target.value);
   };
 
   return (
@@ -350,7 +352,7 @@ export const SearchInput = observer((props: HeaderProps) => {
         />
       </button>
       <div
-        className={`w-full fixed top-[60px] z-[999] h-[calc(100vh-60px)] border border-solid border-[#222] bg-white flex flex-col ${
+        className={`w-full fixed top-[60px] z-[999] border border-solid border-[#222] bg-white flex flex-col ${
           openSearchDrawer ? "right-0" : "-right-full"
         } transition-all duration-300 ease-in-out`}
       >
@@ -358,7 +360,7 @@ export const SearchInput = observer((props: HeaderProps) => {
           <input
             className="text-2xs h-full px-4 flex-1 focus:outline-none placeholder:text-[#A1A1A1]"
             type="search"
-            value={uiStore.searchKeyword}
+            value={searchKeyword}
             placeholder={"ÜRÜN ARA"}
             onKeyPress={onKeyPress}
             onChange={onChange}
@@ -375,17 +377,6 @@ export const SearchInput = observer((props: HeaderProps) => {
           >
             KAPAT
           </button>
-        </div>
-        <div className="block w-full h-[15px] bg-[#D9D9D9] border-y border-solid border-[#222]"></div>
-        <div className="w-full flex flex-1 overflow-y-scroll flex-wrap bg-[#D9D9D9]">
-          <div className="w-full">
-            <ProductList
-              isSearchModal
-              source="search"
-              productList={props.searchProducts}
-              NS=""
-            />
-          </div>
         </div>
       </div>
     </>
