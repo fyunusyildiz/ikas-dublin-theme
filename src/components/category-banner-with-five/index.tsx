@@ -22,7 +22,7 @@ const CategoryBannerWithFive: React.FC<CategoryBannerWithFiveProps> = (
             objectFit="cover"
             alt={props.firstCategoryText}
             useBlur
-            sizes="100vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
             className="group-hover:scale-105 transition-transform duration-300 ease-in-out"
           />
           {props.firstCategoryHasFilter && (
@@ -52,7 +52,7 @@ const CategoryBannerWithFive: React.FC<CategoryBannerWithFiveProps> = (
               objectFit="cover"
               alt={props.secondCategoryText}
               useBlur
-              sizes="100vw"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 25vw"
               className="group-hover:scale-105 transition-transform duration-300 ease-in-out"
             />
             {props.secondCategoryHasFilter && (
@@ -81,7 +81,7 @@ const CategoryBannerWithFive: React.FC<CategoryBannerWithFiveProps> = (
               objectFit="cover"
               alt={props.thirdCategoryText}
               useBlur
-              sizes="100vw"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 25vw"
               className="group-hover:scale-105 transition-transform duration-300 ease-in-out"
             />
             {props.thirdCategoryHasFilter && (
@@ -110,7 +110,7 @@ const CategoryBannerWithFive: React.FC<CategoryBannerWithFiveProps> = (
               objectFit="cover"
               alt={props.fourthCategoryText}
               useBlur
-              sizes="100vw"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 25vw"
               className="group-hover:scale-105 transition-transform duration-300 ease-in-out"
             />
             {props.fourthCategoryHasFilter && (
@@ -139,8 +139,8 @@ const CategoryBannerWithFive: React.FC<CategoryBannerWithFiveProps> = (
               objectFit="cover"
               alt={props.fifthCategoryText}
               useBlur
-              sizes="100vw"
-              className="group-hover:scale-105 transition-transform duration-300 ease-in-out"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 25vw"
+              className="group-hover:scale-105 transition-transform duration-300 ease-in-out"              
             />
             {props.fifthCategoryHasFilter && (
               <div className="w-full h-full absolute z-[1] bg-black bg-opacity-35 top-0 left-0" />

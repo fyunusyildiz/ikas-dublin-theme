@@ -20,21 +20,13 @@ const Hero = ({
           <div className="w-full h-full absolute z-[1] bg-black bg-opacity-35 top-0 left-0" />
         )}
         <div className="w-full h-full relative">
-          {isMobile ? (
-            <Image
-              image={mobileImage}
-              alt={heroLink.label}
-              layout="fill"
-              className="absolute top-0 left-0 w-full h-full object-cover object-top"
-            />
-          ) : (
-            <Image
-              image={desktopImage}
-              alt={heroLink.label}
-              layout="fill"
-              className="absolute top-0 left-0 w-full h-full object-cover object-center"
-            />
-          )}
+          <Image
+            image={isMobile ? mobileImage : desktopImage}
+            alt={heroLink.label}
+            layout="fill"
+            className="absolute top-0 left-0 w-full h-full object-cover object-top"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
+          />
         </div>
         {(heroTitle || hasButton || heroDescription) && (
           <div className="flex flex-col gap-3 relative z-10 max-w-[760px] xs:w-[90%]">

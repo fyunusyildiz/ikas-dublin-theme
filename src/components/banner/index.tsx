@@ -42,7 +42,6 @@ const Banner: React.FC<BannerProps> = (props) => {
             layout="fill"
             objectFit={"cover"}
             objectPosition={"center"}
-            unoptimized
           />
           <h6 className={`relative z-[2] text-xl md:text-base xs:text-sm`} style={leftFrameTextStyle}>
             {leftFrameText}
@@ -56,7 +55,6 @@ const Banner: React.FC<BannerProps> = (props) => {
             layout="fill"
             objectFit={"cover"}
             objectPosition={"center"}
-            unoptimized
           />
           {rightFrameImageHasFilter && (
             <div className="w-full h-full absolute z-[1] bg-black bg-opacity-35 top-0 left-0" />

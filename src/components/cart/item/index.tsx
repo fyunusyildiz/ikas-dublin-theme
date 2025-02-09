@@ -140,7 +140,6 @@ const ItemImage = observer(({ item }: { item: IkasOrderLineItem }) => {
               layout="fill"
               sizes="200px"
               className="object-cover object-center"
-              priority
             />
           )}
         </a>

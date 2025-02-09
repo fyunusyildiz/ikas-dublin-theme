@@ -117,7 +117,7 @@ const MainImage = observer((props: MainImageProps) => {
                   width={width}
                   height={height}
                   objectFit="cover"
-                  sizes={`(max-width: 1440px) 100vw, ${point.xxl / 2}px`}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
               </figure>
             ) : (
@@ -160,7 +160,7 @@ const MainImage = observer((props: MainImageProps) => {
                   height={height}
                   objectFit="cover"
                   className="h-full"
-                  sizes="100%"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 30vw"
                 />
               </figure>
             ) : (

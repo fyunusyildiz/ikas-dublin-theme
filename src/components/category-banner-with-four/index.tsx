@@ -22,7 +22,7 @@ const CategoryBannerWithFour: React.FC<CategoryBannerWithFourProps> = (
             objectFit="cover"
             alt={props.firstCategoryText}
             useBlur
-            sizes="100vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 25vw"
             className="group-hover:scale-105 transition-transform duration-300 ease-in-out"
           />
           {props.firstCategoryHasFilter && (
@@ -51,7 +51,7 @@ const CategoryBannerWithFour: React.FC<CategoryBannerWithFourProps> = (
             objectFit="cover"
             alt={props.secondCategoryText}
             useBlur
-            sizes="100vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 25vw"
             className="group-hover:scale-105 transition-transform duration-300 ease-in-out"
           />
           {props.secondCategoryHasFilter && (
@@ -80,7 +80,7 @@ const CategoryBannerWithFour: React.FC<CategoryBannerWithFourProps> = (
             objectFit="cover"
             alt={props.thirdCategoryText}
             useBlur
-            sizes="100vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 25vw"
             className="group-hover:scale-105 transition-transform duration-300 ease-in-out"
           />
           {props.thirdCategoryHasFilter && (
@@ -109,7 +109,7 @@ const CategoryBannerWithFour: React.FC<CategoryBannerWithFourProps> = (
             objectFit="cover"
             alt={props.fourthCategoryText}
             useBlur
-            sizes="100vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 25vw"
             className="group-hover:scale-105 transition-transform duration-300 ease-in-out"
           />
           {props.fourthCategoryHasFilter && (

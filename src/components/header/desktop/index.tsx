@@ -1,5 +1,6 @@
 import {
   IkasBaseStore,
+  IkasImage,
   IkasProduct,
   Image,
   Link,
@@ -137,8 +138,10 @@ const NavItem = (props: { link: LinkProps } & HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [hoveredLink, setHoveredLink] = useState("");
   const [categoryOrder, setCategoryOrder] = useState(0);
-  const [firstImageOfCategory, setFirstImageOfCategory] = useState("");
-  const [secondImageOfCategory, setSecondImageOfCategory] = useState("");
+  const [firstImageOfCategory, setFirstImageOfCategory] =
+    useState<IkasImage | null>(null);
+  const [secondImageOfCategory, setSecondImageOfCategory] =
+    useState<IkasImage | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -159,14 +162,14 @@ const NavItem = (props: { link: LinkProps } & HeaderProps) => {
     });
 
     if (categoryOrder === 0) {
-      setFirstImageOfCategory(props.firstCategoryImages?.[0]?.src ?? "");
-      setSecondImageOfCategory(props.firstCategoryImages?.[1]?.src ?? "");
+      setFirstImageOfCategory(props.firstCategoryImages?.[0] ?? null);
+      setSecondImageOfCategory(props.firstCategoryImages?.[1] ?? null);
     } else if (categoryOrder === 1) {
-      setFirstImageOfCategory(props.secondCategoryImages?.[0]?.src ?? "");
-      setSecondImageOfCategory(props.secondCategoryImages?.[1]?.src ?? "");
+      setFirstImageOfCategory(props.secondCategoryImages?.[0] ?? null);
+      setSecondImageOfCategory(props.secondCategoryImages?.[1] ?? null);
     } else {
-      setFirstImageOfCategory(props.thirdCategoryImages?.[0]?.src ?? "");
-      setSecondImageOfCategory(props.thirdCategoryImages?.[1]?.src ?? "");
+      setFirstImageOfCategory(props.thirdCategoryImages?.[0] ?? null);
+      setSecondImageOfCategory(props.thirdCategoryImages?.[1] ?? null);
     }
   }, [hoveredLink, categoryOrder, props]);
 
@@ -234,19 +237,27 @@ const NavItem = (props: { link: LinkProps } & HeaderProps) => {
                 ))}
               </ul>
             </div>
-            <div className="col-span-1 overflow-hidden border-r border-solid border-[#222]">
-              <img
-                src={firstImageOfCategory}
-                alt={link.label}
-                className="w-full h-full object-cover object-center"
-              />
+            <div className="col-span-1 overflow-hidden relative border-r border-solid border-[#222]">
+              {firstImageOfCategory && (
+                <Image
+                  image={firstImageOfCategory}
+                  layout="fill"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 25vw"
+                  alt={link.label}
+                  className="w-full h-full object-cover object-center"
+                />
+              )}
             </div>
-            <div className="col-span-1 overflow-hidden">
-              <img
-                src={secondImageOfCategory}
-                alt={link.label}
-                className="w-full h-full object-cover object-center"
-              />
+            <div className="col-span-1 overflow-hidden relative">
+              {secondImageOfCategory && (
+                <Image
+                  image={secondImageOfCategory}
+                  alt={link.label}
+                  layout="fill"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 25vw"
+                  className="w-full h-full object-cover object-center"
+                />
+              )}
             </div>
           </div>
         </div>
@@ -315,7 +326,12 @@ export const SearchInput = observer((props: HeaderProps) => {
         <div className="block w-full h-[22px] bg-[#D9D9D9] border-y border-solid border-[#222]"></div>
         <div className="w-full flex flex-1 overflow-y-scroll flex-wrap bg-[#D9D9D9]">
           <div className="w-full">
-              <ProductList isSearchModal source="search" productList={props.searchProducts} NS="" />
+            <ProductList
+              isSearchModal
+              source="search"
+              productList={props.searchProducts}
+              NS=""
+            />
           </div>
         </div>
       </div>
@@ -388,7 +404,6 @@ export const FavoriteProduct = observer((props: FavoriteProductProps) => {
             ) : (
               <Image
                 layout="fill"
-                priority
                 className="object-cover object-center"
                 image={product.selectedVariant.mainImage?.image!}
               />

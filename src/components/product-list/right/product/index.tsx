@@ -27,7 +27,9 @@ const Product = (props: Props) => {
       <li
         className={`w-1/4 md:w-1/3 sm:w-1/2 relative border border-[#222222d2] group ${
           props.className
-        } ${props.isSearchModal ? "!w-full border-t-0 border-r border-l-0" : ""}`}
+        } ${
+          props.isSearchModal ? "!w-full border-t-0 border-r border-l-0" : ""
+        }`}
       >
         <Link passHref href={product.href}>
           <a title={a11yTitle}>
@@ -83,14 +85,13 @@ const ProductImage = observer(({ product }: Props) => {
     return <img src="/product-dummy-image.jpeg" />;
   }
 
-  return product.selectedVariant.mainImage.image.isVideo ? (
-    <video src={product.selectedVariant.mainImage.image.src} />
-  ) : (
+  return (
     <Image
       layout="responsive"
       width="125px"
       height="200px"
       className="object-cover"
+      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
       image={product.selectedVariant.mainImage?.image!}
     />
   );
