@@ -91,7 +91,7 @@ const ProductImage = observer(({ product }: Props) => {
       width="125px"
       height="200px"
       className="object-cover"
-      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 80vw"
       image={product.selectedVariant.mainImage?.image!}
     />
   );

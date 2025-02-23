@@ -20,7 +20,7 @@ const ProductDetail = (props: ProductDetailProps) => {
           {props.product?.name}
         </span>
       </div>
-      <div className="grid grid-cols-10 xs:mt-0 mb-32 h-full gap-9 md:gap-6 xs:gap-0 sm:grid-cols-[1fr]">
+      <div className="grid grid-cols-10 xs:mt-0 mb-32 gap-9 md:gap-6 xs:gap-0 sm:grid-cols-[1fr]">
         <SliderArea {...props} />
         <Detail {...props} />
       </div>

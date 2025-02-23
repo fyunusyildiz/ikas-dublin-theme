@@ -1,7 +1,7 @@
 import { IkasNavigationLink, Link, useStore } from "@ikas/storefront";
 import { observer } from "mobx-react-lite";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import UIStore from "src/store/ui-store";
 
@@ -24,30 +24,52 @@ import ProductList from "src/components/product-list";
 
 const MobileHeader = (props: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const observerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    setIsScrolled(window.scrollY > 20);
 
-    window.addEventListener("scroll", handleScroll);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsScrolled(!entry.isIntersecting);
+      },
+      {
+        threshold: 0,
+        rootMargin: "-20px 0px 0px 0px",
+      }
+    );
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    if (observerRef.current) {
+      observer.observe(observerRef.current);
+    }
+
+    return () => observer.disconnect();
   }, []);
 
   return (
     <>
+      <div
+        ref={observerRef}
+        className="observer-element"
+        style={{
+          position: "absolute",
+          top: 0,
+          height: "0px",
+          width: "100%",
+          pointerEvents: "none",
+        }}
+      />
       {props.hasAnnouncement && props.noTransparentHeader && (
         <Announcement {...props} />
       )}
       <header
-        className={`w-full transition-all duration-300 border-b border-solid border-[#222] ${
+        className={`w-full fixed-header z-[999] transition-all duration-300 border-b border-solid border-[#222] ${
           props.noTransparentHeader
-            ? ""
-            : "fixed top-[0px] z-[999] transition-all duration-300 ease-in-out"
-        } ${isScrolled ? "fixed top-0 z-[999] shadow-sm" : ""}`}
+            ? "relative" // transparent olmayan header için relative
+            : isScrolled
+            ? "fixed-header top-0 left-0 right-0 z-[99] bg-white shadow-sm" // scroll durumunda
+            : "relative" // başlangıç durumu
+        }`}
         style={{
           backgroundColor: props.noTransparentHeader
             ? props.headerBackgroundColor
@@ -63,6 +85,7 @@ const MobileHeader = (props: HeaderProps) => {
         </div>
         <Sidenav {...props} />
       </header>
+      {isScrolled && <div className="h-[60px]"></div>}
       <MaxQuantityPerCartModal />
     </>
   );
@@ -326,22 +349,21 @@ export const SearchInput = observer((props: HeaderProps) => {
   const onKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
       event.preventDefault();
-      router.push(`/search?s=${uiStore.searchKeyword}`);
+      router.push(`/search?s=${searchKeyword}`);
     }
   };
 
   const handleSearch = () => {
     toggleSearchDrawer();
-    uiStore.searchKeyword = searchKeyword;
-    router.push(`/search?s=${uiStore.searchKeyword}`);
+    router.push(`/search?s=${searchKeyword}`);
   };
 
   const toggleSearchDrawer = () => {
     setOpenSearchDrawer(!openSearchDrawer);
   };
 
-  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchKeyword(event.target.value);
+  const onChange = (value: string) => {
+    setSearchKeyword(value);
   };
 
   return (
@@ -363,7 +385,7 @@ export const SearchInput = observer((props: HeaderProps) => {
             value={searchKeyword}
             placeholder={"ÜRÜN ARA"}
             onKeyPress={onKeyPress}
-            onChange={onChange}
+            onChange={(e) => onChange(e.target.value)}
           />
           <button
             className="h-full text-2xs flex items-center justify-center p-2 text-[#222]"

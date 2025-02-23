@@ -11,7 +11,7 @@ import { observer } from "mobx-react-lite";
 import { HeaderProps, TextPosition } from "src/components/__generated__/types";
 
 import { useRouter } from "next/router";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Items } from "src/components/cart";
 import MaxQuantityPerCartModal from "src/components/components/modal-max-quantity-per-cart";
 import Search from "src/components/header/desktop/svg/search";
@@ -32,25 +32,58 @@ import ProductList from "src/components/product-list";
 
 const DesktopHeader = (props: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const observerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setIsScrolled(window.scrollY > 20);
-    });
+    // Başlangıçta scroll durumunu kontrol et
+    setIsScrolled(window.scrollY > 20);
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // console.log('intersection ratio:', entry.intersectionRatio);
+        // console.log('is intersecting:', entry.isIntersecting);
+        setIsScrolled(!entry.isIntersecting);
+      },
+      {
+        threshold: [0], // threshold 1 yerine 0 kullanın
+        rootMargin: "-20px 0px 0px 0px",
+      }
+    );
+
+    if (observerRef.current) {
+      observer.observe(observerRef.current);
+    }
+
+    return () => observer.disconnect();
   }, []);
+
   return (
     <>
+      <div
+        ref={observerRef}
+        className="observer-element"
+        style={{
+          position: "absolute",
+          top: 0,
+          height: "1px",
+          width: "100%",
+          pointerEvents: "none",
+        }}
+      />
       {props.hasAnnouncement && props.noTransparentHeader && (
         <Announcement {...props} />
       )}
       <header
         className={`w-full border-b border-solid border-[#222222] ${
-          isScrolled ? "fixed top-0 z-[999]" : ""
+          isScrolled
+            ? "fixed-header top-0 left-0 right-0 bg-white shadow-md z-[999]"
+            : "relative bg-transparent"
         } ${
           props.noTransparentHeader
             ? ""
             : isScrolled
             ? "fixed top-0 z-[999]"
-            : "fixed top-[0px] z-[999] ease-in-out"
+            : "relative"
         }`}
         style={{
           backgroundColor: props.noTransparentHeader
@@ -66,6 +99,7 @@ const DesktopHeader = (props: HeaderProps) => {
           </div>
         </div>
       </header>
+      {isScrolled && <div style={{ height: "80px" }} />}{" "}
       <MaxQuantityPerCartModal />
     </>
   );
@@ -268,13 +302,13 @@ const NavItem = (props: { link: LinkProps } & HeaderProps) => {
 
 export const SearchInput = observer((props: HeaderProps) => {
   const [openSearchDrawer, setOpenSearchDrawer] = useState(false);
-  const uiStore = UIStore.getInstance();
+  const [searchKeyword, setSearchKeyword] = useState("");
   const router = useRouter();
 
   const onKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
       event.preventDefault();
-      router.push(`/search?s=${uiStore.searchKeyword}`);
+      router.push(`/search?s=${searchKeyword}`);
     }
   };
 
@@ -282,8 +316,8 @@ export const SearchInput = observer((props: HeaderProps) => {
     setOpenSearchDrawer(!openSearchDrawer);
   };
 
-  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    uiStore.searchKeyword = event.target.value;
+  const onChange = (value: string) => {
+    setSearchKeyword(value);
   };
 
   return (
@@ -294,24 +328,24 @@ export const SearchInput = observer((props: HeaderProps) => {
         />
       </button>
       <div
-        className={`w-[660px] fixed top-[80px] z-[999] h-[640px] border border-solid border-[#222] bg-white flex flex-col ${
+        className={`w-[660px] fixed top-[80px] z-[999] h-[54px] border border-solid border-[#222] bg-white flex flex-col ${
           openSearchDrawer ? "right-0" : "-right-full"
         } transition-all duration-300 ease-in-out`}
       >
         <div className="w-full flex items-center gap-5 h-[37px]">
           <input
-            className="text-2xs h-full px-4 flex-1 focus:outline-none placeholder:text-[#A1A1A1]"
+            className="text-2xs h-full px-4 flex-1 focus:outline-none placeholder:text-[#A1A1A1] focus:bg-transparent"
             type="search"
-            value={uiStore.searchKeyword}
+            value={searchKeyword}
+            onChange={(e) => onChange(e.target.value)}
             placeholder={"ÜRÜN ARA"}
             onKeyPress={onKeyPress}
-            onChange={onChange}
           />
           <button
             className="h-full text-2xs flex items-center justify-center p-2 text-[#222]"
             onClick={() => {
               toggleSearchDrawer();
-              router.push(`/search?s=${uiStore.searchKeyword}`);
+              router.push(`/search?s=${searchKeyword}`);
             }}
           >
             ARA
@@ -323,17 +357,7 @@ export const SearchInput = observer((props: HeaderProps) => {
             KAPAT
           </button>
         </div>
-        <div className="block w-full h-[22px] bg-[#D9D9D9] border-y border-solid border-[#222]"></div>
-        <div className="w-full flex flex-1 overflow-y-scroll flex-wrap bg-[#D9D9D9]">
-          <div className="w-full">
-            <ProductList
-              isSearchModal
-              source="search"
-              productList={props.searchProducts}
-              NS=""
-            />
-          </div>
-        </div>
+        <div className="block w-full h-[16px] bg-[#D9D9D9] border-t border-solid border-[#222]"></div>
       </div>
     </>
   );

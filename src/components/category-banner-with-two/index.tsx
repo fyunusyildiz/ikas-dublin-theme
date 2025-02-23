@@ -20,7 +20,7 @@ const CategoryBannerWithTwo: React.FC<CategoryBannerWithTwoProps> = (props) => {
             objectFit="cover"
             alt={props.firstCategoryText}
             useBlur
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 80vw"
             className="group-hover:scale-105 transition-transform duration-300 ease-in-out"
           />
           {props.firstCategoryHasFilter && (
@@ -49,7 +49,7 @@ const CategoryBannerWithTwo: React.FC<CategoryBannerWithTwoProps> = (props) => {
             objectFit="cover"
             alt={props.secondCategoryText}
             useBlur
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 80vw"
             className="group-hover:scale-105 transition-transform duration-300 ease-in-out"
           />
           {props.secondCategoryHasFilter && (

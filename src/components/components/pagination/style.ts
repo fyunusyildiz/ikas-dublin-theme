@@ -15,6 +15,8 @@ export const Button = styled.button`
   :disabled {
     color: ${theme.color.secondaryText};
   }
+  text-decoration: underline;
+  cursor: pointer;
 `;
 
 export const NextButton = styled(Button)``;

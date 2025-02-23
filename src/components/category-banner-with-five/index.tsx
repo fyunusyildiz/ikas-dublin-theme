@@ -22,7 +22,7 @@ const CategoryBannerWithFive: React.FC<CategoryBannerWithFiveProps> = (
             objectFit="cover"
             alt={props.firstCategoryText}
             useBlur
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 80vw"
             className="group-hover:scale-105 transition-transform duration-300 ease-in-out"
           />
           {props.firstCategoryHasFilter && (
@@ -52,7 +52,7 @@ const CategoryBannerWithFive: React.FC<CategoryBannerWithFiveProps> = (
               objectFit="cover"
               alt={props.secondCategoryText}
               useBlur
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 25vw"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 80vw"
               className="group-hover:scale-105 transition-transform duration-300 ease-in-out"
             />
             {props.secondCategoryHasFilter && (
@@ -81,7 +81,7 @@ const CategoryBannerWithFive: React.FC<CategoryBannerWithFiveProps> = (
               objectFit="cover"
               alt={props.thirdCategoryText}
               useBlur
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 25vw"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 80vw"
               className="group-hover:scale-105 transition-transform duration-300 ease-in-out"
             />
             {props.thirdCategoryHasFilter && (
@@ -110,7 +110,7 @@ const CategoryBannerWithFive: React.FC<CategoryBannerWithFiveProps> = (
               objectFit="cover"
               alt={props.fourthCategoryText}
               useBlur
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 25vw"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 80vw"
               className="group-hover:scale-105 transition-transform duration-300 ease-in-out"
             />
             {props.fourthCategoryHasFilter && (
@@ -139,7 +139,7 @@ const CategoryBannerWithFive: React.FC<CategoryBannerWithFiveProps> = (
               objectFit="cover"
               alt={props.fifthCategoryText}
               useBlur
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 25vw"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 80vw"
               className="group-hover:scale-105 transition-transform duration-300 ease-in-out"              
             />
             {props.fifthCategoryHasFilter && (
