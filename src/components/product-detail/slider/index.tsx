@@ -150,7 +150,7 @@ const MainImage = observer((props: MainImageProps) => {
         <Slider {...settings} className="w-full !hidden sm:!block">
           {product.selectedVariant.images?.map((image, index) =>
             !image.isVideo ? (
-              <figure key={index} className="w-full h-[80vh] relative">
+              <figure key={index} className="w-full h-[65vh] relative">
                 <Image
                   key={index}
                   useBlur
