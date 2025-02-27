@@ -19,7 +19,6 @@ const IkasThemeApp: React.FC<AppProps> = (props) => {
 
   return (
     <>
-      <RouteLoader />
       <Component {...pageProps} />;
     </>
   );

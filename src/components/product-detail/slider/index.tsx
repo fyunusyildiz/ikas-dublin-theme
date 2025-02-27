@@ -108,7 +108,7 @@ const MainImage = observer((props: MainImageProps) => {
             !image.isVideo ? (
               <figure
                 key={index}
-                className="w-full xl:h-[700px] h-[1000px] relative border-b border-solid border-[#222]"
+                className="w-full xl:h-[800px] h-[1000px] relative border-b border-solid border-[#222]"
               >
                 <Image
                   useBlur
